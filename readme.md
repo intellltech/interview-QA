@@ -14,7 +14,7 @@
 ## Answers
 1. ### What is Solidity?
    
-Solidity is a high-level language used in the blockchain ecosystem for implementing smart contracts. Designed specifically for targeting the Ethereum Virtual Machine, Solidity was influenced by several <a href="https://www.simplilearn.com/best-programming-languages-start-learning-today-article">programming languages</a>, such as JavaScript, Python, and C++.
+Solidity is a high-level language used in the blockchain ecosystem for implementing smart contracts. Designed specifically for targeting the Ethereum Virtual Machine, Solidity was influenced by several <a href="https://www.simplilearn.com/best-programming-languages-start-learning-today-article" target="black">programming languages</a>, such as JavaScript, Python, and C++.
     **[⬆ Back to Top](#questions)**
     
 2.  ### What are some important features of Solidity?
