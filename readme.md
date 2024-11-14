@@ -965,7 +965,7 @@ You can use import statement to import a file,
 121. ### Can I only import local files?
 
 You can also import files using HTTP (even from Github),
-              import "http://github.com/<owner>/<repo>/<path to the file>"
+              import "http://github.com/{owner}/{repo}/{path to the file}"
     **[⬆ Back to Top](#questions)**
 
 122. ### What parts is the memory of an EVM divided into?
