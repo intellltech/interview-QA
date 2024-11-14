@@ -114,6 +114,26 @@
 | 107  | [How would you design a contract system for a decentralized insurance platform?](#How-would-you-design-a-contract-system-for-a-decentralized-insurance-platform)
 | 108  | [Explain how you would implement a yield farming contract in Solidity.](#Explain-how-you-would-implement-a-yield-farming-contract-in-Solidity)
 | 109  | [How would you design a contract for a decentralized autonomous organization (DAO) in Solidity?](#How-would-you-design-a-contract-for-a-decentralized-autonomous-organization-DAO-in-Solidity)
+| 110  | [Is Solidity statically or dynamically typed?](#Is-Solidity-statically-or-dynamically-typed)
+| 111  | [What is the equivalent to the Java "Class" in Solidity?](#What-is-the-equivalent-to-the-Java-Class-in-Solidity)
+| 112  | [What is an instance of a contract?](#What-is-an-instance-of-a-contract)
+| 113  | [Give me a couple of differences between Java and Solidity.](#Give-me-a-couple-of-differences-between-Java-and-Solidity)
+| 114  | [What is the very first thing you must specify in a Solidity file?](#What-is-the-very-first-thing-you-must-specify-in-a-Solidity-file)
+| 115  | [What does a contract consist of?](#What-does-a-contract-consist-of)
+| 116  | [What types of functions are there?](#What-types-of-functions-are-there)
+| 117  | [What error will I get if I put multiple contract definitions into a single Solidity file?](#What-error-will-I-get-if-I-put-multiple-contract-definitions-into-a-single-Solidity-file)
+| 118  | [What are some ways in which two contracts can interact?](#What-are-some-ways-in-which-two-contracts-can-interact)
+| 119  | [What happens when you try to deploy a file with multiple contracts?](#What-happens-when-you-try-to-deploy-a-file-with-multiple-contracts)
+| 120  | [000](#000)
+| 121  | [111](#111)
+| 122  | [222](#222)
+| 123  | [333](#333)
+| 124  | [444](#444)
+| 125  | [555](#555)
+| 126  | [666](#666)
+| 127  | [777](#777)
+| 128  | [888](#888)
+| 129  | [999](#999)
 
 ## Answers
 1. ### What is Solidity?
@@ -884,4 +904,104 @@ A well-structured answer should include these key components:
 - Governance token distribution and management
 - Quorum and voting threshold calculations
 Evaluate the candidate's understanding of on-chain governance and how they balance decentralization with efficient decision-making. Look for considerations of scalability, gas optimization, and potential attack vectors like vote buying or governance attacks.
+    **[⬆ Back to Top](#questions)**
+
+110. ### Is Solidity statically or dynamically typed?
+
+It is statically typed, which means that types are known at compilation.
+    **[⬆ Back to Top](#questions)**
+
+111. ### What is the equivalent to the Java "Class" in Solidity?
+
+It's the Contract.
+    **[⬆ Back to Top](#questions)**
+
+112. ### What is an instance of a contract?
+
+An instance of a contract is the deployed contract on the blockchain.
+    **[⬆ Back to Top](#questions)**
+
+113. ### Give me a couple of differences between Java and Solidity.
+
+Solidity supports multiple inheritance but doesn't support overloading
+    **[⬆ Back to Top](#questions)**
+
+114. ### What is the very first thing you must specify in a Solidity file?
+
+The version of Solidity compiler, which is specified as ^0.4.8. It is necessary because it prevents incompatibility errors which can be introduced when compiling with another version.
+    **[⬆ Back to Top](#questions)**
+
+115. ### What does a contract consist of?
+
+It consists mainly of storage variables, functions and events.
+    **[⬆ Back to Top](#questions)**
+
+116. ### What types of functions are there?
+
+There is a constructor, fallback function, constant functions and functions that modify the contract state.
+    **[⬆ Back to Top](#questions)**
+    
+117. ### What error will I get if I put multiple contract definitions into a single Solidity file?
+
+It is perfectly fine to put multiple contract definitions into a single Solidity file.
+    **[⬆ Back to Top](#questions)**
+    
+118. ### What are some ways in which two contracts can interact?
+
+A contract can invoke, create and inherit from another contract(s).
+    **[⬆ Back to Top](#questions)**
+    
+119. ### What happens when you try to deploy a file with multiple contracts?
+
+The compiler only deploys the last contract in that file and all other contracts are ignored.
+    **[⬆ Back to Top](#questions)**
+
+120. ### 000
+
+000
+    **[⬆ Back to Top](#questions)**
+
+121. ### 111
+
+111
+    **[⬆ Back to Top](#questions)**
+
+122. ### 222
+
+222
+    **[⬆ Back to Top](#questions)**
+
+123. ### 333
+
+333
+    **[⬆ Back to Top](#questions)**
+
+124. ### 444
+
+444
+    **[⬆ Back to Top](#questions)**
+
+125. ### 555
+
+555
+    **[⬆ Back to Top](#questions)**
+
+126. ### 666
+
+666
+    **[⬆ Back to Top](#questions)**
+    
+127. ### 777
+
+777
+    **[⬆ Back to Top](#questions)**
+    
+128. ### 888
+
+888
+    **[⬆ Back to Top](#questions)**
+    
+129. ### 999
+
+999
     **[⬆ Back to Top](#questions)**
