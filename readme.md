@@ -45,6 +45,7 @@ Server-Side Rendering (SSR) and Client-Side Rendering (CSR): React supports both
 
 In summary, React's focus on component reusability, virtual DOM, unidirectional data flow, and JSX syntax sets it apart from other front-end frameworks. Its key concepts enable developers to build efficient, maintainable, and interactive user interfaces.
     **[⬆ Back to Top](#questions)**
+    
 3. ### How to create components in React?
    
 Components form the fundamental building blocks of a React application.
