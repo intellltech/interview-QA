@@ -124,15 +124,15 @@
 | 117  | [What error will I get if I put multiple contract definitions into a single Solidity file?](#What-error-will-I-get-if-I-put-multiple-contract-definitions-into-a-single-Solidity-file)
 | 118  | [What are some ways in which two contracts can interact?](#What-are-some-ways-in-which-two-contracts-can-interact)
 | 119  | [What happens when you try to deploy a file with multiple contracts?](#What-happens-when-you-try-to-deploy-a-file-with-multiple-contracts)
-| 120  | [000](#000)
-| 121  | [111](#111)
-| 122  | [222](#222)
-| 123  | [333](#333)
-| 124  | [444](#444)
-| 125  | [555](#555)
-| 126  | [666](#666)
-| 127  | [777](#777)
-| 128  | [888](#888)
+| 120  | [What if I have a huge project, do I need to keep all my related contracts into a single file?](#What-if-I-have-a-huge-project-do-I-need-to-keep-all-my-related-contracts-into-a-single-file)
+| 121  | [Can I only import local files?](#Can-I-only-import-local-files)
+| 122  | [What parts is the memory of an EVM divided into?](#What-parts-is-the-memory-of-an-EVM-divided-into)
+| 123  | [Explain Storage](#Explain-Storage)
+| 124  | [Explain Memory](#Explain-Memory)
+| 125  | [Explain Calldata](#Explain-Calldata)
+| 126  | [What variables are stored in the Storage and Memory areas respectively?](#What-variables-are-stored-in-the-Storage-and-Memory-areas-respectively)
+| 127  | [Take a look at the following code and explain which part of the code corresponds to wich memory area:](#Take-a-look-at-the-following-code-and-explain-which-part-of-the-code-corresponds-to-wich-memory-area)
+| 128  | [Can I do this: function doSomething(uint[] storage args) internal returns(uint[] storage data) {...}](#Can-I-do-this)
 | 129  | [999](#999)
 
 ## Answers
@@ -956,49 +956,53 @@ A contract can invoke, create and inherit from another contract(s).
 The compiler only deploys the last contract in that file and all other contracts are ignored.
     **[⬆ Back to Top](#questions)**
 
-120. ### 000
+120. ### What if I have a huge project, do I need to keep all my related contracts into a single file?
 
-000
+You can use import statement to import a file,
+              import "./MyOtherContracts.sol"
     **[⬆ Back to Top](#questions)**
 
-121. ### 111
+121. ### Can I only import local files?
 
-111
+You can also import files using HTTP (even from Github),
+              import "http://github.com/<owner>/<repo>/<path to the file>"
     **[⬆ Back to Top](#questions)**
 
-122. ### 222
+122. ### What parts is the memory of an EVM divided into?
 
-222
+It is divided into Storage, Memory and Calldata
     **[⬆ Back to Top](#questions)**
 
-123. ### 333
+123. ### Explain Storage
 
-333
+Think of it as a database. Each contract manages its own Storage variables. It is a key-value datastore (256 bit key & value). The read and write are more costly in terms of gas used per execution.
     **[⬆ Back to Top](#questions)**
 
-124. ### 444
+124. ### Explain Memory
 
-444
+It is a temporary storage. The data is lost once the execution terminates. You can allocate complext datatypes like arrays and structs.
     **[⬆ Back to Top](#questions)**
 
-125. ### 555
+125. ### Explain Calldata
 
-555
+It can be tought of as the callstack. It is temporary, non-modifiable, and it stores EVM execution data.
     **[⬆ Back to Top](#questions)**
 
-126. ### 666
+126. ### What variables are stored in the Storage and Memory areas respectively?
 
-666
-    **[⬆ Back to Top](#questions)**
-    
-127. ### 777
-
-777
+State variables and local variables (wich are references to the state variables) are stored in Storage. Function arguments are located in Memory area.
     **[⬆ Back to Top](#questions)**
     
-128. ### 888
+127. ### Take a look at the following code and explain which part of the code corresponds to wich memory area:
 
-888
+![alt text](./src/image7.png)
+Part 1 - Storage. Part 2 - Storage (array size points to the same location as counter). Part 3 - Memory. Part 4 - Reference to Storage.
+    **[⬆ Back to Top](#questions)**
+    
+128. ### Can I do this:
+    function doSomething(uint[] storage args) internal returns(uint[] storage data) {...}
+
+Yes, you can force the arguments of a function to be of type storage. In this case if you do not pass a storage reference, the compiler will complain.
     **[⬆ Back to Top](#questions)**
     
 129. ### 999
