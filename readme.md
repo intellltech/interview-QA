@@ -5,7 +5,7 @@
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     | **Behavioural Questions**                                                                                                                                                                                                                   
-| 1   | [What is Solidity?](#what-is-solidity) 
+| 1   | [What is Solidity?](#What-is-Solidity) 
 | 2   | [What are some important features of Solidity?](#What-are-some-important-features-of-Solidity)                                                                                                
 | 3   | [How to create components in React?](#how-to-create-components-in-react)
 
