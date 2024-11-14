@@ -25,16 +25,20 @@
 | 18   | [What is a smart contract’s ABI?](#What-is-a-smart-contracts-ABI)
 | 19   | [What type of language is Solidity?](#What-type-of-language-is-Solidity)
 | 20   | [What are the two APIs that a smart contract uses to interface with it?](#What-are-the-two-APIs-that-a-smart-contract-uses-to-interface-with-it)
+| 21   | [Why is Solidity used in blockchain?](#Why-is-Solidity-used-in-blockchain)
+| 22   | [Is Solidity frontend or backend?](#Is-Solidity-frontend-or-backend)
+| 23   | [How much do Solidity developers make?](#How-much-do-Solidity-developers-make)
+| 24   | [Is Solidity the future?](#Is-Solidity-the-future)
 
 ## Answers
 1. ### What is Solidity?
    
-Solidity is a high-level language used in the blockchain ecosystem for implementing smart contracts. Designed specifically for targeting the Ethereum Virtual Machine, Solidity was influenced by several <a href="https://www.simplilearn.com/best-programming-languages-start-learning-today-article" target="_blank">programming languages</a>, such as <a href="https://www.simplilearn.com/tutorials/javascript-tutorial/introduction-to-javascript" target="_blank">JavaScript</a>, <a href="https://www.simplilearn.com/learn-the-basics-of-python-article" target="_blank">Python</a>, and <a href="https://www.simplilearn.com/tutorials/cpp-tutorial/learn-cpp-basics" target="_blank">C++</a>.
+Solidity is a high-level language used in the blockchain ecosystem for implementing smart contracts. Solidity is an object-oriented programming language developed by Christian Reitwiessner, Alex Beregszaszi, and several former Ethereum core contributors for implementing smart contracts on various blockchain platforms like Ethereum. It is used to implement smart contracts that implement business logic and generates a chain of transaction records in the blockchain system. Designed specifically for targeting the Ethereum Virtual Machine, Solidity was influenced by several programming languages, such as JavaScript, Python, and C++.
     **[⬆ Back to Top](#questions)**
     
 2.  ### What are some important features of Solidity?
 
-Solidity has some salient features, which include libraries, contracts, and inheritance support. With Solidity, users can also create custom data types which can be a crucial part of <a href="https://www.simplilearn.com/tutorials/blockchain-tutorial/what-is-smart-contract" target="_blank">smart contract</a> development.
+Solidity has some salient features, which include libraries, contracts, and inheritance support. With Solidity, users can also create custom data types which can be a crucial part of smart contract development.<br/><ui><li>Solidity is a statically-typed object-oriented language.</li><li>It is highly influenced by Python, C++, and JavaScript which runs on EVM.</li><li>It is designed for implementing smart contracts.</li><li>It can be used for implementing contracts for functionalities like Voting, Crowdfunding, Multi-signature wallets, etc.</li><li>Solidity is a primary language for blockchain platforms.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 3. ### What types of applications can be developed using Solidity?
@@ -125,4 +129,24 @@ Solidity, which is designed for creating smart contracts, is a statically-typed 
 20. ### What are the two APIs that a smart contract uses to interface with it?
 
 The two APIs used by a smart contract to interface with it are eth_sendTransaction and eth_call. Calls, when compared to gas, as a better option because gas is expensive while calls don’t cost anything. Therefore, while gas can change the blockchain, calls don’t. However, while transactions don’t return a value, that is not the case with calls.
+    **[⬆ Back to Top](#questions)**
+
+21. ### [Why is Solidity used in blockchain?]
+
+Solidity is used in blockchains for creating smart contracts. These smart contracts are responsible for implementing business logic and generating transactional records in the blockchain system. Solidity is used for various blockchain platforms, such as Ethereum, Ethereum Classic, and Binance Smart Chain.
+    **[⬆ Back to Top](#questions)**
+
+22. ### [Is Solidity frontend or backend?]
+
+Solidity is a backend language. The reason why blockchain platforms need a different backend language with specific features is that the front end is similar for both centralized and decentralized applications. What makes them different is the backend, which requires a unique high-level programming language such as Solidity.
+    **[⬆ Back to Top](#questions)**
+
+23. ### [How much do Solidity developers make?]
+
+Solidity developers have the scope to earn well with time owing to the demand for professionals who can use the language to create smart contracts for blockchain systems. The current national average salary that Solidity developers can earn is USD 1,20,000 per annum in United States.
+    **[⬆ Back to Top](#questions)**
+
+24. ### [Is Solidity the future?]
+
+Since decentralized applications and programs are gaining more popularity with time and have a greater scope of application for different sectors, it is safe to say that Solidity is the future.
     **[⬆ Back to Top](#questions)**
