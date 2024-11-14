@@ -39,16 +39,21 @@
 | 32   | [What are hexadecimal literals in Solidity?](#What-are-hexadecimal-literals-in-Solidity)
 | 33   | [What are the different Ether units available in Solidity?](#What-are-the-different-Ether-units-available-in-Solidity)
 | 34   | [What time units are available in Solidity?](#What-time-units-are-available-in-Solidity)
-| 0   | [What are storage variables in Solidity?](#What-are-storage-variables-in-Solidity)
-| 1   | [What are source files in Solidity?](#What-are-source-files-in-Solidity)
-| 2   | [What are state variables in Solidity?](#What-are-state-variables-in-Solidity)
-| 3   | [What are the main components of a Solidity Smart Contract?](#What-are-the-main-components-of-a-Solidity-Smart-Contract)
-| 4   | [What is special in smart contracts compared to other programs?](#What-is-special-in-smart-contracts-compared-to-other-programs)
-| 5   | [List the difference between unit8 and unit16.](#List-the-difference-between-unit8-and-unit16)
-| 6   | [What are private and public variables in Solidity?](#What-are-private-and-public-variables-in-Solidity)
-| 7   | [List the differences between view and pure functions.](#List-the-differences-between-view-and-pure-functions)
-| 8   | [List the difference between memory and storage in Solidity.](#List-the-difference-between-memory-and-storage-in-Solidity)
-| 9   | [List the differences between struct and array.](#List-the-differences-between-struct-and-array)
+| 35   | [What are storage variables in Solidity?](#What-are-storage-variables-in-Solidity)
+| 36   | [What are source files in Solidity?](#What-are-source-files-in-Solidity)
+| 37   | [What are state variables in Solidity?](#What-are-state-variables-in-Solidity)
+| 38   | [What are the main components of a Solidity Smart Contract?](#What-are-the-main-components-of-a-Solidity-Smart-Contract)
+| 39   | [What is special in smart contracts compared to other programs?](#What-is-special-in-smart-contracts-compared-to-other-programs)
+| 40   | [List the difference between unit8 and unit16.](#List-the-difference-between-unit8-and-unit16)
+| 41   | [What are private and public variables in Solidity?](#What-are-private-and-public-variables-in-Solidity)
+| 42   | [List the differences between view and pure functions.](#List-the-differences-between-view-and-pure-functions)
+| 43   | [List the difference between memory and storage in Solidity.](#List-the-difference-between-memory-and-storage-in-Solidity)
+| 44   | [List the differences between struct and array.](#List-the-differences-between-struct-and-array)
+| 45   | [000](#000)
+| 46   | [111](#111)
+| 47   | [222](#222)
+| 48   | [333](#333)
+| 49   | [444](#444)
 
 ## Answers
 1. ### What is Solidity?
@@ -222,54 +227,79 @@ The different ether units available in Solidity are wei, kwei, gwei, mwei, micro
 Solidity has time units where the lowest time unit is second and other time units are seconds, minutes, hours, days, and weeks.
     **[⬆ Back to Top](#questions)**
 
-0. ### What are storage variables in Solidity?
+35. ### What are storage variables in Solidity?
 
 Storage variables are the variables that are stored on the blockchain. These variables are permanent and are used for storing important data concerning the contract. They are also known as dynamic variables and are stored in the storage and cannot be changed. They are persistent.
     **[⬆ Back to Top](#questions)**
 
-1. ### What are source files in Solidity?
+36. ### What are source files in Solidity?
 
 A solidity source file can contain any number of smart contracts or library definitions in a single file.<ui><li>The source file can contain any number of contract definitions, imports, and pragma.</li><li>It is recommended that a developer maintains different source files for each contract or library definition to have better code maintainability. </li><li>The solidity source file has .sol extension.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-2. ### What are state variables in Solidity?
+37. ### What are state variables in Solidity?
 
 State variables are stored in the storage. These values are permanently stored in the contract’s storage.<ui><li>They store data directly on the blockchain.</li><li>These are declared inside a contract and outside the function.</li><li>These are expensive as they cost gas.</li><li>These can be assigned one of the access modifiers, public, private, or internal.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-3. ### What are the main components of a Solidity Smart Contract?
+38. ### What are the main components of a Solidity Smart Contract?
 
 The main components of a Solidity smart contract are:<ui><li><b>Pragma statement:</b> This statement specifies the required version of the solidity compiler for the smart contract.</li><li><b>State variables:</b> These are used to store the contract’s state data persistently on the blockchain.</li><li><b>Constructor:</b> This is a special function that is used for initializing state variables and called at once at contract deployment.</li><li><b>Functions:</b> Functions define the logic and behavior of the contract.</li><li><b>Modifiers:</b> These are the reusable code snippets that can be added to functions to modify their behavior.</li><li><b>Events:</b> Events are custom data structures that emit transaction logs for external listeners to monitor contract activity and state changes.</li><li><b>Inheritance:</b> Inheritance allows a contract to inherit properties from a base contract thus enabling code reuse and abstraction.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-4. ### What is special in smart contracts compared to other programs?
+39. ### What is special in smart contracts compared to other programs?
 
 '<ui><li><b>Immutable:</b> Once the smart contracts are deployed on the blockchain, their code cannot be altered. This makes the smart contract invulnerable to unauthorized access.</li><li><b>Decentralized execution:</b> The execution of smart contracts does not depend on a single authority but instead on multiple nodes that are spread around the world.</li><li><b>Self-executing:</b> Smart contracts are designed to execute predefined actions automatically when certain conditions specified in the contract are met. This reduces the need for intermediaries thus reducing the potential for human error.</li><li><b>Tokenization:</b> Smart contracts can be used to create and manage digital assets through the use of tokens.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-5. ### List the difference between unit8 and unit16.
+40. ### List the difference between unit8 and unit16.
 
 uint8 stores a number of up to 2^8-1. It has 8 bits.
 uint16 stores number up to 2^16-1. It has 16 bits.
     **[⬆ Back to Top](#questions)**
 
-6. ### What are private and public variables in Solidity?
+41. ### What are private and public variables in Solidity?
 
 Private variables can be accessed only within the contract that declares them. These are not accessible by an external entity nor by the contracts derived from the contract in which they are declared.
 Public variables can be accessed by any contract, function, or external entity. When these variables are declared in Solidity, the compiler automatically generates a getter function that allows any external entity or contract to read its value.
     **[⬆ Back to Top](#questions)**
     
-7. ### List the differences between view and pure functions.
+42. ### List the differences between view and pure functions.
 
 ![alt text](./src/image1.png)
     **[⬆ Back to Top](#questions)**
     
-8. ### List the difference between memory and storage in Solidity.
+43. ### List the difference between memory and storage in Solidity.
 
 ![alt text](./src/image2.png)
     **[⬆ Back to Top](#questions)**
     
-9. ### List the differences between struct and array.
+44. ### List the differences between struct and array.
 
 ![alt text](./src/image3.png)
+    **[⬆ Back to Top](#questions)**
+
+45. ### 000
+
+000
+    **[⬆ Back to Top](#questions)**
+
+46. ### 111
+
+111
+    **[⬆ Back to Top](#questions)**
+
+47. ### 222
+
+222
+    **[⬆ Back to Top](#questions)**
+
+48. ### 333
+
+333
+    **[⬆ Back to Top](#questions)**
+
+49. ### 444
+
+444
     **[⬆ Back to Top](#questions)**
