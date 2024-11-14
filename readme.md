@@ -64,6 +64,56 @@
 | 57  | [What is a staking pool in Solidity?](#What-is-a-staking-pool-in-Solidity)
 | 58  | [List the difference between public and private visibility modifiers in Solidity?](#List-the-difference-between-public-and-private-visibility-modifiers-in-Solidity)
 | 59  | [List different types of libraries in Solidity.](#List-different-types-of-libraries-in-Solidity)
+| 60  | [What is Decentralized Exchange (DEX)?](#What-is-Decentralized-Exchange-DEX)
+| 61  | [What is assert and require in Solidity?](#What-is-assert-and-require-in-Solidity)
+| 62  | [What is the formula to calculate Ethereum gas cost?](#What-is-the-formula-to-calculate-Ethereum-gas-cost)
+| 63  | [What is the difference between tx.origin and msg.sender?](#What-is-the-difference-between-txorigin-and-msgsender)
+| 64  | [What is the largest value a uint256 can store?](#What-is-the-largest-value-a-uint256-can-store)
+| 65  | [What is a sandwich attack?](#What-is-a-sandwich-attack)
+| 66  | [What is ERC165 used for?](#What-is-ERC165-used-for)
+| 67  | [What is TWAP?](#What-is-TWAP)
+| 68  | [What is a bonding curve?](#What-is-a-bonding-curve)
+| 69  | [What is a reentrancy attack in Solidity?](#What-is-a-reentrancy-attack-in-Solidity)
+| 70  | [Can you explain what Solidity is and its primary use case?](#Can-you-explain-what-Solidity-is-and-its-primary-use-case)
+| 71  | [How does Solidity handle contract inheritance?](#How-does-Solidity-handle-contract-inheritance)
+| 72  | [What are the key differences between 'memory' and 'storage' in Solidity?](#What-are-the-key-differences-between-memory-and-storage-in-Solidity)
+| 73  | [Explain the concept of 'gas' in Ethereum and how it relates to Solidity programming.](#Explain-the-concept-of-gas-in-Ethereum-and-how-it-relates-to-Solidity-programming)
+| 74  | [What are events in Solidity and why are they useful?](#What-are-events-in-Solidity-and-why-are-they-useful)
+| 75  | [How do you handle errors and exceptions in Solidity?](#How-do-you-handle-errors-and-exceptions-in-Solidity)
+| 76  | [What are the main security considerations when developing smart contracts in Solidity?](#What-are-the-main-security-considerations-when-developing-smart-contracts-in-Solidity)
+| 77  | [How would you optimize a Solidity contract to reduce gas costs?](#How-would-you-optimize-a-Solidity-contract-to-reduce-gas-costs)
+| 78  | [How do you manage state variables in a Solidity contract?](#How-do-you-manage-state-variables-in-a-Solidity-contract)
+| 79  | [What is the purpose of the 'constructor' function in Solidity?](#What-is-the-purpose-of-the-constructor-function-in-Solidity)
+| 80  | [Can you explain the difference between 'internal' and 'private' functions in Solidity?](#Can-you-explain-the-difference-between-internal-and-private-functions-in-Solidity)
+| 81  | [What are the advantages of using 'modifier' in Solidity?](#What-are-the-advantages-of-using-modifier-in-Solidity)
+| 82  | [How do you handle contract upgrades in Solidity?](#How-do-you-handle-contract-upgrades-in-Solidity)
+| 83  | [What is a 'multi-signature' wallet, and why is it used in Solidity?](#What-is-a-multi-signature-wallet-and-why-is-it-used-in-Solidity)
+| 84  | [How do you approach debugging and troubleshooting Solidity contracts?](#How-do-you-approach-debugging-and-troubleshooting-Solidity-contracts)
+| 85  | [What is the 'self-destruct' function in Solidity, and when should it be used?](#What-is-the-self-destruct-function-in-Solidity-and-when-should-it-be-used)
+| 86  | [How do you handle access control in Solidity contracts?](#How-do-you-handle-access-control-in-Solidity-contracts)
+| 87  | [What are the gas optimizations techniques you would use in a Solidity contract?](#What-are-the-gas-optimizations-techniques-you-would-use-in-a-Solidity-contract)
+| 88  | [How would you explain the concept of 'gas' in Ethereum to a non-technical stakeholder?](#How-would-you-explain-the-concept-of-gas-in-Ethereum-to-a-non-technical-stakeholder)
+| 89  | [Can you describe a situation where you had to optimize a smart contract for gas efficiency?](#Can-you-describe-a-situation-where-you-had-to-optimize-a-smart-contract-for-gas-efficiency)
+| 90  | [How would you implement a time-lock feature in a smart contract?](#How-would-you-implement-a-time-lock-feature-in-a-smart-contract)
+| 91  | [Explain the concept of 'reentrancy' and how you would prevent it in your smart contracts.](#Explain-the-concept-of-reentrancy-and-how-you-would-prevent-it-in-your-smart-contracts)
+| 92  | [How would you design a smart contract system for a decentralized voting application?](#How-would-you-design-a-smart-contract-system-for-a-decentralized-voting-application)
+| 93  | [How would you ensure the security of a smart contract in Solidity?](#How-would-you-ensure-the-security-of-a-smart-contract-in-Solidity)
+| 94  | [What are common security vulnerabilities in Solidity and how can they be mitigated?](#What-are-common-security-vulnerabilities-in-Solidity-and-how-can-they-be-mitigated)
+| 95  | [How do you handle the risks associated with external calls in Solidity?](#How-do-you-handle-the-risks-associated-with-external-calls-in-Solidity)
+| 96  | [What steps would you take to avoid denial-of-service (DoS) attacks in Solidity?](#What-steps-would-you-take-to-avoid-denial-of-service-DoS-attacks-in-Solidity)
+| 97  | [How would you secure sensitive data within a Solidity contract?](#How-would-you-secure-sensitive-data-within-a-Solidity-contract)
+| 98  | [What is the importance of conducting security audits on Solidity smart contracts?](#What-is-the-importance-of-conducting-security-audits-on-Solidity-smart-contracts)
+| 99  | [How do you handle private data in Solidity, given that the blockchain is public?](#How-do-you-handle-private-data-in-Solidity-given-that-the-blockchain-is-public)
+| 100  | [What are the best practices for writing secure smart contracts in Solidity?](#What-are-the-best-practices-for-writing-secure-smart-contracts-in-Solidity)
+| 101  | [111](#111)
+| 102  | [222](#222)
+| 103  | [333](#333)
+| 104  | [444](#444)
+| 105  | [555](#555)
+| 106  | [666](#666)
+| 107  | [777](#777)
+| 108  | [888](#888)
+| 109  | [999](#999)
 
 ## Answers
 1. ### What is Solidity?
@@ -365,4 +415,403 @@ Staking Pool in Solidity is a smart contract that allows users to pool their cry
 
 Deployed Library: Deployed libraries have their own addresses and several other smart contracts can use them.
 Embedded Library: Embedded libraries don’t have their unique address and they are deployed as part of the code of the smart contract that uses them.
+    **[⬆ Back to Top](#questions)**
+
+60. ### What is Decentralized Exchange (DEX)?
+
+The Decentralized Exchange (DEX) is a peer-to-peer crypto exchange that operates on a decentralized platform. It does not rely on a single centralized authority to facilitate trade instead it uses several blockchain features like smart contracts and AMM algorithms to enable the trade of crypto assets directly.<ui><li>It uses smart contracts to automate trade execution, manage order books, etc.</li><li>DEXs run on a network of nodes, usually powered by blockchain or distributed ledger technology.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+61. ### What is assert and require in Solidity?
+
+![alt text](./src/image5.png)
+    **[⬆ Back to Top](#questions)**
+
+62. ### What is the formula to calculate Ethereum gas cost?
+
+Gas fees are paid in Ethereum using this formula:
+![alt text](./src/image6.png)
+    **[⬆ Back to Top](#questions)**
+
+63. ### What is the difference between tx.origin and msg.sender?
+
+tx.origin is the address of the Externally Owner Account (EOA) that originated the transaction.
+msg.sender is the address of the smart contract or EOA that called the currently executing smart contract.
+    **[⬆ Back to Top](#questions)**
+
+64. ### What is the largest value a uint256 can store?
+
+uint256 is an unsigned integer that can hold a maximum value of 2^256-1. It requires 32 bytes of storage space.
+    **[⬆ Back to Top](#questions)**
+
+65. ### What is a sandwich attack?
+
+The sandwich attack is a form of front-running that targets decentralized finance protocols and services. It leverages the unique characteristics of DeFi to make money by manipulating crypto markets.<ui><li>The attacker identifies a potential victim transaction.</li><li>The attacker moves to send a buy transaction for the same asset pair which will fill before the user’s transaction.</li><li>This attacker transaction shifts the liquidity pool composition, resulting in the available exchange rates for subsequent transactions being different from that which was originally shown to other users whose transactions have not yet been executed.</li><li>Once the victim swap completes at the unfavorable exchange rate, the attacker follows up with a sell transaction for the asset pair which locks in their profit.</li><li>This second transaction �kruns’ the victim, completing the sandwich.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+66. ### What is ERC165 used for?
+
+The ERC165 is a standard to publish and detect what interfaces a smart contract implements.
+    **[⬆ Back to Top](#questions)**
+    
+67. ### What is TWAP?
+
+Time-Wieghted Average Price (TWAP) is an algorithmic strategy that aims to achieve an average execution price close to the time-weighted average price of the user-specified period. TWAP is calculated for executing large trade orders.
+    **[⬆ Back to Top](#questions)**
+    
+68. ### What is a bonding curve?
+
+Bonding curve is a mathematical concept that is used to describe the relationship between price and token supply.<ui><li>Bonding curve contracts sell the tokens to users by calculating the token price in Ether and issuing them after the payment, also buying them and paying with Ether.</li><li>Bonding curve contracts ensure that the price of each token increases as the number of tokens issued increases.</li></ui>
+    **[⬆ Back to Top](#questions)**
+    
+69. ### What is a reentrancy attack in Solidity?
+
+Reentrancy is a type of attack that can occur in smart contracts that allow untrusted external code to be executed within the contract. This can happen when a smart contract calls an external contract, and the external contract then calls back into the original contract, potentially causing an infinite loop.<ui><li>A reentrancy attack is a method of exploiting a vulnerability in a smart contract that allows an attacker to repeatedly call a function in the contract, causing an infinite loop and potentially stealing funds.</li><li>One way to prevent reentrancy attacks is to use a mutex, or mutual exclusion, lock to prevent multiple calls to the same function from occurring at the same time.</li><li>Another way is to use a guard condition, where a flag is set before external function calls and checked after.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+70. ### Can you explain what Solidity is and its primary use case?
+
+Solidity is a high-level, object-oriented programming language designed specifically for writing smart contracts on blockchain platforms, primarily Ethereum. It's statically typed and supports inheritance, libraries, and complex user-defined types.
+
+The primary use case for Solidity is developing smart contracts that run on the Ethereum Virtual Machine (EVM). These contracts can handle tasks like token creation, decentralized applications (DApps), and automating complex business logic on the blockchain.
+
+Look for candidates who can clearly articulate Solidity's purpose and its connection to blockchain technology. Strong answers will mention its role in smart contract development and may touch on its similarities to languages like JavaScript or C++.
+    **[⬆ Back to Top](#questions)**
+
+71. ### How does Solidity handle contract inheritance?
+
+Solidity supports multiple inheritance, allowing a contract to inherit properties and functions from one or more parent contracts. This is achieved using the 'is' keyword followed by the name of the parent contract(s).
+
+Inheritance in Solidity follows the C3 linearization algorithm to resolve conflicts when multiple parent contracts are involved. This ensures a deterministic order of resolution for inherited functions and state variables.
+
+Ideal candidates should demonstrate an understanding of how inheritance can be used to create more modular and reusable code in Solidity development. Look for explanations that touch on the benefits of inheritance, such as code reuse and the ability to create more complex contracts through composition.
+    **[⬆ Back to Top](#questions)**
+
+72. ### What are the key differences between 'memory' and 'storage' in Solidity?
+
+'Memory' and 'storage' are two important data locations in Solidity that affect how variables are stored and accessed:
+- Storage: This is where all state variables are stored. It's persistent between function calls and transactions, but it's also more expensive to use in terms of gas costs.
+- Memory: This is used to hold temporary values. It's erased between external function calls and is less expensive to use.
+A strong answer should highlight the persistence of storage versus the temporary nature of memory, as well as touch on the gas cost implications. Look for candidates who can provide examples of when to use each, such as using memory for function parameters and local variables, and storage for state that needs to persist.
+    **[⬆ Back to Top](#questions)**
+
+73. ### Explain the concept of 'gas' in Ethereum and how it relates to Solidity programming.
+
+Gas is a unit of measurement for the computational work required to execute operations on the Ethereum network. Every operation in a smart contract costs a certain amount of gas, which is paid for in Ether by the person initiating the transaction.
+
+In Solidity programming, gas considerations are crucial for optimizing contract efficiency and cost-effectiveness. Developers need to be aware of gas costs associated with different operations and data structures to write economical contracts.
+
+Look for answers that demonstrate an understanding of the relationship between code complexity and gas costs. Candidates should be able to discuss strategies for gas optimization, such as using appropriate data types, minimizing storage usage, and avoiding unnecessary computations in loops.
+    **[⬆ Back to Top](#questions)**
+
+74. ### What are events in Solidity and why are they useful?
+
+Events in Solidity are a way for smart contracts to communicate that something has happened on the blockchain to the front-end application or other listening contracts. They are inheritable members of contracts that, when emitted, cause the arguments to be stored in the transaction's log.
+
+Events are useful for several reasons:
+
+- They provide a cheaper form of storage compared to contract state variables
+- They allow external applications to react to changes in the contract
+- They can be used for debugging and monitoring contract activity
+Strong candidates should be able to explain how to declare and emit events, and discuss real-world use cases. Look for answers that touch on the importance of events in creating responsive and interactive decentralized applications.
+    **[⬆ Back to Top](#questions)**
+
+75. ### How do you handle errors and exceptions in Solidity?
+
+Solidity provides several mechanisms for handling errors and exceptions:
+
+1. Require(): Used to check conditions and throw an exception if the condition is not met.
+2. Assert(): Used to check for internal errors and invariants.
+3. Revert(): Used to flag an error and revert the current call.
+4. Try/Catch: Introduced in Solidity 0.6.0 for external function calls and contract creation.
+A comprehensive answer should explain the differences between these mechanisms and when to use each. Look for candidates who understand the importance of proper error handling in maintaining contract integrity and providing meaningful feedback to users and other contracts.
+    **[⬆ Back to Top](#questions)**
+
+76. ### What are the main security considerations when developing smart contracts in Solidity?
+
+Security is paramount in smart contract development due to the immutable and financial nature of blockchain transactions. Key considerations include:
+
+- Reentrancy attacks: Ensuring functions that make external calls are protected against recursive calls
+- Integer overflow/underflow: Using SafeMath libraries or Solidity 0.8.0+ built-in checks
+- Access control: Implementing proper authorization checks
+- Gas limitations: Avoiding operations that could exceed block gas limits
+- Front-running: Mitigating risks of transaction order exploitation
+Ideal candidates should demonstrate awareness of common vulnerabilities and best practices for secure smart contract development. Look for answers that emphasize the importance of code audits, testing, and staying updated on the latest security recommendations.
+    **[⬆ Back to Top](#questions)**
+    
+77. ### How would you optimize a Solidity contract to reduce gas costs?
+
+Optimizing gas costs is crucial for creating efficient and cost-effective smart contracts. Some key strategies include:
+
+- Using appropriate data types (e.g., uint8 instead of uint256 for small numbers)
+- Minimizing storage usage and preferring memory for temporary data
+- Avoiding expensive operations in loops
+- Using events instead of storing data when possible
+- Optimizing function visibility (external vs public)
+- Utilizing libraries for common functions
+Look for answers that demonstrate a deep understanding of how different Solidity constructs affect gas consumption. Strong candidates should be able to discuss trade-offs between optimization and readability, and mention tools or techniques they use to analyze and reduce gas costs.
+    **[⬆ Back to Top](#questions)**
+    
+78. ### How do you manage state variables in a Solidity contract?
+
+State variables in Solidity are variables whose values are permanently stored on the blockchain. These variables can be public or private and are declared inside a contract but outside of any function. Public state variables automatically generate a getter function, making it easy to read their values from outside the contract.
+
+When managing state variables, it's crucial to consider their visibility and data type. The values stored in state variables persist between function calls and transactions, so they should be used judiciously to optimize gas consumption.
+
+Look for candidates who understand the importance of managing state variables efficiently and can explain their role in maintaining the contract's data integrity. A strong candidate should also mention best practices for minimizing gas costs related to state variable usage.
+    **[⬆ Back to Top](#questions)**
+    
+79. ### What is the purpose of the 'constructor' function in Solidity?
+
+The constructor function in Solidity is a special function that is executed only once when the contract is deployed. It is typically used to initialize state variables and set up initial contract conditions. After the contract is deployed, the constructor function cannot be called again.
+
+Constructors can take arguments to set up initial values based on dynamic inputs at deployment time. This is useful for passing critical information to the contract that should only be set once.
+
+In a candidate's response, look for a clear understanding of how and when to use constructors. The candidate should also explain the significance of initializing state variables and setting up contract conditions during deployment.
+    **[⬆ Back to Top](#questions)**
+
+80. ### Can you explain the difference between 'internal' and 'private' functions in Solidity?
+
+'Internal' and 'private' are two types of function visibility specifiers in Solidity. Internal functions can be called within the same contract or any derived contracts. This makes them useful for creating reusable functions that can be accessed in inherited contracts.
+
+'Private' functions, on the other hand, can only be called within the contract in which they are defined. They are not accessible by any derived contracts, making them more restrictive in scope.
+
+An ideal candidate should demonstrate an understanding of when to use 'internal' versus 'private' functions based on the desired encapsulation and accessibility. They should also explain how these visibility specifiers contribute to the security and maintainability of the contract.
+    **[⬆ Back to Top](#questions)**
+
+81. ### What are the advantages of using 'modifier' in Solidity?
+
+Modifiers in Solidity are used to alter the behavior of functions. They can be applied to functions to add preconditions, postconditions, or other checks. This allows for more readable and maintainable code by separating concerns and reducing redundancy.
+
+Modifiers are especially useful for enforcing access control, validating inputs, and ensuring certain conditions are met before executing a function. They can also be combined and reused across multiple functions, making code more modular.
+
+When evaluating a candidate's response, look for an understanding of how modifiers improve code quality and maintainability. The candidate should also provide examples of common use cases, such as access control or input validation, to demonstrate their practical knowledge.
+    **[⬆ Back to Top](#questions)**
+
+82. ### How do you handle contract upgrades in Solidity?
+
+Upgrading a smart contract in Solidity can be challenging because the code deployed on the blockchain is immutable. However, there are strategies to manage upgrades, such as the proxy pattern. This involves deploying a proxy contract that delegates calls to an implementation contract. When an upgrade is needed, you deploy a new implementation contract and update the proxy to point to it.
+
+Another approach is to use a modular architecture, where you separate different functionalities into individual contracts. This allows you to upgrade specific modules without affecting the entire system.
+
+Look for candidates who understand the complexities of contract upgrades and can discuss different strategies for managing them. Ideal candidates should demonstrate knowledge of the proxy pattern and modular architecture and explain the trade-offs and benefits of each approach.
+    **[⬆ Back to Top](#questions)**
+
+83. ### What is a 'multi-signature' wallet, and why is it used in Solidity?
+
+A multi-signature wallet in Solidity is a type of wallet that requires multiple parties to approve a transaction before it can be executed. This adds an extra layer of security by preventing a single point of failure.
+
+Multi-signature wallets are commonly used in decentralized applications and organizations to manage funds securely. They ensure that no single party can unilaterally control the wallet, reducing the risk of fraud or unauthorized transactions.
+
+An ideal candidate should explain the security benefits of multi-signature wallets and provide practical examples of their use in decentralized applications. They should also discuss how multi-signature wallets contribute to trust and security in blockchain systems.
+    **[⬆ Back to Top](#questions)**
+
+84. ### How do you approach debugging and troubleshooting Solidity contracts?
+
+Debugging and troubleshooting Solidity contracts involve various techniques and tools. One common method is using events to log specific actions or values during contract execution. These logs can then be analyzed to identify issues.
+
+Tools like Remix, Truffle, and Hardhat offer debugging functionalities, including breakpoints and stack traces. These tools help developers navigate through the execution flow and pinpoint errors.
+
+When evaluating a candidate's response, look for a comprehensive understanding of different debugging techniques and tools. The candidate should also emphasize the importance of thorough testing and validation to minimize debugging efforts.
+    **[⬆ Back to Top](#questions)**
+
+85. ### What is the 'self-destruct' function in Solidity, and when should it be used?
+
+The 'self-destruct' function in Solidity is used to permanently delete a contract from the blockchain, removing its code and freeing up storage space. When a contract is self-destructed, any remaining Ether balance is sent to a specified address.
+
+Self-destruct should be used cautiously, as it is irreversible. Common use cases include emergency shutdowns, contract upgrades, or when the contract has fulfilled its purpose.
+
+A strong candidate should explain the implications of using 'self-destruct' and provide scenarios where it is appropriate. They should also discuss the importance of designing contracts with clear self-destruct conditions and ensuring it aligns with the overall contract logic.
+    **[⬆ Back to Top](#questions)**
+
+86. ### How do you handle access control in Solidity contracts?
+
+Access control in Solidity contracts involves restricting who can call certain functions or access specific data. The most common way to handle access control is by using modifiers, such as 'onlyOwner,' to restrict function execution to specific addresses.
+
+Another approach is to use role-based access control, where different roles are assigned to addresses, and each role has specific permissions. Libraries like OpenZeppelin provide ready-to-use access control implementations.
+
+Look for candidates who understand different access control mechanisms and their importance in securing contracts. The candidate should also discuss practical examples and best practices for implementing robust access control.
+    **[⬆ Back to Top](#questions)**
+    
+87. ### What are the gas optimizations techniques you would use in a Solidity contract?
+
+Gas optimization in Solidity is essential to reduce the cost of executing transactions. Techniques include minimizing storage operations, using smaller data types, and avoiding expensive operations like loops and nested calls.
+
+Other strategies involve using libraries and external contracts, optimizing function visibility, and leveraging events instead of state variables for logging purposes.
+
+An ideal candidate should discuss various gas optimization techniques and their impact on contract efficiency. They should also provide examples and explain the trade-offs involved in different optimization strategies.
+    **[⬆ Back to Top](#questions)**
+    
+88. ### How would you explain the concept of 'gas' in Ethereum to a non-technical stakeholder?
+
+A strong answer should include an analogy that makes the concept relatable. For example, a candidate might explain:
+
+Gas in Ethereum is like fuel for a car. Just as you need to put gas in your car to make it run, you need to pay gas fees to execute transactions or run smart contracts on the Ethereum network. The more complex the operation, the more 'gas' it requires, similar to how a longer journey needs more fuel.
+
+Look for candidates who can simplify complex concepts without losing accuracy. They should also mention that gas fees help prevent network spam and compensate miners for their computational work.
+    **[⬆ Back to Top](#questions)**
+    
+89. ### Can you describe a situation where you had to optimize a smart contract for gas efficiency?
+
+An ideal answer should include a specific example from the candidate's experience. They might describe:
+
+- Identifying inefficient loops or redundant storage operations
+- Implementing gas-saving techniques like using shorter data types
+- Utilizing external functions instead of public ones where possible
+- Employing the 'memory' keyword for temporary data storage
+- Results achieved, such as percentage reduction in gas costs
+Pay attention to the candidate's problem-solving approach and their understanding of Solidity's unique characteristics. A strong candidate will also mention the importance of balancing gas optimization with code readability and maintainability.
+    **[⬆ Back to Top](#questions)**
+
+90. ### How would you implement a time-lock feature in a smart contract?
+
+A comprehensive answer should outline the following steps:
+
+1. Use a state variable to store the unlock time
+2. Implement a function to set the time lock, usually in the constructor
+3. Create a modifier that checks if the current time is past the unlock time
+4. Apply this modifier to functions that should be time-locked
+Look for candidates who mention potential pitfalls, such as relying solely on block.timestamp, which can be manipulated by miners. Strong candidates might suggest using block numbers instead of timestamps for more predictable results, or implementing a two-step process for critical operations to mitigate risks.
+    **[⬆ Back to Top](#questions)**
+
+91. ### Explain the concept of 'reentrancy' and how you would prevent it in your smart contracts.
+
+A solid answer should include:
+
+1. Definition: Reentrancy is a vulnerability where an external contract call can interrupt the execution of the original function and make a recursive call back into it before the first execution is complete.
+2. Prevention methods:
+  - Using the 'checks-effects-interactions' pattern
+  - Implementing a reentrancy guard modifier
+  - Avoiding sending Ether or making external calls until all internal work is done
+Look for candidates who can provide a clear explanation of the vulnerability and demonstrate understanding of multiple prevention techniques. Strong candidates might also mention the importance of thorough testing and audits to catch potential reentrancy issues.
+    **[⬆ Back to Top](#questions)**
+
+92. ### How would you design a smart contract system for a decentralized voting application?
+
+A well-thought-out answer should cover the following aspects:
+
+1. Voter registration and verification
+2. Ballot structure and storage
+3. Vote casting mechanism
+4. Vote counting and result calculation
+5. Ensuring vote privacy and preventing double voting
+6. Implementing time constraints for the voting period
+Evaluate the candidate's ability to consider security, scalability, and user experience. Strong candidates might discuss trade-offs between on-chain and off-chain components, or propose innovative solutions like zk-SNARKs for privacy. Look for answers that demonstrate an understanding of decentralized systems and their unique challenges.
+    **[⬆ Back to Top](#questions)**
+
+93. ### How would you ensure the security of a smart contract in Solidity?
+
+To ensure the security of a smart contract, developers must follow a multi-layered approach. This includes using established design patterns like the Checks-Effects-Interactions pattern, writing thorough unit tests, and conducting security audits.
+
+Additionally, developers should keep their Solidity version up to date and use well-vetted libraries. External audits and bug bounty programs can also be crucial in finding vulnerabilities.
+
+Look for candidates who emphasize a holistic approach to security, mention specific patterns and practices, and understand the importance of continuous monitoring and updates.
+    **[⬆ Back to Top](#questions)**
+
+94. ### What are common security vulnerabilities in Solidity and how can they be mitigated?
+
+Common security vulnerabilities in Solidity include reentrancy, integer overflow and underflow, and front-running. These can be mitigated by following best practices and using tools like OpenZeppelin for secure contract development.
+
+To prevent reentrancy attacks, the Checks-Effects-Interactions pattern should be followed. For integer overflow/underflow, SafeMath library can be used. Preventing front-running involves using commit-reveal schemes or other encryption methods.
+
+An ideal candidate should be able to identify these vulnerabilities and articulate multiple mitigation strategies. They should also be familiar with using established libraries and frameworks.
+    **[⬆ Back to Top](#questions)**
+
+95. ### How do you handle the risks associated with external calls in Solidity?
+
+Handling external calls in Solidity requires caution because they can introduce vulnerabilities like reentrancy. One approach is to follow the Checks-Effects-Interactions pattern, ensuring that state changes are made before making any external calls.
+
+Using limited external calls and employing small, modular contracts can also reduce risk. Developers should also consider using interfaces to clearly define the expected behavior of external contracts.
+
+Look for answers that show an understanding of the inherent risks and demonstrate practical ways to minimize those risks, including following best practices and modular design.
+    **[⬆ Back to Top](#questions)**
+
+96. ### What steps would you take to avoid denial-of-service (DoS) attacks in Solidity?
+
+Avoiding DoS attacks in Solidity involves several strategies. One key method is to ensure that loops have a fixed and manageable number of iterations. Contracts should also avoid heavy reliance on external calls and limit the use of gas-intensive operations.
+
+Using pull rather than push patterns for sending funds can also help mitigate DoS risks. Developers should also ensure that critical functions aren't reliant on external data sources that can be manipulated.
+
+Candidates should mention both design patterns and practical coding techniques that minimize the risk of DoS attacks. Look for an understanding of how resource management and careful coding practices can prevent such vulnerabilities.
+    **[⬆ Back to Top](#questions)**
+    
+97. ### How would you secure sensitive data within a Solidity contract?
+
+Securing sensitive data in Solidity involves using encryption and access controls. While Solidity doesn't support encryption natively, developers can use off-chain solutions for encryption and store only the hashed values on-chain.
+
+Implementing role-based access control using modifiers and establishing strong, verifiable authentication mechanisms are also crucial. Additionally, developers should audit their code to ensure there are no vulnerabilities that expose sensitive data.
+
+An ideal answer will mention both on-chain and off-chain strategies for protecting sensitive information. Look for an understanding of encryption methods, access controls, and the importance of regular code audits.
+    **[⬆ Back to Top](#questions)**
+    
+98. ### What is the importance of conducting security audits on Solidity smart contracts?
+
+Security audits are critical for identifying and fixing vulnerabilities in smart contracts before they are deployed. These audits involve a thorough review of the contract code by security experts who look for common issues like reentrancy, overflow/underflow, and unauthorized access.
+
+Audits help ensure that the contract behaves as expected and that there are no loopholes that malicious actors can exploit. They provide an additional layer of security and can greatly increase user trust in the contract.
+
+Candidates should emphasize the importance of third-party audits, mention any standardized audit processes, and understand how audits fit into the overall development lifecycle. Practical experience with audits is a plus.
+    **[⬆ Back to Top](#questions)**
+    
+99. ### How do you handle private data in Solidity, given that the blockchain is public?
+
+Handling private data in Solidity is challenging because the blockchain is inherently public. One approach is to minimize the amount of sensitive data stored on-chain and use off-chain storage solutions for private data.
+
+Developers can also use techniques like hashing, encryption, and zero-knowledge proofs to protect data. Using private blockchain networks where access can be restricted may also be an option.
+
+Look for candidates who understand the limitations of on-chain privacy and can propose practical solutions to protect sensitive information. They should also be aware of the trade-offs involved in different approaches.
+    **[⬆ Back to Top](#questions)**
+
+100. ### What are the best practices for writing secure smart contracts in Solidity?
+
+Best practices for writing secure smart contracts in Solidity include adhering to the latest Solidity version, following established design patterns like Checks-Effects-Interactions, and using libraries like OpenZeppelin for secure code.
+
+Writing comprehensive tests, conducting security audits, and using formal verification methods are also important. Developers should also stay updated on known vulnerabilities and best practices through community resources and literature.
+
+An ideal candidate should mention multiple best practices and demonstrate a proactive approach to security. They should also show familiarity with tools and resources that help maintain the security of the smart contract.
+    **[⬆ Back to Top](#questions)**
+
+101. ### 111
+
+111
+    **[⬆ Back to Top](#questions)**
+
+102. ### 222
+
+222
+    **[⬆ Back to Top](#questions)**
+
+103. ### 333
+
+333
+    **[⬆ Back to Top](#questions)**
+
+104. ### 444
+
+444
+    **[⬆ Back to Top](#questions)**
+
+105. ### 555
+
+555
+    **[⬆ Back to Top](#questions)**
+
+106. ### 666
+
+666
+    **[⬆ Back to Top](#questions)**
+    
+107. ### 777
+
+777
+    **[⬆ Back to Top](#questions)**
+    
+108. ### 888
+
+888
+    **[⬆ Back to Top](#questions)**
+    
+109. ### 999
+
+999
     **[⬆ Back to Top](#questions)**
