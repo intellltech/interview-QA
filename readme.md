@@ -49,11 +49,21 @@
 | 42   | [List the differences between view and pure functions.](#List-the-differences-between-view-and-pure-functions)
 | 43   | [List the difference between memory and storage in Solidity.](#List-the-difference-between-memory-and-storage-in-Solidity)
 | 44   | [List the differences between struct and array.](#List-the-differences-between-struct-and-array)
-| 45   | [000](#000)
-| 46   | [111](#111)
-| 47   | [222](#222)
-| 48   | [333](#333)
-| 49   | [444](#444)
+| 45   | [How much is 1 gwei of Ether?](#How-much-is-1-gwei-of-Ether)
+| 46   | [How much is 1 wei of Ether?](#How-much-is-1-wei-of-Ether)
+| 47   | [How much is 1 kwei of Ether?](#How-much-is-1-kwei-of-Ether)
+| 48   | [What is the difference between Solidity and other programming languages?](#What-is-the-difference-between-Solidity-and-other-programming-languages)
+| 49   | [What is the ABI of the contract?](#What-is-the-ABI-of-the-contract)
+| 50  | [What are the different types of conversions allowed in Solidity?](#What-are-the-different-types-of-conversions-allowed-in-Solidity)
+| 51  | [How does error handling work in Solidity?](#How-does-error-handling-work-in-Solidity)
+| 52  | [What do revert() and revert(string reason) do?](#What-do-revert-and-revertstring-reason-do)
+| 53  | [What happens if the smart contract does not specify the Solidity version?](#What-happens-if-the-smart-contract-does-not-specify-the-Solidity-version)
+| 54  | [Explain the role of the Ethereum Virtual Machine (EVM).](#Explain-the-role-of-the-Ethereum-Virtual-Machine-EVM)
+| 55  | [Does EVM understands Solidity?](#Does-EVM-understands-Solidity)
+| 56  | [What is a proxy contract in Solidity?](#What-is-a-proxy-contract-in-Solidity)
+| 57  | [What is a staking pool in Solidity?](#What-is-a-staking-pool-in-Solidity)
+| 58  | [List the difference between public and private visibility modifiers in Solidity?](#List-the-difference-between-public-and-private-visibility-modifiers-in-Solidity)
+| 59  | [List different types of libraries in Solidity.](#List-different-types-of-libraries-in-Solidity)
 
 ## Answers
 1. ### What is Solidity?
@@ -279,27 +289,80 @@ Public variables can be accessed by any contract, function, or external entity. 
 ![alt text](./src/image3.png)
     **[⬆ Back to Top](#questions)**
 
-45. ### 000
+45. ### How much is 1 gwei of Ether?
 
-000
+1 Gwei equals 0.000000001 or 10e-9 ETH. 1 ETH equals one billion (10e9) Gwei.
     **[⬆ Back to Top](#questions)**
 
-46. ### 111
+46. ### How much is 1 wei of Ether?
 
-111
+1 wei is equivalent to 10^-18 ETH. 1 ETH is equal to 1,000,000,000,000,000,000 wei/
     **[⬆ Back to Top](#questions)**
 
-47. ### 222
+47. ### How much is 1 kwei of Ether?
 
-222
+1 kwei is equal to 0.00000000 ETH.
     **[⬆ Back to Top](#questions)**
 
-48. ### 333
+48. ### What is the difference between Solidity and other programming languages?
 
-333
+Programming languages like Python, C, and C++ are designed to create centralized applications. On the other hand, Solidity is designed to work with Ethereum Virtual Machine and is used to create smart contracts that work in a decentralized environment. 
+Solidity differs from the EVM-targeting languages like Serpent and Mutan in the way that Solidity supports complex member variables for the contracts, and supports inheritance.
+Solidity is a statically-typed language and Javascript is a dynamically typed language.
     **[⬆ Back to Top](#questions)**
 
-49. ### 444
+49. ### What is the ABI of the contract?
 
-444
+The Application Binary Interface (ABI) allows anyone writing a smart contract to be able to communicate between a web application written in high-level programming language and the bytecode that is understandable by EVM.<ui><li>ABI defines how the contents of the library are stored inside the file and the program uses the ABI to search through the file and find what it needs.</li><li>These act as function selectors defining the specific methods that can be called to a smart contract for execution.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+50. ### What are the different types of conversions allowed in Solidity?
+
+Solidity allows Implicit and Explicit conversions.<ui><li>Implicit conversion takes place in solidity if it makes sense semantically and no information is lost.</li><li>Explicit conversion can be done in cases when the compiler is not allowing implicit conversion but one is sure of what to do and how to do it. Explicit conversion can be done using casting or constructor-like syntax.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+51. ### How does error handling work in Solidity?
+
+Solidity provides various functions for error handling where the solidity code is compiled to the byte code and the syntax error check happens at the compile time while the runtime errors are difficult to catch and occur while executing the smart contract.<ui><li>When an error occurs the state is reverted back to its original state.</li><li>This undoes all the changes made to the state in the current call to the smart contract.</li></ui>
+    **[⬆ Back to Top](#questions)**
+
+52. ### What do revert() and revert(string reason) do?
+
+Both of them are error-handling methods in Solidity.<ui><li><b>revert():</b> This aborts the execution of the smart contract and reverts the state changes.</li><li><b>revert(string reason):</b> This aborts the execution of the smart contract and reverts the state changes and provides the explanatory string.</li>
+    **[⬆ Back to Top](#questions)**
+
+53. ### What happens if the smart contract does not specify the Solidity version?
+
+Failure to choose the correct version of Solidity while programming the smart contract might lead to the smart contract compilation failure.<ui><li>A contract can be annotated with version pragma that indicates the version that is supported to make code reuse easier.</li><li>There are two ways to use version pragma:<ui><li>“pragma solidity^version”.</li><li>“pragma solidity version”.</li></ui></li></ui>
+    **[⬆ Back to Top](#questions)**
+
+54. ### Explain the role of the Ethereum Virtual Machine (EVM).
+
+Ethereum Virtual Machine (EVM) serves as the runtime environment for smart contracts running on the Ethereum Blockchain and ensures that smart contracts are executed securely across all nodes in the network.<ui><li>The EVM process the EVM bytecode generated from high-level smart contract languages like Solidity.</li><li>EVM is responsible for maintaining the state of the Ethereum blockchain including the contract state. When the contract’s state changes due to the execution of the function then EVM updates the contract’s state.</li><li>EVM uses gas to measure the cost of executing the smart contract. The EVM calculates the total gas used during contract execution.</li>
+    **[⬆ Back to Top](#questions)**
+
+55. ### Does EVM understands Solidity?
+
+The EVM does not directly understand Solidity as it understands and executes bytecode. When a transaction is executed EVM reads and processes the corresponding bytecode instructions.
+    **[⬆ Back to Top](#questions)**
+
+56. ### What is a proxy contract in Solidity?
+
+A proxy contract in Solidity is a design pattern that employs a secondary contract to act as an intermediary between the users and the main contract. It is often used for storage optimization purposes.
+    **[⬆ Back to Top](#questions)**
+    
+57. ### What is a staking pool in Solidity?
+
+Staking Pool in Solidity is a smart contract that allows users to pool their cryptocurrency holdings together and participate in various blockchain activities like PoS consensus, etc.<ui><li>It helps to maximize potential earnings.</li><li>It also helps to mitigate risks associated with individual staking.</li></ui>
+    **[⬆ Back to Top](#questions)**
+    
+58. ### List the difference between public and private visibility modifiers in Solidity?
+
+![alt text](./src/image4.png)
+    **[⬆ Back to Top](#questions)**
+    
+59. ### List different types of libraries in Solidity.
+
+Deployed Library: Deployed libraries have their own addresses and several other smart contracts can use them.
+Embedded Library: Embedded libraries don’t have their unique address and they are deployed as part of the code of the smart contract that uses them.
     **[⬆ Back to Top](#questions)**
