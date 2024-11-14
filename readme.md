@@ -7,7 +7,7 @@
 |     | **Behavioural Questions**                                                                                                                                                                                                                   
 | 1   | [What is Solidity?](#What-is-Solidity) 
 | 2   | [What are some important features of Solidity?](#What-are-some-important-features-of-Solidity)                                                                                                
-| 3   | [How to create components in React?](#how-to-create-components-in-react)
+| 3   | [What types of applications can be developed using Solidity?](#What-types-of-applications-can-be-developed-using-Solidity)
 
 
 
@@ -22,25 +22,9 @@ Solidity is a high-level language used in the blockchain ecosystem for implement
 Solidity has some salient features, which include libraries, contracts, and inheritance support. With Solidity, users can also create custom data types which can be a crucial part of smart contract development.
     **[⬆ Back to Top](#questions)**
 
-3. ### How to create components in React?
+3. ### What types of applications can be developed using Solidity?
    
-Components form the fundamental building blocks of a React application.
-
-React provides two ways to create a component – function components and class components.
-
-Function Components is the simplest way to create a component. It uses pure JavaScript functions that accept props and returns a React element.
-
-function Welcome({ message }) {
-  return <h1>{`Hello, ${message}`}</h1>
-}
-
-Class Components, on the other hand, uses ES6 class to define a component. The same function component can be rewritten as the following class component:
-
-class Welcome extends React.Component {
-  render() {
-    return <h1>{`Hello, ${this.props.message}`}</h1>
-  }
-}
+Solidity finds its application in creating smart contracts on Ethereum, which is a decentralized platform that is responsible for running smart contracts. Smart contracts function just as programmed and they are not prone to third-party interference. While it is most commonly used for developing smart contracts, you can also develop complex decentralized applications. You can develop various aspects, such as voting systems, crowdfunding platforms, decentralized exchanges, lending platforms, and much more.
     **[⬆ Back to Top](#questions)**
 
 
