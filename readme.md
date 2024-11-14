@@ -105,15 +105,15 @@
 | 98  | [What is the importance of conducting security audits on Solidity smart contracts?](#What-is-the-importance-of-conducting-security-audits-on-Solidity-smart-contracts)
 | 99  | [How do you handle private data in Solidity, given that the blockchain is public?](#How-do-you-handle-private-data-in-Solidity-given-that-the-blockchain-is-public)
 | 100  | [What are the best practices for writing secure smart contracts in Solidity?](#What-are-the-best-practices-for-writing-secure-smart-contracts-in-Solidity)
-| 101  | [111](#111)
-| 102  | [222](#222)
-| 103  | [333](#333)
-| 104  | [444](#444)
-| 105  | [555](#555)
-| 106  | [666](#666)
-| 107  | [777](#777)
-| 108  | [888](#888)
-| 109  | [999](#999)
+| 101  | [How would you design a smart contract system for a decentralized lending platform?](#How-would-you-design-a-smart-contract-system-for-a-decentralized-lending-platform)
+| 102  | [Describe a situation where you had to optimize a complex Solidity contract for gas efficiency. What strategies did you employ?](#Describe-a-situation-where-you-had-to-optimize-a-complex-Solidity-contract-for-gas-efficiency-What-strategies-did-you-employ)
+| 103  | [How would you implement a voting system in Solidity that ensures one vote per address while maintaining voter privacy?](#How-would-you-implement-a-voting-system-in-Solidity-that-ensures-one-vote-per-address-while-maintaining-voter-privacy)
+| 104  | [Explain how you would design a token vesting contract with multiple beneficiaries and varying vesting schedules.](#Explain-how-you-would-design-a-token-vesting-contract-with-multiple-beneficiaries-and-varying-vesting-schedules)
+| 105  | [How would you implement a decentralized exchange (DEX) in Solidity, and what key features wouldXou include?](#How-would-you-implement-a-decentralized-exchange-DEX-in-Solidity-and-what-key-features-would-you-include)
+| 106  | [Describe how you would implement a multi-signature wallet contract in Solidity.](#Describe-how-you-would-implement-a-multi-signature-wallet-contract-in-Solidity)
+| 107  | [How would you design a contract system for a decentralized insurance platform?](#How-would-you-design-a-contract-system-for-a-decentralized-insurance-platform)
+| 108  | [Explain how you would implement a yield farming contract in Solidity.](#Explain-how-you-would-implement-a-yield-farming-contract-in-Solidity)
+| 109  | [How would you design a contract for a decentralized autonomous organization (DAO) in Solidity?](#How-would-you-design-a-contract-for-a-decentralized-autonomous-organization-DAO-in-Solidity)
 
 ## Answers
 1. ### What is Solidity?
@@ -771,47 +771,117 @@ Writing comprehensive tests, conducting security audits, and using formal verifi
 An ideal candidate should mention multiple best practices and demonstrate a proactive approach to security. They should also show familiarity with tools and resources that help maintain the security of the smart contract.
     **[⬆ Back to Top](#questions)**
 
-101. ### 111
+101. ### How would you design a smart contract system for a decentralized lending platform?
 
-111
+A strong candidate should outline a system that includes the following components:
+
+- A main contract to manage the overall lending platform
+- Token contracts for handling collateral and loan assets
+- Interest rate calculation mechanisms
+- Liquidation protocols for defaulted loans
+- User account management and balance tracking
+- Safety measures like emergency pause functions and upgradability
+Look for answers that demonstrate an understanding of DeFi principles, security considerations, and gas optimization techniques. The ideal response should also touch on how the system would handle different scenarios like partial repayments or early loan closures.
     **[⬆ Back to Top](#questions)**
 
-102. ### 222
+102. ### Describe a situation where you had to optimize a complex Solidity contract for gas efficiency. What strategies did you employ?
 
-222
+An experienced Solidity developer should be able to share a specific example and explain their optimization process. They might mention strategies such as:
+
+- Reducing the number of storage operations
+- Using events instead of storing unnecessary data
+- Optimizing loop structures
+- Employing tight variable packing
+- Utilizing libraries for commonly used functions
+- Implementing batch operations where possible
+Pay attention to how the candidate balances gas efficiency with code readability and maintainability. A strong answer will also include before-and-after comparisons of gas costs and an explanation of how they measured the improvements.
     **[⬆ Back to Top](#questions)**
 
-103. ### 333
+103. ### How would you implement a voting system in Solidity that ensures one vote per address while maintaining voter privacy?
 
-333
+A well-thought-out answer should include the following elements:
+
+- Use of a mapping to track whether an address has voted
+- Implementation of a commit-reveal scheme to maintain privacy
+- Time-locked phases for commit, reveal, and tallying
+- Consideration of gas costs for large-scale voting
+- Measures to prevent double-voting or vote manipulation
+Look for candidates who can explain the trade-offs between on-chain and off-chain components, and how they would handle potential issues like front-running or blockchain reorganizations. The ideal response should also touch on how to make the system upgradable for future improvements.
     **[⬆ Back to Top](#questions)**
 
-104. ### 444
+104. ### Explain how you would design a token vesting contract with multiple beneficiaries and varying vesting schedules.
 
-444
+A comprehensive answer should cover these key points:
+
+- A struct to represent each beneficiary's vesting schedule
+- A mapping to store beneficiary data
+- Functions to add beneficiaries and their vesting terms
+- A claim function that calculates and releases vested tokens
+- Consideration of linear vs. cliff vesting options
+- Handling of token transfers and balance management
+Evaluate the candidate's understanding of time-based logic in Solidity and how they approach potential issues like gas limits for multiple beneficiaries. A strong response will also include thoughts on contract upgradability and handling edge cases like early termination or schedule modifications.
     **[⬆ Back to Top](#questions)**
 
-105. ### 555
+105. ### How would you implement a decentralized exchange (DEX) in Solidity, and what key features would you include?
 
-555
+A knowledgeable candidate should outline a DEX implementation that includes:
+
+- An order book or automated market maker (AMM) system
+- Token pair management and liquidity pools
+- Price calculation mechanisms
+- Trading functions (market orders, limit orders)
+- Fee collection and distribution
+- Security measures against common DEX vulnerabilities
+Pay attention to how the candidate addresses challenges like front-running, impermanent loss, and efficient order matching. The ideal answer should also touch on gas optimization strategies and considerations for cross-chain compatibility or layer 2 scaling solutions.
     **[⬆ Back to Top](#questions)**
 
-106. ### 666
+106. ### Describe how you would implement a multi-signature wallet contract in Solidity.
 
-666
+A strong answer should include the following components:
+
+- A struct to represent transaction proposals
+- A mapping to track owner addresses and their confirmation status
+- Functions for submitting, confirming, and executing transactions
+- A mechanism to change ownership or adjust the number of required signatures
+- Proper access control and security checks
+Look for candidates who can explain how they would handle edge cases, such as owner removal or contract upgrades. The ideal response should also address gas optimization techniques and potential security vulnerabilities specific to multi-sig wallets.
     **[⬆ Back to Top](#questions)**
     
-107. ### 777
+107. ### How would you design a contract system for a decentralized insurance platform?
 
-777
+An experienced Solidity developer should propose a system that includes:
+
+- Contracts for policy management and claims processing
+- Integration with oracle services for real-world data
+- Premium calculation and payment handling
+- Automated claim verification and payout mechanisms
+- Staking or collateral systems for insurers
+- Governance mechanisms for parameter adjustments
+Evaluate the candidate's understanding of decentralized finance principles and their ability to design complex, interacting systems. Look for considerations of scalability, upgradability, and handling of edge cases like disputed claims or policy cancellations.
     **[⬆ Back to Top](#questions)**
     
-108. ### 888
+108. ### Explain how you would implement a yield farming contract in Solidity.
 
-888
+A comprehensive answer should cover the following aspects:
+
+- Staking mechanisms for users to deposit tokens
+- Reward distribution calculations based on staking duration and amount
+- Functions for claiming rewards and unstaking
+- Integration with other DeFi protocols for yield generation
+- Consideration of impermanent loss and risk management
+- Emergency withdrawal functions and security measures
+Look for candidates who can discuss the challenges of implementing fair and gas-efficient reward distribution. The ideal response should also address potential vulnerabilities and how to mitigate them, as well as strategies for contract upgradability.
     **[⬆ Back to Top](#questions)**
     
-109. ### 999
+109. ### How would you design a contract for a decentralized autonomous organization (DAO) in Solidity?
 
-999
+A well-structured answer should include these key components:
+
+- Membership management (token-based or NFT-based)
+- Proposal submission and voting mechanisms
+- Treasury management and fund allocation
+- Execution of approved proposals
+- Governance token distribution and management
+- Quorum and voting threshold calculations
+Evaluate the candidate's understanding of on-chain governance and how they balance decentralization with efficient decision-making. Look for considerations of scalability, gas optimization, and potential attack vectors like vote buying or governance attacks.
     **[⬆ Back to Top](#questions)**
