@@ -22,7 +22,7 @@
 | 15   | [What is a constant function in Solidity?](#What-is-a-constant-function-in-Solidity)
 | 16   | [What is the concept of storage variables in Solidity?](#What-is-the-concept-of-storage-variables-in-Solidity)
 | 17   | [What is the first thing that needs to be defined when creating a Solidity file?](#What-is-the-first-thing-that-needs-to-be-defined-when-creating-a-Solidity-file)
-| 18   | [What is a smart contract’s ABI?](#What-is-a-smart-contracts-ABI)
+| 18   | [What is a smart contract's ABI?](#What-is-a-smart-contracts-ABI)
 | 19   | [What type of language is Solidity?](#What-type-of-language-is-Solidity)
 | 20   | [What are the two APIs that a smart contract uses to interface with it?](#What-are-the-two-APIs-that-a-smart-contract-uses-to-interface-with-it)
 | 21   | [Why is Solidity used in blockchain?](#Why-is-Solidity-used-in-blockchain)
@@ -44,7 +44,7 @@
 | 37   | [What are state variables in Solidity?](#What-are-state-variables-in-Solidity)
 | 38   | [What are the main components of a Solidity Smart Contract?](#What-are-the-main-components-of-a-Solidity-Smart-Contract)
 | 39   | [What is special in smart contracts compared to other programs?](#What-is-special-in-smart-contracts-compared-to-other-programs)
-| 40   | [List the difference between unit8 and unit16.](#List-the-difference-between-unit8-and-unit16)
+| 40   | [List the difference between unit8 and unit16. Give one difference between a uint8 and a uint16?](#List-the-difference-between-unit8-and-unit16-Give-one-difference-between-a-uint8-and-a-uint16)
 | 41   | [What are private and public variables in Solidity?](#What-are-private-and-public-variables-in-Solidity)
 | 42   | [List the differences between view and pure functions.](#List-the-differences-between-view-and-pure-functions)
 | 43   | [List the difference between memory and storage in Solidity.](#List-the-difference-between-memory-and-storage-in-Solidity)
@@ -130,10 +130,70 @@
 | 123  | [Explain Storage](#Explain-Storage)
 | 124  | [Explain Memory](#Explain-Memory)
 | 125  | [Explain Calldata](#Explain-Calldata)
-| 126  | [What variables are stored in the Storage and Memory areas respectively?](#What-variables-are-stored-in-the-Storage-and-Memory-areas-respectively)
+| 126  | [What variables are stored in the Storage and Memory areas respectively? Give one difference between the state variable and the local variable?](#What-variables-are-stored-in-the-Storage-and-Memory-areas-respectively-Give-one-difference-between-the-state-variable-and-the-local-variable)
 | 127  | [Take a look at the following code and explain which part of the code corresponds to wich memory area:](#Take-a-look-at-the-following-code-and-explain-which-part-of-the-code-corresponds-to-wich-memory-area)
 | 128  | [Can I do this: function doSomething(uint[] storage args) internal returns(uint[] storage data) {...}](#Can-I-do-this)
-| 129  | [999](#999)
+| 129  | [Define Ethereum smart contract.](#Define-Ethereum-smart-contract)
+| 130  | [Why is the Ethereum smart contract so special compared to other programs?](#Why-is-the-Ethereum-smart-contract-so-special-compared-to-other-programs)
+| 131  | [Define Ethereum networks.](#Define-Ethereum-networks)
+| 132  | [Explain enum.](#Explain-enum)
+| 133  | [What is the method of payment for gas?](#What-is-the-method-of-payment-for-gas)
+| 134  | [Who can read private and public variables?](#Who-can-read-private-and-public-variables)
+| 135  | [Does the EVM understand Solidity?](#Does-the-EVM-understand-Solidity)
+| 136  | [What is a function of Solidity?](#What-is-a-function-of-Solidity)
+| 137  | [Describe an event in Solidity.](#Describe-an-event-in-Solidity)
+| 138  | [What is the difference between public and private visibility in Solidity?](#What-is-the-difference-between-public-and-private-visibility-in-Solidity)
+| 139  | [In Solidity, explain the constructor?](#In-Solidity-explain-the-constructor)
+| 140  | [Explain delegatecall here in Solidity.](#Explain-delegatecall-here-in-Solidity)
+| 141  | [What is a library?](#What-is-a-library)
+| 142  | [How many types of libraries are there in Solidity?](#How-many-types-of-libraries-are-there-in-Solidity)
+| 143  | [Mention two famous smart contract frameworks for Solidity.](#Mention-two-famous-smart-contract-frameworks-for-Solidity)
+| 144  | [Mention two networks where you can deploy a Solidity smart contract.](#Mention-two-networks-where-you-can-deploy-a-Solidity-smart-contract)
+| 145  | [Can you list some distinctions between view and pure functions?](#Can-you-list-some-distinctions-between-view-and-pure-functions)
+| 146  | [Please outline some differences between the Ethereum blockchain and Bitcoin.](#Please-outline-some-differences-between-the-Ethereum-blockchain-and-Bitcoin)
+| 147  | [Outline some differences between a struct and an array?](#Outline-some-differences-between-a-struct-and-an-array)
+| 148  | [What do you need to do to deploy a smart contract to the Ethereum network?](#What-do-you-need-to-do-to-deploy-a-smart-contract-to-the-Ethereum-network)
+| 149  | [Show the Solidity smart contract layout.](#Show-the-Solidity-smart-contract-layout)
+| 150  | [Are private variables really private?](#Are-private-variables-really-private)
+| 151  | [Explain when you would use an array versus a mapping.](#Explain-when-you-would-use-an-array-versus-a-mapping)
+| 152  | [Give one difference between memory and storage in Solidity.](#Give-one-difference-between-memory-and-storage-in-Solidity)
+| 153  | [What are Solidity modifiers?](#What-are-Solidity-modifiers)
+| 154  | [What is a fallback function in Solidity?](#What-is-a-fallback-function-in-Solidity)
+| 155  | [Define decentralized exchange (DEX)?](#Define-decentralized-exchange-DEX)
+| 156  | [What is the difference between assert and require in Solidity?](#What-is-the-difference-between-assert-and-require-in-Solidity)
+| 157  | [Give the name of 3 data types that you use often?](#Give-the-name-of-3-data-types-that-you-use-often)
+| 158  | [In Solidity, how can you declare an array of integers?](#In-Solidity-how-can-you-declare-an-array-of-integers)
+| 159  | [How can you map addresses to booleans in Solidity?](#How-can-you-map-addresses-to-booleans-in-Solidity)
+| 160  | [Write the code to add data to an array that has been declared as a state variable?](#Write-the-code-to-add-data-to-an-array-that-has-been-declared-as-a-state-variable)
+| 161  | [How can you add data to a mapping which is declared as a state variable?](#How-can-you-add-data-to-a-mapping-which-is-declared-as-a-state-variable)
+| 162  | [Give some reasons why you need a private variable in your code?](#Give-some-reasons-why-you-need-a-private-variable-in-your-code)
+| 163  | [Write the 2 APIs used to interact with a smart contract?](#Write-the-2-APIs-used-to-interact-with-a-smart-contract)
+| 164  | [List 4 famous Ethereum wallets](#List-4-famous-Ethereum-wallets)
+| 165  | [List some ways you can instantiate a struct?](#List-some-ways-you-can-instantiate-a-struct)
+| 166  | [How can you instantiate a struct with inner mapping?](#How-can-you-instantiate-a-struct-with-inner-mapping)
+| 167  | [How can you join array and mapping to allow iteration and struct lookup?](#How-can-you-join-array-and-mapping-to-allow-iteration-and-struct-lookup)
+| 168  | [For an in-memory array, how to add a value?](#For-an-in-memory-array-how-to-add-a-value)
+| 169  | [What is the difference between an ERC-20 and ERC-721 token?](#What-is-the-difference-between-an-ERC-20-and-ERC-721-token)
+| 170  | [Explain reentrancy attack?](#Explain-reentrancy-attack)
+| 171  | [What is a hard fork in Solidity?](#What-is-a-hard-fork-in-Solidity)
+| 172  | [What is the difference between a requirement and a revert statement in Solidity?](#What-is-the-difference-between-a-requirement-and-a-revert-statement-in-Solidity)
+| 173  | [What is a token standard in Solidity?](#What-is-a-token-standard-in-Solidity)
+| 174  | [What is a privacy token in Solidity?](#What-is-a-privacy-token-in-Solidity)
+| 175  | [What is a governance token in Solidity?](#What-is-a-governance-token-in-Solidity)
+| 176  | [What is a wrapped token in Solidity?](#What-is-a-wrapped-token-in-Solidity)
+| 177  | [What is a rollup?](#What-is-a-rollup)
+| 178  | [What is a soft fork in Solidity?](#What-is-a-soft-fork-in-Solidity)
+| 179  | [What is a decentralized application (dApp) in Solidity?](#What-is-a-decentralized-application-dApp-in-Solidity)
+| 180  | [Give one difference between an event and a function in Solidity.](#Give-one-difference-between-an-event-and-a-function-in-Solidity)
+| 181  | [How to get the list of all keys in a mapping (like object.keys() in Javascript)?](#How-to-get-the-list-of-all-keys-in-a-mapping-like-objectkeys-in-Javascript)
+| 182  | [List 3 mechanisms for code reuse here.](#List-3-mechanisms-for-code-reuse-here)
+| 183  | [How can you make one contract inherit from the other?](#How-can-you-make-one-contract-inherit-from-the-other)
+| 184  | [Is it compulsory to make an address “address payable” to transfer ERC20 tokens?](#Is-it-compulsory-to-make-an-address-address-payable-to-transfer-ERC20-tokens)
+| 185  | [What’s new with Solidity 0.5.x vs. 0.4.x?](#Whats-new-with-Solidity-05x-vs-04x)
+| 186  | [Give three ways to save gas.](#Give-three-ways-to-save-gas)
+| 187  | [Write in an order uint128, bytes32, and another uint128 to save gas.](#Write-in-an-order-uint128-bytes32-and-another-uint128-to-save-gas)
+| 188  | [What do you know about the ABIEncoderV2 pragma statement?](#What-do-you-know-about-the-ABIEncoderV2-pragma-statement)
+| 189  | [What is a decentralized identifier (DID) in Solidity?](#What-is-a-decentralized-identifier-DID-in-Solidity)
 
 ## Answers
 1. ### What is Solidity?
@@ -158,12 +218,12 @@ One main difference between Solidity and other programming languages like Python
 
 5. ### What is machine code in relation to Solidity contracts?
 
-Machine codes are a compilation of solidity contracts, which are written in a high-level language. And it is the machine code that is executed on the Ethereum blockchain by the computer’s processor. A basic understanding of machine code is needed to understand what Solidity contracts are and how they work.
+Machine codes are a compilation of solidity contracts, which are written in a high-level language. And it is the machine code that is executed on the Ethereum blockchain by the computer's processor. A basic understanding of machine code is needed to understand what Solidity contracts are and how they work.
     **[⬆ Back to Top](#questions)**
 
 6. ### What is an enum? What are the restrictions on their use?
 
-Enums are one of the methods used for creating user-defined types in Solidity. While you can implement an implicit conversion when using enums, they allow explicit conversion both to and from all integer types. Enums require at least one member, and the explicit conversions check the runtime value ranges. When there’s a failure, it results in an exception.
+Enums are one of the methods used for creating user-defined types in Solidity. While you can implement an implicit conversion when using enums, they allow explicit conversion both to and from all integer types. Enums require at least one member, and the explicit conversions check the runtime value ranges. When there's a failure, it results in an exception.
     **[⬆ Back to Top](#questions)**
     
 7. ### What is EVM bytecode?
@@ -193,7 +253,7 @@ The most basic difference between <a herf="https://www.simplilearn.com/tutorials
 
 12. ### What are the benefits of using smart contracts on Ethereum?
 
-There are several advantages of using smart contracts on Ethereum over traditional contracts, such as a greater degree of security since smart contracts are stored on the blockchain. This makes these contracts immune to tampering. Since smart contracts are designed to automate various tasks including the transfer of funds and verification of identities, they’re more efficient.
+There are several advantages of using smart contracts on Ethereum over traditional contracts, such as a greater degree of security since smart contracts are stored on the blockchain. This makes these contracts immune to tampering. Since smart contracts are designed to automate various tasks including the transfer of funds and verification of identities, they're more efficient.
     **[⬆ Back to Top](#questions)**
 
 13. ### What tools can be used for testing Solidity codes?
@@ -221,9 +281,18 @@ The variables stored on the <a herf="https://www.simplilearn.com/tutorials/block
 The first you should define when creating a Solidity file is the class. This helps avoid errors related to compilation that is caused due to incompatibility between various versions of Solidity. Therefore, the version number must be declared.
     **[⬆ Back to Top](#questions)**
     
-18. ### What is a smart contract’s ABI?
+18. ### What is a smart contract's ABI?
 
-A smart contract’s ABI specifies its interface and the set of functions accessed from outside the smart contract. The ABI is used only for defining the events of the contract and function signatures, such as names of the function, return types, and argument types. However, it does not define their implementation.
+A smart contract's ABI, or Application Binary Interface, is a JSON representation of the contract's methods and events. It serves as an interface between the Ethereum blockchain and client-side applications (like web3.js or Ethers.js) by providing useful information about the smart contract.
+
+The ABI includes:
+
+- Function names
+- Function input and output types
+- Function modifiers (like payable, view, or pure)
+- Event names
+- Event input types and indices
+With the help of the ABI, a client-side application can construct correct data types, encoding, and decoding of function calls and events when interacting with a smart contract on the Ethereum blockchain.
     **[⬆ Back to Top](#questions)**
     
 19. ### What type of language is Solidity?
@@ -234,7 +303,7 @@ It makes use of ECMAScript-like syntax. Therefore, existing web developers would
     
 20. ### What are the two APIs that a smart contract uses to interface with it?
 
-The two APIs used by a smart contract to interface with it are eth_sendTransaction and eth_call. Calls, when compared to gas, as a better option because gas is expensive while calls don’t cost anything. Therefore, while gas can change the blockchain, calls don’t. However, while transactions don’t return a value, that is not the case with calls.
+The two APIs used by a smart contract to interface with it are eth_sendTransaction and eth_call. Calls, when compared to gas, as a better option because gas is expensive while calls don't cost anything. Therefore, while gas can change the blockchain, calls don't. However, while transactions don't return a value, that is not the case with calls.
     **[⬆ Back to Top](#questions)**
 
 21. ### Why is Solidity used in blockchain?
@@ -264,17 +333,18 @@ The Solidity contract file/ library file has an extension .sol. For example, Gee
 
 26. ### What is a smart contract?
 
-Smart contracts are computer programs stored on the blockchain that are executed when the predetermined conditions are met.<ui><li>These are used to automate the execution so that all the participants can be immediately certain of the outcome.</li><li>Smart contracts can automatically trigger the next action when the conditions are met.</li><li>They remove the need for intermediaries to handle the transactions.</li><li>Smart contracts don’t require any paperwork to process as they are digital and automated.</li></ui>
+Smart contracts are computer programs stored on the blockchain that are executed when the predetermined conditions are met.<ui><li>These are used to automate the execution so that all the participants can be immediately certain of the outcome.</li><li>Smart contracts can automatically trigger the next action when the conditions are met.</li><li>They remove the need for intermediaries to handle the transactions.</li><li>Smart contracts don't require any paperwork to process as they are digital and automated.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 27. ### What is a gas limit in Solidity?
 
-A gas limit in Solidity refers to the maximum amount of gas a user is willing to spend on a transaction. When creating a transaction on the Ethereum Network user must specify the gas limit to ensure that they don’t spend more gas than they intend.<ui><li>If a transaction requires more gas than the specified gas limit, the transaction will be reverted, and the used gas will not be refunded.</li><li>If a transaction requires less than the gas limit, the remaining gas will be returned to the user.</li></ui>
+A gas limit in Solidity refers to the maximum amount of gas a user is willing to spend on a transaction. When creating a transaction on the Ethereum Network user must specify the gas limit to ensure that they don't spend more gas than they intend.<ui><li>If a transaction requires more gas than the specified gas limit, the transaction will be reverted, and the used gas will not be refunded.</li><li>If a transaction requires less than the gas limit, the remaining gas will be returned to the user.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 28. ### What is a variable in Solidity?
 
 A variable in Solidity is a storage location that can contain values. These values can be changed during runtime. Variables are broadly classified as state variables and local variables.<ui><li>State variables are the variables that are declared outside any function in a contract and are permanently stored on the Ethereum blockchain.</li><li>Local variables are the variables that are declared within the function and their scope is limited to that function.</li></ui>
+Variables in Solidity also have data types, such as uint, int, address, bool, bytes, or string. Additionally, Solidity supports complex data structures like arrays, structs, and mappings.
     **[⬆ Back to Top](#questions)**
 
 29. ### What is an event in Solidity?
@@ -319,12 +389,12 @@ A solidity source file can contain any number of smart contracts or library defi
 
 37. ### What are state variables in Solidity?
 
-State variables are stored in the storage. These values are permanently stored in the contract’s storage.<ui><li>They store data directly on the blockchain.</li><li>These are declared inside a contract and outside the function.</li><li>These are expensive as they cost gas.</li><li>These can be assigned one of the access modifiers, public, private, or internal.</li></ui>
+State variables are stored in the storage. These values are permanently stored in the contract's storage.<ui><li>They store data directly on the blockchain.</li><li>These are declared inside a contract and outside the function.</li><li>These are expensive as they cost gas.</li><li>These can be assigned one of the access modifiers, public, private, or internal.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 38. ### What are the main components of a Solidity Smart Contract?
 
-The main components of a Solidity smart contract are:<ui><li><b>Pragma statement:</b> This statement specifies the required version of the solidity compiler for the smart contract.</li><li><b>State variables:</b> These are used to store the contract’s state data persistently on the blockchain.</li><li><b>Constructor:</b> This is a special function that is used for initializing state variables and called at once at contract deployment.</li><li><b>Functions:</b> Functions define the logic and behavior of the contract.</li><li><b>Modifiers:</b> These are the reusable code snippets that can be added to functions to modify their behavior.</li><li><b>Events:</b> Events are custom data structures that emit transaction logs for external listeners to monitor contract activity and state changes.</li><li><b>Inheritance:</b> Inheritance allows a contract to inherit properties from a base contract thus enabling code reuse and abstraction.</li></ui>
+The main components of a Solidity smart contract are:<ui><li><b>Pragma statement:</b> This statement specifies the required version of the solidity compiler for the smart contract.</li><li><b>State variables:</b> These are used to store the contract's state data persistently on the blockchain.</li><li><b>Constructor:</b> This is a special function that is used for initializing state variables and called at once at contract deployment.</li><li><b>Functions:</b> Functions define the logic and behavior of the contract.</li><li><b>Modifiers:</b> These are the reusable code snippets that can be added to functions to modify their behavior.</li><li><b>Events:</b> Events are custom data structures that emit transaction logs for external listeners to monitor contract activity and state changes.</li><li><b>Inheritance:</b> Inheritance allows a contract to inherit properties from a base contract thus enabling code reuse and abstraction.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 39. ### What is special in smart contracts compared to other programs?
@@ -332,7 +402,7 @@ The main components of a Solidity smart contract are:<ui><li><b>Pragma statement
 '<ui><li><b>Immutable:</b> Once the smart contracts are deployed on the blockchain, their code cannot be altered. This makes the smart contract invulnerable to unauthorized access.</li><li><b>Decentralized execution:</b> The execution of smart contracts does not depend on a single authority but instead on multiple nodes that are spread around the world.</li><li><b>Self-executing:</b> Smart contracts are designed to execute predefined actions automatically when certain conditions specified in the contract are met. This reduces the need for intermediaries thus reducing the potential for human error.</li><li><b>Tokenization:</b> Smart contracts can be used to create and manage digital assets through the use of tokens.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-40. ### List the difference between unit8 and unit16.
+40. ### List the difference between unit8 and unit16. Give one difference between a uint8 and a uint16?
 
 uint8 stores a number of up to 2^8-1. It has 8 bits.
 uint16 stores number up to 2^16-1. It has 16 bits.
@@ -408,7 +478,7 @@ Failure to choose the correct version of Solidity while programming the smart co
 
 54. ### Explain the role of the Ethereum Virtual Machine (EVM).
 
-Ethereum Virtual Machine (EVM) serves as the runtime environment for smart contracts running on the Ethereum Blockchain and ensures that smart contracts are executed securely across all nodes in the network.<ui><li>The EVM process the EVM bytecode generated from high-level smart contract languages like Solidity.</li><li>EVM is responsible for maintaining the state of the Ethereum blockchain including the contract state. When the contract’s state changes due to the execution of the function then EVM updates the contract’s state.</li><li>EVM uses gas to measure the cost of executing the smart contract. The EVM calculates the total gas used during contract execution.</li>
+Ethereum Virtual Machine (EVM) serves as the runtime environment for smart contracts running on the Ethereum Blockchain and ensures that smart contracts are executed securely across all nodes in the network.<ui><li>The EVM process the EVM bytecode generated from high-level smart contract languages like Solidity.</li><li>EVM is responsible for maintaining the state of the Ethereum blockchain including the contract state. When the contract's state changes due to the execution of the function then EVM updates the contract's state.</li><li>EVM uses gas to measure the cost of executing the smart contract. The EVM calculates the total gas used during contract execution.</li>
     **[⬆ Back to Top](#questions)**
 
 55. ### Does EVM understands Solidity?
@@ -418,12 +488,16 @@ The EVM does not directly understand Solidity as it understands and executes byt
 
 56. ### What is a proxy contract in Solidity?
 
-A proxy contract in Solidity is a design pattern that employs a secondary contract to act as an intermediary between the users and the main contract. It is often used for storage optimization purposes.
+A proxy contract in Solidity is a design pattern that employs a secondary contract to act as an intermediary between the users and the main contract, which houses the core business logic. Proxy contracts are often used for upgradeability and storage optimization purposes.
+
+The proxy contract maintains a reference to the main contract (often called the logic or implementation contract) and delegates calls from users to the main contract, effectively forwarding function calls and data to the appropriate methods in it. This allows developers to maintain the proxy contract's state, while the main contract's code can be replaced or updated without affecting the data.
     **[⬆ Back to Top](#questions)**
     
 57. ### What is a staking pool in Solidity?
 
-Staking Pool in Solidity is a smart contract that allows users to pool their cryptocurrency holdings together and participate in various blockchain activities like PoS consensus, etc.<ui><li>It helps to maximize potential earnings.</li><li>It also helps to mitigate risks associated with individual staking.</li></ui>
+A staking pool in the context of Solidity is a smart contract that allows users to pool their cryptocurrency holdings (e.g., Ether or tokens) together and participate in various blockchain activities, like Proof-of-Stake (PoS) consensus mechanisms, liquidity provision on decentralized exchanges, or revenue-generating platforms like yield farming.
+
+A staking pool is typically designed to provide users with proportional rewards based on their stake, maximize potential earnings, and mitigate risks associated with individual staking. The staking pool smart contract would define how users can add and withdraw their funds, how the rewards are calculated, and how they are distributed among the participants.
     **[⬆ Back to Top](#questions)**
     
 58. ### List the difference between public and private visibility modifiers in Solidity?
@@ -434,7 +508,7 @@ Staking Pool in Solidity is a smart contract that allows users to pool their cry
 59. ### List different types of libraries in Solidity.
 
 Deployed Library: Deployed libraries have their own addresses and several other smart contracts can use them.
-Embedded Library: Embedded libraries don’t have their unique address and they are deployed as part of the code of the smart contract that uses them.
+Embedded Library: Embedded libraries don't have their unique address and they are deployed as part of the code of the smart contract that uses them.
     **[⬆ Back to Top](#questions)**
 
 60. ### What is Decentralized Exchange (DEX)?
@@ -448,6 +522,8 @@ The Decentralized Exchange (DEX) is a peer-to-peer crypto exchange that operates
     **[⬆ Back to Top](#questions)**
 
 62. ### What is the formula to calculate Ethereum gas cost?
+
+Gas is the price of gas in Ether that a user is willing to pay to execute a transaction on the network. Transactions with higher gas prices are prioritized by miners, as they receive a higher reward for including them in a block.
 
 Gas fees are paid in Ethereum using this formula:
 ![alt text](./src/image6.png)
@@ -466,7 +542,7 @@ uint256 is an unsigned integer that can hold a maximum value of 2^256-1. It requ
 
 65. ### What is a sandwich attack?
 
-The sandwich attack is a form of front-running that targets decentralized finance protocols and services. It leverages the unique characteristics of DeFi to make money by manipulating crypto markets.<ui><li>The attacker identifies a potential victim transaction.</li><li>The attacker moves to send a buy transaction for the same asset pair which will fill before the user’s transaction.</li><li>This attacker transaction shifts the liquidity pool composition, resulting in the available exchange rates for subsequent transactions being different from that which was originally shown to other users whose transactions have not yet been executed.</li><li>Once the victim swap completes at the unfavorable exchange rate, the attacker follows up with a sell transaction for the asset pair which locks in their profit.</li><li>This second transaction �kruns’ the victim, completing the sandwich.</li></ui>
+The sandwich attack is a form of front-running that targets decentralized finance protocols and services. It leverages the unique characteristics of DeFi to make money by manipulating crypto markets.<ui><li>The attacker identifies a potential victim transaction.</li><li>The attacker moves to send a buy transaction for the same asset pair which will fill before the user's transaction.</li><li>This attacker transaction shifts the liquidity pool composition, resulting in the available exchange rates for subsequent transactions being different from that which was originally shown to other users whose transactions have not yet been executed.</li><li>Once the victim swap completes at the unfavorable exchange rate, the attacker follows up with a sell transaction for the asset pair which locks in their profit.</li><li>This second transaction �kruns' the victim, completing the sandwich.</li></ui>
     **[⬆ Back to Top](#questions)**
 
 66. ### What is ERC165 used for?
@@ -988,9 +1064,12 @@ It is a temporary storage. The data is lost once the execution terminates. You c
 It can be tought of as the callstack. It is temporary, non-modifiable, and it stores EVM execution data.
     **[⬆ Back to Top](#questions)**
 
-126. ### What variables are stored in the Storage and Memory areas respectively?
+126. ### What variables are stored in the Storage and Memory areas respectively? Give one difference between the state variable and the local variable?
 
 State variables and local variables (wich are references to the state variables) are stored in Storage. Function arguments are located in Memory area.
+
+State variable= State variable values permanently stored in contract storage.
+Local variable= Local variables values are present till functions are executed.
     **[⬆ Back to Top](#questions)**
     
 127. ### Take a look at the following code and explain which part of the code corresponds to wich memory area:
@@ -1005,7 +1084,542 @@ Part 1 - Storage. Part 2 - Storage (array size points to the same location as co
 Yes, you can force the arguments of a function to be of type storage. In this case if you do not pass a storage reference, the compiler will complain.
     **[⬆ Back to Top](#questions)**
     
-129. ### 999
+129. ### Define Ethereum smart contract.
 
-999
+An Ethereum smart contracts is a self-executing, autonomous piece of code that runs on the Ethereum blockchain. It contains the terms of an agreement between parties, and it is enforced automatically by the Ethereum Virtual Machine (EVM) when certain predetermined conditions are met.
+
+Smart contracts can store and manage data, transfer digital assets, execute functions, and interact with other contracts on the Ethereum network, enabling decentralized applications (DApps) to be built and executed without intermediaries. Smart contracts are typically written in a high-level programming language like Solidity and then compiled into bytecode for execution on the EVM.
+    **[⬆ Back to Top](#questions)**
+
+130. ### Why is the Ethereum smart contract so special compared to other programs?
+
+Ethereum smart contracts are special compared to other programs due to the following reasons:
+
+<b>Decentralized execution:</b> Smart contracts run on the Ethereum blockchain, which is a decentralized network. This means that the execution of a smart contract doesn't rely on a single authority or server, but rather on multiple nodes spread around the world. This increases the reliability and fault tolerance of the smart contract.
+
+<b>Immutable and tamper-proof:</b> Once a smart contract is deployed on the Ethereum blockchain, its code cannot be altered. This makes smart contracts invulnerable to hacking or unauthorized changes, ensuring that the rules established in the contract remain unchanged.
+
+<b>Transparent and verifiable:</b> All transactions and state changes in a smart contract are recorded on the Ethereum blockchain, and this information is publicly visible. This helps establish trust among the participants, as they can audit and verify that the smart contract is functioning as intended.
+
+<b>Self-executing:</b> Smart contracts are designed to execute predefined actions automatically when certain conditions specified in the contract are met. This eliminates the need for intermediaries and manual intervention to enforce the terms of an agreement, reducing the potential for human error or fraud.
+
+<b>Tokenization:</b> Ethereum smart contracts can be used to create and manage digital assets through the use of tokens. This has led to various use cases in finance, gaming, collectibles, and more, that leverage tokenization as a way to represent unique assets or value.
+    **[⬆ Back to Top](#questions)**
+
+131. ### Define Ethereum networks.
+
+Ethereum networks are blockchain ecosystems that are built using the Ethereum protocol. They are decentralized platforms that facilitate the execution of smart contracts and transactions using the Ether (ETH) cryptocurrency. There are primarily two types of Ethereum networks:
+
+Mainnet: The mainnet is the primary and original Ethereum network. It is a public, decentralized, and permissionless network where Ether holds real-world value, and transactions and contract executions are performed using real Ether. The mainnet is used for deploying production-level smart contracts and applications, and all nodes maintain the network's security, validate transactions, and reach consensus following the Ethereum protocol.
+
+Testnets: Testnets are alternative Ethereum networks used for testing and development purposes. They provide a sandbox environment where developers can deploy and interact with smart contracts without risking real Ether. Testnet Ether has no real-world value, and testnets are isolated from the mainnet to avoid any impact on the mainnet's security or stability. Some of the commonly used Ethereum testnets are Ropsten, Rinkeby, and Goerli.
+    **[⬆ Back to Top](#questions)**
+
+132. ### Explain enum.
+
+An enum, short for "enumerated type," is a user-defined data type in Solidity that represents a set of named values called elements or members. Enums provide a convenient way to work with a collection of distinct values, often used to model a set of states or modes that a system or contract might be in.
+
+Enums improve code readability by using descriptive names for states instead of using direct integer values, thus making the code easier to understand and maintain. In Solidity, enums are declared using the enum keyword followed by a descriptive name for the enumeration and a set of values enclosed in curly braces {}.
+    **[⬆ Back to Top](#questions)**
+
+133. ### What is the method of payment for gas?
+
+Gas is paid in ether using the formula: ether cost = gasPrice * gas. In this formula, the gas represents the gas cost of executing a transaction. gasPrice is in wei / gas, usually expressed in Gwei. A transaction also shows a gasLimit parameter- it specifies the maximum number of gas that a transaction can pay. A transaction without this could potentially deplete an account's Ether.
+    **[⬆ Back to Top](#questions)**
+
+134. ### Who can read private and public variables?
+
+In Solidity, the visibility of variables determines who can access those variables.
+
+<b>Public variables:</b> They can be accessed by any contract, function, or external entity. When a public state variable is declared in Solidity, the compiler automatically generates a getter function for that variable, which allows any external entity or other contracts to read its value. However, modifying the value of a public variable is still limited to the contract or derived contracts themselves.
+
+<b>Private variables:</b> They can be accessed only within the contract that declares them. Private variables are not accessible by any external entity, nor by contracts derived from the contract in which they are declared. They provide encapsulation and help maintain the contract's internal state securely.
+
+It's important to note that although private variables cannot be directly accessed by external entities, their values may still be read indirectly through transaction data on the blockchain, since all data is public on the Ethereum network. To ensure confidentiality, consider alternative approaches such as encrypting sensitive information off-chain.
+    **[⬆ Back to Top](#questions)**
+
+135. ### Does the EVM understand Solidity?
+
+No. The Ethereum Virtual Machine (EVM) does not directly understand Solidity. Instead, it understands and executes bytecode, a lower-level language.
+
+When you write a smart contract in Solidity, the code must go through a couple of steps before it can be executed on the EVM:
+
+<b>Compilation:</b> The Solidity code is compiled into an intermediate representation called Ethereum bytecode using a compiler like solc. This bytecode is a sequence of low-level instructions that the EVM can understand.
+
+<b>Deployment:</b> The compiled bytecode is then deployed to the Ethereum network, where it resides on the blockchain as part of a contract's data.
+
+When a function or transaction is executed for a smart contract, the EVM reads and processes the corresponding bytecode instructions. Since EVM bytecode is a lower-level language, it is closer to machine code and more efficient for the EVM to execute, allowing for better performance and resource utilization.
+    **[⬆ Back to Top](#questions)**
+
+136. ### What is a function of Solidity?
+
+A function is a group of instructions that perform a specific task. And it can be reused anywhere in the program, which saves the unreasonable use of memory and decreases the runtime of the program; by creating a function, users do not need to write the same code repeatedly.
+    **[⬆ Back to Top](#questions)**
+    
+137. ### Describe an event in Solidity.
+
+An event in Solidity is a custom data structure used to log information and notify external consumers, such as off-chain applications or services, about specific occurrences within a contract. Events serve as a convenient way to emit data that can be easily observed and monitored by external entities without reading the entire contract state.
+
+Events are declared in contracts using the event keyword and usually contain parameters that define the data to be logged. When an event is triggered, the EVM emits a log that includes the event data, making it searchable and accessible via blockchain explorers or APIs.
+    **[⬆ Back to Top](#questions)**
+    
+138. ### What is the difference between public and private visibility in Solidity?
+
+In Solidity, visibility modifiers like public and private determine the accessibility of state variables, functions, and contracts. The difference between public and private visibility in Solidity is as follows:
+
+Public: When a state variable, function, or contract is marked public, it is accessible from any contract (including the contract itself, derived contracts, and other external contracts) and can also be called directly by external transactions. For state variables, Solidity automatically generates a getter function to allow external access.
+
+Private: When a state variable, function, or contract is marked private, it is accessible only within the contract in which it is defined. It cannot be accessed from derived contracts or other external contracts. No getter functions are generated for private state variables.
+    **[⬆ Back to Top](#questions)**
+    
+139. ### In Solidity, explain the constructor?
+
+In Solidity, a constructor is a special function within a contract that is called only once, at the time of contract deployment. The constructor is used to initialize the contract's state variables and set the initial state of the contract. It can be identified by the keyword constructor.
+
+A Solidity constructor may have one or more arguments, allowing users to pass values during the contract deployment. Additionally, it can have visibility modifiers like public or internal. However, private and external modifiers are not allowed for constructors.
+    **[⬆ Back to Top](#questions)**
+
+140. ### Explain delegatecall here in Solidity.
+
+delegatecall is a low-level function in Solidity used to call a function in another contract, while preserving the context (storage and caller address) of the calling contract. It allows the called function to access and modify the calling contract's storage, effectively enabling code reuse or upgradable contracts.
+
+When delegatecall is used, the called function runs in the context of the calling contract, making it possible to modify state variables and access other functions of the calling contract as if they are in the same contract. This functionality should be used with caution due to potential security concerns and risks associated with giving another contract direct control over the calling contract's storage.
+    **[⬆ Back to Top](#questions)**
+
+141. ### What is a library?
+
+A library in Solidity is a reusable and deployable piece of code that can be shared by multiple smart contracts, allowing for reduced code redundancy, optimized gas usage, and enhanced modularity. Libraries are similar to contracts, but they cannot have state variables, nor can they inherit or be inherited from other contracts.
+
+Functions in a library can be viewed as pure functions without knowledge of the contract's state. When a library function is called, the context of the calling contract remains unchanged, allowing library functions to operate on the calling contract's state variables through the use of the using keyword. This allows for efficient code reuse and helps contract developers modularize their smart contract implementation.
+    **[⬆ Back to Top](#questions)**
+
+142. ### How many types of libraries are there in Solidity?
+
+Deployed- They have their own address, and several other smart contracts can use them.
+
+Embedded- They don't have their own unique address. They are deployed as part of the code of the smart contract that uses them.
+    **[⬆ Back to Top](#questions)**
+
+143. ### Mention two famous smart contract frameworks for Solidity.
+
+- Truffle: Truffle is an Ethereum development framework that provides tools for building and testing smart contracts in Solidity. It simplifies the entire development process by offering a built-in testing environment, deployment management with migrations, and a powerful command-line interface. Truffle also supports popular Ethereum libraries such as Web3.js and provides access to Ganache, a personal blockchain for development and testing.
+
+- Hardhat: Hardhat is another leading smart contract development framework that focuses on developer experience and productivity. It offers a range of features, including an Ethereum development environment, a testing framework, and a task runner. Hardhat is well-known for Hardhat Network, an Ethereum node designed for local development, which supports advanced debugging and console.log() functionality directly from your Solidity contract. Additionally, Hardhat integrates with popular Ethereum libraries and testing tools, such as Ethers.js, Waffle, and TypeChain.
+    **[⬆ Back to Top](#questions)**
+
+144. ### Mention two networks where you can deploy a Solidity smart contract.
+
+Two networks where you can deploy a Solidity smart contract are:
+
+- Ethereum Mainnet: The Ethereum Mainnet is the primary, public blockchain network where Ether has real-world value and smart contracts can interact with real users and decentralized applications.
+
+- Ropsten Testnet: Ropsten is a widely-used Ethereum test network that allows developers to deploy and test their smart contracts without incurring any real-world costs. It uses Proof of Work consensus mechanism and offers test Ether to simulate real-world conditions.
+    **[⬆ Back to Top](#questions)**
+
+145. ### Can you list some distinctions between view and pure functions?
+
+Here are some distinctions between view and pure functions in Solidity:
+
+- State reading: view functions allow reading data from the contract's state, while pure functions do not access the contract's state at all.
+
+- State modification: Neither view nor pure functions modify the contract's state.
+
+- Gas consumption: Since view functions can access the contract's state, their gas consumption is dependent on the operations and data read from the state. On the other hand, pure functions do not access the state, so their gas consumption is more predictable as it depends only on the function's execution, not the state interactions.
+
+- Use cases: View functions are often used for retrieving information about the contract and its state, like checking a user's balance or getting some specific details from the contract. pure functions, in contrast, are used for computations that depend only on the function's input, like calculating a hash or performing a mathematical operation.
+
+- Function calls: Both view and pure functions can be called from within the contract or from other contracts. However, they are not supposed to change the contract's state or affect any transactions, making them suitable for off-chain or local calls that simulate a transaction without actually sending it to the blockchain.
+    **[⬆ Back to Top](#questions)**
+
+146. ### Please outline some differences between the Ethereum blockchain and Bitcoin.
+
+![alt text](./src/image8.png)
+    **[⬆ Back to Top](#questions)**
+    
+147. ### Outline some differences between a struct and an array?
+
+![alt text](./src/image9.png)
+    **[⬆ Back to Top](#questions)**
+    
+148. ### What do you need to do to deploy a smart contract to the Ethereum network?
+
+To deploy a smart contract to the Ethereum network, follow these steps:
+
+- Write the smart contract: Create a Solidity smart contract, following best practices and conforming with the required standards, such as ERC-20 for tokens.
+
+- Test the smart contract: Thoroughly test the smart contract using tools like Remix IDE, Truffle, or Hardhat. Write unit tests and ensure your contract behaves as expected.
+
+- Compile the contract: Compile the smart contract using a Solidity compiler, such as solc, to generate bytecode and Application Binary Interface (ABI).
+
+- Choose a network: Determine the appropriate Ethereum network for deployment, such as the Ropsten or Rinkeby Testnets (for testing) or Mainnet (for production).
+
+- Fund your account: Ensure you have Ether in the account used for deployment. If using a testnet, request Ether from a faucet.
+
+- Prepare the deployment script: Create a deployment script or use a tool like Truffle or Hardhat to simplify the deployment process. Include the contract bytecode, ABI, constructor arguments (if any), and gas price in the script.
+
+- Unlock your wallet: Unlock your Ethereum wallet (private key), which is used for signing the deployment transaction.
+
+- Deploy the contract: Execute the deployment script or command. This will send a deployment transaction to the network, signed by your wallet.
+
+- Wait for transaction confirmation: Monitor the transaction hash for confirmation. Once the transaction is mined and confirmed, the smart contract address will be available.
+
+- Verify and publish the contract source code (optional): Upload the contract source code on a platform like Etherscan to publicly verify the contract's authenticity and function. This step helps garner trust from potential users.
+    **[⬆ Back to Top](#questions)**
+    
+149. ### Show the Solidity smart contract layout.
+
+![alt text](./src/image10.png)
+    **[⬆ Back to Top](#questions)**
+
+150. ### Are private variables really private?
+
+In Solidity, private variables are "private" within the context of the contract. This means that a private variable cannot be accessed or modified directly by other contracts or external entities.
+
+However, it's important to note that all data stored on the Ethereum blockchain is ultimately public. While private variables are not directly accessible by other contracts, any user with access to the blockchain data can analyze it and potentially reconstruct the values of private variables. In other words, while private variables provide protection against unauthorized access within the contract code itself, they do not guarantee complete privacy from a determined observer.
+    **[⬆ Back to Top](#questions)**
+
+151. ### Explain when you would use an array versus a mapping.
+
+When deciding whether to use an array or a mapping in Solidity, consider the following factors:
+
+<b>Use an Array when:</b>
+
+- You need to maintain a specific order of elements.
+- You want to store a collection of elements that can be iterated over.
+- You require a fixed or dynamic length data structure and need to know the total number of elements.
+- You need to access elements using a numerical index.
+<b>Use a Mapping when:</b>
+
+- You need a key-value structure for associating one data type with another.
+- You want fast and constant-time lookups of elements irrespective of the mapping size.
+- You don't need to know the total number of elements or maintain their order.
+- You want to avoid duplicate keys, as each key in a mapping can have only one associated value.
+- You want a data structure that doesn't necessarily have a predefined or fixed size.
+In summary, choose an array when you need a collection of data that preserves the order and allows iteration. Opt for a mapping when you need an efficient key-value store that avoids duplicates and maintains a constant-time lookup.
+    **[⬆ Back to Top](#questions)**
+
+152. ### Give one difference between memory and storage in Solidity.
+
+In Solidity, memory and storage are two different types of data locations. The key difference between them is as follows:
+
+memory: A temporary storage location that exists only for the duration of a function call. Data stored in memory is not persisted between function calls and is much cheaper, in terms of gas costs, than storage.
+
+storage: A permanent storage location that exists on the Ethereum blockchain, where contract state variables are stored. Data stored in storage persists across function calls and is more expensive, in terms of gas costs, compared to memory.
+    **[⬆ Back to Top](#questions)**
+
+153. ### What are Solidity modifiers?
+
+Solidity modifiers are reusable pieces of code that can be added to functions to modify their behavior. They typically serve the purpose of validating conditions or adding access control restrictions to functions. Modifiers can be attached to a function using an annotation-like syntax, and their code is executed before the main function code.
+
+Modifiers can make code more readable, maintainable, and concise by abstracting away repetitive logic. When a function with a modifier is called, the modifier's code is executed first, and upon satisfying the required conditions, the original function's code is executed.
+    **[⬆ Back to Top](#questions)**
+
+154. ### What is a fallback function in Solidity?
+
+A fallback function in Solidity is a special, unnamed function that gets executed whenever a contract receives Ether without any data or when a function call is made without specifying any function. It serves as the default function for a contract when no other function matches the given input. It must be marked external and payable if the contract is intended to receive Ether directly.
+    **[⬆ Back to Top](#questions)**
+
+155. ### Define decentralized exchange (DEX)?
+
+A decentralized exchange (DEX) is a cryptocurrency exchange that operates without relying on a centralized authority or intermediary, such as a traditional exchange or a bank, to facilitate and manage trades. Instead, DEXs run on a network of nodes, usually powered by blockchain or distributed ledger technology, allowing traders to retain control over their funds and private keys.
+
+DEXs utilize smart contracts, often developed in Solidity, to automate trade execution, manage order books, and enable various trading pairs. Users trade directly from their wallets, removing the need to deposit funds into a centralized platform. This contrasts with centralized exchanges that require users to deposit funds into their platform's wallets, exposing users to potential hacks or loss of funds.
+    **[⬆ Back to Top](#questions)**
+
+156. ### What is the difference between assert and require in Solidity?
+
+![alt text](./src/image11.png)
+    **[⬆ Back to Top](#questions)**
+    
+157. ### Give the name of 3 data types that you use often?
+
+- bool (Boolean): The bool (Boolean) data type is another commonly used data type in Solidity. It represents a binary value and can have only two possible values: true and false. Booleans are often used as flags or decision-making indicators in conditional statements and control structures, such as if statements and loops.
+
+- address: This data type is used to store Ethereum addresses. It is often used when working with account addresses and contract instances, as well as for performing Ether transfers and contract calls.
+
+- string: A dynamic array of characters, mainly used for storing and manipulating text data or any arbitrary-length sequence of bytes. It is useful for storing information like user names, descriptions, or any other textual data.
+    **[⬆ Back to Top](#questions)**
+    
+158. ### In Solidity, how can you declare an array of integers?
+
+In Solidity, you can declare an array of integers by specifying the data type followed by square brackets []. For example, to declare an array of unsigned integers, you would use the uint[] data type. You can initialize the array while declaring it or create an empty array.
+
+Here are two examples of how to declare an array of integers in Solidity:
+
+Declare and initialize an array of unsigned integers:
+![alt text](./src/image12.png)
+Declare an empty array of unsigned integers
+
+
+:
+    **[⬆ Back to Top](#questions)**
+    
+159. ### How can you map addresses to booleans in Solidity?
+
+In Solidity, you can use a mapping data structure to map addresses to booleans. A mapping allows you to store key-value pairs, where each key points to a corresponding value. Here's an example of how you can create a mapping that maps addresses to booleans in Solidity:
+![alt text](./src/image13.png)
+    **[⬆ Back to Top](#questions)**
+
+160. ### Write the code to add data to an array that has been declared as a state variable?
+
+Here's an example of a Solidity contract where we declare an array of unsigned integers as a state variable and define a function to add data to the array:
+
+![alt text](./src/image14.png)
+
+In this example, we have a state variable myArray which is an array of unsigned integers. To add data to this array, we define a function addToMyArray that accepts an unsigned integer (value) as a parameter. The function uses the push method to add the value to the end of the myArray. The push method modifies the state of the contract, thus persisting the array's data changes on the blockchain.
+    **[⬆ Back to Top](#questions)**
+
+161. ### How can you add data to a mapping which is declared as a state variable?
+
+In Solidity, a mapping declared as a state variable is a key-value storage type that allows you to map keys to corresponding values. Here's an example of how you can declare a mapping as a state variable and then add data to it within a contract:
+
+![alt text](./src/image15.png)
+
+In this example, the identification mapping is declared as a state variable, mapping uint keys to string values. The setIdentifier function takes an id (uint) and a name (string) as input, and assigns the name to the id in the identification mapping. This adds the key-value pair to the mapping.
+    **[⬆ Back to Top](#questions)**
+
+162. ### Give some reasons why you need a private variable in your code?
+
+There are several reasons why you might want to use private variables in your Solidity code:
+
+- Encapsulation: Private variables help maintain a clear separation between internal state and external interactions. By keeping the internal workings of a contract hidden, you can prevent external manipulation or unintended access to sensitive information.
+
+- Security: Private variables can prevent unauthorized access to contract data, which is particularly important when handling sensitive or valuable information like user balances, ownership details, or internal contract state.
+
+- Upgradability: When contract state variables are kept private, you can more easily introduce logic updates or bug fixes without affecting external interfaces, maintaining backward compatibility.
+
+- Code maintainability: Private variables limit the visibility and accessibility of your contract's state, which helps to identify unintended external dependencies and ensures that any potential modifications to the contract's state are done through the provided contract functions.
+
+- Resource optimization: Limited access to private variables can prevent unnecessary reads and writes to the contract's storage, which can help reduce gas consumption and optimize resource usage.
+    **[⬆ Back to Top](#questions)**
+
+163. ### Write the 2 APIs used to interact with a smart contract?
+
+- eth_sendTransaction (transaction): eth_sendTransaction is a JSON-RPC API method provided by Ethereum nodes to create and broadcast transactions. JSON-RPC (Remote Procedure Call) is an API protocol that enables client-server communication over HTTP or WebSocket connections. Ethereum implements JSON-RPC to allow developers to interact with the Ethereum network and its nodes, including sending transactions and querying blockchain data.
+
+- eth_call (call): eth_call is an API method provided by Ethereum nodes. It is part of the JSON-RPC API suite, which allows developers to interact with the Ethereum blockchain over HTTP or WebSocket connections.
+
+eth_call is an API method provided by Ethereum nodes. It is part of the JSON-RPC API suite, which allows developers to interact with the Ethereum blockchain over HTTP or WebSocket connections.
+    **[⬆ Back to Top](#questions)**
+
+164. ### List 4 famous Ethereum wallets
+
+Here are four popular Ethereum wallets:
+
+- Metamask: A browser extension and mobile wallet that supports Ethereum and Ethereum-based tokens (such as ERC-20 and ERC-721). Metamask enables users to interact with decentralized applications (dApps) straight from their web browser or smartphone.
+
+- MyEtherWallet (MEW): An open-source, client-side wallet that allows users to create new Ethereum wallets, manage existing ones, and interact with smart contracts. MEW is accessible through a variety of platforms, including web browsers and mobile apps.
+
+- Ledger: A hardware wallet that provides offline storage and enhanced security for cryptocurrencies, including Ethereum and Ethereum-based tokens. Ledger wallets, such as the Ledger Nano S and Ledger Nano X, support interaction with dApps and smart contracts through integrations with wallet software like Metamask and MyEtherWallet.
+
+- Trezor: Another hardware wallet that offers securely storing Ethereum and other cryptocurrencies offline. Trezor wallets, such as Trezor One and Trezor Model T, can also connect with Ethereum dApps and smart contracts through integrated wallet software like Metamask and MyEtherWallet.
+    **[⬆ Back to Top](#questions)**
+
+165. ### List some ways you can instantiate a struct?
+
+In Solidity, you can instantiate a struct in several ways. Here are a few of them:
+
+- Declare a new instance using the StructName and initialize it by assigning values to all its properties inside parentheses:
+StructName memory instanceName = StructName({property1: value1, property2: value2});
+- Declare a new instance using the StructName and initialize it by assigning values in the same order as defined in the struct declaration:
+StructName memory instanceName = StructName(value1, value2);
+- When creating a nested struct, you can use the same approaches mentioned above:
+ParentStructName memory instanceName = ParentStructName({
+property1: value1,
+nestedStruct: StructName({property1: value1, property2: value2})
+});
+
+Remember that if you want to create a struct within a function, you need to use the memory keyword when declaring it. On the other hand, if you need to create a struct instance as a state variable, you don't need to use memory.
+    **[⬆ Back to Top](#questions)**
+
+166. ### How can you instantiate a struct with inner mapping?
+
+In Solidity, you cannot directly instantiate a struct with an inner mapping because mappings cannot be copied or initialized. However, you can work around this limitation by defining a separate function that adds or updates values in the inner mapping.
+
+Here's an example:
+
+![alt text](./src/image16.png)
+    **[⬆ Back to Top](#questions)**
+    
+167. ### How can you join array and mapping to allow iteration and struct lookup?
+
+In Solidity, arrays and mappings cannot be directly connected. However, you can achieve iteration and struct lookup by using a combination of an array, mapping, and a struct. Here's an example to demonstrate this:
+![alt text](./src/image17.png)
+In this example, we store the data in a struct called Data. To allow iteration and struct lookup, we use an array dataList to store the Data structs, and a mapping dataIndices to link the id to the index of the data in the dataList array. By doing this, you can iterate through the dataList array, and also use the dataIndices mapping to quickly find the index of a specific Data struct in the dataList array.
+    **[⬆ Back to Top](#questions)**
+
+168. ### For an in-memory array, how to add a value?
+
+In Solidity, to add a value to an in-memory array, you need to make sure the array size is large enough to hold the new value. Unfortunately, memory arrays do not have built-in .push() methods to increase the size dynamically. You can work around this by either declaring the array with a fixed size and populating the values, or by copying the data into a new array with a larger size.
+
+Here's an example that demonstrates how to add a value to an in-memory array by copying the data into a new array:
+![alt text](./src/image18.png)
+    **[⬆ Back to Top](#questions)**
+    
+169. ### What is the difference between an ERC-20 and ERC-721 token?
+
+![alt text](./src/image19.png)
+    **[⬆ Back to Top](#questions)**
+
+170. ### Explain reentrancy attack?
+
+A reentrancy attack is a security vulnerability in smart contracts, where an attacker can repeatedly call a function within the same transaction before the previous call is finished. It often takes advantage of the contract's functions that make external calls to untrusted contracts while still having control over the state variables.
+
+In a reentrancy attack, the malicious contract hijacks the control flow and can potentially drain the funds or exploit other vulnerabilities in the targeted contract.
+    **[⬆ Back to Top](#questions)**
+
+171. ### What is a hard fork in Solidity?
+
+A hard fork is a change to the underlying consensus rules or protocol that results in the creation of a new, independent blockchain branch. The term "hard fork" is used to refer to the permanent divergence in the blockchain network due to incompatibilities between the old rules and the new rules.
+
+In the context of Ethereum, a hard fork may occur when there is a change to the Ethereum protocol that requires all participants in the network (miners, nodes, and clients) to update their software. Participants who do not upgrade will remain on the old chain, while those who do will create a new chain with the updated rules.
+    **[⬆ Back to Top](#questions)**
+
+172. ### What is the difference between a requirement and a revert statement in Solidity?
+
+In Solidity, both require() and revert() statements are used to handle errors and exceptions by checking for conditions and reverting the transaction if the conditions are not met. However, there are differences in their use cases and behavior, as detailed below:
+
+require() function: require() is mainly used to validate input parameters and preconditions before executing functions or contracts. It checks if a specified condition is true and, if not, reverts the transaction along with a custom or default error message, allowing the user to understand why the transaction failed. Any unused gas is returned to the sender.
+
+revert() function: revert() explicitly aborts the execution of a transaction, rolling back any state changes made during the execution. revert() is typically used to indicate that an error or exception has occurred while executing the contract, or a specific condition that should not have been reached has been encountered.
+    **[⬆ Back to Top](#questions)**
+
+173. ### What is a token standard in Solidity?
+
+A token standard in Solidity is a set of rules and guidelines, including a predefined interface, that governs how tokens should be implemented on the Ethereum blockchain. By following a token standard, developers create tokens that are compatible with different wallets, contracts, and other services within the Ethereum ecosystem. These standards define the methods and events that a token contract should include, enabling the interoperability of different tokens throughout the network.
+    **[⬆ Back to Top](#questions)**
+
+174. ### What is a privacy token in Solidity?
+
+A privacy token in Solidity refers to a token/asset implemented in a smart contract on the Ethereum blockchain with enhanced privacy features. Privacy tokens aim to protect the identity of token holders and keep transaction details confidential when compared to standard tokens, such as ERC20 or ERC721.
+
+The primary objective of privacy tokens is to enable private transactions, enhanced security, and reduced traceability while still ensuring compliance with decentralized networks and ecosystems.
+    **[⬆ Back to Top](#questions)**
+
+175. ### What is a governance token in Solidity?
+
+A governance token in Solidity is a token that represents the voting rights and decision-making power within a decentralized network or platform. Governance tokens enable a decentralized, community-driven approach to decision-making regarding the development, management, and future direction of the associated protocol or platform. Token holders can participate in governance through proposals, voting, or delegation of their voting power to other addresses.
+    **[⬆ Back to Top](#questions)**
+
+176. ### What is a wrapped token in Solidity?
+
+A wrapped token in Solidity is a tokenized version of a digital asset, typically implemented as a smart contract on the Ethereum blockchain. Wrapped tokens are created to represent the value of various cryptocurrencies or assets while enabling compatibility with the Ethereum network, enhancing functionality and interoperability within the Ethereum ecosystem.
+
+Probably the most well-known example of a wrapped token is the Wrapped Bitcoin (WBTC) - an ERC20 token that represents Bitcoin on the Ethereum blockchain. Each WBTC token has the same value as one Bitcoin and is backed by actual Bitcoin held in a custodial wallet. This allows users to interact with Bitcoin within the Ethereum DeFi ecosystem while maintaining the value of the native asset.
+    **[⬆ Back to Top](#questions)**
+    
+177. ### What is a rollup?
+
+A rollup is a Layer-2 scaling solution built on top of existing blockchain networks, such as Ethereum, to improve the throughput and reduce the transaction costs. Rollups function by bundling or "rolling up" multiple transactions off-chain into a single transaction using a cryptographic proof, hence the name "rollup." This proof is then submitted and verified on the base blockchain, which reduces the number of on-chain transactions while maintaining the security guarantees provided by the underlying blockchain.
+    **[⬆ Back to Top](#questions)**
+    
+178. ### What is a soft fork in Solidity?
+
+A soft fork occurs when a blockchain undergoes a backward-compatible update to the protocol or rules. Soft forks tighten the existing rules or introduce new ones but maintain compatibility with the previous set of rules. To be more precise, the term "soft fork" is not specific to Solidity but applies to any blockchain system, including Ethereum, which Solidity is built upon.
+
+For instance, a change in the Ethereum network's consensus algorithm, applied through a soft fork, would still allow nodes that have not upgraded to the new version to validate and accept blocks generated by nodes using the updated rules. However, the nodes that have not upgraded might still produce blocks that may be considered invalid by up-to-date nodes.
+    **[⬆ Back to Top](#questions)**
+    
+179. ### What is a decentralized application (dApp) in Solidity?
+
+A decentralized application (dApp) is a distributed application built on top of a blockchain network, like Ethereum. The term "in Solidity" refers to decentralized applications whose smart contracts are written in the Solidity programming language.
+
+dApps leverage smart contracts, which are self-executing contracts with the terms directly written into code, to create a transparent and trustless environment. The main features of decentralized applications are:
+
+- Open source: dApps have their source code available to everybody, promoting transparency.
+
+- Decentralized: dApps are built on top of blockchain networks that store data on multiple nodes, reducing the risk of a single point of failure and central control.
+
+- Consensus-driven: dApps use cryptographic techniques and consensus mechanisms that incentivize participants to behave honestly and fairly.
+
+- No central authority: dApps operate autonomously without intermediaries, providing censorship resistance and reducing dependency on third parties.
+    **[⬆ Back to Top](#questions)**
+
+180. ### Give one difference between an event and a function in Solidity.
+
+An event in Solidity is a custom data structure used to log information on the blockchain. Events emit data from smart contracts to external consumers or clients, allowing them to monitor and react to contract events. They do not affect the contract's state and are typically used for notifying external components about state changes or important occurrences within the contract.
+
+On the other hand, a function is a piece of code that can be called by external components or other functions within the contract to manipulate data or execute some logic. Functions are the core building blocks of a contract and can read from or write to the contract's state, transfer ether, interact with other contracts, and perform various other actions.
+
+In summary, a key difference between an event and a function in Solidity is that an event is used for logging and broadcasting information whereas a function is used for executing logic and manipulating data within the contract.
+    **[⬆ Back to Top](#questions)**
+
+181. ### How to get the list of all keys in a mapping (like object.keys() in Javascript)?
+
+Using object.keys(), you can get all the keys of an object. It takes an argument and returns an array for all the keys. It gives the object's own enumerable string-keyed property names.
+    **[⬆ Back to Top](#questions)**
+
+182. ### List 3 mechanisms for code reuse here.
+
+In Solidity, three mechanisms for code reuse are:
+
+- Functions: Functions are reusable units of code within a single contract. You can define functions that perform specific tasks or calculations and call these functions from other parts of the contract whenever needed. Functions help make the code manageable and modular.
+
+- Inheritance: Solidity allows contracts to inherit properties (state variables, functions, events, and modifiers) from other contracts using inheritance. Inheritance promotes the reuse of existing, well-defined code and prevents the need to define similar functionalities in multiple contracts. Inherited contracts are often termed parent or base contracts, while the contracts that inherit their properties are referred to as child or derived contracts.
+
+Example:
+![alt text](./src/image20.png)
+- Libraries: Solidity libraries are reusable pieces of code that can be deployed separately and then linked to contracts. Libraries can define reusable functions and utilize their own internal state, but they cannot hold any state data or interact with Ether. Contracts can call the functions defined within a library, allowing for code reuse and optimization. Solidity also supports using the using keyword, which allows the library's functions to be called as if they were contract methods.
+
+Example:
+![alt text](./src/image21.png)
+    **[⬆ Back to Top](#questions)**
+
+183. ### How can you make one contract inherit from the other?
+
+In Solidity, you can make one contract inherit from another by using the is keyword. The inheriting contract, known as the derived contract, will inherit state variables, functions, events, and modifiers from the base contract. Inheritance can be used to create more modular, reusable, and organized code.
+
+Here's an example to demonstrate contract inheritance in Solidity:
+![alt text](./src/image22.png)
+In this example, Derived contract inherits from Base contract using the is keyword. As a result, the Derived contract can access and use the x state variable, setX() function, and getX() function from the Base contract. The Derived contract also has its own state variable y and functions setY() and getY() for additional functionality.
+    **[⬆ Back to Top](#questions)**
+
+184. ### Is it compulsory to make an address “address payable” to transfer ERC20 tokens?
+
+No, it is not compulsory to make an address "address payable" to transfer ERC20 tokens. An "address payable" is required only when you want to transfer Ether directly between addresses. In the case of ERC20 tokens, transfer and approval functions are provided in the ERC20 standard itself, which handle the transfer of tokens between addresses without requiring "address payable".
+
+To transfer ERC20 tokens, you will need to interact with the respective ERC20 token contract using the provided transfer() or transferFrom() (combined with approve()) functions, which work with regular non-payable addresses.
+    **[⬆ Back to Top](#questions)**
+
+185. ### What’s new with Solidity 0.5.x vs. 0.4.x?
+
+- Add memory storage keywords to private, public, and internal complex parameters that don't have predefined storage locations.
+- For fallback functions “add function” visibility of external
+- Change function contractName to constructor
+- Change constant function state mutability modifier to view
+    **[⬆ Back to Top](#questions)**
+
+186. ### Give three ways to save gas.
+
+To make transactions more efficient and save gas in Solidity, developers can use different optimization techniques. Here are three common ways to save gas:
+
+<b>Use less expensive operations:</b> Some operations in Solidity consume less gas than others, so it is important to select the right operations whenever possible. For example, use +=, -= instead of repeated + and - operations, and use ++ and -- increment/decrement operators to modify values. Additionally, using bitwise operations (&, |, ^) whenever possible instead of arithmetic operations can lead to gas savings.
+
+<b>Optimize storage:</b> Setting a storage value costs more gas if it changes from zero to non-zero and less for a non-zero to non-zero change. To optimize, you can implement two approaches:
+
+- Use storage efficiently by combining multiple smaller data types into single storage slots when possible.
+- Make the most of Solidity's struct packing. Solidity automatically packs smaller data types within struct efficiently to minimize the gas cost. Thus, organizing state variables within struct can save gas.<br></br><b>Reuse code with libraries:</b> Extensive usage of functions, loops, and conditions can increase gas consumption. Using libraries for frequently used functions can help you to reduce the amount of bytecode and save gas. Also, consider using internal functions that are inlined when called, earlier in the contract to reduce the overall size of compiled bytecode.
+    **[⬆ Back to Top](#questions)**
+    
+187. ### Write in an order uint128, bytes32, and another uint128 to save gas.
+
+When organizing the order of data types in a Solidity contract to save gas, you should consider the concept of packing variables. This is especially relevant when storing multiple smaller data types. By placing smaller data types next to each other, you can utilize the available space within a single storage slot, which is 32 bytes wide, and save gas. The example below demonstrates how to organize uint128, bytes32, and another uint128 in an efficient order:
+![alt text](./src/image23.png)
+In the above example, variableA and variableC are both uint128, which effectively occupy 16 bytes each. Since a storage slot is 32 bytes wide, these two variables combined total 32 bytes, which fit into a single storage slot. variableB is a bytes32, occupying a full storage slot as well. Following this structure, the contract efficiently utilizes storage space and saves gas during computation.
+    **[⬆ Back to Top](#questions)**
+    
+188. ### What do you know about the ABIEncoderV2 pragma statement?
+
+The ABIEncoderV2 pragma statement is an experimental feature in Solidity that enables the more advanced ABI (Application Binary Interface) encoder and decoder functionalities, extending the capabilities of the Standard ABI Encoder (ABIEncoderV1). In particular, ABIEncoderV2 supports struct types and nested arrays as function parameters and return values.
+
+To enable the use of ABIEncoderV2, you need to include the following pragma statement in your Solidity file:
+
+pragma experimental ABIEncoderV2;
+    **[⬆ Back to Top](#questions)**
+    
+189. ### What is a decentralized identifier (DID) in Solidity?
+
+A Decentralized Identifier (DID) is not specific to Solidity; it is a general concept that can be implemented in any smart contract or blockchain platform. A DID is a new type of global identifier that enables self-sovereign identity by being generated and controlled by the identity owner, rather than relying on a centralized authority. DIDs are typically associated with verifiable credentials and decentralized identity systems like Decentralized Public Key Infrastructure (DPKI).
+
+In the context of Solidity, a DID can be implemented by creating a smart contract that handles the registration, storage, and management of these identifiers on the Ethereum blockchain. For example, using Ethereum-based standards such as ERC725 (identity) and ERC735 (claims) to create a decentralized identity contract.
     **[⬆ Back to Top](#questions)**
