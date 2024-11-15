@@ -194,6 +194,36 @@
 | 187  | [Write in an order uint128, bytes32, and another uint128 to save gas.](#Write-in-an-order-uint128-bytes32-and-another-uint128-to-save-gas)
 | 188  | [What do you know about the ABIEncoderV2 pragma statement?](#What-do-you-know-about-the-ABIEncoderV2-pragma-statement)
 | 189  | [What is a decentralized identifier (DID) in Solidity?](#What-is-a-decentralized-identifier-DID-in-Solidity)
+| 190  | [Write two kinds of assembly?](#Write-two-kinds-of-assembly)
+| 191  | [How to protect against a reentrancy attack?](#How-to-protect-against-a-reentrancy-attack)
+| 192  | [Is it feasible to send a transaction without having to charge customers for gas?](#Is-it-feasible-to-send-a-transaction-without-having-to-charge-customers-for-gas)
+| 193  | [What is the use of the payable keyword in Solidity?](#What-is-the-use-of-the-payable-keyword-in-Solidity)
+| 194  | [What is the equivalent of a Javascript console.log in Solidity for debugging?](#What-is-the-equivalent-of-a-Javascript-consolelog-in-Solidity-for-debugging)
+| 195  | [What do you understand by PoW consensus?](#What-do-you-understand-by-PoW-consensus)
+| 196  | [Explain consensus algorithm’s function?](#Explain-consensus-algorithms-function)
+| 197  | [An abstract contract is preferable over an interface in Solidity. Why?](#An-abstract-contract-is-preferable-over-an-interface-in-Solidity-Why)
+| 198  | [Mention some restrictions on enumeration use?](#Mention-some-restrictions-on-enumeration-use)
+| 199  | [What is the indexed keyword in the event definition?](#What-is-the-indexed-keyword-in-the-event-definition)
+| 200  | [What is a Merkle tree in Solidity?](#What-is-a-Merkle-tree-in-Solidity)
+| 201  | [What is a sidechain in Solidity?](#What-is-a-sidechain-in-Solidity)
+| 202  | [What is a state channel in Solidity?](#What-is-a-state-channel-in-Solidity)
+| 203  | [What is a cross-chain bridge in Solidity?](#What-is-a-cross-chain-bridge-in-Solidity)
+| 204  | [What is a flash mint in Solidity?](#What-is-a-flash-mint-in-Solidity)
+| 205  | [What do you know about smart contract wallet?](#What-do-you-know-about-smart-contract-wallet)
+| 206  | [What is a multi-signature wallet in Solidity?](#What-is-a-multi-signature-wallet-in-Solidity)
+| 207  | [How can you prevent overflow and underflow issues while working with uint in Solidity?](#How-can-you-prevent-overflow-and-underflow-issues-while-working-with-uint-in-Solidity)
+| 208  | [How can you implement a simple contract that accesses the block information in Solidity?](#How-can-you-implement-a-simple-contract-that-accesses-the-block-information-in-Solidity)
+| 209  | [How can you implement a simple ERC20 token in Solidity?](#How-can-you-implement-a-simple-ERC20-token-in-Solidity)
+| 210  | [How can you implement a time lock or delay on function execution in a Solidity contract?](#How-can-you-implement-a-time-lock-or-delay-on-function-execution-in-a-Solidity-contract)
+| 211  | [How can you implement an upgradable smart contract in Solidity?](#How-can-you-implement-an-upgradable-smart-contract-in-Solidity)
+| 212  | [What are function modifiers and provide an example of usage in Solidity?](#What-are-function-modifiers-and-provide-an-example-of-usage-in-Solidity)
+| 213  | [How can you implement a simple Owned contract pattern in Solidity?](#How-can-you-implement-a-simple-Owned-contract-pattern-in-Solidity)
+| 214  | [Explain how you can send Ether to other addresses from within a smart contract.](#Explain-how-you-can-send-Ether-to-other-addresses-from-within-a-smart-contract)
+| 215  | [How can you implement an emergency stop in a Solidity contract?](#How-can-you-implement-an-emergency-stop-in-a-Solidity-contract)
+| 216  | [How can you access the balance of a contract?](#How-can-you-access-the-balance-of-a-contract)
+| 217  | [Explain how to implement simple access control tiering using function modifiers.](#Explain-how-to-implement-simple-access-control-tiering-using-function-modifiers)
+| 218  | [Can a user send a transaction without being required to pay for gas? If yes, then how?](#Can-a-user-send-a-transaction-without-being-required-to-pay-for-gas-If-yes-then-how)
+| 219  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -1622,4 +1652,308 @@ pragma experimental ABIEncoderV2;
 A Decentralized Identifier (DID) is not specific to Solidity; it is a general concept that can be implemented in any smart contract or blockchain platform. A DID is a new type of global identifier that enables self-sovereign identity by being generated and controlled by the identity owner, rather than relying on a centralized authority. DIDs are typically associated with verifiable credentials and decentralized identity systems like Decentralized Public Key Infrastructure (DPKI).
 
 In the context of Solidity, a DID can be implemented by creating a smart contract that handles the registration, storage, and management of these identifiers on the Ethereum blockchain. For example, using Ethereum-based standards such as ERC725 (identity) and ERC735 (claims) to create a decentralized identity contract.
+    **[⬆ Back to Top](#questions)**
+
+190. ### Write two kinds of assembly?
+
+There are two kinds of assembly in Solidity: Inline Assembly and Stand-Alone Assembly.
+
+Inline Assembly
+
+Inline Assembly is a low-level, EVM-specific assembly language used within Solidity smart contracts to optimize the execution of specific code sections or access low-level EVM operations that are not directly available in Solidity. It is encapsulated within Solidity code using the assembly keyword.
+
+Example of Inline Assembly in Solidity:
+
+![alt text](./src/image24.png)
+
+In this example, the getAddition() function uses Inline Assembly to perform addition with the low-level add opcode of the EVM.
+
+Stand-Alone Assembly (Yul):
+
+Stand-Alone Assembly, also known as Yul or JULIA (intermediate language), is an intermediate language used by the Solidity compiler as an intermediate step between the high-level code and the actual bytecode produced for the EVM. Yul is designed to be simple, efficient, and easy to optimize. It is intended to serve as a common base for higher-level high-level languages and is usable as an intermediate language for various compilation targets, including the EVM, Ethereum Flavoured WebAssembly (eWASM) and others.
+
+Example of Yul code:
+
+![alt text](./src/image25.png)
+
+This Yul code snippet takes in two 256-bit values from the calldata, adds them, and returns the result. Note that this code cannot be used directly inside a Solidity contract, but illustrates the syntax and simplicity of a Stand-Alone Assembly.
+    **[⬆ Back to Top](#questions)**
+
+191. ### How to protect against a reentrancy attack?
+
+To protect against a reentrancy attack, follow these best practices:
+
+Use the Checks-Effects-Interactions pattern: Arrange your contract's code in the following order - perform input checks, update state variables, and lastly, interact with other contracts. This ensures that the state variables are up-to-date before any external calls.
+
+![alt text](./src/image26.png)
+
+Use function modifiers: Create a function modifier that prevents the reentrancy attack by not allowing the function to be called again until the previous execution is completed.
+
+![alt text](./src/image27.png)
+
+Use the transfer() function: The transfer() function is a safer method for sending ether because it only forwards a limited amount of gas to the recipient. This is usually not enough gas for the recipient to execute arbitrary code, thus preventing reentrancy attacks. However, this method is now discouraged in favor of call{value: amount} due to new gas mechanics introduced by EIP-1884.
+
+![alt text](./src/image28.png)
+
+Use Pull Payment (i.e., Withdraw Pattern): Instead of pushing payments from the contract to the recipients, allow recipients to withdraw their funds from the contract. This method separates the accounting logic from the actual transfer of funds, reducing the attack surface for reentrancy attacks.
+
+![alt text](./src/image29.png)
+    **[⬆ Back to Top](#questions)**
+
+192. ### Is it feasible to send a transaction without having to charge customers for gas?
+
+You’ll often find this question among the Solidity developer interview questions, and the answer is Yes. You'd have people sign a message on the front end first. The message and signature would then be routed to a centralized backend (off-chain) that would establish a transaction and include the payload (message + signature).
+
+This means that instead of the user's wallet, the app's wallet will cover gas costs. A smart contract will validate the signature's validity and perform an activity on behalf of the user on the blockchain.
+    **[⬆ Back to Top](#questions)**
+
+193. ### What is the use of the payable keyword in Solidity?
+
+The payable keyword in Solidity is used as a modifier for a function or a fallback method to indicate that the function can receive Ether directly. When a function is marked as payable, it enables the contract to accept Ether directly as part of the transaction calling the function.
+
+If a function is not declared as payable, sending Ether to the function will result in a runtime error, causing the transaction to revert.
+
+![alt text](./src/image30.png)
+
+In this example, the sendEther function is marked as payable, allowing it to accept Ether payments and increment the totalReceived counter.
+    **[⬆ Back to Top](#questions)**
+
+194. ### What is the equivalent of a Javascript console.log in Solidity for debugging?
+
+This question is often a part of the Solidity developer interview questions. In Solidity, there isn't a direct equivalent to console.log in JavaScript. Instead, you can use events for debugging purposes. You can define an event and emit it with the values you want to log. External clients or applications can then watch for this event and process the logged data.
+
+Here's an example:
+
+![alt text](./src/image31.png)
+
+In this example, you would watch the Log event in your client application to observe the emitted message and value. Keep in mind that using events for debugging consumes gas and their data will be stored permanently on the blockchain.
+    **[⬆ Back to Top](#questions)**
+
+195. ### What do you understand by PoW consensus?
+
+PoW, or Proof of Work, is a consensus mechanism used in blockchain technology to validate and confirm new transactions and create new blocks. It requires participants, known as miners, to perform complex and resource-intensive calculations to solve a cryptographic puzzle. When a miner solves the puzzle, they can propose the next block to be added to the blockchain.
+
+The PoW consensus mechanism helps to ensure that the blockchain remains secure and decentralized, as it makes it difficult for any single participant to monopolize the computational resources or perpetrate malicious actions. Networks such as Bitcoin and Ethereum use PoW as their primary consensus mechanism. However, concerns regarding energy consumption and environmental impact have led to the development of alternative consensus mechanisms such as Proof of Stake (PoS) and Delegated Proof of Stake (DPoS).
+    **[⬆ Back to Top](#questions)**
+
+196. ### Explain consensus algorithm’s function?
+
+A consensus algorithm is a fundamental component of a blockchain network that enables its nodes or participants to reach an agreement on the validity and authenticity of transactions and data. The main functions of a consensus algorithm include:
+
+Transaction validation: Consensus algorithms ensure that only valid and legitimate transactions are added to the blockchain. By validating each transaction, the algorithm helps to maintain the integrity and security of the network.
+
+Agreement on the state of the blockchain: Consensus algorithms facilitate agreement among nodes on the current state of the blockchain, which is necessary to maintain a consistent and up-to-date ledger.
+
+Appending new blocks: The algorithms provide a mechanism for proposing and appending new blocks to the blockchain. These blocks contain recent transactions that have been validated and agreed upon by the participants.
+
+Fault tolerance: Consensus algorithms help provide fault tolerance to the network, ensuring that even if some nodes are offline or have faulty data, the network can continue to function correctly. This contributes to a blockchain network's resilience and reliability.
+
+Security: Consensus algorithms are designed to prevent malicious activities such as double-spending and other attacks on the network. They make it difficult for any single participant or a group of participants to take control of the network or compromise its integrity.
+    **[⬆ Back to Top](#questions)**
+    
+197. ### An abstract contract is preferable over an interface in Solidity. Why?
+
+Actually, it's not accurate to say that an abstract contract is always preferable over an interface in Solidity. Both abstract contracts and interfaces serve different purposes, and whether to use one over the other depends on the specific use case.
+
+<b>Interface:</b>
+
+- Interfaces are used to define the external functions that a contract is required to implement, enabling a consistent way to interact with other contracts.
+- Interfaces can only contain function signatures without implementation (no function bodies).
+- Interfaces cannot have state variables or constructors.
+- Interfaces support multiple inheritance, letting a contract inherit from multiple interfaces.
+<b>Abstract Contract:</b>
+
+- Abstract contracts are used as a base for other contracts to inherit from, but they can't be deployed on their own because they contain at least one unimplemented function.
+- Abstract contracts can have implemented functions, state variables, constructors, and events.
+- Abstract contracts also support inheritance, yet unlike interfaces, they can have constructors and state variables.
+- Abstract contracts can contain partially implemented functions, which can be helpful in sharing common functionality between several contracts.
+If your goal is to define a standard set of external functions for a contract to interact with other contracts, then an interface is the better choice. However, if you need a base contract that can include common functionality, state variables, and constructor logic that other contracts can inherit from, then an abstract contract would be more suitable.
+    **[⬆ Back to Top](#questions)**
+    
+198. ### Mention some restrictions on enumeration use?
+
+Enumerations in Solidity are a convenient way to work with a fixed set of constant values. Despite their usefulness, they also come with some restrictions:
+
+- Integer conversion: Enumeration values are automatically assigned integer values starting from 0, but you cannot directly convert or assign numbers to enumeration types. An explicit cast is necessary to convert from integer values to the enumeration type.
+
+- Limited scope: Enumerations can only be declared at the contract level, and they cannot be defined inside a function or struct. This may limit their usability in certain situations.
+
+- Limited comparison operators: Enumerations support only basic comparison operators (== and !=). They do not support the greater-than (>), less-than (<), greater-than-or-equal-to (>=), or less-than-or-equal-to (<=) comparison operators. However, their underlying integer values can be compared using these operators after explicitly casting the enumeration value to an integer.
+
+- No dynamic enumeration: Enumerations in Solidity are static and require a predefined set of constants. They cannot be created or modified dynamically during runtime.
+
+- No arithmetic operations: Enumerations do not support arithmetic operations such as addition or subtraction. To perform arithmetic operations, you need to explicitly cast the enumeration value to an integer type and then perform the operations on the integer values.
+    **[⬆ Back to Top](#questions)**
+    
+199. ### What is the indexed keyword in the event definition?
+
+In Solidity, the indexed keyword is used in event definitions to mark specific event parameters for more efficient and optimized filtering and searching. When an event parameter is marked as indexed, it becomes a part of the indexed log's data structure known as "topics".
+
+There can be up to three indexed parameters in an event, and these parameters will be stored as separate topics alongside the event signature in the log. Non-indexed parameters, on the other hand, are stored together in the log's data section.
+
+With indexed parameters, clients like external applications or blockchain explorers can easily and efficiently search, filter, or listen to specific events based on specified indexed values. This is particularly useful when monitoring a large number of logs or looking for specific information within a blockchain.
+    **[⬆ Back to Top](#questions)**
+
+200. ### What is a Merkle tree in Solidity?
+
+A Merkle tree, or binary hash tree, is a data structure used in computer science and cryptography for efficiently verifying the contents of large data sets. Although Merkle trees are not a part of Solidity as a language, they play a significant role in Ethereum, the blockchain platform where Solidity contracts are predominantly deployed.
+
+In Ethereum, a Merkle tree is used to store the data of transactions (Trie), state (State Trie), and storage (Storage Trie) efficiently and securely. The tree consists of leaves and nodes, where the leaves contain the actual data (e.g., transactions or storage), and each non-leaf node stores the hash of its child nodes. The root of the tree, known as the Merkle root, represents the hash of all the tree's elements and is included in each block header to verify the block's transactions.
+    **[⬆ Back to Top](#questions)**
+
+201. ### What is a sidechain in Solidity?
+
+A sidechain is not directly related to Solidity as a language; however, it is a concept used in blockchain technology. Sidechains are separate, individual blockchain networks connected to a primary blockchain (such as Ethereum, where Solidity contracts are commonly used) through a two-way pegging mechanism. Sidechains enable assets and tokens to be transferred between the primary blockchain and the sidechain securely and efficiently.
+
+The purpose of using a sidechain is to address issues like network congestion, performance, and scalability on the main blockchain. The sidechain can process transactions and execute smart contracts independently from the main chain, thus distributing the workload and reducing the transaction processing burden on the primary blockchain. This can lead to faster transaction confirmations and reduced fees.
+    **[⬆ Back to Top](#questions)**
+
+202. ### What is a state channel in Solidity?
+
+A state channel is a scalability solution for blockchain networks such as Ethereum, where Solidity is commonly used to write smart contracts. State channels provide a way for blockchain users to execute transactions and interact with smart contracts off-chain, improving scalability and efficiency while reducing fees.
+
+A state channel functions by opening an off-chain channel between participants, through which multiple transactions, contractual interactions, or other off-chain computations can occur privately and securely. The initial state is locked on-chain with a smart contract, and the participants then update the state off-chain by signing transactions or agreements between them.
+    **[⬆ Back to Top](#questions)**
+
+203. ### What is a cross-chain bridge in Solidity?
+
+A cross-chain bridge, although unrelated to Solidity as a language, is a solution in blockchain technology that enables communication and asset transfers between different blockchain networks, such as Ethereum (which uses Solidity for smart contracts) and Binance Smart Chain or other blockchains.
+
+Cross-chain bridges work by connecting multiple blockchain platforms through the use of smart contracts, oracles, validators, and other components. These bridges facilitate the secure transfer of assets, including tokens and crypto-currencies, from one chain to another, often achieved by locking the original asset on the source chain and minting an equivalent representation on the destination chain. This linking of distinct blockchain networks creates interoperability, allowing for cross-chain services and dApps.
+    **[⬆ Back to Top](#questions)**
+
+204. ### What is a flash mint in Solidity?
+
+A flash mint is a specific feature available in some DeFi (Decentralized Finance) tokens, usually implemented using Solidity smart contracts. Flash minting allows users to mint a large amount of tokens instantly, with one critical condition - they must repay the minted tokens (plus any applicable fees) within the same block or transaction. This is done using a function built into the contract, such as flashMint().
+
+Flash minting relies on the concept of flash loans, which enables users to borrow large amounts of tokens without providing collateral. The primary use case for flash mints includes arbitrage opportunities and executing complex financial interactions in DeFi platforms.
+    **[⬆ Back to Top](#questions)**
+
+205. ### What do you know about smart contract wallet?
+
+A smart contract wallet is a type of cryptocurrency wallet that is built using smart contracts, commonly developed in languages like Solidity. It offers more advanced functionality and improved security compared to traditional wallets. These wallets operate on decentralized platforms, usually Ethereum, and allow users to store, manage, and interact with digital assets such as tokens, cryptocurrencies, and NFTs (Non-Fungible Tokens).
+    **[⬆ Back to Top](#questions)**
+
+206. ### What is a multi-signature wallet in Solidity?
+
+A multi-signature (multisig) wallet in Solidity is a type of smart contract wallet that requires approval from multiple parties (or keys) before a transaction can be executed. The multisig wallet is developed using Solidity and deployed on the Ethereum blockchain (or any other compatible EVM-based blockchain). It offers enhanced security and better access control features compared to a traditional single-key wallet.
+
+The multisig wallet typically works by specifying a required number of approvals (known as the threshold) for any operation. For example, if a multisig wallet is set up with a 2-of-3 threshold, it means that at least two out of the three authorized users must sign and approve the transaction before it can be executed.
+    **[⬆ Back to Top](#questions)**
+    
+207. ### How can you prevent overflow and underflow issues while working with uint in Solidity?
+
+To prevent overflow and underflow issues, the SafeMath library provided by OpenZeppelin can be used. The library performs arithmetic operations with an added check for overflows and underflows, and will revert transactions if issues arise. Below is an example of its usage:
+
+![alt text](./src/image32.png)
+    **[⬆ Back to Top](#questions)**
+    
+208. ### How can you implement a simple contract that accesses the block information in Solidity?
+
+You can access block information from within a Solidity contract using the block global variable. Here's an example:
+
+![alt text](./src/image33.png)
+
+This example demonstrates a simple contract that retrieves some of the most common block information: the current block number, the current block timestamp, and the block difficulty.
+    **[⬆ Back to Top](#questions)**
+    
+209. ### How can you implement a simple ERC20 token in Solidity?
+
+To create an ERC20 token, you must implement the ERC20 interface as defined in the EIP20 standard. As a developer, you can use the OpenZeppelin library, which provides tested and community-reviewed implementations of ERC20 tokens. Here's a simple example:
+
+![alt text](./src/image34.png)
+
+In the example, the MyToken contract inherits the ERC20 contract from the OpenZeppelin library, which implements the required functions and behavior for an ERC20 token. The constructor sets the token's name, symbol, and mint the initial supply.
+    **[⬆ Back to Top](#questions)**
+
+210. ### How can you implement a time lock or delay on function execution in a Solidity contract?
+
+A time lock or delay can be introduced by using block.timestamp to set a time limit before a function is executed. Here's a simple example:
+
+![alt text](./src/image35.png)
+
+This example demonstrates a simple smart contract with a time lock on the executeRestrictedFunction function. The function can only be executed when the unlocked modifier's condition is met.
+    **[⬆ Back to Top](#questions)**
+
+211. ### How can you implement an upgradable smart contract in Solidity?
+
+Upgradable contracts use a proxy pattern to separate the contract logic from the data storage, allowing developers to replace the contract logic while retaining the original data. The two most common patterns are the ‘unstructured storage’ and ‘eternal storage’ patterns.
+
+A simple example using the ‘unstructured storage’ pattern:
+
+![alt text](./src/image36.png)
+
+This example demonstrates a basic upgradable contract using the Proxy contract to delegate calls to the implementation contract. Developers can replace the implementation without affecting the deployed MyContract data.
+
+Keep in mind, this example is simplified and not recommended for production deployments. For a more robust upgradable contract system, refer to the OpenZeppelin library's proxy implementation, such as the TransparentUpgradeableProxy contract.
+    **[⬆ Back to Top](#questions)**
+
+212. ### What are function modifiers and provide an example of usage in Solidity?
+
+Function modifiers are a feature in Solidity that allows you to alter the behavior of a function. They can be used to add common requirements, such as access restrictions, preconditions, and state validation checks.
+
+Example:
+
+![alt text](./src/image37.png)
+
+In this example, the onlyOwner modifier restricts access to the restrictedFunction so that only the contract owner can execute it. The modifier checks the msg.sender and reverts the transaction if the sender is not the owner.
+    **[⬆ Back to Top](#questions)**
+
+213. ### How can you implement a simple Owned contract pattern in Solidity?
+
+The Owned contract pattern uses an access control mechanism to restrict the access to certain functions to the contract creator. Below is an example:
+
+![alt text](./src/image38.png)
+    **[⬆ Back to Top](#questions)**
+
+214. ### Explain how you can send Ether to other addresses from within a smart contract.
+
+To send Ether from a smart contract, you can use the transfer, send, or call functions. The transfer and send functions are not recommended due to their limited gas stipend, which may cause issues with the receiving contracts. The call function is recommended for sending Ether. Here's an example:
+
+![alt text](./src/image39.png)
+
+This contract contains a sendEther function which takes a payable recipient address and an amount and transfers the specified amount of Ether to the recipient.
+    **[⬆ Back to Top](#questions)**
+
+215. ### How can you implement an emergency stop in a Solidity contract?
+
+To implement an emergency stop, you can use a contract that sets a "stopped" state, and then use a function modifier to enforce that state. Below is an example:
+
+![alt text](./src/image40.png)
+
+In this example, the EmergencyStop contract has a stopped state variable and a stopInEmergency modifier that restricts the execution of the restrictedFunction when the stopped state is true. The contract creator (owner) can toggle the emergency stop state using the toggleEmergencyStop function.
+    **[⬆ Back to Top](#questions)**
+
+216. ### How can you access the balance of a contract?
+
+Accessing the balance of a contract can be done using the balance property of the contract address. Here's an example:
+
+![alt text](./src/image41.png)
+
+This example demonstrates a simple contract where you can retrieve the balance using the getContractBalance function. Using address(this).balance, you can get the current Ether balance of the contract.
+    **[⬆ Back to Top](#questions)**
+    
+217. ### Explain how to implement simple access control tiering using function modifiers.
+
+To implement an access control tiering system, define multiple privileged roles with distinct permissions within a contract. Then, use function modifiers to enforce role-based access to functions. Here's an example:
+
+![alt text](./src/image42.png)
+
+In this example, the RoleBasedAccessControl contract uses the onlyAdmin and onlyModerator modifiers to restrict access to certain functions. The adminFunction can only be called by the admin, and the moderatorFunction can only be called by the moderator. The userFunction can be called by anyone.
+    **[⬆ Back to Top](#questions)**
+    
+218. ### Can a user send a transaction without being required to pay for gas? If yes, then how?
+
+In Ethereum, it's not possible for users to send transactions without paying for gas, as gas fees are required to compensate the miners for processing and validating transactions on the network. However, there are a few workarounds that can be utilized to let users interact with contracts without the need to pay gas fees directly, and instead, have another party cover their fees:
+
+- Gas Station Network (GSN): GSN is a decentralized system that enables users to interact with contracts without ETH for gas fees. Instead, the gas fees are paid by a third party known as a "paymaster." A contract willing to accept "meta-transactions" must implement the GSN's relay recipient interface. When a user wants to execute a transaction, they create a "meta-transaction" and send it to a relay server instead of the Ethereum network directly. The relay server forwards the transaction to the contract while paying the gas fee. The paymaster (or the contract itself) will later compensate the relay server.
+
+- Flash bots: Flash bots can help users have their transaction included in a block without paying a direct gas fee. To achieve this, the user includes the payment in the transaction and sends it to a flash bot-enabled miner. The miner benefits from the payment while also circumventing the regular "first-price auction" model for gas. However, this approach is complex and primarily used for more advanced use cases such as arbitrage or liquidations.
+
+- EIP-3074 (Authenticator): EIP-3074 is a proposed protocol upgrade that introduces a new opcode (AUTH) allowing users to delegate transaction processing to a third party (known as an "Authenticator") who will pay the gas fees. Users sign a message that permits specific operations, and the Authenticator creates and sends the transaction, paying the fees themselves. Once EIP-3074 is implemented, this approach can be a viable solution for enabling users to send transactions without directly paying gas fees.
+    **[⬆ Back to Top](#questions)**
+    
+219. ### 9999
+
+9999
     **[⬆ Back to Top](#questions)**
