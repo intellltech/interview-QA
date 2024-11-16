@@ -35,7 +35,7 @@
 | 28   | [What is a variable in Solidity?](#What-is-a-variable-in-Solidity)
 | 29   | [What is an event in Solidity?](#What-is-an-event-in-Solidity)
 | 30   | [What is a library in Solidity?](#What-is-a-library-in-Solidity)
-| 31   | [What is the constant function in Solidity?](#What-is-the-constant-function-in-Solidity)
+| 31   | [How does the 'view' function modifier work with functions?](#How-does-the-view-function-modifier-work-with-functions)
 | 32   | [What are hexadecimal literals in Solidity?](#What-are-hexadecimal-literals-in-Solidity)
 | 33   | [What are the different Ether units available in Solidity?](#What-are-the-different-Ether-units-available-in-Solidity)
 | 34   | [What time units are available in Solidity?](#What-time-units-are-available-in-Solidity)
@@ -59,7 +59,7 @@
 | 52  | [What do revert() and revert(string reason) do?](#What-do-revert-and-revertstring-reason-do)
 | 53  | [What happens if the smart contract does not specify the Solidity version?](#What-happens-if-the-smart-contract-does-not-specify-the-Solidity-version)
 | 54  | [Explain the role of the Ethereum Virtual Machine (EVM).](#Explain-the-role-of-the-Ethereum-Virtual-Machine-EVM)
-| 55  | [Does EVM understands Solidity?](#Does-EVM-understands-Solidity)
+| 55  | [How does the Ethereum Virtual Machine (EVM) work?](#How-does-the-Ethereum-Virtual-Machine-EVM-work)
 | 56  | [What is a proxy contract in Solidity?](#What-is-a-proxy-contract-in-Solidity)
 | 57  | [What is a staking pool in Solidity?](#What-is-a-staking-pool-in-Solidity)
 | 58  | [List the difference between public and private visibility modifiers in Solidity?](#List-the-difference-between-public-and-private-visibility-modifiers-in-Solidity)
@@ -223,7 +223,17 @@
 | 216  | [How can you access the balance of a contract?](#How-can-you-access-the-balance-of-a-contract)
 | 217  | [Explain how to implement simple access control tiering using function modifiers.](#Explain-how-to-implement-simple-access-control-tiering-using-function-modifiers)
 | 218  | [Can a user send a transaction without being required to pay for gas? If yes, then how?](#Can-a-user-send-a-transaction-without-being-required-to-pay-for-gas-If-yes-then-how)
-| 219  | [9999](#9999)
+| 219  | [Can you explain what a smart contract is?](#Can-you-explain-what-a-smart-contract-is)
+| 220  | [What is a contract in Solidity?](#What-is-a-contract-in-Solidity)
+| 221  | [Explain 'msg.sender'.](#Explain-msgsender)
+| 222  | [What is the purpose of 'require' in Solidity?](#What-is-the-purpose-of-require-in-Solidity)
+| 223  | [How are Ethereum addresses formatted?](#How-are-Ethereum-addresses-formatted)
+| 224  | [Can Solidity functions accept multiple parameters?](#Can-Solidity-functions-accept-multiple-parameters)
+| 225  | [Describe the process of creating a new contract from another contract in Solidity.](#Describe-the-process-of-creating-a-new-contract-from-another-contract-in-Solidity)
+| 226  | [Describe what "gas" is in the context of Ethereum.](#Describe-what-gas-is-in-the-context-of-Ethereum)
+| 227  | [What is an ERC-20 token?](#What-is-an-ERC-20-token)
+| 228  | [How does a decentralized exchange (DEX) work?](#How-does-a-decentralized-exchange-DEX-work)
+| 229  | [What are some challenges faced when developing on the Ethereum platform?](#What-are-some-challenges-faced-when-developing-on-the-Ethereum-platform)
 
 ## Answers
 1. ### What is Solidity?
@@ -387,9 +397,9 @@ An event is an inheritable member of the contract, which stores the arguments pa
 Libraries in solidity are similar to contracts that contain reusable codes. A library has functions that can be called by other contracts.<ui><li>Deploying a common code by creating a library reduces the gas cost.</li><li>Functions of the library can be called directly when they do not modify the state variables i.e. only pure and view functions can be called from outside of the library.</li><li>The library does not have state variables, it cannot inherit any element and cannot be inherited.</li></ui>
     **[⬆ Back to Top](#questions)**
 
-31. ### What is the constant function in Solidity?
+31. ### How does the 'view' function modifier work with functions?
 
-A constant function does not change the state of the contract. Therefore, the constant function can be called from anywhere without concerning the security issues it will impose as the function will not affect the state of the contract.
+A 'view' function declares that no state will be changed. This means the function is only viewing the data but not modifying it.
     **[⬆ Back to Top](#questions)**
     
 32. ### What are hexadecimal literals in Solidity?
@@ -511,9 +521,9 @@ Failure to choose the correct version of Solidity while programming the smart co
 Ethereum Virtual Machine (EVM) serves as the runtime environment for smart contracts running on the Ethereum Blockchain and ensures that smart contracts are executed securely across all nodes in the network.<ui><li>The EVM process the EVM bytecode generated from high-level smart contract languages like Solidity.</li><li>EVM is responsible for maintaining the state of the Ethereum blockchain including the contract state. When the contract's state changes due to the execution of the function then EVM updates the contract's state.</li><li>EVM uses gas to measure the cost of executing the smart contract. The EVM calculates the total gas used during contract execution.</li>
     **[⬆ Back to Top](#questions)**
 
-55. ### Does EVM understands Solidity?
+55. ### How does the Ethereum Virtual Machine (EVM) work?
 
-The EVM does not directly understand Solidity as it understands and executes bytecode. When a transaction is executed EVM reads and processes the corresponding bytecode instructions.
+The EVM is the runtime environment for smart contracts on Ethereum. It ensures that contracts run in isolation, execute code, and interact with the Ethereum state.
     **[⬆ Back to Top](#questions)**
 
 56. ### What is a proxy contract in Solidity?
@@ -1953,7 +1963,57 @@ In Ethereum, it's not possible for users to send transactions without paying for
 - EIP-3074 (Authenticator): EIP-3074 is a proposed protocol upgrade that introduces a new opcode (AUTH) allowing users to delegate transaction processing to a third party (known as an "Authenticator") who will pay the gas fees. Users sign a message that permits specific operations, and the Authenticator creates and sends the transaction, paying the fees themselves. Once EIP-3074 is implemented, this approach can be a viable solution for enabling users to send transactions without directly paying gas fees.
     **[⬆ Back to Top](#questions)**
     
-219. ### 9999
+219. ### Can you explain what a smart contract is?
 
-9999
+A smart contract is a self-executing contract with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein exist across a distributed, decentralized blockchain network.
+    **[⬆ Back to Top](#questions)**
+
+220. ### What is a contract in Solidity?
+
+In Solidity, a contract is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
+    **[⬆ Back to Top](#questions)**
+
+221. ### Explain 'msg.sender'.
+
+msg.sender is a predefined variable that refers to the address of the person (or contract) who called the current function.
+    **[⬆ Back to Top](#questions)**
+
+222. ### What is the purpose of 'require' in Solidity?
+
+'require' is used to ensure that certain conditions are met. If the condition is not met, the operation is reverted.
+    **[⬆ Back to Top](#questions)**
+
+223. ### How are Ethereum addresses formatted?
+
+Ethereum addresses are typically presented as 42-character hexadecimal strings prefixed with '0x'.
+    **[⬆ Back to Top](#questions)**
+
+224. ### Can Solidity functions accept multiple parameters?
+
+Yes, Solidity functions can accept multiple parameters separated by commas.
+    **[⬆ Back to Top](#questions)**
+
+225. ### Describe the process of creating a new contract from another contract in Solidity.
+
+This can be achieved by using the new keyword followed by the contract name with parameters, if any are needed for the constructor.
+    **[⬆ Back to Top](#questions)**
+
+226. ### Describe what "gas" is in the context of Ethereum.
+
+Gas refers to the unit that measures the amount of computational effort required to execute operations, like making transactions or running smart contracts on Ethereum.
+    **[⬆ Back to Top](#questions)**
+    
+227. ### What is an ERC-20 token?
+
+ERC-20 is a standard interface for Ethereum tokens, ensuring interoperability between tokens. Most tokens on Ethereum follow the ERC-20 standard.
+    **[⬆ Back to Top](#questions)**
+    
+228. ### How does a decentralized exchange (DEX) work?
+
+A DEX allows users to trade cryptocurrencies directly with one another without a centralized authority, typically using smart contracts to automate the process.
+    **[⬆ Back to Top](#questions)**
+    
+229. ### What are some challenges faced when developing on the Ethereum platform?
+
+Challenges include scalability issues, fluctuating gas prices, interoperability with other systems, and ensuring smart contract security.
     **[⬆ Back to Top](#questions)**
