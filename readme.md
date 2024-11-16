@@ -258,12 +258,22 @@
 | 251  | [Which is better to use for an address allowlist: a mapping or an array? Why?](#Which-is-better-to-use-for-an-address-allowlist-a-mapping-or-an-array-Why)
 | 252  | [Why shouldn’t tx.origin be used for authentication?](#Why-shouldnt-txorigin-be-used-for-authentication)
 | 253  | [What hash function does Ethereum primarily use?](#What-hash-function-does-Ethereum-primarily-use)
-| 254  | [4444](#4444)
-| 255  | [5555](#5555)
-| 256  | [6666](#6666)
-| 257  | [7777](#7777)
-| 258  | [8888](#8888)
-| 259  | [9999](#9999)
+| 254  | [What is a flash loan?](#What-is-a-flash-loan)
+| 255  | [What is the check-effects pattern?](#What-is-the-check-effects-pattern)
+| 256  | [What is the minimum amount of Ether required to run a solo staking node?](#What-is-the-minimum-amount-of-Ether-required-to-run-a-solo-staking-node)
+| 257  | [What is the difference between fallback and receive?](#What-is-the-difference-between-fallback-and-receive)
+| 258  | [As of the Shanghai upgrade, what is the gas limit per block?](#As-of-the-Shanghai-upgrade-what-is-the-gas-limit-per-block)
+| 259  | [What prevents infinite loops from running forever?](#What-prevents-infinite-loops-from-running-forever)
+| 260  | [How do you send Ether to a contract that does not have payable functions, or a receive or fallback?](#How-do-you-send-Ether-to-a-contract-that-does-not-have-payable-functions-or-a-receive-or-fallback)
+| 261  | [What is the difference between transferFrom and safeTransferFrom in ERC721?](#What-is-the-difference-between-transferFrom-and-safeTransferFrom-in-ERC721)
+| 262  | [How can an ERC1155 token be made into a non-fungible token?](#How-can-an-ERC1155-token-be-made-into-a-non-fungible-token)
+| 263  | [What is access control and why is it important?](#What-is-access-control-and-why-is-it-important)
+| 264  | [What does a modifier do?](#What-does-a-modifier-do)
+| 265  | [What is variable and fixed interest rate?](#What-is-variable-and-fixed-interest-rate)
+| 266  | [6666](#6666)
+| 267  | [7777](#7777)
+| 268  | [8888](#8888)
+| 269  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -1288,6 +1298,8 @@ Two networks where you can deploy a Solidity smart contract are:
 
 145. ### Can you list some distinctions between view and pure functions?
 
+View function declares that no state will be changed. Pure function declares that no state variable will be changed or read.
+
 Here are some distinctions between view and pure functions in Solidity:
 
 - State reading: view functions allow reading data from the contract's state, while pure functions do not access the contract's state at all.
@@ -2247,32 +2259,84 @@ tx.origin shouldn’t be used for authentication because an attacker could execu
 Ethereum primarily uses the Keccak-256 hash function. This function is used for various purposes in the Ethereum network including generating addresses, forming block hashes, creating Merkle trees, generating transaction receipts, hashing within smart contracts, hashing event signatures, signature generation and verification, etc…
     **[⬆ Back to Top](#questions)**
 
-254. ### 4444
+254. ### What is a flash loan?
 
-4444
+Flash Loans allow you to borrow any available amount of assets without putting up any collateral, as long as the liquidity is returned to the protocol within one block transaction. To do a Flash Loan, you will need to build a contract that requests a Flash Loan. The contract will then need to execute the instructed steps and pay back the loan + interest and fees all within the same transaction.
     **[⬆ Back to Top](#questions)**
 
-255. ### 5555
+255. ### What is the check-effects pattern?
 
-5555
+Checks Effects Interaction Pattern is a basic coding pattern that prevents an unexpected execution of a contract. This is a programming pattern that checks all the prerequisites before executing a feature in a certain function.
     **[⬆ Back to Top](#questions)**
 
-256. ### 6666
+256. ### What is the minimum amount of Ether required to run a solo staking node?
+
+32 ETH.
+    **[⬆ Back to Top](#questions)**
+    
+257. ### What is the difference between fallback and receive?
+
+The key distinction between fallback and receive functions in Solidity lies in their purpose and trigger conditions. The fallback function, present in Solidity versions prior to 0.6.0, served as a catch-all function to handle Ether transactions if a contract received Ether without matching any function signature or payable fallback function. On the other hand, the receive function, introduced in Solidity 0.6.0, specifically handles Ether sent to a contract without data. It is triggered when a contract receives a plain Ether transfer, offering a more explicit and dedicated way to manage Ether transactions without ambiguity, enhancing readability and control over the contract's behavior.
+    **[⬆ Back to Top](#questions)**
+    
+258. ### As of the Shanghai upgrade, what is the gas limit per block?
+
+30 million gas.
+    **[⬆ Back to Top](#questions)**
+    
+259. ### What prevents infinite loops from running forever?
+
+Loops in Solidity have a gas cost associated with each iteration, and if the gas limit is exceeded, the loop stops executing.
+    **[⬆ Back to Top](#questions)**
+
+260. ### How do you send Ether to a contract that does not have payable functions, or a receive or fallback?
+
+An attacker can forcibly send ether to any account and this cannot be prevented. The attacker can do this by creating a contract, funding it with 1 wei, and invoking selfdestruct(victimAddress).
+    **[⬆ Back to Top](#questions)**
+
+261. ### What is the difference between transferFrom and safeTransferFrom in ERC721?
+
+- transferFrom: This function is used to transfer tokens from one address to another. It is a basic transfer mechanism that moves tokens from the owner's address to another specified address. However, it does not include any additional checks or validation during the transfer process. If the receiving address is a contract that doesn't support ERC721, the tokens could be lost.
+
+- safeTransferFrom: In contrast, safeTransferFrom is an enhanced version of transferFrom that includes additional safety checks. It first checks if the receiving address is a contract and whether that contract supports ERC721 (ERC721Receiver). If the receiving contract doesn’t implement the required ERC721 interface, the transfer fails, preventing potential token loss. This function aims to prevent accidental transfers to contracts that are not compatible with ERC721 tokens.
+    **[⬆ Back to Top](#questions)**
+
+262. ### How can an ERC1155 token be made into a non-fungible token?
+
+By limiting the supply of token ID to only one. In ERC1155, tokens are identified by their ID and amount. By restricting the amount of a specific token ID to 1, you effectively make it a non-fungible token as there's only one instance of it.
+    **[⬆ Back to Top](#questions)**
+
+263. ### What is access control and why is it important?
+
+Access control ensures that only authorized users can execute specific functions or access sensitive parts of the contract. It prevents unauthorized users from manipulating critical parts of the contract's logic, thereby enhancing security and reducing the risk of attacks or exploits.
+    **[⬆ Back to Top](#questions)**
+
+264. ### What does a modifier do?
+
+Modifiers are special functions that modify the behavior of other functions. They allow developers to add extra conditions or functionality without having to rewrite the entire function.
+    **[⬆ Back to Top](#questions)**
+
+265. ### What is variable and fixed interest rate?
+
+Fixed-rate financing means the interest rate on your loan does not change over the life of your loan. Variable-rate financing is where the interest rate on your loan can change, based on the prime rate or another rate called an “index".
+    **[⬆ Back to Top](#questions)**
+
+266. ### 6666
 
 6666
     **[⬆ Back to Top](#questions)**
     
-257. ### 7777
+267. ### 7777
 
 7777
     **[⬆ Back to Top](#questions)**
     
-258. ### 8888
+268. ### 8888
 
 8888
     **[⬆ Back to Top](#questions)**
     
-259. ### 9999
+269. ### 9999
 
 9999
     **[⬆ Back to Top](#questions)**
