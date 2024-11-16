@@ -234,6 +234,36 @@
 | 227  | [What is an ERC-20 token?](#What-is-an-ERC-20-token)
 | 228  | [How does a decentralized exchange (DEX) work?](#How-does-a-decentralized-exchange-DEX-work)
 | 229  | [What are some challenges faced when developing on the Ethereum platform?](#What-are-some-challenges-faced-when-developing-on-the-Ethereum-platform)
+| 230  | [Explain "sharding" in the Ethereum context.](#Explain-sharding-in-the-Ethereum-context)
+| 231  | [What is the Metropolis phase in Ethereum's development?](#What-is-the-Metropolis-phase-in-Ethereums-development)
+| 232  | [What is typically needed to interact with a smart contract?](#What-is-typically-needed-to-interact-with-a-smart-contract)
+| 233  | [Describe function keywords and data structures specific to Solidity.](#Describe-function-keywords-and-data-structures-specific-to-Solidity)
+| 234  | [Define interfaces, abstract contracts, and libraries.](#Define-interfaces-abstract-contracts-and-libraries)
+| 235  | [Name common EIPs and briefly describe their purpose and functionality.](#Name-common-EIPs-and-briefly-describe-their-purpose-and-functionality)
+| 236  | [How do proxy patterns work? Describe the common patterns.](#How-do-proxy-patterns-work-Describe-the-common-patterns)
+| 237  | [Describe the lifecycle of a smart contract deployed on an EVM-compatible L1, from compilation to user interactions.](#Describe-the-lifecycle-of-a-smart-contract-deployed-on-an-EVM-compatible-L1-from-compilation-to-user-interactions)
+| 238  | [What is fuzzing and formal verification? Write a basic stateful fuzzing test.](#What-is-fuzzing-and-formal-verification-Write-a-basic-stateful-fuzzing-test)
+| 239  | [How are contract addresses and function selectors produced? Where are function selectors placed in calldata?](#How-are-contract-addresses-and-function-selectors-produced-Where-are-function-selectors-placed-in-calldata)
+| 240  | [Define Yul and describe a simple token transfer or gas optimization in assembly. Describe the free memory pointer.](#Define-Yul-and-describe-a-simple-token-transfer-or-gas-optimization-in-assembly-Describe-the-free-memory-pointer)
+| 241  | [List common Solidity vulnerabilities and techniques to combat them.](#List-common-Solidity-vulnerabilities-and-techniques-to-combat-them)
+| 242  | [What is the difference between private, internal, public, and external functions?](#What-is-the-difference-between-private-internal-public-and-external-functions)
+| 243  | [Approximately, how large can a smart contract be?](#Approximately-how-large-can-a-smart-contract-be)
+| 244  | [What is the difference between create and create2?](#What-is-the-difference-between-create-and-create2)
+| 245  | [What major change with arithmetic happened with Solidity 0.8.0?](#What-major-change-with-arithmetic-happened-with-Solidity-080)
+| 246  | [What special CALL is required for proxies to work?](#What-special-CALL-is-required-for-proxies-to-work)
+| 247  | [Prior to EIP-1559, how do you calculate the dollar cost of an Ethereum transaction?](#Prior-to-EIP-1559-how-do-you-calculate-the-dollar-cost-of-an-Ethereum-transaction)
+| 248  | [What are the challenges of creating a random number on the blockchain?](#What-are-the-challenges-of-creating-a-random-number-on-the-blockchain)
+| 249  | [What is the difference between a Dutch Auction and an English Auction?](#What-is-the-difference-between-a-Dutch-Auction-and-an-English-Auction)
+| 250  | [What is the difference between transfer and transferFrom in ERC20?](#What-is-the-difference-between-transfer-and-transferFrom-in-ERC20)
+| 251  | [Which is better to use for an address allowlist: a mapping or an array? Why?](#Which-is-better-to-use-for-an-address-allowlist-a-mapping-or-an-array-Why)
+| 252  | [Why shouldn’t tx.origin be used for authentication?](#Why-shouldnt-txorigin-be-used-for-authentication)
+| 253  | [What hash function does Ethereum primarily use?](#What-hash-function-does-Ethereum-primarily-use)
+| 254  | [4444](#4444)
+| 255  | [5555](#5555)
+| 256  | [6666](#6666)
+| 257  | [7777](#7777)
+| 258  | [8888](#8888)
+| 259  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -2016,4 +2046,233 @@ A DEX allows users to trade cryptocurrencies directly with one another without a
 229. ### What are some challenges faced when developing on the Ethereum platform?
 
 Challenges include scalability issues, fluctuating gas prices, interoperability with other systems, and ensuring smart contract security.
+    **[⬆ Back to Top](#questions)**
+
+230. ### Explain "sharding" in the Ethereum context.
+
+Sharding is a scalability solution for Ethereum, splitting the network into smaller pieces or "shards", allowing transactions to be processed in parallel.
+    **[⬆ Back to Top](#questions)**
+
+231. ### What is the Metropolis phase in Ethereum's development?
+
+Metropolis is one of Ethereum's development phases aimed at making the network lighter, faster, and more private, introducing mechanisms like zk-SNARKs.
+    **[⬆ Back to Top](#questions)**
+
+232. ### What is typically needed to interact with a smart contract?
+
+The deployed contract address.
+The contract's ABI (Application binary interface).*
+A provider for read-only interactions. A signer for state-changing interactions.
+*Technically speaking, if you can read the EVM opcodes then you don’t need an ABI. You can manually create the calldata with tools like Foundry’s cast.
+    **[⬆ Back to Top](#questions)**
+
+233. ### Describe function keywords and data structures specific to Solidity.
+
+<b>Visibility keywords</b>
+
+- Public: Callable from anywhere.
+- Private: Callable only within the contract.
+- Internal: Callable within the contract and inheriting contracts.
+- External: Callable only from outside the contract.
+<b>Mutability & Modifier keywords</b>
+
+- View: Prohibited from writing to state; may only read state variables.
+- Pure: Prohibited from reading or writing to state.
+- Payable: Allows the native gas token to be received directly via msg.value in the function call.
+- Virtual: Declares a function as overridable (changeable in child contracts). 
+- Override: Declares a function is an override of a virtual function.
+<b>Custom Modifiers</b>
+
+Code that is executed before, after, or even during a function body. Often used as a preliminary security check.
+<b>Data structures</b>
+
+- State variable: On chain storage, unless labeled a constant or immutable.
+- Address: A smart contract address or user’s externally owned account (EOA). Can be typecast to uint160 or bytes20.
+- Enum: Custom exhaustible types that compile into integers.
+- Struct: Structured blueprint for similar data.
+- Mapping: Key-value storage similar to a hash table. Values for all keys default as the zero value for their type.
+- Events/Errors: Readable information exposed on chain to easily parse transactions.
+    **[⬆ Back to Top](#questions)**
+
+234. ### Define interfaces, abstract contracts, and libraries.
+
+- An interface defines functions without implementation so they adhere to a specific structure. They are not deployable contracts.
+- An abstract contract is a base contract that has at least one function without an implementation. It's used as a template for other contracts to inherit. It cannot be deployed.
+- A library is useful for recurrent code and may be deployed if it contains external functions. Contracts use delegatecall to call the libraries external functions. A library that contains only internal functions is not deployed and does not need to use delegatecall due to the absence of state interactions.
+- Solidity is unlike other languages due to its immutable nature. It must be written in a concise, clear manner with focus on minimizing contracts, state variables, functions, and interactions. Bugs arise exponentially as a codebase grows. 
+    **[⬆ Back to Top](#questions)**
+
+235. ### Name common EIPs and briefly describe their purpose and functionality.
+
+- EIP-20: Standardized the structure for many identical tokens (fungible).
+- EIP-721: Standardized the structure for unique tokens (NFTs).
+- EIP-1155: Standardized the structure for the multi-token solution (NFT and ERC-20 features combined).
+- EIP-777: Token with hooks.
+- EIP-1559: Restructured fee mechanics with a burned base fee, priority fee, and max fee.
+- EIP-4626: Standardized vaults for deposits and withdrawals.
+- EIP-137: Ethereum Name Service (ENS), mapping readable names to underlying addresses.
+- EIP-165: Standard interface detection.
+- EIP-712: Structured signature data.
+- EIP-1967: Standardized proxy storage slots.
+- EIP-2535: Multi-Facet Proxy / Diamond Proxy pattern.
+- EIP-2612: Permit functionality providing single actor gasless approvals.
+    **[⬆ Back to Top](#questions)**
+
+236. ### How do proxy patterns work? Describe the common patterns.
+
+Smart contracts are immutable unless they leverage a proxy pattern. Proxy patterns unlock the ability to change an implementation contract address and make the contract upgradable. All patterns use delegatecall to call the implementation while maintaining state in the centralized proxy. Implementations use initializers instead of constructors. An admin is needed to execute the change of an implementation address.
+
+- UUPS (Universal Upgradeable Proxy Standard): The upgrade and admin logic is in the implementation contract.
+- Transparent Proxy: The upgrade logic is in the proxy contract with a clear separation between the proxy and implementation. 
+- Diamond Pattern: Allows for the creation of multiple implementation contracts in the form of facets. The diamond is the proxy.
+- Beacon: Uses a central beacon to track the implementation for multiple proxies. Efficient for multiple proxy upgrades but rarely used in practice.
+    **[⬆ Back to Top](#questions)**
+    
+237. ### Describe the lifecycle of a smart contract deployed on an EVM-compatible L1, from compilation to user interactions.
+
+- An EVM language such as Solidity, Yul, Vyper, or Huff can be locally compiled to produce the raw bytecode and ABI for the contract. After compilation, a contract's bytecode can be deployed via a signer and RPC provider. The signer's private key is required to execute transactions on behalf of its public key, while the RPC provider broadcasts the transaction to the network of validators. 
+- The consensus agents in proof of stake networks are called validators. Validators are nodes running full blockchain client software that includes an EVM implementation. They require staked tokens to operate. Validators maintain the chain's current state, propose and validate new blocks, and execute received transactions. 
+- During deployment, a transaction containing the contract's bytecode and constructor parameters is broadcast to the network and enters the mempool. Validators select transactions from the mempool for inclusion in new blocks. The mempool transparently shows pending transactions which facilitates MEV opportunities. The CREATE opcode is used to generate an address which points to the contract's bytecode and storage.
+- After deployment, any EOA or smart contract can interact with the exposed functions of the contract to view and update the on-chain state. ABIs generated during compilation are often used for frontend interactions with contracts.
+    **[⬆ Back to Top](#questions)**
+    
+238. ### What is fuzzing and formal verification? Write a basic stateful fuzzing test.
+
+Fuzzing is feeding random or semi-random data to a system in an attempt to find detrimental inputs that break invariants. Invariants are properties of the system that must always remain true. Formal verification is the method that deconstructs the underlying logic into a mathematical proof, to prove or disprove that an invariant will hold.
+
+A stateful fuzzing test randomly calls state changing functions in order to travel through unique states in the system, which are then checked through invariant_ or statefulFuzz_ labeled functions to ensure the declared properties and invariants hold.
+
+Below is a mock example using the modified Counter contract of an initialized Foundry project.
+![alt text](./src/image43.png)
+    **[⬆ Back to Top](#questions)**
+    
+239. ### How are contract addresses and function selectors produced? Where are function selectors placed in calldata?
+
+- Function selectors are defined as the first 4 bytes from the Keccak256 hash of the function signature. A selector is placed at the beginning of the calldata. Notably, we can easily use Foundry’s cast sig command to produce the function selector from a function signature. Running cast sig "transfer(address,uint256)" will successfully produce the correct function selector 0xa9059cbb.
+- CREATE: The default method for contract address creation. The address is produced by taking the last 20 bytes from the resulting hash of the encoded sender and their current nonce.
+- CREATE2: Enables pre-computation of contract address. The address is produced by taking the last 20 bytes from the resulting hash of the sender address, a 32 byte salt, and hash of initialization code. The salt allows for crafting a precomputed desired address.
+    **[⬆ Back to Top](#questions)**
+
+240. ### Define Yul and describe a simple token transfer or gas optimization in assembly. Describe the free memory pointer.
+
+Yul is an intermediary language that is syntactically closer to opcode instructions than Solidity. 
+
+- A token transfer would sload sender and receiver balances, use lt comparator to determine if the sender has enough tokens, update balances based on the amount via sstore, emit an event using log3 for the two addresses and amount, and return true on success using an mstore and return.
+- A straightforward gas saving technique uses an unchecked assembly block for calculations where the result cannot overflow.
+- The free memory pointer (FMP) keeps track of where new data can go by pointing to the next available space in memory. It's always located in memory at 0x40, after the scratch space and before the zero slot. It initially points to 0x80 as the first available location. Because Solidity doesn't free memory, the FMP automatically moves in 32 byte chunks every time new data needs to be stored in memory.
+- The FMP needs to be restored when you've manually adjusted it during a function to ensure that future operations don’t overwrite important data.
+    **[⬆ Back to Top](#questions)**
+
+241. ### List common Solidity vulnerabilities and techniques to combat them.
+
+- MEV attacks
+- Re-entrancy
+- Gas griefing
+- Signature replay
+- Multi-chain deployment issues
+- Parallel data structure exploits
+- Rounding/overflow/precision errors
+- Accounting/business logic errors
+- DoS
+- Weird tokens (FoT, Rebase, ERC-777 hooks, blacklists)
+- Vault inflation attack
+- Proxy storage collisions
+- Flash loans
+- and many many more...
+    **[⬆ Back to Top](#questions)**
+
+242. ### What is the difference between private, internal, public, and external functions?
+
+- private: Private functions can only be used internally and not even by derived contracts.
+
+- internal: Internal functions can only be used internally or by derived contracts.
+
+- public: Public functions can be used both externally and internally. For public state variable, Solidity automatically creates a getter function.
+
+- external: External functions are meant to be called by other contracts. They cannot be used for internal call. To call external function within contract this.function_name() call is required. State variables cannot be marked as external.
+    **[⬆ Back to Top](#questions)**
+
+243. ### Approximately, how large can a smart contract be?
+
+24,576 bytes - approximately, 24KB
+    **[⬆ Back to Top](#questions)**
+
+244. ### What is the difference between create and create2?
+
+The CREATE and CREATE2 opcodes differ in the parameters used to calculate the new contract’s address. The CREATE opcode computes the new address by taking the keccak256 hash of the sender’s address and a nonce. The CREATE2 opcode computes the new address by taking the keccak256 hash of the constant 0xFF (to avoid collision with the CREATE opcode), the sender’s address, a salt (arbitrary value provided by the sender) and the new contract’s init code. Since CREATE2 uses a user defined parameter in it’s calculation, the new contract’s address is able to be (more reliably and flexibly) predetermined.
+    **[⬆ Back to Top](#questions)**
+
+245. ### What major change with arithmetic happened with Solidity 0.8.0?
+
+Solidity 0.8.0 came with a built-in feature that automatically includes checks for arithmetic underflows and overflows. Before 0.8.0, integer underflows and overflows were allowed and would not cause an error. Since version 0.8.0, Solidity will revert if an expression causes an integer underflow or overflow. In cases where the developer is confident that there will be no arithmetic underflow or overflow, the "unchecked { your_code }" syntax allows code in curly brackets to escape this built-in check.
+    **[⬆ Back to Top](#questions)**
+
+246. ### What special CALL is required for proxies to work?
+
+DELEGATECALL is required for proxy contracts to work because this type of call will preserve the msg (msg.sender, msg.value, etc…) and run in the context of the calling contract instead of the called contract. This enables the proxy contract to call an implementation contract to modify the proxy contract’s state. By using DELEGATECALL, the implementation contract can be upgraded without the smart contract system losing any information or having to change the address of the proxy.
+    **[⬆ Back to Top](#questions)**
+    
+247. ### Prior to EIP-1559, how do you calculate the dollar cost of an Ethereum transaction?
+
+Prior to EIP-1559, the dollar cost calculation of an Ethereum transaction was ((GAS USED * GAS PRICE / 10^-9) * CURRENT ETHER PRICE. In this era, the miner received 100% of the gas cost. After EIP-1559, the dollar cost calculation of an Ethereum transaction is (((BASEFEE + PRIORITY FEE) * GAS USED)) / 10^-9) * CURRENT ETHER PRICE. Now, the miner receives a portion of the gas cost (PRIORITY FEE) and the other portion, the protocol fee (BASEFEE), is burned.
+    **[⬆ Back to Top](#questions)**
+    
+248. ### What are the challenges of creating a random number on the blockchain?
+
+Random number generation on the blockchain is difficult because of its deterministic and public nature. The Ethereum Virtual Machine (EVM) must produce the same output given the same input, and all data on the blockchain is public. Therefore, it is possible to determine the “random number” by copying its generation formula and reading the inputs from the blockchain.
+    **[⬆ Back to Top](#questions)**
+    
+249. ### What is the difference between a Dutch Auction and an English Auction?
+
+In a Dutch Auction, the auction price starts high and continuously decreases over time until a bidder submits a bid that meets or exceeds the current price, which wins the auction. In an English auction, the auction price starts low and increases over time as bidders outbid one another until the auction ends, where the highest bidder wins.
+    **[⬆ Back to Top](#questions)**
+
+250. ### What is the difference between transfer and transferFrom in ERC20?
+
+In ERC20, the transfer function is called to transfer a token amount from msg.sender to a destination address. The transferFrom function is called to transfer a token amount from a specified source address to a destination address. For the transferFrom call to be successful, the source address must first give an allowance for msg.sender to be able to spend (at least) the transfer amount.
+    **[⬆ Back to Top](#questions)**
+
+251. ### Which is better to use for an address allowlist: a mapping or an array? Why?
+
+A mapping is better for an address allowlist because it is more gas efficient. With a mapping, it is possible to check if an address is on the allowlist by directly accessing its value. Using an array, verifying an address could be costly because it would require looping through each element.
+    **[⬆ Back to Top](#questions)**
+
+252. ### Why shouldn’t tx.origin be used for authentication?
+
+tx.origin shouldn’t be used for authentication because an attacker could execute a phishing attack and authenticate as tx.origin. Since tx.origin is the address that initiated the transaction, an attacker could influence a user to execute a malicious transaction on the attacker’s contract and then call a function to authenticate on the target contract. In this scenario, tx.origin is the victim’s address and the target contract would authenticate the request and allow the attacker to execute transactions as if the attacker were tx.origin.
+    **[⬆ Back to Top](#questions)**
+
+253. ### What hash function does Ethereum primarily use?
+
+Ethereum primarily uses the Keccak-256 hash function. This function is used for various purposes in the Ethereum network including generating addresses, forming block hashes, creating Merkle trees, generating transaction receipts, hashing within smart contracts, hashing event signatures, signature generation and verification, etc…
+    **[⬆ Back to Top](#questions)**
+
+254. ### 4444
+
+4444
+    **[⬆ Back to Top](#questions)**
+
+255. ### 5555
+
+5555
+    **[⬆ Back to Top](#questions)**
+
+256. ### 6666
+
+6666
+    **[⬆ Back to Top](#questions)**
+    
+257. ### 7777
+
+7777
+    **[⬆ Back to Top](#questions)**
+    
+258. ### 8888
+
+8888
+    **[⬆ Back to Top](#questions)**
+    
+259. ### 9999
+
+9999
     **[⬆ Back to Top](#questions)**
