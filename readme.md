@@ -270,10 +270,20 @@
 | 263  | [What is access control and why is it important?](#What-is-access-control-and-why-is-it-important)
 | 264  | [What does a modifier do?](#What-does-a-modifier-do)
 | 265  | [What is variable and fixed interest rate?](#What-is-variable-and-fixed-interest-rate)
-| 266  | [6666](#6666)
-| 267  | [7777](#7777)
-| 268  | [8888](#8888)
-| 269  | [9999](#9999)
+| 266  | [In Ethereum, what are the typical block size and block time?](#In-Ethereum-what-are-the-typical-block-size-and-block-time)
+| 267  | [Do Smart Contracts have any legal standards?](#Do-Smart-Contracts-have-any-legal-standards)
+| 268  | [What more do you know about Ether?](#What-more-do-you-know-about-Ether)
+| 269  | [What do you understand about Ethereum nodes?](#What-do-you-understand-about-Ethereum-nodes)
+| 270  | [How does the Ethereum course differ from Ripple?](#How-does-the-Ethereum-course-differ-from-Ripple)
+| 271  | [What is the location of transactions in Ethereum?](#What-is-the-location-of-transactions-in-Ethereum)
+| 272  | [2222](#2222)
+| 273  | [3333](#3333)
+| 274  | [4444](#4444)
+| 275  | [5555](#5555)
+| 276  | [6666](#6666)
+| 277  | [7777](#7777)
+| 278  | [8888](#8888)
+| 279  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -2321,22 +2331,72 @@ Modifiers are special functions that modify the behavior of other functions. The
 Fixed-rate financing means the interest rate on your loan does not change over the life of your loan. Variable-rate financing is where the interest rate on your loan can change, based on the prime rate or another rate called an “index".
     **[⬆ Back to Top](#questions)**
 
-266. ### 6666
+266. ### In Ethereum, what are the typical block size and block time?
+
+Ethereum takes around 10-15 seconds for forming a new block, which has a block size of roughly 30-50 kb. 
+    **[⬆ Back to Top](#questions)**
+    
+267. ### Do Smart Contracts have any legal standards?
+
+Smart contracts lack legal standards that enable government agencies for testing and verifying their accuracy. However, the parties to the contract do not need to have faith in one another as users can not manipulate smart contracts. If the conditions aren’t met, it discards transaction requests automatically. 
+    **[⬆ Back to Top](#questions)**
+    
+268. ### What more do you know about Ether?
+
+In terms of popularity, Ethereum blockchain’s native cryptocurrency, Ether (ETH), is the 2nd most widely known crypto after bitcoin (BTC). To put it another way, Ether serves as a substantial power source that runs Ethereum distributed application platforms.
+    **[⬆ Back to Top](#questions)**
+    
+269. ### What do you understand about Ethereum nodes?
+
+Ethereum nodes interact with one another with the help of Ethereum blockchain protocol. For the outside world, they use JSON-RPC interface to interact. 
+    **[⬆ Back to Top](#questions)**
+
+270. ### How does the Ethereum course differ from Ripple?
+
+Ripple’s major goal is to eliminate the customary friction caused by currency rates for real-time global payments. However, the Ethereum course aspires to expand the use of blockchain technology via the use of intelligent contracts. Hence, decentralized apps and smart contracts can develop and operate without interruption, fraud, or outside influence. In contrast to Ethereum’s Proof-of-State (PoS) consensus mechanism, Ripple makes use of a mechanism called Federated Byzantine Agreement (FBA).
+    **[⬆ Back to Top](#questions)**
+
+271. ### What is the location of transactions in Ethereum?
+
+What is the location of transactions in Ethereum?
+    **[⬆ Back to Top](#questions)**
+
+272. ### 2222
+
+2222
+    **[⬆ Back to Top](#questions)**
+
+273. ### 3333
+
+3333
+    **[⬆ Back to Top](#questions)**
+
+274. ### 4444
+
+4444
+    **[⬆ Back to Top](#questions)**
+
+275. ### 5555
+
+5555
+    **[⬆ Back to Top](#questions)**
+
+276. ### 6666
 
 6666
     **[⬆ Back to Top](#questions)**
     
-267. ### 7777
+277. ### 7777
 
 7777
     **[⬆ Back to Top](#questions)**
     
-268. ### 8888
+278. ### 8888
 
 8888
     **[⬆ Back to Top](#questions)**
     
-269. ### 9999
+279. ### 9999
 
 9999
     **[⬆ Back to Top](#questions)**
