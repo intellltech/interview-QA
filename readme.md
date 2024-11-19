@@ -324,6 +324,26 @@
 | 317  | [Escrow Contract](#Escrow-Contract)
 | 318  | [Decentralized Token Exchange](#Decentralized-Token-Exchange)
 | 319  | [Multi-Signature Wallet](#Multi-Signature-Wallet)
+| 320  | [How did you get into smart contract (SC) development?](#How-did-you-get-into-smart-contract-SC-development)
+| 321  | [Can you describe the main steps of Smart Contract development?](#Can-you-describe-the-main-steps-of-Smart-Contract-development)
+| 322  | [What is the blockchain consensus algo?](#What-is-the-blockchain-consensus-algo)
+| 323  | [What is Wei, and how does it differ from Ether?](#What-is-Wei-and-how-does-it-differ-from-Ether)
+| 324  | [What is Web3.js?](#What-is-Web3js)
+| 325  | [How do gas limit and gas price influence the mining of transactions?](#How-do-gas-limit-and-gas-price-influence-the-mining-of-transactions)
+| 326  | [What are the existing access modifiers, and how are they different?](#What-are-the-existing-access-modifiers-and-how-are-they-different)
+| 327  | [What is a fallback method?](#What-is-a-fallback-method)
+| 328  | [What are the Ethereum network types? What are the differences between them?](#What-are-the-Ethereum-network-types-What-are-the-differences-between-them)
+| 329  | [How are libraries different from contracts?](#How-are-libraries-different-from-contracts)
+| 330  | [Please describe specific contract interaction features: DELEGATECALL, STATICCALL, library differences, use cases, and gas costs.](#Please-describe-specific-contract-interaction-features-DELEGATECALL-STATICCALL-library-differences-use-cases-and-gas-costs)
+| 331  | [What is the Ecrecover function? Provide an example, please.](#What-is-the-Ecrecover-function-Provide-an-example-please)
+| 332  | [Talk about storage vs memory.](#Talk-about-storage-vs-memory)
+| 333  | [What is the ERC20 interface?](#What-is-the-ERC20-interface)
+| 334  | [What is the ERC721 interface?](#What-is-the-ERC721-interface)
+| 335  | [What are the most common Smart Contract vulnerabilities?](#What-are-the-most-common-Smart-Contract-vulnerabilities)
+| 336  | [6666](#6666)
+| 337  | [7777](#7777)
+| 338  | [8888](#8888)
+| 339  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -2924,4 +2944,149 @@ contract MultiSigWallet {
     }
 }
 Explanation: This contract allows users to submit transactions using the submitTransaction function. Each transaction requires approval from two different addresses before it can be executed. The approveTransaction function is used to approve a transaction. Once a transaction receives the required number of approvals, it can be executed using the executeTransaction function. The getTransactionStatus function retrieves the status of a transaction.
+    **[⬆ Back to Top](#questions)**
+
+320. ### How did you get into smart contract (SC) development?
+
+With the extreme hype around blockchain technologies, the demand for smart-contract and blockchain developers is rising. With knowledge and experience in IT technologies and computer language coding, it is possible to learn the Solidity programming language for smart-contract development in a pretty short amount of time. In addition, from a technical point of view, blockchain developer requirements aren’t more complicated or challenging than other coding languages. Of course, this isn’t an easy task, but considering the major blockchain benefits and interest in innovation, I decided to commit myself to learning SС development.
+    **[⬆ Back to Top](#questions)**
+
+321. ### Can you describe the main steps of Smart Contract development?
+
+When all the requirements are clearly set, like ERC standards and patterns, coding can be started. First of all, one should choose the language (Solidity being the most popular).
+
+The next step is to write or reuse the contract in some of the IDE. It is good practice to use a framework (Truffle) as a development environment.
+
+Testing is one of the most important steps in SC development. There are several types of testing: functional, integration, manual. Also, there are some packages that help check code style, small security issues, and test coverage (Solhint, Solium, Solidity coverage).
+
+The contract can be deployed to the Ethereum main network when all of these steps have been finished.
+    **[⬆ Back to Top](#questions)**
+
+322. ### What is the blockchain consensus algo?
+
+Consensus algorithms are processes in computing that reach agreements on single-data value in blockchain processes. The algorithms are meant to provide network reliability involving numerous unreliable nodes for double-spending prevention.
+
+There are different types of algorithms, like PoW, PoS, DPoS, PoA, PoWeight, BFT or DAGs. Here are some examples and their characteristics:
+![alt text](./src/image44.png)
+    **[⬆ Back to Top](#questions)**
+
+323. ### What is Wei, and how does it differ from Ether?
+
+Wei is considered to be an Ether unit or the lowest denomination of Ether, like pennies to pounds or cents to dollars, for instance. Here is the chart of unit values:
+![alt text](./src/image45.png)
+    **[⬆ Back to Top](#questions)**
+
+324. ### What is Web3.js?
+
+Web3 for Javascript is a collection of libraries that allow interaction with local/remote nodes on the Ethereum blockchain where HTTP/IPC connection can be used.
+
+These libraries provide Web3 objects that allow applications to run on Ethereum and conduct blockchain interactions. Web3 provides a large number of functions to keep track of block data, see transaction number/balance, and additional features. Read insights on Solidity #3 meetup to find out more about the peculiarities of Web3.js functions.
+    **[⬆ Back to Top](#questions)**
+
+325. ### How do gas limit and gas price influence the mining of transactions?
+
+As Ethereum transactions run on gas instead of Ethers, the execution of certain commands and transactions costs gas. This type of execution is presented by the amount of gas you send (gas price) and a total block gas limit. The gas limit is modified by the user who sends the transaction; it is the amount of gas sent along. The gas price is the actual transaction cost, which combines the cost of the transaction and the cost of execution. The transaction price equals gas used multiplied by gas price.
+
+The gas limit of a transaction can put the time of mining into a block. Transactions with high gas limits can be less prioritized and take more time to get into the block.
+    **[⬆ Back to Top](#questions)**
+
+326. ### What are the existing access modifiers, and how are they different?
+
+There are a number of Solidity function modifiers that are used to change the behaviour of various functions. They can check function conditions automatically, before the execution. Access modifiers are contract inheritable properties. Functions can be divided into:
+
+- external
+- private
+- public
+- internal
+These functions differ one from another according to call method, either externally, from other contracts, or publicly, via messages. They may provide only internal, private access.
+    **[⬆ Back to Top](#questions)**
+    
+327. ### What is a fallback method?
+
+It is a process of triggering fallback functions when the function signature does not match any other function specified in the identifier, or if specific data isn’t supplied. Functions can also be executed when plain Ether is received (without any data provided).
+    **[⬆ Back to Top](#questions)**
+    
+328. ### What are the Ethereum network types? What are the differences between them?
+
+As of today, most Ethereum projects are run on the Ethereum public blockchain, which provides access to a number of participants, nodes, currencies, and markets. Depending on permitted access, there are three main types of Ethereum network: public, private, and consortium blockchains.
+![alt text](./src/image46.png)
+    **[⬆ Back to Top](#questions)**
+    
+329. ### How are libraries different from contracts?
+
+Though libraries and contracts are somewhat similar, libraries can be deployed once at a particular address. Thus, the library code can be reused via the DELEGATECALL EVM feature. When one calls library functions, the code executes itself in the contract. Visually, library call functions are the same as base-contract call functions, but libraries won’t be visible in the hierarchy of inheritance. Compared to contracts, library restrictions include: no state variables, the inability to inherit or be inherited, and the inability to receive the Ether.
+    **[⬆ Back to Top](#questions)**
+
+330. ### Please describe specific contract interaction features: DELEGATECALL, STATICCALL, library differences, use cases, and gas costs.
+
+DELEGATECALL allows the user (delegates the right) to perform various actions with storage. It is a security risk that provides trust in the sending and receiving of contracts, and ensures the storage safety.
+
+STATICCALL is a new opcode used to increase security in smart contracts. It can also call another contract, but disables any modifications or state changes during the call.
+
+Libraries act as key players. They don’t have a storage option, and don’t hold an Ether. That is why libraries have to undergo an audit before being put into production (with DELEGATECALL, for instance).
+
+Library types include the following:
+
+- static
+- dynamic
+- shared
+- remote
+A library is defined as static when its code can be accessed during the invoking program process. A dynamic library is distinctive, as it can be loaded at run time and linked by a dynamic linker when the program is prepared for execution. A shared library (object) is a file that is possible to share by further executable/shared files. Remote libraries are used to separate executables over the web to another computer.
+    **[⬆ Back to Top](#questions)**
+
+331. ### What is the Ecrecover function? Provide an example, please.
+
+Ecrecover recovers public key addresses from an elliptic curved signature, and returns zero errors.
+Here is an example of a function:
+![alt text](./src/image47.png)
+    **[⬆ Back to Top](#questions)**
+
+332. ### Talk about storage vs memory.
+
+Storage and memory are keywords used in coding to store or save certain types of data, like arrays or structs. They are two of three areas where EVM stores items.
+
+Storage resides in contract-state variables. Each of these contracts has an individual storage that is persistent, but a bit expensive to use. Storage can map up to 256-bit words within itself, but can’t read or write to any other storage.
+
+Memory, on the other hand, holds temporary items and can be erased between function calls. It is linear, and has the ability to address at the byte level, also limited to 256 bit-width. In addition, memory is more expensive, depending upon expansion size and quadratic scalability.
+    **[⬆ Back to Top](#questions)**
+
+333. ### What is the ERC20 interface?
+
+ERC20 is a token standard that describes different functions and events that must be implemented in an Ethereum token contract. In order to meet ERC20 standards, an interface contract declares a set of necessary functions and events. Here is an interface example:
+![alt text](./src/image48.png)
+    **[⬆ Back to Top](#questions)**
+
+334. ### What is the ERC721 interface?
+
+ERC721 is an open, free standard describing how to build tokens on Ethereum. Its main distinctive feature is that all ERC721 tokens are unique. An interface has to allow these tokens to be managed/owned/traded. Here is an interface example:
+![alt text](./src/image49.png)
+![alt text](./src/image50.png)
+![alt text](./src/image51.png)
+![alt text](./src/image52.png)
+    **[⬆ Back to Top](#questions)**
+
+335. ### What are the most common Smart Contract vulnerabilities?
+
+Given that smart contracts are immutable, it is extremely important to deploy intelligent code without any pitfalls. It has to be secure and resistant to possible attacks. This is why the developer has to evaluate the principal risks and vulnerabilities that are likely to occur. Among the major ones:
+![alt text](./src/image53.png)
+    **[⬆ Back to Top](#questions)**
+
+336. ### 6666
+
+6666
+    **[⬆ Back to Top](#questions)**
+    
+337. ### 7777
+
+7777
+    **[⬆ Back to Top](#questions)**
+    
+338. ### 8888
+
+8888
+    **[⬆ Back to Top](#questions)**
+    
+339. ### 9999
+
+9999
     **[⬆ Back to Top](#questions)**
