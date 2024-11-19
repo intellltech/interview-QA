@@ -340,10 +340,40 @@
 | 333  | [What is the ERC20 interface?](#What-is-the-ERC20-interface)
 | 334  | [What is the ERC721 interface?](#What-is-the-ERC721-interface)
 | 335  | [What are the most common Smart Contract vulnerabilities?](#What-are-the-most-common-Smart-Contract-vulnerabilities)
-| 336  | [6666](#6666)
-| 337  | [7777](#7777)
-| 338  | [8888](#8888)
-| 339  | [9999](#9999)
+| 336  | [How would you introduce Solidity?](#How-would-you-introduce-Solidity)
+| 337  | [What role do smart contracts play in Ethereum?](#What-role-do-smart-contracts-play-in-Ethereum)
+| 338  | [What are Solidity’s key characteristics?](#What-are-Soliditys-key-characteristics)
+| 339  | [How does Solidity relate to use cases in the actual world?](#How-does-Solidity-relate-to-use-cases-in-the-actual-world)
+| 340  | [In Solidity, what is machine code?](#In-Solidity-what-is-machine-code)
+| 341  | [What distinguishes Solidity from Python, C++, and Java?](#What-distinguishes-Solidity-from-Python-C-and-Java)
+| 342  | [Which compiler does Solidity use?](#Which-compiler-does-Solidity-use)
+| 343  | [In Solidity, what is the Pragma directive?](#In-Solidity-what-is-the-Pragma-directive)
+| 344  | [What exactly is a Solidity Contract?](#What-exactly-is-a-Solidity-Contract)
+| 345  | [What keywords in Solidity are reserved?](#What-keywords-in-Solidity-are-reserved)
+| 346  | [What are the differences between Ethereum blockchain and Bitcoin?](#What-are-the-differences-between-Ethereum-blockchain-and-Bitcoin)
+| 347  | [How do you establish a connection to a node?](#How-do-you-establish-a-connection-to-a-node)
+| 348  | [Can users hide a transaction?](#Can-users-hide-a-transaction)
+| 349  | [What is the consensus algorithm’s function?](#What-is-the-consensus-algorithms-function)
+| 350  | [Explain how PoW consensus works in detail.](#Explain-how-PoW-consensus-works-in-detail)
+| 351  | [In the Ethereum platform, what is the significance of the account nonce?](#In-the-Ethereum-platform-what-is-the-significance-of-the-account-nonce)
+| 352  | [What is the best way to get Ethers?](#What-is-the-best-way-to-get-Ethers)
+| 353  | [What programming language is best for creating smart contracts and decentralized applications?](#What-programming-language-is-best-for-creating-smart-contracts-and-decentralized-applications)
+| 354  | [What is the meaning of dApps?](#What-is-the-meaning-of-dApps)
+| 355  | [Which consensus does the Ethereum platform use?](#Which-consensus-does-the-Ethereum-platform-use)
+| 356  | [Describe the truffle.](#Describe-the-truffle)
+| 357  | [Explain what is PoS.](#Explain-what-is-PoS)
+| 358  | [What are Ethereum blockchain wallets, and how do I get one?](#What-are-Ethereum-blockchain-wallets-and-how-do-I-get-one)
+| 359  | [Can you name any known wallet to hold ETH?](#Can-you-name-any-known-wallet-to-hold-ETH)
+| 360  | [How well versed are you in Ethereum blockchain hardware wallets?](#How-well-versed-are-you-in-Ethereum-blockchain-hardware-wallets)
+| 361  | [How to classify Ethereum networks?](#How-to-classify-Ethereum-networks)
+| 362  | [What are some of the Blockchain-based smart contracts?](#What-are-some-of-the-Blockchain-based-smart-contracts)
+| 363  | [When creating a Solidity file, name the first thing you need to define?](#When-creating-a-Solidity-file-name-the-first-thing-you-need-to-define)
+| 364  | [What is the relation between wei and Ether?](#What-is-the-relation-between-wei-and-Ether)
+| 365  | [What variables influence the amount of gas in use during a transaction?](#What-variables-influence-the-amount-of-gas-in-use-during-a-transaction)
+| 366  | [6666](#6666)
+| 367  | [7777](#7777)
+| 368  | [8888](#8888)
+| 369  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -3071,22 +3101,182 @@ Given that smart contracts are immutable, it is extremely important to deploy in
 ![alt text](./src/image53.png)
     **[⬆ Back to Top](#questions)**
 
-336. ### 6666
+336. ### How would you introduce Solidity?
+
+The Ethereum Foundation developed Solidity, a high-level contract-oriented programming language, to be used in the creation of smart contracts. In the Ethereum blockchain ecosystem, it is the most popular programming language for deploying smart contracts. To further target EVM-based development, the Solidity programming language integrates aspects from well-known languages like C++, JavaScript, and Python.
+    **[⬆ Back to Top](#questions)**
+    
+337. ### What role do smart contracts play in Ethereum?
+
+Smart contracts are digital representations of two-party physical contracts. Smart contracts in the case of Ethereum can provide the foundation for autonomous transaction completion on the network without middlemen. For the examination of your fundamental understanding of Solidity use cases, you can anticipate inquiries on such essential principles in Solidity engineer interview questions. Ethereum needs smart contracts because of the advantages of quick, immutable, and inexpensive transactions. In fact, smart contracts are fundamental building pieces of the web3 ecosystem, which is continuously growing.
+    **[⬆ Back to Top](#questions)**
+    
+338. ### What are Solidity’s key characteristics?
+
+Solidity’s support for contracts, libraries, and inheritance are some of its key features. To test your understanding of the fundamentals of Solidity, you can find Solidity developer interview questions that are centred on Solidity’s capabilities. The ability to create custom data types is another crucial Solidity feature that plays a crucial part in the creation of smart contracts.
+    **[⬆ Back to Top](#questions)**
+    
+339. ### How does Solidity relate to use cases in the actual world?
+
+Solidity’s smart contract construction capabilities strongly indicate its applicability to real-world use cases. The ability to understand use cases is a prerequisite for all Solidity responsibilities. Smart contracts using Solidity wouldn’t be susceptible to fraud or outside meddling. You may create a variety of apps with the programming language, from straightforward smart contracts to intricate decentralised applications or dApps. Solidity could have notable applications in things like voting systems and crowdfunding websites. Solidity, on the other side, can support the creation of decentralised exchanges, lending platforms, and token systems.
+    **[⬆ Back to Top](#questions)**
+
+340. ### In Solidity, what is machine code?
+
+The essential exam of your knowledge includes some crucial questions about fundamental Solidity programming. Only those who have a working knowledge of machine code and its capabilities can understand Solidity contracts. The smart contract code running on the processor is referred to as machine code. The EVM cannot understand Solidity smart contracts since they are written in the human-readable language and must be converted into machine code. EVM bytecode is the popular name for machine code in Solidity. It lacks abstract grammar, and its straightforward commands make execution simpler.
+    **[⬆ Back to Top](#questions)**
+
+341. ### What distinguishes Solidity from Python, C++, and Java?
+
+The differences between Solidity and other programming languages would also be a major topic of interview questions. The application method is one of the key distinctions between Solidity and other programming languages. Python, C++, and Java have been designed specifically for creating centralised applications. On the other hand, Solidity uses the Ethereum Virtual Machine to create and use smart contracts.
+    **[⬆ Back to Top](#questions)**
+
+342. ### Which compiler does Solidity use?
+
+References to the selection of compiler for Solidity smart contracts would be included in the collection of fundamental Solidity interview questions. Solidity does not currently have a formal reference compiler and is not yet fully standardised. However, Solidity code can be compiled by smart contract developers using the Ethereum Foundation’s Solidity Compiler. Developers have access to Solidity Compiler via a command-line tool and a web-based compiler. Backward compatibility with earlier Solidity versions is not a feature of the Solidity Compiler.
+    **[⬆ Back to Top](#questions)**
+
+343. ### In Solidity, what is the Pragma directive?
+
+The first line of the Solidity code is the Pragma directive, which specifies the version for which the source code is being produced. For instance, it would state that the new versions of Solidity, which are functionally equivalent to version 0.4.0, have been developed alongside the old versions. Such Solidity engineer interview questions can be answered by mentioning that the pragma directive is local to a certain source file. The pragma directive of the incoming file would not apply to the importing file if another file were to be imported.
+    **[⬆ Back to Top](#questions)**
+
+344. ### What exactly is a Solidity Contract?
+
+The Solidity language is built around contracts. It is the group of files and information stored at a specific Ethereum blockchain address. The data and the code in the Solidity contract correspond to the smart contract’s functionalities and state, respectively. The declaration of a state variable depends heavily on the various smart contract components. Function modifiers are another feature of the contract components that aid in retrieving variable values.
+    **[⬆ Back to Top](#questions)**
+
+345. ### What keywords in Solidity are reserved?
+
+The core Solidity programming questions also clarified reserved keywords in the smart contract programming language. Reserved keywords are crucial tools for beginners to employ while they learn how to use Solidity. The reserved keywords can be used to precisely and correctly identify the conditions that are necessary for creating Solidity code. Abstract, apply, after, auto, switch, typedef, macro, inline, sizeof, unchecked, and many other words are instances of reserved keywords.
+    **[⬆ Back to Top](#questions)**
+
+346. ### What are the differences between Ethereum blockchain and Bitcoin?
+
+The goal of Bitcoin’s creation was to provide a national currency alternative. The Ethereum platform, on the other hand, was introduced to promote programmatic, immutable contracts and applications through the use of its very own currency, ETH. Furthermore, Ethereum transactions are completed in seconds, but Bitcoin transactions take minutes. Also, the Ethereum platform is a ledger technology that corporations are using to construct new programs and decentralized apps, while Bitcoin is just a cryptocurrency. Hence, the Ethereum blockchain is also the more durable of the two technologies.
+    **[⬆ Back to Top](#questions)**
+    
+347. ### How do you establish a connection to a node?
+
+Nodes are computers that are part of a network and are in charge of carrying out transactional tasks. Hence, a node may be accessed via WS-RPC, JSON-RPC, or IPC-RPC. 
+    **[⬆ Back to Top](#questions)**
+    
+348. ### Can users hide a transaction?
+
+No. Users can not hide a transaction, in fact all transactions are publicly viewable.
+    **[⬆ Back to Top](#questions)**
+    
+349. ### What is the consensus algorithm’s function?
+
+The consensus mechanism of a blockchain guarantees that the numerous parties agree upon credibility of provided transactional data and decides who may add new blocks of transactions. Also, it prevents any unauthorized changes by users. 
+    **[⬆ Back to Top](#questions)**
+
+350. ### Explain how PoW consensus works in detail.
+
+PoW consensus focuses on solving complicated mathematical problems and making as many predictions at the earliest. Hence, this requires a large amount of computing power, and a miner may increase profitability by adopting more efficient mining equipment. Furthermore, mining pools compete with each other to see who can estimate the maximum number of possible hashes for a given block first using this form of the consensus process. Hence, when a miner discovers a solution, they share it with the rest of the network and receives rewards with cryptocurrency. 
+    **[⬆ Back to Top](#questions)**
+
+351. ### In the Ethereum platform, what is the significance of the account nonce?
+
+An account nonce determines each account’s transaction counter. It can eliminate replay assaults. 
+    **[⬆ Back to Top](#questions)**
+
+352. ### What is the best way to get Ethers?
+
+There are two methods: by mining them or by exchanging them for other digital coins. 
+    **[⬆ Back to Top](#questions)**
+
+353. ### What programming language is best for creating smart contracts and decentralized applications?
+
+Solidity is widely in use for writing smart contracts and decentralized applications (dApps) as the preferred programming language. 
+
+( If you want to become a smart contract developer then Solidity is a must language to learn. You should join a smart contract developer course).
+    **[⬆ Back to Top](#questions)**
+
+354. ### What is the meaning of dApps?
+
+There are digital applications called “dApps” that run on a peer-to-peer(P2P) network of computers rather than one central server. 
+    **[⬆ Back to Top](#questions)**
+
+355. ### Which consensus does the Ethereum platform use?
+
+The Ethereum consensus method has changed from Proof of Work (PoW) to Proof of State (PoS). 
+    **[⬆ Back to Top](#questions)**
+
+356. ### Describe the truffle.
+
+It is a free and open-source platform for developing and managing dApps and smart contracts. Hence, it is widely known as the best framework for the Ethereum developer professionals.
+    **[⬆ Back to Top](#questions)**
+    
+357. ### Explain what is PoS.
+
+PoS is a consensus method that addresses the primary flaws of the PoW protocol. Using this method, the network verifies each new block before adding it to the blockchain. In contrast to PoW, in PoS, miners may participate in the mining process by staking their coins. Using the very minimum of gear and software, users may mine for rewards. Therefore, the more coins a miner has, the more likely they are to be able to influence the consensus. This means that only the wealthiest people will be able to govern the network. 
+    **[⬆ Back to Top](#questions)**
+    
+358. ### What are Ethereum blockchain wallets, and how do I get one?
+
+Users may connect with their Ethereum account via the usage of Ethereum wallets. Hence, you need a wallet to hold Ether before you can begin trading. 
+    **[⬆ Back to Top](#questions)**
+    
+359. ### Can you name any known wallet to hold ETH?
+
+Meta mask is one of the best Ethereum wallets. It facilitates storage, sending, receiving ETH and ERC20. 
+    **[⬆ Back to Top](#questions)**
+
+360. ### How well versed are you in Ethereum blockchain hardware wallets?
+
+Consider this wallet if you’re looking for a high degree of security. It stores private keys on a physical chip, hence they are more secure. Furthermore, to protect your cryptocurrency from cyber-attacks and hackers, these wallets do not need an internet connection.
+    **[⬆ Back to Top](#questions)**
+
+361. ### How to classify Ethereum networks?
+
+Here are all three kinds:
+
+- A blockchain network that is not publicly accessible,
+- Ethereum’s test network, or “TestNet,”
+- One of the primary networks.
+    **[⬆ Back to Top](#questions)**
+
+362. ### What are some of the Blockchain-based smart contracts?
+
+- Ethereum
+- EOSIO
+- NEM
+- RSK
+- Hyperledger
+    **[⬆ Back to Top](#questions)**
+
+363. ### When creating a Solidity file, name the first thing you need to define?
+
+When creating a Solidity file, the first thing you need to do is define a class. In order to avoid compilation errors caused by incompatibilities between different versions of Solidity, you must first declare their version number. 
+    **[⬆ Back to Top](#questions)**
+
+364. ### What is the relation between wei and Ether?
+
+One Ether makes 1018 Wie. 
+    **[⬆ Back to Top](#questions)**
+
+365. ### What variables influence the amount of gas in use during a transaction?
+
+The quantity of storage and the Smart Contract instructions determine the value of how much gas should be in use to perform a transaction. 
+    **[⬆ Back to Top](#questions)**
+
+366. ### 6666
 
 6666
     **[⬆ Back to Top](#questions)**
     
-337. ### 7777
+367. ### 7777
 
 7777
     **[⬆ Back to Top](#questions)**
     
-338. ### 8888
+368. ### 8888
 
 8888
     **[⬆ Back to Top](#questions)**
     
-339. ### 9999
+369. ### 9999
 
 9999
     **[⬆ Back to Top](#questions)**
