@@ -276,14 +276,14 @@
 | 269  | [What do you understand about Ethereum nodes?](#What-do-you-understand-about-Ethereum-nodes)
 | 270  | [How does the Ethereum course differ from Ripple?](#How-does-the-Ethereum-course-differ-from-Ripple)
 | 271  | [What is the location of transactions in Ethereum?](#What-is-the-location-of-transactions-in-Ethereum)
-| 272  | [2222](#2222)
-| 273  | [3333](#3333)
-| 274  | [4444](#4444)
-| 275  | [5555](#5555)
-| 276  | [6666](#6666)
-| 277  | [7777](#7777)
-| 278  | [8888](#8888)
-| 279  | [9999](#9999)
+| 272  | [What is Ethereum?](#What-is-Ethereum)
+| 273  | [What are Ethereum smart contracts?](#What-are-Ethereum-smart-contracts)
+| 274  | [What is EVM?](#What-is-EVM)
+| 275  | [What is the value token for Ethereum?](#What-is-the-value-token-for-Ethereum)
+| 276  | [What is Ether?](#What-is-Ether)
+| 277  | [Can you explain the basic syntax and structure of a Solidity contract?](#Can-you-explain-the-basic-syntax-and-structure-of-a-Solidity-contract)
+| 278  | [How does Ethereum differ from Bitcoin?](#How-does-Ethereum-differ-from-Bitcoin)
+| 279  | [How does Ethereum handle scalability, security, and privacy issues?](#How-does-Ethereum-handle-scalability-security-and-privacy-issues)
 
 ## Answers
 1. ### What is Solidity?
@@ -2361,42 +2361,72 @@ Ripple’s major goal is to eliminate the customary friction caused by currency 
 What is the location of transactions in Ethereum?
     **[⬆ Back to Top](#questions)**
 
-272. ### 2222
+272. ### What is Ethereum?
 
-2222
+Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ethereum came right after the evolution of Bitcoin and is one of the popular public platforms for building Blockchain-based applications.
+
+Ethereum has become the most popular blockchain platform among developers as it allows building decentralized applications(dApps) and smart contracts.
+
+Smart contracts on the Ethereum network are written in high-level developer-friendly programming languages like Solidity and Vyper.
     **[⬆ Back to Top](#questions)**
 
-273. ### 3333
+273. ### What are Ethereum smart contracts?
 
-3333
+Smart contracts are the small programs that run on the Ethereum blockchain. Smart contracts are like software applications, and it’s used for digital agreements and deals.
+
+Smart contracts are transparent and automated. They enforce rules and perform actions, agreed upon by their participants. Smart reduces the requirement of central authority as it offers a conflict-free solution as it can not be stopped or modified by anyone.
+
+Smart contracts automate the negotiation and fulfillment of a contract. A smart contract runs on a blockchain network and can be used for a wide range of applications, including financial transactions, supply chain management, and voting systems.
     **[⬆ Back to Top](#questions)**
 
-274. ### 4444
+274. ### What is EVM?
 
-4444
+The Ethereum Virtual Machine(EVM) is the software platform that developers can use to create decentralized applications (DApps) on Ethereum. This virtual machine is where all Ethereum accounts and smart contracts live. The EVM handles smart contract deployment and execution.
+
+EVM operates in a sandboxed environment that is isolated from the external network. It is also Turing complete and utilizes Gas as an internal pricing mechanism.
     **[⬆ Back to Top](#questions)**
 
-275. ### 5555
+275. ### What is the value token for Ethereum?
 
-5555
+Ether(ETH) is the value token for Ethereum.
     **[⬆ Back to Top](#questions)**
 
-276. ### 6666
+276. ### What is Ether?
 
-6666
+Ether(ETH) is the native currency of the Ethereum network. It is the second largest cryptocurrency after Bitcoin(BTC).
+
+Ether is the transactional token that facilitates operations on the Ethereum network. It is like fuel to the Ethereum network. Ethereum rewards Ether to all the participants of the Ethereum network for providing the computation power.
     **[⬆ Back to Top](#questions)**
     
-277. ### 7777
+277. ### Can you explain the basic syntax and structure of a Solidity contract?
 
-7777
+A Solidity contract consists of a contract definition, state variables, and functions. The contract definition starts with the keyword “contract” followed by the name of the contract. State variables are used to store data on the blockchain, and functions are used to interact with the contract and modify its state. The basic structure of a Solidity contract is as follows:
+
+pragma solidity ^0.8.0;
+
+contract ExampleContract {
+    // state variables
+    uint256 public balance;
+    
+    // functions
+    function deposit() public {
+        balance += 1;
+    }
+
+    function withdraw() public {
+        balance -= 1;
+    }
+}
     **[⬆ Back to Top](#questions)**
     
-278. ### 8888
+278. ### How does Ethereum differ from Bitcoin?
 
-8888
+Unlike Bitcoin, which was created primarily as a digital currency, Ethereum was designed to be a platform for creating decentralized applications and smart contracts. Ethereum provides developers with a toolkit for building decentralized applications and executing smart contracts on its blockchain.
     **[⬆ Back to Top](#questions)**
     
-279. ### 9999
+279. ### How does Ethereum handle scalability, security, and privacy issues?
 
-9999
+Ethereum is working on several scalability solutions, including sharding and layer 2 scaling solutions. The Ethereum network also employs various security measures, such as secure cryptographic algorithms and consensus mechanisms, to prevent tampering and ensure the integrity of the blockchain.
+
+Regarding privacy, Ethereum has been working on implementing privacy-enhancing technologies, such as zero-knowledge proofs, to improve the privacy of transactions on its network.
     **[⬆ Back to Top](#questions)**
