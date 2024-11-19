@@ -370,10 +370,70 @@
 | 363  | [When creating a Solidity file, name the first thing you need to define?](#When-creating-a-Solidity-file-name-the-first-thing-you-need-to-define)
 | 364  | [What is the relation between wei and Ether?](#What-is-the-relation-between-wei-and-Ether)
 | 365  | [What variables influence the amount of gas in use during a transaction?](#What-variables-influence-the-amount-of-gas-in-use-during-a-transaction)
-| 366  | [6666](#6666)
-| 367  | [7777](#7777)
-| 368  | [8888](#8888)
-| 369  | [9999](#9999)
+| 366  | [What is the difference between public, private, internal, and external visibility in Solidity?](#What-is-the-difference-between-public-private-internal-and-external-visibility-in-Solidity)
+| 367  | [What are events in Solidity, and why are they important?](#What-are-events-in-Solidity-and-why-are-they-important)
+| 368  | [What is the difference between view and pure functions in Solidity?](#What-is-the-difference-between-view-and-pure-functions-in-Solidity)
+| 369  | [What is a fallback function in Solidity, and when is it triggered?](#What-is-a-fallback-function-in-Solidity-and-when-is-it-triggered)
+| 370  | [How does inheritance work in Solidity?](#How-does-inheritance-work-in-Solidity)
+| 371  | [What is a constructor in Solidity, and how is it used?](#What-is-a-constructor-in-Solidity-and-how-is-it-used)
+| 372  | [What is Gas in Solidity, and how does it impact smart contract execution?](#What-is-Gas-in-Solidity-and-how-does-it-impact-smart-contract-execution)
+| 373  | [What is the purpose of require, assert, and revert statements in Solidity?](#What-is-the-purpose-of-require-assert-and-revert-statements-in-Solidity)
+| 374  | [What is the difference between delegatecall and call?](#What-is-the-difference-between-delegatecall-and-call)
+| 375  | [What are modifiers in Solidity, and how do you use them?](#What-are-modifiers-in-Solidity-and-how-do-you-use-them)
+| 376  | [What is the purpose of the selfdestruct function in Solidity?](#What-is-the-purpose-of-the-selfdestruct-function-in-Solidity)
+| 377  | [How does Solidity handle function overloading?](#How-does-Solidity-handle-function-overloading)
+| 378  | [How would you implement a contract upgrade in Solidity?](#How-would-you-implement-a-contract-upgrade-in-Solidity)
+| 379  | [What are libraries in Solidity, and how do they differ from contracts?](#What-are-libraries-in-Solidity-and-how-do-they-differ-from-contracts)
+| 380  | [What are interfaces in Solidity, and why are they used?](#What-are-interfaces-in-Solidity-and-why-are-they-used)
+| 381  | [What are structs in Solidity, and how are they used?](#What-are-structs-in-Solidity-and-how-are-they-used)
+| 382  | [What is a re-entrancy attack, and how can it be mitigated in Solidity?](#What-is-a-re-entrancy-attack-and-how-can-it-be-mitigated-in-Solidity)
+| 383  | [What is the Checks-Effects-Interactions pattern, and why is it important?](#What-is-the-Checks-Effects-Interactions-pattern-and-why-is-it-important)
+| 384  | [What is a front-running attack in Ethereum, and how can it be prevented in Solidity?](#What-is-a-front-running-attack-in-Ethereum-and-how-can-it-be-prevented-in-Solidity)
+| 385  | [What are integer overflows/underflows, and how can you prevent them?](#What-are-integer-overflowsunderflows-and-how-can-you-prevent-them)
+| 386  | [How can you protect smart contracts against Denial of Service (DoS) attacks?](#How-can-you-protect-smart-contracts-against-Denial-of-Service-DoS-attacks)
+| 387  | [What are some best practices for ensuring the security of Solidity smart contracts?](#What-are-some-best-practices-for-ensuring-the-security-of-Solidity-smart-contracts)
+| 388  | [What are ERC-20 tokens, and what are the key functions in an ERC-20 contract?](#What-are-ERC-20-tokens-and-what-are-the-key-functions-in-an-ERC-20-contract)
+| 389  | [What is the difference between ERC-20 and ERC-721?](#What-is-the-difference-between-ERC-20-and-ERC-721)
+| 390  | [How do you test Solidity smart contracts?](#How-do-you-test-Solidity-smart-contracts)
+| 391  | [What is OpenZeppelin, and why is it important in Solidity development?](#What-is-OpenZeppelin-and-why-is-it-important-in-Solidity-development)
+| 392  | [What is the CREATE2 opcode, and how does it differ from CREATE?](#What-is-the-CREATE2-opcode-and-how-does-it-differ-from-CREATE)
+| 393  | [How does abi.encode, abi.encodePacked, abi.encodeWithSelector and abi.encodeWithSignature differ in Solidity, and when would you use each?](#How-does-abiencode-abiencodePacked-abiencodeWithSelector-and-abiencodeWithSignature-differ-in-Solidity-and-when-would-you-use-each)
+| 394  | [What is the difference between keccak256 and sha256 in Solidity, and when would you use each?](#What-is-the-difference-between-keccak256-and-sha256-in-Solidity-and-when-would-you-use-each)
+| 395  | [How would you create a minimal proxy contract using the CREATE2 opcode in Solidity?](#How-would-you-create-a-minimal-proxy-contract-using-the-CREATE2-opcode-in-Solidity)
+| 396  | [How does Solidity handle fixed-size and dynamic-size arrays differently in terms of gas usage and storage?](#How-does-Solidity-handle-fixed-size-and-dynamic-size-arrays-differently-in-terms-of-gas-usage-and-storage)
+| 397  | [What is extcodesize, and how can it be used to check if a contract has been deployed?](#What-is-extcodesize-and-how-can-it-be-used-to-check-if-a-contract-has-been-deployed)
+| 398  | [What is the log opcode, and how are Solidity events translated into EVM logs?](#What-is-the-log-opcode-and-how-are-Solidity-events-translated-into-EVM-logs)
+| 399  | [What are low-level call, delegatecall, and staticcall, and when should you use each?](#What-are-low-level-call-delegatecall-and-staticcall-and-when-should-you-use-each)
+| 400  | [How does the Solidity receive function differ from the fallback function, and when would you implement each?](#How-does-the-Solidity-receive-function-differ-from-the-fallback-function-and-when-would-you-implement-each)
+| 401  | [What is assembly in Solidity, and when would you use inline assembly (Yul)?](#What-is-assembly-in-Solidity-and-when-would-you-use-inline-assembly-Yul)
+| 402  | [What are the gas optimizations you would apply when writing Solidity code, and what trade-offs do they introduce?](#What-are-the-gas-optimizations-you-would-apply-when-writing-Solidity-code-and-what-trade-offs-do-they-introduce)
+| 403  | [What are the challenges of using the selfdestruct function for contract upgrades or termination?](#What-are-the-challenges-of-using-the-selfdestruct-function-for-contract-upgrades-or-termination)
+| 404  | [What are storage collision attacks, and how do you prevent them when using delegatecall in Solidity?](#What-are-storage-collision-attacks-and-how-do-you-prevent-them-when-using-delegatecall-in-Solidity)
+| 405  | [How would you implement a time-lock mechanism in a smart contract, and what are its potential pitfalls?](#How-would-you-implement-a-time-lock-mechanism-in-a-smart-contract-and-what-are-its-potential-pitfalls)
+| 406  | [What is Solidity’s immutable keyword, and how does it compare with constant?](#What-is-Soliditys-immutable-keyword-and-how-does-it-compare-with-constant)
+| 407  | [How do you secure a multi-signature contract, and what are the potential vulnerabilities?](#How-do-you-secure-a-multi-signature-contract-and-what-are-the-potential-vulnerabilities)
+| 408  | [Why prefer Use call over send, transfer?](#Why-prefer-Use-call-over-send-transfer)
+| 409  | [Explain the purpose of ERC-2612 and how it enhances the ERC-20 standard.](#Explain-the-purpose-of-ERC-2612-and-how-it-enhances-the-ERC-20-standard)
+| 410  | [How does the permit function work in ERC-2612, and what are its key parameters?](#How-does-the-permit-function-work-in-ERC-2612-and-what-are-its-key-parameters)
+| 411  | [What is EIP-712, and why is it important for structured data hashing and signing in Solidity?](#What-is-EIP-712-and-why-is-it-important-for-structured-data-hashing-and-signing-in-Solidity)
+| 412  | [Describe the steps involved in generating an EIP-712 compliant signature in Solidity.](#Describe-the-steps-involved-in-generating-an-EIP-712-compliant-signature-in-Solidity)
+| 413  | [What is the DOMAIN_SEPARATOR in EIP-712, and how is it constructed?](#What-is-the-DOMAIN_SEPARATOR-in-EIP-712-and-how-is-it-constructed)
+| 414  | [Why is the DOMAIN_SEPARATOR necessary in contracts using EIP-712?](#Why-is-the-DOMAIN_SEPARATOR-necessary-in-contracts-using-EIP-712)
+| 415  | [How do nonces and deadlines protect against replay attacks in smart contracts?](#How-do-nonces-and-deadlines-protect-against-replay-attacks-in-smart-contracts)
+| 416  | [Write a Solidity snippet that verifies a permit using a nonce and deadline. Explain each step.](#Write-a-Solidity-snippet-that-verifies-a-permit-using-a-nonce-and-deadline-Explain-each-step)
+| 417  | [What is calldata in Solidity, and when should it be used over memory or storage?](#What-is-calldata-in-Solidity-and-when-should-it-be-used-over-memory-or-storage)
+| 418  | [What are the trade-offs of using calldata for function parameters in Solidity?](#What-are-the-trade-offs-of-using-calldata-for-function-parameters-in-Solidity)
+| 419  | [Explain the process of recovering a signer’s address from a hashed message and signature in Solidity.](#Explain-the-process-of-recovering-a-signers-address-from-a-hashed-message-and-signature-in-Solidity)
+| 420  | [What are the potential security pitfalls of using ecrecover in Solidity? How can these be mitigated?](#What-are-the-potential-security-pitfalls-of-using-ecrecover-in-Solidity-How-can-these-be-mitigated)
+| 421  | [1111](#1111)
+| 422  | [2222](#2222)
+| 423  | [3333](#3333)
+| 424  | [4444](#4444)
+| 425  | [5555](#5555)
+| 426  | [6666](#6666)
+| 427  | [7777](#7777)
+| 428  | [8888](#8888)
+| 429  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -3261,22 +3321,630 @@ One Ether makes 1018 Wie.
 The quantity of storage and the Smart Contract instructions determine the value of how much gas should be in use to perform a transaction. 
     **[⬆ Back to Top](#questions)**
 
-366. ### 6666
+366. ### What is the difference between public, private, internal, and external visibility in Solidity?
+
+- Public: Accessible both inside and outside the contract.
+- Private: Only accessible within the contract that defines it.
+- Internal: Accessible within the contract and derived contracts.
+- External: Only callable from outside the contract; more gas-efficient than public when called externally.
+    **[⬆ Back to Top](#questions)**
+    
+367. ### What are events in Solidity, and why are they important?
+
+Events are logs on the Ethereum blockchain that notify external applications about contract activity. They are useful for triggering actions in off-chain applications like dApps.
+    **[⬆ Back to Top](#questions)**
+    
+368. ### What is the difference between view and pure functions in Solidity?
+
+View: Read-only functions that don’t modify the state.
+Pure: Functions that neither modify nor read the state; they only operate on input arguments.
+    **[⬆ Back to Top](#questions)**
+    
+369. ### What is a fallback function in Solidity, and when is it triggered?
+
+The fallback function is executed when a contract receives Ether but no data (or an unknown function call). It is used to handle such cases gracefully.
+
+fallback() external payable { }
+    **[⬆ Back to Top](#questions)**
+
+370. ### How does inheritance work in Solidity?
+
+Solidity supports single and multiple inheritance, allowing contracts to inherit properties and functions from parent contracts. Derived contracts can override parent functions using the override keyword.
+    **[⬆ Back to Top](#questions)**
+
+371. ### What is a constructor in Solidity, and how is it used?
+
+A constructor is a special function that initializes a contract when it is deployed. It is only executed once during the contract's creation.
+    **[⬆ Back to Top](#questions)**
+
+372. ### What is Gas in Solidity, and how does it impact smart contract execution?
+
+Gas is a unit that measures the amount of computational effort required to execute operations in Ethereum. It prevents infinite loops and incentivizes efficient coding.
+    **[⬆ Back to Top](#questions)**
+
+373. ### What is the purpose of require, assert, and revert statements in Solidity?
+
+- require: Validates inputs and conditions. If the condition fails, the transaction is reverted.
+- assert: Used to check for internal errors and conditions that should never happen. It’s more expensive in terms of gas.
+- revert: Used to manually stop execution and revert the contract state.
+    **[⬆ Back to Top](#questions)**
+
+374. ### What is the difference between delegatecall and call?
+
+- call: Calls a function of another contract, changing the context to that of the called contract.
+- delegatecall: Calls a function but keeps the context of the calling contract. It’s used in proxy patterns for contract upgrades.
+    **[⬆ Back to Top](#questions)**
+
+375. ### What are modifiers in Solidity, and how do you use them?
+
+Modifiers are used to change the behavior of functions. They allow for preconditions before the execution of a function.
+Example:
+
+modifier onlyOwner() {
+    require(msg.sender == owner);
+    _;
+}
+    **[⬆ Back to Top](#questions)**
+
+376. ### What is the purpose of the selfdestruct function in Solidity?
+
+selfdestruct is used to delete a contract from the blockchain, sending any remaining Ether to a specified address. It’s typically used for contract upgrades or when a contract is no longer needed.
+    **[⬆ Back to Top](#questions)**
+    
+377. ### How does Solidity handle function overloading?
+
+Solidity allows multiple functions with the same name but different parameters. The compiler differentiates them based on the parameter types and count.
+    **[⬆ Back to Top](#questions)**
+    
+378. ### How would you implement a contract upgrade in Solidity?
+
+Contract upgrades can be implemented using proxy patterns, where the proxy contract delegates calls to the implementation contract. This allows changes to the logic without altering the contract's storage.
+    **[⬆ Back to Top](#questions)**
+    
+379. ### What are libraries in Solidity, and how do they differ from contracts?
+
+Libraries are similar to contracts but they cannot store state and cannot receive Ether. They are reusable and their code can be called from contracts without redeploying.
+    **[⬆ Back to Top](#questions)**
+
+380. ### What are interfaces in Solidity, and why are they used?
+
+Interfaces define a contract’s external functions without including their implementation. They allow for interoperability between contracts. Example:
+
+interface Token {
+    function transfer(address _to, uint256 _value) external;
+}    **[⬆ Back to Top](#questions)**
+
+381. ### What are structs in Solidity, and how are they used?
+
+Structs are custom data types that group multiple variables together. Example:
+struct Person {
+    string name;
+    uint age;
+}
+    **[⬆ Back to Top](#questions)**
+
+382. ### What is a re-entrancy attack, and how can it be mitigated in Solidity?
+
+A re-entrancy attack-  occurs when a malicious contract calls a vulnerable contract multiple times before the initial execution is completed, often draining funds. Mitigation techniques include:
+- Using the Checks-Effects-Interactions pattern.
+- Using the reentrancyGuard modifier from libraries like OpenZeppelin.
+    **[⬆ Back to Top](#questions)**
+
+383. ### What is the Checks-Effects-Interactions pattern, and why is it important?
+
+It is a Solidity best practice to first check conditions (Checks), then update the contract’s state (Effects), and finally interact with other contracts (Interactions). This minimizes vulnerabilities such as re-entrancy.
+    **[⬆ Back to Top](#questions)**
+
+384. ### What is a front-running attack in Ethereum, and how can it be prevented in Solidity?
+
+Front-running occurs when someone exploits the visibility of pending transactions by submitting their own transaction with a higher gas fee to get processed first. Mitigation strategies include using commit-reveal schemes or adjusting transaction gas fees dynamically.
+    **[⬆ Back to Top](#questions)**
+
+385. ### What are integer overflows/underflows, and how can you prevent them?
+
+Integer overflow happens when an arithmetic operation exceeds the storage limit of a variable. This can be prevented by using libraries like OpenZeppelin’s SafeMath, which checks for overflows and underflows (Solidity 0.8.0 upwards natively supports this).
+    **[⬆ Back to Top](#questions)**
+
+386. ### How can you protect smart contracts against Denial of Service (DoS) attacks?
+
+To prevent DoS attacks, avoid gas-heavy loops, use pull over push patterns for funds withdrawal, and limit external calls within functions.
+    **[⬆ Back to Top](#questions)**
+    
+387. ### What are some best practices for ensuring the security of Solidity smart contracts?
+
+- Use known libraries (e.g., OpenZeppelin).
+- Implement proper access control (e.g., owner checks).
+- Avoid state changes before external calls.
+- Limit the complexity of contracts.
+- Conduct thorough audits and testing (including fuzzing).
+    **[⬆ Back to Top](#questions)**
+    
+388. ### What are ERC-20 tokens, and what are the key functions in an ERC-20 contract?
+
+ERC-20 is a standard for fungible tokens on Ethereum. Key functions include:
+- balanceOf
+- transfer
+- approve
+- transferFrom
+- allowance
+    **[⬆ Back to Top](#questions)**
+    
+389. ### What is the difference between ERC-20 and ERC-721?
+
+- ERC-20: A standard for fungible tokens, where each token is identical.
+- ERC-721: A standard for non-fungible tokens (NFTs), where each token is unique.
+    **[⬆ Back to Top](#questions)**
+
+390. ### How do you test Solidity smart contracts?
+
+Testing can be done using frameworks like Truffle, Hardhat, or Brownie. Contracts can be tested locally on simulated blockchains (e.g., Ganache) or on testnets before mainnet deployment. Tools like Chai or Mocha are often used for writing unit tests.
+    **[⬆ Back to Top](#questions)**
+
+391. ### What is OpenZeppelin, and why is it important in Solidity development?
+
+OpenZeppelin is a popular framework that provides secure, reusable libraries and contracts for Solidity. It includes implementations of standard token contracts (ERC-20, ERC-721), access control patterns, and more.
+    **[⬆ Back to Top](#questions)**
+
+392. ### What is the CREATE2 opcode, and how does it differ from CREATE?
+
+CREATE2 allows contracts to be deployed to a deterministic address based on the contract bytecode, deployer's address, and a salt value.
+- Pros:
+Enables pre-calculation of contract addresses before deployment.
+Useful for factory contracts, ensuring the same contract address across networks.
+- Cons:
+Contracts cannot be deployed twice with the same bytecode and salt combination.
+
+Example:
+pair = address(uint(keccak256(abi.encodePacked(
+     hex'ff',
+     factory,
+     keccak256(abi.encodePacked(token0, token1)), hex'ced7c507bf75a9c4a42a9c14d582db9f48b2de7a90ccc86d338a41f541fe4f53' // INIT_CODE_PAIR_HASH of Pancake Factory
+))));
+
+Ex2
+address contractAddress = address(uint160(uint256(keccak256(abi.encodePacked(
+    bytes1(0xff), 
+    deployer, 
+    salt, 
+    keccak256(bytecode)
+)))));
+    **[⬆ Back to Top](#questions)**
+
+393. ### How does abi.encode, abi.encodePacked, abi.encodeWithSelector and abi.encodeWithSignature differ in Solidity, and when would you use each?
+
+- abi.encode: Encodes values into tightly packed binary form, used for general-purpose encoding.
+- abi.encodePacked: Encodes data in a packed format (no padding), useful for hash generation but can cause collisions with dynamic types.
+- abi.encodeWithSelector: Encodes the function selector (i.e., the first 4 bytes of the function's keccak256 hash) and arguments needed to call, used for low-level call or delegatecall. This method is typically used when you know the exact function you want to call and its selector.
+- abi.encodeWithSignature: Similar to abi.encodeWithSelector but encodes function call with a specific signature (i.e., the function name and its arguments). This method is typically convenient when the function signature is a string and the selector is not precomputed.
+
+Use cases:
+abi.encode for data storage or passing arguments.
+abi.encodePacked for hash-based operations.
+abi.encodeWithSelector for calling other contracts without ABI, it is is slightly more gas-efficient than abi.encodeWithSignature because it avoids recalculating the selector.
+abi.encodeWithSignature for simplicity when you only have the signature string.
+
+Example: abi.encode
+
+DOMAIN_SEPARATOR = keccak256(
+   abi.encode(
+       keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
+       keccak256(bytes(name)),
+       keccak256(bytes('1')),
+       chainId,
+       address(this)
+   )
+);
+
+abi.encodePacked
+
+messageHash = keccak256(abi.encodePacked(...));
+
+abi.encodeWithSelector
+
+// This extracts the first 4 bytes of the 32-byte keccak256 hash. These first 4 bytes form the function selector for the transfer function.
+// The function selector is essentially the "address" of the function within the smart contract. When an external call is made to the contract, the EVM uses the function selector to determine which function to execute.
+bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)'))))
+(bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
+
+// Some ERC-20 tokens don’t follow the standard perfectly. For example, some older tokens don’t return a boolean from their transfer function. 
+// Using a low-level call with this flexible checking mechanism allows the function to work with both types of tokens (those that return a boolean and those that don’t).
+require(success && (data.length == 0 || abi.decode(data, (bool))), 'Pancake: TRANSFER_FAILED');
+
+abi.encodeWithSignature
+
+bytes memory encoded = abi.encodeWithSignature("transfer(address,uint256)", recipient, amount);
+    **[⬆ Back to Top](#questions)**
+
+394. ### What is the difference between keccak256 and sha256 in Solidity, and when would you use each?
+
+- keccak256: Ethereum’s primary hashing algorithm, based on SHA-3, used for signatures, address generation, and storing hashed data.
+- sha256: Standard SHA-2 hashing algorithm, often used for interoperability with external systems.
+
+Use cases:
+Use keccak256 for Ethereum-specific functions like signature verification.
+Use sha256 for off-chain integrations or systems using SHA-2 standards.
+
+Example: keccak256
+
+bytes32 digest = keccak256(
+ abi.encodePacked(
+       '\x19\x01',
+       DOMAIN_SEPARATOR,
+       keccak256(abi.encode(
+           PERMIT_TYPEHASH, 
+           owner, 
+           spender, 
+           value, 
+           nonces[owner]++, 
+           deadline
+       ))
+   )
+);
+
+sha256: External systems can hash payment details (sha256) and pass the hash (expectedHash) to the smart contract.
+
+// The contract verifies that the provided payment data matches the expected hash, ensuring data integrity across systems.
+contract PaymentProcessor {
+   function verifyPayment(bytes32 expectedHash, string memory paymentData) public pure returns (bool) {
+       // Recalculate hash of payment data
+       bytes32 computedHash = sha256(abi.encodePacked(paymentData));
+       // Compare with the expected hash (e.g., received from an external system)
+       return computedHash == expectedHash;
+   }
+}
+    **[⬆ Back to Top](#questions)**
+
+395. ### How would you create a minimal proxy contract using the CREATE2 opcode in Solidity?
+
+- A minimal proxy (also known as an EIP-1167 clone factory) is a contract that delegates all calls to a master implementation contract using delegatecall. You can combine this with CREATE2 to deploy proxies at predictable addresses.
+- Steps:
+    Compute the address using keccak256.
+    Deploy the proxy contract using CREATE2 with a minimal bytecode proxy.
+    Example minimal proxy:
+
+ bytes memory bytecode = abi.encodePacked(
+     hex"363d3d373d3d3d363d73", masterContractAddress, hex"5af43d82803e903d91602b57fd5bf3"
+ );
+ address proxyAddress;
+ assembly {
+     proxyAddress := create2(0, add(bytecode, 0x20), mload(bytecode), salt)
+ }
+    **[⬆ Back to Top](#questions)**
+
+396. ### How does Solidity handle fixed-size and dynamic-size arrays differently in terms of gas usage and storage?
+
+- Fixed-size arrays have predefined storage slots allocated for each element at compile time, making them cheaper and faster for storage and access.
+- Dynamic-size arrays can grow or shrink, so additional storage and pointer management are required, resulting in higher gas costs for operations like adding or removing elements.
+- Trade-offs:
+    Use fixed-size arrays when array size is known in advance and performance is critical.
+    Use dynamic-size arrays when flexibility is needed.
+    **[⬆ Back to Top](#questions)**
+    
+397. ### What is extcodesize, and how can it be used to check if a contract has been deployed?
+
+- extcodesize is an EVM opcode that returns the size of the bytecode at a given address. It’s used to determine whether an address is a contract.
+- Example:
+ function isContract(address account) internal view returns (bool) {
+     uint256 size;
+     assembly {
+         size := extcodesize(account)
+     }
+     return size > 0;
+ }
+- Use case:
+    Helps to prevent sending Ether to externally owned accounts (EOAs) when a contract address is expected.
+    Cons: Can’t differentiate between contracts in construction or destroyed contracts (selfdestructed contracts will return zero size).
+    **[⬆ Back to Top](#questions)**
+    
+398. ### What is the log opcode, and how are Solidity events translated into EVM logs?
+
+- log opcodes (log0, log1, up to log4) represent events in Solidity. They generate EVM logs that are stored on-chain but are not accessible within smart contracts themselves.
+- Use cases: - Used for emitting events, which are critical for off-chain dApps to monitor contract state changes.
+    Example of event emission:
+
+   event Transfer(address indexed from, address indexed to, uint256 value);
+   emit Transfer(msg.sender, recipient, amount);
+- Gas considerations: Storing data in logs is cheaper than in storage, but still requires gas.
+    **[⬆ Back to Top](#questions)**
+    
+399. ### What are low-level call, delegatecall, and staticcall, and when should you use each?
+
+- call: Executes code in another contract, allows Ether transfer, and changes context to the called contract.
+- delegatecall: Executes code in the context of the calling contract (proxy pattern).
+- staticcall: Similar to call, but ensures no state changes, useful for read-only external calls.
+Use cases:
+    call for interacting with other contracts, transferring Ether, or fallback functions.
+    delegatecall for proxies and contract upgrades.
+    staticcall for ensuring no state modifications in read-only external calls.
+    **[⬆ Back to Top](#questions)**
+
+400. ### How does the Solidity receive function differ from the fallback function, and when would you implement each?
+
+- receive: A specific function triggered when the contract receives Ether without data.
+- fallback: Triggered when a function is called that does not exist in the contract or when the contract receives Ether with data (if receive is not defined).
+Use cases:
+    Implement receive for contracts that should accept Ether without any accompanying data.
+    Use fallback for advanced behavior like proxy contract routing or handling unexpected function calls.
+    Example:
+
+receive() external payable { }
+fallback() external payable { }
+    **[⬆ Back to Top](#questions)**
+
+401. ### What is assembly in Solidity, and when would you use inline assembly (Yul)?
+
+- Assembly (Yul) allows for low-level manipulation of the EVM using opcodes directly. It's used for optimizations, gas savings, or accessing functionality not directly available in Solidity.
+- Use cases:
+    Gas optimization for complex arithmetic or loops.
+    Direct access to low-level EVM opcodes (e.g., mstore, mload).
+- Example:
+assembly {
+    chainId := chainid
+}
+
+Ex2
+
+function add(uint x, uint y) public pure returns (uint) {
+    assembly {
+        let result := add(x, y)
+        return(result, 32)
+    }
+}
+
+- Trade-offs:
+    Can significantly reduce gas costs.
+    Harder to read, maintain, and secure compared to high-level Solidity code.
+    **[⬆ Back to Top](#questions)**
+
+402. ### What are the gas optimizations you would apply when writing Solidity code, and what trade-offs do they introduce?
+
+Gas optimizations include reducing storage writes, using memory instead of storage, minimizing contract size, and packing variables.
+- Pros:
+    Reduces transaction costs, making your contract more efficient.
+    Improves the performance of decentralized applications (dApps).
+- Cons:
+    Over-optimizing can make code harder to read and maintain.
+    Optimizations like variable packing might introduce bugs if improperly handled (e.g., overflow issues).
+    **[⬆ Back to Top](#questions)**
+
+403. ### What are the challenges of using the selfdestruct function for contract upgrades or termination?
+
+The selfdestruct function deletes a contract from the blockchain and transfers any remaining Ether to a specified address.
+- Pros:
+    Removes the contract, freeing up storage space on the blockchain.
+    Can be used to return funds in emergency situations.
+- Cons:
+    Leaves orphaned contract calls, which may cause other contracts interacting with it to fail.
+    There’s no way to undo a selfdestruct once executed.
+    **[⬆ Back to Top](#questions)**
+
+404. ### What are storage collision attacks, and how do you prevent them when using delegatecall in Solidity?
+
+Storage collisions occur when the storage layout between the proxy contract and the implementation contract differs, potentially causing state corruption.
+- Pros of preventing it:
+    Ensures the integrity of contract storage and logic.
+- Cons:
+    Requires careful design and auditing of storage layout across contract upgrades.
+    Incorrect handling can still lead to subtle, hard-to-detect bugs.
+    **[⬆ Back to Top](#questions)**
+
+405. ### How would you implement a time-lock mechanism in a smart contract, and what are its potential pitfalls?
+
+A time-lock restricts access to certain functions or assets for a predetermined time period, typically used for vesting or governance delays.
+- Pros:
+    Improves security by allowing a delay between action and execution, giving time for review.
+    Can prevent impulse or malicious actions.
+- Cons:
+    May lead to unintended delays or freezing of assets if poorly implemented.
+    Increases complexity, potentially making the system harder to interact with.
+    **[⬆ Back to Top](#questions)**
+
+406. ### What is Solidity’s immutable keyword, and how does it compare with constant?
+
+The immutable keyword defines a variable that is set during contract deployment and cannot be changed after that, but is not stored in storage.
+- Pros:
+    Reduces gas costs since immutable variables are stored in contract bytecode rather than storage.
+    Allows flexibility compared to constant, which must be known at compile-time.
+- Cons:
+    Once set, it cannot be changed, leading to potential limitations if the contract requires dynamic behavior later.
+    **[⬆ Back to Top](#questions)**
+    
+407. ### How do you secure a multi-signature contract, and what are the potential vulnerabilities?
+
+Multi-signature contracts require multiple parties to sign off on a transaction before it is executed, adding a layer of security.
+- Pros:
+    Reduces the risk of a single point of failure or malicious control.
+    Offers decentralized governance and enhanced security for high-value assets.
+- Cons:
+    Introduces coordination challenges among signers, leading to delays.
+    Vulnerable to denial-of-service (DoS) attacks if some signers become inactive or maliciously refuse to sign.
+    **[⬆ Back to Top](#questions)**
+    
+408. ### Why prefer Use call over send, transfer?
+
+The reason for using call instead of the other alternatives like transfer or send is mostly due to certain limitations and flexibility:
+
+- transfer: Transfers a fixed amount of gas (2300 gas) to the recipient, which is usually enough for basic Ether receipt but may fail if the receiving contract has more complex logic.
+- send: Similar to transfer but returns a boolean indicating success or failure.
+- call: Allows specifying the exact amount of gas and sending data. Since Solidity 0.6.x, call has become the recommended way to send Ether due to gas limitations imposed on transfer.
+    **[⬆ Back to Top](#questions)**
+    
+409. ### Explain the purpose of ERC-2612 and how it enhances the ERC-20 standard.
+
+ERC-2612 introduces the permit function, enabling gasless approvals for ERC-20 tokens. Users can approve token transfers via cryptographic signatures off-chain, avoiding the need to perform an on-chain transaction. This is especially useful for DeFi applications as it reduces transaction costs and allows for meta-transactions where the approval and transfer are bundled.
+    **[⬆ Back to Top](#questions)**
+
+410. ### How does the permit function work in ERC-2612, and what are its key parameters?
+
+The permit function allows an owner to authorize a spender to spend tokens without requiring an on-chain transaction from the owner.
+
+Key Parameters:
+- owner: The address authorizing the permit.
+- spender: The address allowed to spend the tokens.
+- value: The token amount allowed for spending.
+- deadline: A timestamp after which the permit is no longer valid.
+- (v, r, s): The components of the owner's ECDSA signature.
+Example flow:
+- The owner signs a message off-chain using EIP-712.
+- The spender submits the permit function with the signature to the smart contract.
+- The contract verifies the signature and updates the allowance accordingly.
+    **[⬆ Back to Top](#questions)**
+
+411. ### What is EIP-712, and why is it important for structured data hashing and signing in Solidity?
+
+EIP-712 is a standard for encoding structured data into a message for signing, ensuring the signature cannot be reused across other contracts or domains. It improves security and usability by providing type-safe and domain-specific data signing. This is particularly critical for applications like permit, where signatures are used to authorize specific operations on a given chain and contract.
+    **[⬆ Back to Top](#questions)**
+
+412. ### Describe the steps involved in generating an EIP-712 compliant signature in Solidity.
+
+- Define Types: Create a type structure for the data to be signed.
+- Hash the Data: Use abi.encode and keccak256 to hash the type and its fields.
+- Construct the DOMAIN_SEPARATOR: Combine contract-specific information like name, version, and chainId to hash the domain.
+- Combine the Domain and Data Hash: Use keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash)) to create the final message hash.
+- Sign the Hash: Use an off-chain wallet to generate the signature (via eth_signTypedData).
+- Recover Signer: On-chain, verify the signature using ecrecover.
+    **[⬆ Back to Top](#questions)**
+
+413. ### What is the DOMAIN_SEPARATOR in EIP-712, and how is it constructed?
+
+The DOMAIN_SEPARATOR is a hashed structure that uniquely identifies a contract, preventing signature reuse across different domains or chains. Construction:
+
+DOMAIN_SEPARATOR = keccak256(
+    abi.encode(
+        keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+        keccak256(bytes(name)),
+        keccak256(bytes(version)),
+        chainId,
+        address(this)
+    )
+);
+Fields include:
+
+- name: Contract name.
+- version: Contract version.
+- chainId: Blockchain ID.
+- verifyingContract: Contract address.
+    **[⬆ Back to Top](#questions)**
+
+414. ### Why is the DOMAIN_SEPARATOR necessary in contracts using EIP-712?
+
+It ensures signatures are valid only for a specific contract and chain, mitigating cross-contract replay attacks. Without a domain separator, a signature valid on one contract could be reused on another, compromising security.
+    **[⬆ Back to Top](#questions)**
+
+415. ### How do nonces and deadlines protect against replay attacks in smart contracts?
+
+- Nonces: Each signature is tied to a unique incrementing number (nonce). Once used, the nonce is incremented, invalidating the signature for subsequent reuse.
+- Deadlines: The deadline specifies the validity period for a signature, ensuring it cannot be used indefinitely.
+    **[⬆ Back to Top](#questions)**
+
+416. ### Write a Solidity snippet that verifies a permit using a nonce and deadline. Explain each step.
+
+function permit(
+    address owner,
+    address spender,
+    uint256 value,
+    uint256 deadline,
+    uint8 v,
+    bytes32 r,
+    bytes32 s
+) external {
+    require(deadline >= block.timestamp, "Expired deadline");
+    bytes32 structHash = keccak256(
+        abi.encode(
+            PERMIT_TYPEHASH,
+            owner,
+            spender,
+            value,
+            nonces[owner]++,
+            deadline
+        )
+    );
+    bytes32 hash = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
+    address signer = ecrecover(hash, v, r, s);
+    require(signer == owner, "Invalid signature");
+    _approve(owner, spender, value);
+}
+
+- Step 1: Check the deadline for expiration.
+- Step 2: Increment and encode the nonce.
+- Step 3: Hash the permit data and domain for signature verification.
+- Step 4: Verify the signer using ecrecover.
+    **[⬆ Back to Top](#questions)**
+    
+417. ### What is calldata in Solidity, and when should it be used over memory or storage?
+
+- calldata is a read-only data location for function parameters in external functions.
+- It is gas-efficient since it does not involve copying or modifying data.
+- Use it when passing immutable data to an external function, especially arrays or strings, where gas savings are critical.
+    **[⬆ Back to Top](#questions)**
+    
+418. ### What are the trade-offs of using calldata for function parameters in Solidity?
+
+- Pros: Gas-efficient, immutable, secure.
+- Cons: Cannot modify data, requiring additional memory allocation if modifications are necessary.
+    **[⬆ Back to Top](#questions)**
+    
+419. ### Explain the process of recovering a signer’s address from a hashed message and signature in Solidity.
+
+- Use keccak256 to hash the message.
+- Prefix the hash with "\x19Ethereum Signed Message:\n32" to match the eth_sign format.
+- Use ecrecover with (v, r, s) to recover the signer’s address. Example:
+function recoverSigner(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public pure returns (address) {
+    return ecrecover(hash, v, r, s);
+}
+    **[⬆ Back to Top](#questions)**
+
+420. ### What are the potential security pitfalls of using ecrecover in Solidity? How can these be mitigated?
+
+- Pitfalls:
+    Malformed signatures may lead to unexpected results.
+    Lack of proper hashing allows replay attacks.
+- Mitigations:
+    Always hash messages with keccak256 and use EIP-712 standards for structured data.
+    Add domain-specific information to hashes to prevent reuse across chains/contracts.
+    **[⬆ Back to Top](#questions)**
+
+421. ### 1111
+
+1111
+    **[⬆ Back to Top](#questions)**
+
+422. ### 2222
+
+2222
+    **[⬆ Back to Top](#questions)**
+
+423. ### 3333
+
+3333
+    **[⬆ Back to Top](#questions)**
+
+424. ### 4444
+
+4444
+    **[⬆ Back to Top](#questions)**
+
+425. ### 5555
+
+5555
+    **[⬆ Back to Top](#questions)**
+
+426. ### 6666
 
 6666
     **[⬆ Back to Top](#questions)**
     
-367. ### 7777
+427. ### 7777
 
 7777
     **[⬆ Back to Top](#questions)**
     
-368. ### 8888
+428. ### 8888
 
 8888
     **[⬆ Back to Top](#questions)**
     
-369. ### 9999
+429. ### 9999
 
 9999
     **[⬆ Back to Top](#questions)**
