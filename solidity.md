@@ -425,15 +425,6 @@
 | 418  | [What are the trade-offs of using calldata for function parameters in Solidity?](#What-are-the-trade-offs-of-using-calldata-for-function-parameters-in-Solidity)
 | 419  | [Explain the process of recovering a signer’s address from a hashed message and signature in Solidity.](#Explain-the-process-of-recovering-a-signers-address-from-a-hashed-message-and-signature-in-Solidity)
 | 420  | [What are the potential security pitfalls of using ecrecover in Solidity? How can these be mitigated?](#What-are-the-potential-security-pitfalls-of-using-ecrecover-in-Solidity-How-can-these-be-mitigated)
-| 421  | [1111](#1111)
-| 422  | [2222](#2222)
-| 423  | [3333](#3333)
-| 424  | [4444](#4444)
-| 425  | [5555](#5555)
-| 426  | [6666](#6666)
-| 427  | [7777](#7777)
-| 428  | [8888](#8888)
-| 429  | [9999](#9999)
 
 ## Answers
 1. ### What is Solidity?
@@ -3902,49 +3893,4 @@ function recoverSigner(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public pure 
 - Mitigations:
     Always hash messages with keccak256 and use EIP-712 standards for structured data.
     Add domain-specific information to hashes to prevent reuse across chains/contracts.
-    **[⬆ Back to Top](#questions)**
-
-421. ### 1111
-
-1111
-    **[⬆ Back to Top](#questions)**
-
-422. ### 2222
-
-2222
-    **[⬆ Back to Top](#questions)**
-
-423. ### 3333
-
-3333
-    **[⬆ Back to Top](#questions)**
-
-424. ### 4444
-
-4444
-    **[⬆ Back to Top](#questions)**
-
-425. ### 5555
-
-5555
-    **[⬆ Back to Top](#questions)**
-
-426. ### 6666
-
-6666
-    **[⬆ Back to Top](#questions)**
-    
-427. ### 7777
-
-7777
-    **[⬆ Back to Top](#questions)**
-    
-428. ### 8888
-
-8888
-    **[⬆ Back to Top](#questions)**
-    
-429. ### 9999
-
-9999
     **[⬆ Back to Top](#questions)**
