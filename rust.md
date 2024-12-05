@@ -382,58 +382,68 @@
 | 375  | [Describe the difference between a _shared reference_ and a _mutable reference_.](#Describe-the-difference-between-a-shared-reference-and-a-mutable-reference)
 | 376  | [How does the _borrow checker_ help prevent _race conditions_?](#How-does-the-borrow-checker-help-prevent-race-conditions)
 | 377  | [Describe Rust's ownership system.](#Describe-Rusts-ownership-system)
-| 378  | [How would you implement a contract upgrade in Solidity?](#How-would-you-implement-a-contract-upgrade-in-Solidity)
-| 379  | [What are libraries in Solidity, and how do they differ from contracts?](#What-are-libraries-in-Solidity-and-how-do-they-differ-from-contracts)
-| 380  | [What are interfaces in Solidity, and why are they used?](#What-are-interfaces-in-Solidity-and-why-are-they-used)
-| 381  | [What are structs in Solidity, and how are they used?](#What-are-structs-in-Solidity-and-how-are-they-used)
-| 382  | [What is a re-entrancy attack, and how can it be mitigated in Solidity?](#What-is-a-re-entrancy-attack-and-how-can-it-be-mitigated-in-Solidity)
-| 383  | [What is the Checks-Effects-Interactions pattern, and why is it important?](#What-is-the-Checks-Effects-Interactions-pattern-and-why-is-it-important)
-| 384  | [What is a front-running attack in Ethereum, and how can it be prevented in Solidity?](#What-is-a-front-running-attack-in-Ethereum-and-how-can-it-be-prevented-in-Solidity)
-| 385  | [What are integer overflows/underflows, and how can you prevent them?](#What-are-integer-overflowsunderflows-and-how-can-you-prevent-them)
-| 386  | [How can you protect smart contracts against Denial of Service (DoS) attacks?](#How-can-you-protect-smart-contracts-against-Denial-of-Service-DoS-attacks)
-| 387  | [What are some best practices for ensuring the security of Solidity smart contracts?](#What-are-some-best-practices-for-ensuring-the-security-of-Solidity-smart-contracts)
-| 388  | [What are ERC-20 tokens, and what are the key functions in an ERC-20 contract?](#What-are-ERC-20-tokens-and-what-are-the-key-functions-in-an-ERC-20-contract)
-| 389  | [What is the difference between ERC-20 and ERC-721?](#What-is-the-difference-between-ERC-20-and-ERC-721)
-| 390  | [How do you test Solidity smart contracts?](#How-do-you-test-Solidity-smart-contracts)
-| 391  | [What is OpenZeppelin, and why is it important in Solidity development?](#What-is-OpenZeppelin-and-why-is-it-important-in-Solidity-development)
-| 392  | [What is the CREATE2 opcode, and how does it differ from CREATE?](#What-is-the-CREATE2-opcode-and-how-does-it-differ-from-CREATE)
-| 393  | [How does abi.encode, abi.encodePacked, abi.encodeWithSelector and abi.encodeWithSignature differ in Solidity, and when would you use each?](#How-does-abiencode-abiencodePacked-abiencodeWithSelector-and-abiencodeWithSignature-differ-in-Solidity-and-when-would-you-use-each)
-| 394  | [What is the difference between keccak256 and sha256 in Solidity, and when would you use each?](#What-is-the-difference-between-keccak256-and-sha256-in-Solidity-and-when-would-you-use-each)
-| 395  | [How would you create a minimal proxy contract using the CREATE2 opcode in Solidity?](#How-would-you-create-a-minimal-proxy-contract-using-the-CREATE2-opcode-in-Solidity)
-| 396  | [How does Solidity handle fixed-size and dynamic-size arrays differently in terms of gas usage and storage?](#How-does-Solidity-handle-fixed-size-and-dynamic-size-arrays-differently-in-terms-of-gas-usage-and-storage)
-| 397  | [What is extcodesize, and how can it be used to check if a contract has been deployed?](#What-is-extcodesize-and-how-can-it-be-used-to-check-if-a-contract-has-been-deployed)
-| 398  | [What is the log opcode, and how are Solidity events translated into EVM logs?](#What-is-the-log-opcode-and-how-are-Solidity-events-translated-into-EVM-logs)
-| 399  | [What are low-level call, delegatecall, and staticcall, and when should you use each?](#What-are-low-level-call-delegatecall-and-staticcall-and-when-should-you-use-each)
-| 400  | [How does the Solidity receive function differ from the fallback function, and when would you implement each?](#How-does-the-Solidity-receive-function-differ-from-the-fallback-function-and-when-would-you-implement-each)
-| 401  | [What is assembly in Solidity, and when would you use inline assembly (Yul)?](#What-is-assembly-in-Solidity-and-when-would-you-use-inline-assembly-Yul)
-| 402  | [What are the gas optimizations you would apply when writing Solidity code, and what trade-offs do they introduce?](#What-are-the-gas-optimizations-you-would-apply-when-writing-Solidity-code-and-what-trade-offs-do-they-introduce)
-| 403  | [What are the challenges of using the selfdestruct function for contract upgrades or termination?](#What-are-the-challenges-of-using-the-selfdestruct-function-for-contract-upgrades-or-termination)
-| 404  | [What are storage collision attacks, and how do you prevent them when using delegatecall in Solidity?](#What-are-storage-collision-attacks-and-how-do-you-prevent-them-when-using-delegatecall-in-Solidity)
-| 405  | [How would you implement a time-lock mechanism in a smart contract, and what are its potential pitfalls?](#How-would-you-implement-a-time-lock-mechanism-in-a-smart-contract-and-what-are-its-potential-pitfalls)
-| 406  | [What is Solidity’s immutable keyword, and how does it compare with constant?](#What-is-Soliditys-immutable-keyword-and-how-does-it-compare-with-constant)
-| 407  | [How do you secure a multi-signature contract, and what are the potential vulnerabilities?](#How-do-you-secure-a-multi-signature-contract-and-what-are-the-potential-vulnerabilities)
-| 408  | [Why prefer Use call over send, transfer?](#Why-prefer-Use-call-over-send-transfer)
-| 409  | [Explain the purpose of ERC-2612 and how it enhances the ERC-20 standard.](#Explain-the-purpose-of-ERC-2612-and-how-it-enhances-the-ERC-20-standard)
-| 410  | [How does the permit function work in ERC-2612, and what are its key parameters?](#How-does-the-permit-function-work-in-ERC-2612-and-what-are-its-key-parameters)
-| 411  | [What is EIP-712, and why is it important for structured data hashing and signing in Solidity?](#What-is-EIP-712-and-why-is-it-important-for-structured-data-hashing-and-signing-in-Solidity)
-| 412  | [Describe the steps involved in generating an EIP-712 compliant signature in Solidity.](#Describe-the-steps-involved-in-generating-an-EIP-712-compliant-signature-in-Solidity)
-| 413  | [What is the DOMAIN_SEPARATOR in EIP-712, and how is it constructed?](#What-is-the-DOMAIN_SEPARATOR-in-EIP-712-and-how-is-it-constructed)
-| 414  | [Why is the DOMAIN_SEPARATOR necessary in contracts using EIP-712?](#Why-is-the-DOMAIN_SEPARATOR-necessary-in-contracts-using-EIP-712)
-| 415  | [How do nonces and deadlines protect against replay attacks in smart contracts?](#How-do-nonces-and-deadlines-protect-against-replay-attacks-in-smart-contracts)
-| 416  | [Write a Solidity snippet that verifies a permit using a nonce and deadline. Explain each step.](#Write-a-Solidity-snippet-that-verifies-a-permit-using-a-nonce-and-deadline-Explain-each-step)
-| 417  | [What is calldata in Solidity, and when should it be used over memory or storage?](#What-is-calldata-in-Solidity-and-when-should-it-be-used-over-memory-or-storage)
-| 418  | [What are the trade-offs of using calldata for function parameters in Solidity?](#What-are-the-trade-offs-of-using-calldata-for-function-parameters-in-Solidity)
-| 419  | [Explain the process of recovering a signer’s address from a hashed message and signature in Solidity.](#Explain-the-process-of-recovering-a-signers-address-from-a-hashed-message-and-signature-in-Solidity)
-| 420  | [What are the potential security pitfalls of using ecrecover in Solidity? How can these be mitigated?](#What-are-the-potential-security-pitfalls-of-using-ecrecover-in-Solidity-How-can-these-be-mitigated)
-| 421  | [1111](#1111)
-| 422  | [2222](#2222)
-| 423  | [3333](#3333)
-| 424  | [4444](#4444)
-| 425  | [5555](#5555)
-| 426  | [6666](#6666)
-| 427  | [7777](#7777)
-| 428  | [8888](#8888)
-| 429  | [9999](#9999)
+| 378  | [How does Rust handle null values?](#How-does-Rust-handle-null-values)
+| 379  | [Explain Rust's borrowing and referencing mechanisms.](#Explain-Rusts-borrowing-and-referencing-mechanisms)
+| 380  | [What is "lifetimes" in Rust?](#What-is-lifetimes-in-Rust)
+| 381  | [What is the difference between String and &str in Rust?](#What-is-the-difference-between-String-and-str-in-Rust)
+| 382  | [How does Rust ensure concurrency safety?](#How-does-Rust-ensure-concurrency-safety)
+| 383  | [Describe pattern matching in Rust.](#Describe-pattern-matching-in-Rust)
+| 384  | [What are Rust's traits?](#What-are-Rusts-traits)
+| 385  | [Explain the difference between panic! and unwrap in Rust.](#Explain-the-difference-between-panic-and-unwrap-in-Rust)
+| 386  | [Describe the "Zero-Cost Abstractions" principle in Rust.](#Describe-the-Zero-Cost-Abstractions-principle-in-Rust)
+| 387  | [How does Rust handle object-oriented principles?](#How-does-Rust-handle-object-oriented-principles)
+| 388  | [How does Rust support generic programming?](#How-does-Rust-support-generic-programming)
+| 389  | [Describe Rust's concurrency model.](#Describe-Rusts-concurrency-model)
+| 390  | [What is the Box type in Rust?](#What-is-the-Box-type-in-Rust)
+| 391  | [How does Rust ensure type safety?](#How-does-Rust-ensure-type-safety)
+| 392  | [How would you describe Rust programming language?](#How-would-you-describe-Rust-programming-language)
+| 393  | [What are the key features of Rust?](#What-are-the-key-features-of-Rust)
+| 394  | [Describe ownership in Rust.](#Describe-ownership-in-Rust)
+| 395  | [Which platforms are supported by Rust?](#Which-platforms-are-supported-by-Rust)
+| 396  | [What are the steps for installing Rust?](#What-are-the-steps-for-installing-Rust)
+| 397  | [How to declare global variables in Rust?](#How-to-declare-global-variables-in-Rust)
+| 398  | [What are the limitations of Rust?](#What-are-the-limitations-of-Rust)
+| 399  | [How to write a GUI application in Rust?](#How-to-write-a-GUI-application-in-Rust)
+| 400  | [What are the ownership model rules in Rust?](#What-are-the-ownership-model-rules-in-Rust)
+| 401  | [What is a lifetime in Rust?](#What-is-a-lifetime-in-Rust)
+| 402  | [Is Rust safe in comparison to C and C++?](#Is-Rust-safe-in-comparison-to-C-and-C)
+| 403  | [What is a reference in Rust?](#What-is-a-reference-in-Rust)
+| 404  | [What are the types of references in Rust?](#What-are-the-types-of-references-in-Rust)
+| 405  | [What's the connection between Rust and the reusable codes it generates?](#Whats-the-connection-between-Rust-and-the-reusable-codes-it-generates)
+| 406  | [What is a struct in Rust?](#What-is-a-struct-in-Rust)
+| 407  | [What is the difference between an option and a result in Rust?](#What-is-the-difference-between-an-option-and-a-result-in-Rust)
+| 408  | [What is a procedural macro in Rust?](#What-is-a-procedural-macro-in-Rust)
+| 409  | [What is a data race in Rust?](#What-is-a-data-race-in-Rust)
+| 410  | [What is cargo.lock file in Rust?](#What-is-cargolock-file-in-Rust)
+| 411  | [What is an enum in Rust?](#What-is-an-enum-in-Rust)
+| 412  | [What is a conditional compilation in Rust?](#What-is-a-conditional-compilation-in-Rust)
+| 413  | [What is a build script?](#What-is-a-build-script)
+| 414  | [What is an iterator in Rust?](#What-is-an-iterator-in-Rust)
+| 415  | [What do you know about cargo.toml file in Rust?](#What-do-you-know-about-cargotoml-file-in-Rust)
+| 416  | [What is a declarative macro in Rust?](#What-is-a-declarative-macro-in-Rust)
+| 417  | [What do you understand by function pointer?](#What-do-you-understand-by-function-pointer)
+| 418  | [Explain Tuple in Rust.](#Explain-Tuple-in-Rust)
+| 419  | [Explain the match statement.](#Explain-the-match-statement)
+| 420  | [What is the role of the standard library in Rust?](#What-is-the-role-of-the-standard-library-in-Rust)
+| 421  | [Explain asynchronous programming in Rust.](#Explain-asynchronous-programming-in-Rust)
+| 422  | [Explain the concurrency model.](#Explain-the-concurrency-model)
+| 423  | [How do you perform I/O in Rust?](#How-do-you-perform-IO-in-Rust)
+| 424  | [What is the testing framework used for?](#What-is-the-testing-framework-used-for)
+| 425  | [What is the documentation system in Rust?](#What-is-the-documentation-system-in-Rust)
+| 426  | [How is multithreading handled in Rust?](#How-is-multithreading-handled-in-Rust)
+| 427  | [What is a mutex in Rust?](#What-is-a-mutex-in-Rust)
+| 428  | [What is atomic in Rust?](#What-is-atomic-in-Rust)
+| 429  | [What is a mutable reference?](#What-is-a-mutable-reference)
+| 430  | [How do you work with Rust's standard collections (Vec, HashMap, etc.)?](#How-do-you-work-with-Rusts-standard-collections-Vec-HashMap-etc)
+| 431  | [What is the trait system in Rust?](#What-is-the-trait-system-in-Rust)
+| 432  | [What is the syntax for pattern matching?](#What-is-the-syntax-for-pattern-matching)
+| 433  | [3333](#3333)
+| 434  | [4444](#4444)
+| 435  | [5555](#5555)
+| 436  | [6666](#6666)
+| 437  | [7777](#7777)
+| 438  | [8888](#8888)
+| 439  | [9999](#9999)
 
 ## Answers
 1. ### What is Rust?
@@ -2110,6 +2120,9 @@ Rust programming allows dividing large programs into many modules. A module is a
 
 164. ### What is the unwrap method in Rust?
 
+unwrap() is a method provided by Rust programming language's standard library that can extract the value inside an Option or Result type while also propagating any potential errors that might have occurred.
+
+In Rust, the ‘Option’ and ‘Result’ types are used extensively to handle situations where a value may or may not be present or an operation can fail due to some error. To access the value inside an ‘Option’ or ‘Result,’ you need to use one of several methods provided by these types, such as unwrap(), expect(), map(), match, etc.
 We use the unwrap method to get the output of the result and option enums operations. If any error, such as None or Err, is thrown while running this method, the program will stop its execution. That’s why it is important to handle this method carefully.
     **[⬆ Back to Top](#questions)**
 
@@ -5092,555 +5105,425 @@ Rust's borrow checker efficiently picks up such vulnerabilities, maintaining the
 Rust's ownership system ensures that each value has a single owner, preventing data races and other concurrency issues.
     **[⬆ Back to Top](#questions)**
     
-378. ### How would you implement a contract upgrade in Solidity?
+378. ### How does Rust handle null values?
 
-Contract upgrades can be implemented using proxy patterns, where the proxy contract delegates calls to the implementation contract. This allows changes to the logic without altering the contract's storage.
+Rust doesn't have null. Instead, it uses the Option enum to handle the possibility of absence.
     **[⬆ Back to Top](#questions)**
     
-379. ### What are libraries in Solidity, and how do they differ from contracts?
+379. ### Explain Rust's borrowing and referencing mechanisms.
 
-Libraries are similar to contracts but they cannot store state and cannot receive Ether. They are reusable and their code can be called from contracts without redeploying.
+Borrowing allows Rust to access data by reference rather than by value, ensuring data isn't duplicated. References can be mutable or immutable, enforcing a strict set of rules about data access.
     **[⬆ Back to Top](#questions)**
 
-380. ### What are interfaces in Solidity, and why are they used?
+380. ### What is "lifetimes" in Rust?
 
-Interfaces define a contract’s external functions without including their implementation. They allow for interoperability between contracts. Example:
-
-interface Token {
-    function transfer(address _to, uint256 _value) external;
-}    **[⬆ Back to Top](#questions)**
-
-381. ### What are structs in Solidity, and how are they used?
-
-Structs are custom data types that group multiple variables together. Example:
-struct Person {
-    string name;
-    uint age;
-}
+Lifetimes specify how long a reference to data should remain valid, preventing "dangling references" or accessing data that might be cleaned up.
     **[⬆ Back to Top](#questions)**
 
-382. ### What is a re-entrancy attack, and how can it be mitigated in Solidity?
+381. ### What is the difference between String and &str in Rust?
 
-A re-entrancy attack-  occurs when a malicious contract calls a vulnerable contract multiple times before the initial execution is completed, often draining funds. Mitigation techniques include:
-- Using the Checks-Effects-Interactions pattern.
-- Using the reentrancyGuard modifier from libraries like OpenZeppelin.
+String is a growable, heap-allocated string type, while &str is a string slice pointing to a string in memory.
     **[⬆ Back to Top](#questions)**
 
-383. ### What is the Checks-Effects-Interactions pattern, and why is it important?
+382. ### How does Rust ensure concurrency safety?
 
-It is a Solidity best practice to first check conditions (Checks), then update the contract’s state (Effects), and finally interact with other contracts (Interactions). This minimizes vulnerabilities such as re-entrancy.
+Through its ownership and borrowing system, Rust ensures that data can't be accessed simultaneously in ways that would lead to data races.
     **[⬆ Back to Top](#questions)**
 
-384. ### What is a front-running attack in Ethereum, and how can it be prevented in Solidity?
+383. ### Describe pattern matching in Rust.
 
-Front-running occurs when someone exploits the visibility of pending transactions by submitting their own transaction with a higher gas fee to get processed first. Mitigation strategies include using commit-reveal schemes or adjusting transaction gas fees dynamically.
+Pattern matching is a way to access the data in data structures. It's extensively used in Rust, especially in match expressions.
     **[⬆ Back to Top](#questions)**
 
-385. ### What are integer overflows/underflows, and how can you prevent them?
+384. ### What are Rust's traits?
 
-Integer overflow happens when an arithmetic operation exceeds the storage limit of a variable. This can be prevented by using libraries like OpenZeppelin’s SafeMath, which checks for overflows and underflows (Solidity 0.8.0 upwards natively supports this).
+Traits are a way to define shared behavior across types. They're similar to interfaces in other languages.
     **[⬆ Back to Top](#questions)**
 
-386. ### How can you protect smart contracts against Denial of Service (DoS) attacks?
+385. ### Explain the difference between panic! and unwrap in Rust.
 
-To prevent DoS attacks, avoid gas-heavy loops, use pull over push patterns for funds withdrawal, and limit external calls within functions.
+Both lead to program termination if something goes wrong. panic! is a macro to terminate execution when the programmer believes there's no valid way to proceed. unwrap is a method that panics when called on a None value.
+    **[⬆ Back to Top](#questions)**
+
+386. ### Describe the "Zero-Cost Abstractions" principle in Rust.
+
+It means that abstractions don't impose a runtime overhead. In Rust, higher-level constructs run as efficiently as if you'd hand-written lower-level code.
     **[⬆ Back to Top](#questions)**
     
-387. ### What are some best practices for ensuring the security of Solidity smart contracts?
+387. ### How does Rust handle object-oriented principles?
 
-- Use known libraries (e.g., OpenZeppelin).
-- Implement proper access control (e.g., owner checks).
-- Avoid state changes before external calls.
-- Limit the complexity of contracts.
-- Conduct thorough audits and testing (including fuzzing).
+While Rust isn't object-oriented in the traditional sense, it supports many OO principles through structs, enums, and traits.
     **[⬆ Back to Top](#questions)**
     
-388. ### What are ERC-20 tokens, and what are the key functions in an ERC-20 contract?
+388. ### How does Rust support generic programming?
 
-ERC-20 is a standard for fungible tokens on Ethereum. Key functions include:
-- balanceOf
-- transfer
-- approve
-- transferFrom
-- allowance
+Rust supports generics through its type system, allowing functions and structs to operate over different data types.
     **[⬆ Back to Top](#questions)**
     
-389. ### What is the difference between ERC-20 and ERC-721?
+389. ### Describe Rust's concurrency model.
 
-- ERC-20: A standard for fungible tokens, where each token is identical.
-- ERC-721: A standard for non-fungible tokens (NFTs), where each token is unique.
+Rust uses a "fearless concurrency" model, leveraging its ownership system to allow mutable state without data races.
     **[⬆ Back to Top](#questions)**
 
-390. ### How do you test Solidity smart contracts?
+390. ### What is the Box type in Rust?
 
-Testing can be done using frameworks like Truffle, Hardhat, or Brownie. Contracts can be tested locally on simulated blockchains (e.g., Ganache) or on testnets before mainnet deployment. Tools like Chai or Mocha are often used for writing unit tests.
+It's a heap-allocated smart pointer. It's useful when you have data of unknown size at compile time or when you want to transfer ownership of data.
     **[⬆ Back to Top](#questions)**
 
-391. ### What is OpenZeppelin, and why is it important in Solidity development?
+391. ### How does Rust ensure type safety?
 
-OpenZeppelin is a popular framework that provides secure, reusable libraries and contracts for Solidity. It includes implementations of standard token contracts (ERC-20, ERC-721), access control patterns, and more.
+Rust's strong, static type system ensures type safety. The compiler checks types at compile time and prevents type-related errors.
     **[⬆ Back to Top](#questions)**
 
-392. ### What is the CREATE2 opcode, and how does it differ from CREATE?
+392. ### How would you describe Rust programming language?
 
-CREATE2 allows contracts to be deployed to a deterministic address based on the contract bytecode, deployer's address, and a salt value.
-- Pros:
-Enables pre-calculation of contract addresses before deployment.
-Useful for factory contracts, ensuring the same contract address across networks.
-- Cons:
-Contracts cannot be deployed twice with the same bytecode and salt combination.
+Rust is a general-purpose, multi-paradigm programming language offering high performance and concurrency. Rust is known for its unique ownership and borrowing system, which allows for memory management without needing a garbage collector.
+
+This system ensures that memory is never accessed incorrectly or freed too early, eliminating many common runtime errors and making Rust programs more reliable and secure.
+    **[⬆ Back to Top](#questions)**
+
+393. ### What are the key features of Rust?
+
+Rust offers several features that make it a popular choice for developers. Some of its prominent features include:
+
+- High performance: Rust is designed to be highly efficient and fast, with low-level control over system resources, thus ensuring excellent performance.
+
+- Concurrency: Rust supports concurrency and parallel execution with features such as threads and message passing.
+
+- Memory safety: Rust has a unique ownership and borrowing system that ensures memory safety without significant runtime overheads.
+
+- Zero cost abstractions: The abstractions used in Rust don’t incur any runtime cost due to code optimization implemented by the compiler.
+
+- Macros: Rust offers a robust macro system that enables optimized code generation and meta programming.
+- Cargo integration: Rust provides a built-in package manager known as Cargo, which helps to manage dependencies and easily build projects.
+
+- Error messaging: Rust has improved error messages compared to many other programming languages, including C++. It provides clear, concise, and detailed explanations of errors with proper formatting, colors, and highlighted misspellings, aiding developers in identifying and fixing the issues efficiently.
+    **[⬆ Back to Top](#questions)**
+
+394. ### Describe ownership in Rust.
+
+In Rust, ownership is a fundamental concept that defines and governs how the memory is managed in a Rust program. It is a mechanism that allows Rust to implement memory safety without needing a garbage collector.
+
+Every value, in Rust, has an owner, the variable that holds the value. When the owner goes out of scope, the value is dropped, which frees the associated memory.
+    **[⬆ Back to Top](#questions)**
+
+395. ### Which platforms are supported by Rust?
+
+There are various platforms supported by Rust, including the following:
+
+- Linux
+- macOS
+- Windows
+- iOS
+- Android
+- FreeBSD
+- NetBSD
+- OpenBSD
+- Solaris
+- WebAssembly
+Rust has strong cross-compiling support, allowing developers to build applications for multiple target platforms from a single development environment.
+    **[⬆ Back to Top](#questions)**
+
+396. ### What are the steps for installing Rust?
+
+The steps to install Rust are as follows:
+
+- Open a terminal (on Linux or macOS) or Command Prompt (on Windows).
+- Run the following command to download the Rust installation script:
+ ![alt text](./src/image54.png)
+- Alternatively, download and run the rustup-init.exe file from the official Rust website for Windows.
+- Once the script has finished downloading, it will prompt you to begin the installation process. Press "1" to proceed with the default installation, which installs Rust and its associated tools.
+- The script will then download and install the necessary components. This may take a few minutes.
+- Rust will be ready to use once the installation is complete.
+Now you can start using Rust to build your projects.
+    **[⬆ Back to Top](#questions)**
+    
+397. ### How to declare global variables in Rust?
+
+In Rust, you can declare a global variable using the static keyword. The static keyword declares a global variable with a static lifetime, which means that it exists for the entire duration of the program's execution.
+
+To declare a global variable, you need to specify the type, and it must have a constant expression for initialization. Additionally, since global variables can be accessed from multiple threads, one must ensure to handle synchronization when using mutable global variables.
+    **[⬆ Back to Top](#questions)**
+    
+398. ### What are the limitations of Rust?
+
+Here are some major limitations associated with the Rust programming language:
+
+Learning Curve: Rust can be difficult, especially for those new to programming or unfamiliar with systems programming languages. It has a steep learning curve, and its syntax can be complex and unfamiliar to many developers.
+
+Memory Management: While Rust's ownership and borrowing system is designed to prevent memory-related bugs, it can also be quite restrictive, requiring developers to manage memory usage and ownership of variables carefully.
+
+Slow Compilation: Rust is known for having slow compilation times, especially compared to other modern programming languages. This can frustrate developers who need to iterate quickly during the development process.
+
+Limited Libraries: Rust is still a relatively new language, and as a result, its library ecosystem is not as mature as that of other languages like Python or JavaScript. This can make it difficult to find and use third-party libraries and frameworks.
+    **[⬆ Back to Top](#questions)**
+    
+399. ### How to write a GUI application in Rust?
+
+To write a GUI (Graphical User Interface) application in Rust, you can use one of several available GUI libraries and frameworks. Here are some popular options:
+
+Cocoa: Cocoa is a macOS native UI framework (not a Rust library) that can be accessed using the cocoa-rs Rust bindings. It allows you to create native macOS applications. However, be aware that using Cocoa directly will be platform-specific and won't be cross-platform.
+
+ImGui: ImGui (also known as Dear ImGui) is a bloat-free graphical user interface library for C++. It is popular for creating graphical interfaces for game development, tools, and applications.
+
+GTK: Gtk-rs is a set of bindings for the GTK library, which is a popular GUI library for creating native-looking and highly customizable interfaces.
+
+Gyscos: gyscos is a TUI (Text User Interface) library for Rust. It builds interfaces in the terminal using different backends (like termion, ncurses)
+
+IUP: IUP (Interface User Portable) is a GUI library initially developed in C to provide a minimalistic and easy-to-use interface. IUP has Rust bindings called iup-rust, which allows you to use IUP for building GUI applications in Rust.
+    **[⬆ Back to Top](#questions)**
+
+400. ### What are the ownership model rules in Rust?
+
+The ownership model rules in Rust ensure memory safety, and these rules are as follows:
+
+- Each value in Rust has a single owner.
+- When the owner goes out of scope, the value is dropped.
+- When a value is moved from one variable to another, the original variable can no longer access the value.
+- Rust's borrowing system allows temporary access to a value without taking ownership.
+    **[⬆ Back to Top](#questions)**
+
+401. ### What is a lifetime in Rust?
+
+In Rust, lifetime is a construct that describes the relationships between data references in memory and data lifetime. The Rust compiler uses lifetime to understand and track the length of reference validity.
+
+It is like a label attached to a reference that indicates how long the reference is valid and thus can be used for accessing the data it refers to.
+    **[⬆ Back to Top](#questions)**
+
+402. ### Is Rust safe in comparison to C and C++?
+
+The most significant advantage of Rust over C is its emphasis on writing safe code. Rust was created, with memory safety being one of its top priorities. Rust provides several features which make it difficult to write unsafe code.
+
+C and C++ offer greater control and flexibility on memory management and other low-level operations, which can adversely affect safety. Rust is a safer language in comparison to C and C++.
+    **[⬆ Back to Top](#questions)**
+
+403. ### What is a reference in Rust?
+
+A reference in Rust is essentially a pointer that refers to the value without owning it. References allow parent functions to retain the original variable scope while allowing the child function to use it. This means that multiple parts of the program can access the same data without owning it or making copies.
+    **[⬆ Back to Top](#questions)**
+
+404. ### What are the types of references in Rust?
+
+There are two types of references in Rust: immutable references and mutable references.
+
+Immutable references: These are read-only references that allow you to borrow an immutable view of a value. When you have an immutable reference to a value, you cannot mutate the value through that reference. Immutable references are created using the & symbol followed by the value you want to borrow.
+
+Mutable references: These are references that allow you to borrow a mutable view of a value. When you have a mutable reference to a value, you can mutate the value through that reference. Mutable references are created using the &mut keyword followed by the value you want to borrow.
+    **[⬆ Back to Top](#questions)**
+
+405. ### What's the connection between Rust and the reusable codes it generates?
+
+In Rust, the compiler enforces the ownership model, meaning there are no unmanaged pointers or memory leaks. This makes writing reusable code incredibly easier and more efficient.
+
+Also, Rust’s package manager, Cargo, makes code sharing and reusability very simple. Rust has many libraries and packages, making it easy for developers to write modular and reusable code and leverage existing code to accelerate development.
+    **[⬆ Back to Top](#questions)**
+
+406. ### What is a struct in Rust?
+
+Struct, also known as Structure, is a composite data type that allows you to group together related values under a single name. Structs can represent concepts or objects in your program, allowing you to structure your data in a more organized way. They are similar to structures in C, classes in C++/Java, or records in Pascal, while not having an inherent behavior like classes in object-oriented languages.
+    **[⬆ Back to Top](#questions)**
+    
+407. ### What is the difference between an option and a result in Rust?
+
+In Rust, an option and a result are both types that represent the possibility of having an error or a successful value. However, some differences between them are:
+
+- An ‘Option’ represents the computational value that may or may not be present. For instance, it is used when there is a possibility that the function might not return a value while looking for an item within a collection. The option can either contain ‘Some (value)’ or ‘none,’ and it is generally used to avoid null pointer errors.
+- A ‘Result’ represents an operational result, which can either be a success or a failure with an associated error value (E) if it is a failure. The ‘result’ type is usually used in cases where a function might fail for several reasons, and thus the error cases can be handled in a structured way.
+    **[⬆ Back to Top](#questions)**
+    
+408. ### What is a procedural macro in Rust?
+
+In Rust, a procedural macro is a type of macro that allows you to define custom syntax extensions that can be used in your code. Procedural macros are implemented as Rust functions that take in Rust code as input, manipulate it in some way, and then generate output with a new Rust code. Procedural macros are used to generate code at compile time.
+    **[⬆ Back to Top](#questions)**
+    
+409. ### What is a data race in Rust?
+
+A race condition in Rust can be defined as multiple threads (usually more than 2) trying to access the same data or memory location at the same time concurrently, where at least one access is a write operation. This can lead to undefined behavior like data corruption, program crashes, or security vulnerabilities.
+    **[⬆ Back to Top](#questions)**
+
+410. ### What is cargo.lock file in Rust?
+
+Cargo.lock contains information related to the dependencies of a Rust project, such as transitive dependencies. The objective of this file is to ensure that anyone building a new project will use the same dependencies as the last version of the project to avoid dependency conflicts and ensure reusable builds.
+    **[⬆ Back to Top](#questions)**
+
+411. ### What is an enum in Rust?
+
+In Rust, an enum is a type that enables developers to define a set of named values or data. These values can have several variants, and they can also have additional or optional data.
+
+Enums can be useful in Rust for representing data that can take on a limited set of values, like the days of the week or the options for a user interface. They can also define custom error types or other complex data structures.
+    **[⬆ Back to Top](#questions)**
+
+412. ### What is a conditional compilation in Rust?
+
+In Rust, conditional compilation is a feature that enables developers to compile specific parts of the code using predefined conditions selectively. This feature is usually used for developing platform-specific code or creating functionality for specific build configurations.
+
+In Rust, conditional compilation is achieved using the #[cfg] attribute. This attribute can specify a condition determining whether a particular block of code should be included in the final compiled binary.
+    **[⬆ Back to Top](#questions)**
+
+413. ### What is a build script?
+
+A build script is a special source file in Rust, and this file is executed during the build process of a project. A build script performs several tasks, including the following:
+
+- Generating code
+- Setting environment variables
+- Compiling external dependencies
+- Configuring build options
+    **[⬆ Back to Top](#questions)**
+
+414. ### What is an iterator in Rust?
+
+In Rust, the iterator is a process that provides a sequence of values that can be iterated using iterator methods such as ‘for loop.’ Iterators help to implement looping. To use an iterator in Rust, you typically create an instance of a type that implements the Iterator trait and then use it in a loop or with other iterator methods.
+    **[⬆ Back to Top](#questions)**
+
+415. ### What do you know about cargo.toml file in Rust?
+
+Cargo.toml is a configuration file used in the package manager used by Rust named Cargo. This file contains metadata and specifies information about the project name, version, build settings, and dependencies.
+
+This file is written in ‘TOML’ format, i.e., Tom’s Obvious Minimal Language, which is a simple configuration language. By using Cargo.toml, you can easily manage your project's dependencies and build settings, making it easier to share and collaborate with others.
+    **[⬆ Back to Top](#questions)**
+
+416. ### What is a declarative macro in Rust?
+
+In Rust, a declarative macro allows you to define a pattern that will be matched against the input code and then generate new code based on that pattern. Declarative macros are defined using the macro_rules! macro.
+
+The macro_rules! the macro takes as input a set of rules that define the pattern to match and the code to generate and generates code that implements the macro.
+    **[⬆ Back to Top](#questions)**
+    
+417. ### What do you understand by function pointer?
+
+A function pointer is a type that represents a pointer to the function whose identity might be unknown at compile time. It enables developers to store a reference to a specific function that can be called another time in the code.
+
+Function pointers are helpful when you have to pass a function as an argument to another function or when you are storing a function in a data structure. In Rust, you can define a function pointer using the fn keyword and the *const or *mut pointer syntax.
+    **[⬆ Back to Top](#questions)**
+    
+418. ### Explain Tuple in Rust.
+
+A tuple is a collection of different types of values. It is similar to an array, but unlike arrays, a tuple can contain values of different types. A tuple is constructed using parentheses, and the values within that are separated by commas.
 
 Example:
-pair = address(uint(keccak256(abi.encodePacked(
-     hex'ff',
-     factory,
-     keccak256(abi.encodePacked(token0, token1)), hex'ced7c507bf75a9c4a42a9c14d582db9f48b2de7a90ccc86d338a41f541fe4f53' // INIT_CODE_PAIR_HASH of Pancake Factory
-))));
 
-Ex2
-address contractAddress = address(uint160(uint256(keccak256(abi.encodePacked(
-    bytes1(0xff), 
-    deployer, 
-    salt, 
-    keccak256(bytecode)
-)))));
-    **[⬆ Back to Top](#questions)**
-
-393. ### How does abi.encode, abi.encodePacked, abi.encodeWithSelector and abi.encodeWithSignature differ in Solidity, and when would you use each?
-
-- abi.encode: Encodes values into tightly packed binary form, used for general-purpose encoding.
-- abi.encodePacked: Encodes data in a packed format (no padding), useful for hash generation but can cause collisions with dynamic types.
-- abi.encodeWithSelector: Encodes the function selector (i.e., the first 4 bytes of the function's keccak256 hash) and arguments needed to call, used for low-level call or delegatecall. This method is typically used when you know the exact function you want to call and its selector.
-- abi.encodeWithSignature: Similar to abi.encodeWithSelector but encodes function call with a specific signature (i.e., the function name and its arguments). This method is typically convenient when the function signature is a string and the selector is not precomputed.
-
-Use cases:
-abi.encode for data storage or passing arguments.
-abi.encodePacked for hash-based operations.
-abi.encodeWithSelector for calling other contracts without ABI, it is is slightly more gas-efficient than abi.encodeWithSignature because it avoids recalculating the selector.
-abi.encodeWithSignature for simplicity when you only have the signature string.
-
-Example: abi.encode
-
-DOMAIN_SEPARATOR = keccak256(
-   abi.encode(
-       keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
-       keccak256(bytes(name)),
-       keccak256(bytes('1')),
-       chainId,
-       address(this)
-   )
-);
-
-abi.encodePacked
-
-messageHash = keccak256(abi.encodePacked(...));
-
-abi.encodeWithSelector
-
-// This extracts the first 4 bytes of the 32-byte keccak256 hash. These first 4 bytes form the function selector for the transfer function.
-// The function selector is essentially the "address" of the function within the smart contract. When an external call is made to the contract, the EVM uses the function selector to determine which function to execute.
-bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)'))))
-(bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
-
-// Some ERC-20 tokens don’t follow the standard perfectly. For example, some older tokens don’t return a boolean from their transfer function. 
-// Using a low-level call with this flexible checking mechanism allows the function to work with both types of tokens (those that return a boolean and those that don’t).
-require(success && (data.length == 0 || abi.decode(data, (bool))), 'Pancake: TRANSFER_FAILED');
-
-abi.encodeWithSignature
-
-bytes memory encoded = abi.encodeWithSignature("transfer(address,uint256)", recipient, amount);
-    **[⬆ Back to Top](#questions)**
-
-394. ### What is the difference between keccak256 and sha256 in Solidity, and when would you use each?
-
-- keccak256: Ethereum’s primary hashing algorithm, based on SHA-3, used for signatures, address generation, and storing hashed data.
-- sha256: Standard SHA-2 hashing algorithm, often used for interoperability with external systems.
-
-Use cases:
-Use keccak256 for Ethereum-specific functions like signature verification.
-Use sha256 for off-chain integrations or systems using SHA-2 standards.
-
-Example: keccak256
-
-bytes32 digest = keccak256(
- abi.encodePacked(
-       '\x19\x01',
-       DOMAIN_SEPARATOR,
-       keccak256(abi.encode(
-           PERMIT_TYPEHASH, 
-           owner, 
-           spender, 
-           value, 
-           nonces[owner]++, 
-           deadline
-       ))
-   )
-);
-
-sha256: External systems can hash payment details (sha256) and pass the hash (expectedHash) to the smart contract.
-
-// The contract verifies that the provided payment data matches the expected hash, ensuring data integrity across systems.
-contract PaymentProcessor {
-   function verifyPayment(bytes32 expectedHash, string memory paymentData) public pure returns (bool) {
-       // Recalculate hash of payment data
-       bytes32 computedHash = sha256(abi.encodePacked(paymentData));
-       // Compare with the expected hash (e.g., received from an external system)
-       return computedHash == expectedHash;
-   }
-}
-    **[⬆ Back to Top](#questions)**
-
-395. ### How would you create a minimal proxy contract using the CREATE2 opcode in Solidity?
-
-- A minimal proxy (also known as an EIP-1167 clone factory) is a contract that delegates all calls to a master implementation contract using delegatecall. You can combine this with CREATE2 to deploy proxies at predictable addresses.
-- Steps:
-    Compute the address using keccak256.
-    Deploy the proxy contract using CREATE2 with a minimal bytecode proxy.
-    Example minimal proxy:
-
- bytes memory bytecode = abi.encodePacked(
-     hex"363d3d373d3d3d363d73", masterContractAddress, hex"5af43d82803e903d91602b57fd5bf3"
- );
- address proxyAddress;
- assembly {
-     proxyAddress := create2(0, add(bytecode, 0x20), mload(bytecode), salt)
- }
-    **[⬆ Back to Top](#questions)**
-
-396. ### How does Solidity handle fixed-size and dynamic-size arrays differently in terms of gas usage and storage?
-
-- Fixed-size arrays have predefined storage slots allocated for each element at compile time, making them cheaper and faster for storage and access.
-- Dynamic-size arrays can grow or shrink, so additional storage and pointer management are required, resulting in higher gas costs for operations like adding or removing elements.
-- Trade-offs:
-    Use fixed-size arrays when array size is known in advance and performance is critical.
-    Use dynamic-size arrays when flexibility is needed.
+let my_tuple = (10, "hello", true);
     **[⬆ Back to Top](#questions)**
     
-397. ### What is extcodesize, and how can it be used to check if a contract has been deployed?
+419. ### Explain the match statement.
 
-- extcodesize is an EVM opcode that returns the size of the bytecode at a given address. It’s used to determine whether an address is a contract.
-- Example:
- function isContract(address account) internal view returns (bool) {
-     uint256 size;
-     assembly {
-         size := extcodesize(account)
-     }
-     return size > 0;
- }
-- Use case:
-    Helps to prevent sending Ether to externally owned accounts (EOAs) when a contract address is expected.
-    Cons: Can’t differentiate between contracts in construction or destroyed contracts (selfdestructed contracts will return zero size).
+The match statement is a control flow operator that provides a powerful mechanism to transfer control to a specific code block based on the matching patterns of the variables. It enables you to compare a value across a series of patterns and then execute the relevant block of code based on pattern matches.
+
+When the match statement is executed, Rust will try each pattern in order and execute the code associated with the first pattern that matches the value.
+    **[⬆ Back to Top](#questions)**
+
+420. ### What is the role of the standard library in Rust?
+
+The standard library in Rust contains a collection of modules offering the core functionalities of the language. The standard library is packaged with every installation of Rust, and it provides a wide array of features such as I/O operations, data types, networking capabilities, concurrency protocols, etc.
+The standard library is designed to be efficient, safe, and easy to use. It is also fully documented, with extensive API documentation and online examples.
+    **[⬆ Back to Top](#questions)**
+
+421. ### Explain asynchronous programming in Rust.
+
+Asynchronous programming in Rust involves writing code that can execute non-blocking operations without blocking the main thread. This is accomplished using Rust's async/await syntax and the Rust standard library's async runtime.
+In Rust, asynchronous programming is done through futures, representing a value that may not be available. These futures can be combined using combinators like map, and_then, and or_else to create a sequence of operations that should be executed asynchronously.
+The async keyword is used to define a function that returns a future, and the await keyword is used to suspend the execution of the current function until the future completes.
+    **[⬆ Back to Top](#questions)**
+
+422. ### Explain the concurrency model.
+
+Rust provides various features for writing parallel programs and implementing concurrency.The concurrency model in Rust is primarily based on the ownership and borrowing conceptsensuring memory safety and preventing usual concurrency errors like deadlocks and dataraces.
+Each value in Rust is owned by a single thread, and the ownership can be transferred acrossthreads through message passing. Rust's concurrency model is designed to be safe andefficient, providing a powerful set of tools for building concurrent and parallel programs.
+    **[⬆ Back to Top](#questions)**
+
+423. ### How do you perform I/O in Rust?
+
+The std::io module belonging to the standard library in Rust is used to perform thevinput/output I/O operations. You get a set of structs, functions, and traits for executingvI/O operations efficiently through the std::io module.
+You can also execute output operations through the std::io::stdout() function, which will handle the standard output and then use write() or writeln!() methods for writing data to the output stream.
+    **[⬆ Back to Top](#questions)**
+
+424. ### What is the testing framework used for?
+
+- The testing framework in Rust provides an efficient alternative to manual testing. It comes with an in-built framework, known as rustc_test, that offers a collection of tools for testing the Rust code.
+- The rustc_test framework uses Rust's built-in unit testing system, which allows you to define tests using attributes like #[test] and provides macros like assert_eq! and assert_ne! to make it easy to write assertions.
+- The testing framework in Rust has several benefits, including the capability to calculate values through variables, automatic serialization, and type checking.
+    **[⬆ Back to Top](#questions)**
+
+425. ### What is the documentation system in Rust?
+
+- In Rust, documentation is an important part of writing code. Rust has a built-indocumentation system called Rustdoc that allows developers to document their code withcomments and generate HTML documentation that can be viewed in a web browser.
+- Rustdoc uses a syntax for documenting code called "Rustdoc comments." Rustdoc comments startwith /// and are placed immediately above the documented item, such as a function, struct,or module.
+    **[⬆ Back to Top](#questions)**
+
+426. ### How is multithreading handled in Rust?
+
+- Rust provides built-in support for multi-threading via the standard library. Rust providesthreads in the form of lightweight units of execution with the capability of runningconcurrently within a program.
+- The std:: thread ::spawn function enables the creation of a new thread in Rust, which takes aclosure representing the code that will be run in the thread. Rust also provides severalsynchronization primitives to help manage access to shared data across threads, includingmutexes, semaphores, and channels.
     **[⬆ Back to Top](#questions)**
     
-398. ### What is the log opcode, and how are Solidity events translated into EVM logs?
+427. ### What is a mutex in Rust?
 
-- log opcodes (log0, log1, up to log4) represent events in Solidity. They generate EVM logs that are stored on-chain but are not accessible within smart contracts themselves.
-- Use cases: - Used for emitting events, which are critical for off-chain dApps to monitor contract state changes.
-    Example of event emission:
-
-   event Transfer(address indexed from, address indexed to, uint256 value);
-   emit Transfer(msg.sender, recipient, amount);
-- Gas considerations: Storing data in logs is cheaper than in storage, but still requires gas.
+- Mutex is a mutual exclusion primitive that is incredibly helpful in the protection of shared data. It enables safe access to shared data across several execution threads by blocking threads waiting for the lock to become available.
+- When a Mutex is used to guard a resource, only one thread can hold the lock at any given time, preventing data races and ensuring that the resource is accessed in a safe and controlled manner.
     **[⬆ Back to Top](#questions)**
     
-399. ### What are low-level call, delegatecall, and staticcall, and when should you use each?
+428. ### What is atomic in Rust?
 
-- call: Executes code in another contract, allows Ether transfer, and changes context to the called contract.
-- delegatecall: Executes code in the context of the calling contract (proxy pattern).
-- staticcall: Similar to call, but ensures no state changes, useful for read-only external calls.
-Use cases:
-    call for interacting with other contracts, transferring Ether, or fallback functions.
-    delegatecall for proxies and contract upgrades.
-    staticcall for ensuring no state modifications in read-only external calls.
-    **[⬆ Back to Top](#questions)**
-
-400. ### How does the Solidity receive function differ from the fallback function, and when would you implement each?
-
-- receive: A specific function triggered when the contract receives Ether without data.
-- fallback: Triggered when a function is called that does not exist in the contract or when the contract receives Ether with data (if receive is not defined).
-Use cases:
-    Implement receive for contracts that should accept Ether without any accompanying data.
-    Use fallback for advanced behavior like proxy contract routing or handling unexpected function calls.
-    Example:
-
-receive() external payable { }
-fallback() external payable { }
-    **[⬆ Back to Top](#questions)**
-
-401. ### What is assembly in Solidity, and when would you use inline assembly (Yul)?
-
-- Assembly (Yul) allows for low-level manipulation of the EVM using opcodes directly. It's used for optimizations, gas savings, or accessing functionality not directly available in Solidity.
-- Use cases:
-    Gas optimization for complex arithmetic or loops.
-    Direct access to low-level EVM opcodes (e.g., mstore, mload).
-- Example:
-assembly {
-    chainId := chainid
-}
-
-Ex2
-
-function add(uint x, uint y) public pure returns (uint) {
-    assembly {
-        let result := add(x, y)
-        return(result, 32)
-    }
-}
-
-- Trade-offs:
-    Can significantly reduce gas costs.
-    Harder to read, maintain, and secure compared to high-level Solidity code.
-    **[⬆ Back to Top](#questions)**
-
-402. ### What are the gas optimizations you would apply when writing Solidity code, and what trade-offs do they introduce?
-
-Gas optimizations include reducing storage writes, using memory instead of storage, minimizing contract size, and packing variables.
-- Pros:
-    Reduces transaction costs, making your contract more efficient.
-    Improves the performance of decentralized applications (dApps).
-- Cons:
-    Over-optimizing can make code harder to read and maintain.
-    Optimizations like variable packing might introduce bugs if improperly handled (e.g., overflow issues).
-    **[⬆ Back to Top](#questions)**
-
-403. ### What are the challenges of using the selfdestruct function for contract upgrades or termination?
-
-The selfdestruct function deletes a contract from the blockchain and transfers any remaining Ether to a specified address.
-- Pros:
-    Removes the contract, freeing up storage space on the blockchain.
-    Can be used to return funds in emergency situations.
-- Cons:
-    Leaves orphaned contract calls, which may cause other contracts interacting with it to fail.
-    There’s no way to undo a selfdestruct once executed.
-    **[⬆ Back to Top](#questions)**
-
-404. ### What are storage collision attacks, and how do you prevent them when using delegatecall in Solidity?
-
-Storage collisions occur when the storage layout between the proxy contract and the implementation contract differs, potentially causing state corruption.
-- Pros of preventing it:
-    Ensures the integrity of contract storage and logic.
-- Cons:
-    Requires careful design and auditing of storage layout across contract upgrades.
-    Incorrect handling can still lead to subtle, hard-to-detect bugs.
-    **[⬆ Back to Top](#questions)**
-
-405. ### How would you implement a time-lock mechanism in a smart contract, and what are its potential pitfalls?
-
-A time-lock restricts access to certain functions or assets for a predetermined time period, typically used for vesting or governance delays.
-- Pros:
-    Improves security by allowing a delay between action and execution, giving time for review.
-    Can prevent impulse or malicious actions.
-- Cons:
-    May lead to unintended delays or freezing of assets if poorly implemented.
-    Increases complexity, potentially making the system harder to interact with.
-    **[⬆ Back to Top](#questions)**
-
-406. ### What is Solidity’s immutable keyword, and how does it compare with constant?
-
-The immutable keyword defines a variable that is set during contract deployment and cannot be changed after that, but is not stored in storage.
-- Pros:
-    Reduces gas costs since immutable variables are stored in contract bytecode rather than storage.
-    Allows flexibility compared to constant, which must be known at compile-time.
-- Cons:
-    Once set, it cannot be changed, leading to potential limitations if the contract requires dynamic behavior later.
+- In Rust, "atomic" refers to types that provide atomic operations, which means that these operations are guaranteed to be indivisible and thus not susceptible to race conditions or data corruption when accessed concurrently by multiple threads.
+- Rust provides several atomic types, including AtomicBool, AtomicIsize, AtomicUsize, AtomicPtr, etc. These types allow you to perform atomic read-modify-write operations on their underlying data in a thread-safe and efficient manner
     **[⬆ Back to Top](#questions)**
     
-407. ### How do you secure a multi-signature contract, and what are the potential vulnerabilities?
+429. ### What is a mutable reference?
 
-Multi-signature contracts require multiple parties to sign off on a transaction before it is executed, adding a layer of security.
-- Pros:
-    Reduces the risk of a single point of failure or malicious control.
-    Offers decentralized governance and enhanced security for high-value assets.
-- Cons:
-    Introduces coordination challenges among signers, leading to delays.
-    Vulnerable to denial-of-service (DoS) attacks if some signers become inactive or maliciously refuse to sign.
-    **[⬆ Back to Top](#questions)**
-    
-408. ### Why prefer Use call over send, transfer?
-
-The reason for using call instead of the other alternatives like transfer or send is mostly due to certain limitations and flexibility:
-
-- transfer: Transfers a fixed amount of gas (2300 gas) to the recipient, which is usually enough for basic Ether receipt but may fail if the receiving contract has more complex logic.
-- send: Similar to transfer but returns a boolean indicating success or failure.
-- call: Allows specifying the exact amount of gas and sending data. Since Solidity 0.6.x, call has become the recommended way to send Ether due to gas limitations imposed on transfer.
-    **[⬆ Back to Top](#questions)**
-    
-409. ### Explain the purpose of ERC-2612 and how it enhances the ERC-20 standard.
-
-ERC-2612 introduces the permit function, enabling gasless approvals for ERC-20 tokens. Users can approve token transfers via cryptographic signatures off-chain, avoiding the need to perform an on-chain transaction. This is especially useful for DeFi applications as it reduces transaction costs and allows for meta-transactions where the approval and transfer are bundled.
+A mutable reference is a reference to the variable that allows it to be modified. It is represented by “&amp;mut” syntax. When any specific variable gets passed as a mutable reference to the function, the value of that variable can be modified by the function. However, only one mutable reference to a variable can exist at a time, which is enforced by Rust's borrow checker to prevent data races and ensure memory safety.
     **[⬆ Back to Top](#questions)**
 
-410. ### How does the permit function work in ERC-2612, and what are its key parameters?
+430. ### How do you work with Rust's standard collections (Vec, HashMap, etc.)?
 
-The permit function allows an owner to authorize a spender to spend tokens without requiring an on-chain transaction from the owner.
+Rust's standard collections, such as Vec, HashMap, and HashSet, are commonly used in Rust programs for managing and manipulating data collections. Here are some basic examples of how these collections can be used:
+- <strong>Vec</strong>: A Vec ("vector") is Rust's built-in dynamic array. To create a new vector, you can use the Vec::new() method or a shorthand notation like vec![1, 2, 3] to create a vector with initial values.
+- <strong>HashMap</strong>: A HashMap is Rust's built-in hash table implementation. It allows you to store key-value pairs, where each key is unique.
+- <strong>HashSet</strong>: A HashSet is similar to a HashMap but only stores unique keys without any associated values.
+    **[⬆ Back to Top](#questions)**
+431. ### What is the trait system in Rust?
 
-Key Parameters:
-- owner: The address authorizing the permit.
-- spender: The address allowed to spend the tokens.
-- value: The token amount allowed for spending.
-- deadline: A timestamp after which the permit is no longer valid.
-- (v, r, s): The components of the owner's ECDSA signature.
-Example flow:
-- The owner signs a message off-chain using EIP-712.
-- The spender submits the permit function with the signature to the smart contract.
-- The contract verifies the signature and updates the allowance accordingly.
+- The trait system covers a collection of methods defined for a specific type. The trait system enables generic programming and code reusability. The traits also specify a set of attributes, abilities, or behaviors that types can implement.
+- A trait can be used to define methods, related types, and constants available for implementation by any type that wants to use the trait. Multiple traits can be implemented by types enabling them to integrate various capabilities and behaviors.
     **[⬆ Back to Top](#questions)**
 
-411. ### What is EIP-712, and why is it important for structured data hashing and signing in Solidity?
+432. ### What is the syntax for pattern matching?
 
-EIP-712 is a standard for encoding structured data into a message for signing, ensuring the signature cannot be reused across other contracts or domains. It improves security and usability by providing type-safe and domain-specific data signing. This is particularly critical for applications like permit, where signatures are used to authorize specific operations on a given chain and contract.
+- In Rust, pattern matching is a powerful feature that allows you to match values against a set of patterns and execute corresponding code based on the match. The general syntax for pattern matching in Rust is as follows:
+- <img     src="https://images.prismic.io/turing/658c0026531ac2845a26f56e_Image_06_06_23_at_4_36_PM_3ee5ae4451.webp?auto=format,compress"     alt="Image 06-06-23 at 4.36 PM.webp">
+- In the example above, value_to_match is the value that you want to match against a set of patterns. The patterns are listed inside the curly braces after the match keyword, each separated by a comma. The first pattern that matches value_to_match will cause the corresponding block of code to be executed.
     **[⬆ Back to Top](#questions)**
 
-412. ### Describe the steps involved in generating an EIP-712 compliant signature in Solidity.
-
-- Define Types: Create a type structure for the data to be signed.
-- Hash the Data: Use abi.encode and keccak256 to hash the type and its fields.
-- Construct the DOMAIN_SEPARATOR: Combine contract-specific information like name, version, and chainId to hash the domain.
-- Combine the Domain and Data Hash: Use keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash)) to create the final message hash.
-- Sign the Hash: Use an off-chain wallet to generate the signature (via eth_signTypedData).
-- Recover Signer: On-chain, verify the signature using ecrecover.
-    **[⬆ Back to Top](#questions)**
-
-413. ### What is the DOMAIN_SEPARATOR in EIP-712, and how is it constructed?
-
-The DOMAIN_SEPARATOR is a hashed structure that uniquely identifies a contract, preventing signature reuse across different domains or chains. Construction:
-
-DOMAIN_SEPARATOR = keccak256(
-    abi.encode(
-        keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
-        keccak256(bytes(name)),
-        keccak256(bytes(version)),
-        chainId,
-        address(this)
-    )
-);
-Fields include:
-
-- name: Contract name.
-- version: Contract version.
-- chainId: Blockchain ID.
-- verifyingContract: Contract address.
-    **[⬆ Back to Top](#questions)**
-
-414. ### Why is the DOMAIN_SEPARATOR necessary in contracts using EIP-712?
-
-It ensures signatures are valid only for a specific contract and chain, mitigating cross-contract replay attacks. Without a domain separator, a signature valid on one contract could be reused on another, compromising security.
-    **[⬆ Back to Top](#questions)**
-
-415. ### How do nonces and deadlines protect against replay attacks in smart contracts?
-
-- Nonces: Each signature is tied to a unique incrementing number (nonce). Once used, the nonce is incremented, invalidating the signature for subsequent reuse.
-- Deadlines: The deadline specifies the validity period for a signature, ensuring it cannot be used indefinitely.
-    **[⬆ Back to Top](#questions)**
-
-416. ### Write a Solidity snippet that verifies a permit using a nonce and deadline. Explain each step.
-
-function permit(
-    address owner,
-    address spender,
-    uint256 value,
-    uint256 deadline,
-    uint8 v,
-    bytes32 r,
-    bytes32 s
-) external {
-    require(deadline >= block.timestamp, "Expired deadline");
-    bytes32 structHash = keccak256(
-        abi.encode(
-            PERMIT_TYPEHASH,
-            owner,
-            spender,
-            value,
-            nonces[owner]++,
-            deadline
-        )
-    );
-    bytes32 hash = keccak256(abi.encodePacked("\x19\x01", DOMAIN_SEPARATOR, structHash));
-    address signer = ecrecover(hash, v, r, s);
-    require(signer == owner, "Invalid signature");
-    _approve(owner, spender, value);
-}
-
-- Step 1: Check the deadline for expiration.
-- Step 2: Increment and encode the nonce.
-- Step 3: Hash the permit data and domain for signature verification.
-- Step 4: Verify the signer using ecrecover.
-    **[⬆ Back to Top](#questions)**
-    
-417. ### What is calldata in Solidity, and when should it be used over memory or storage?
-
-- calldata is a read-only data location for function parameters in external functions.
-- It is gas-efficient since it does not involve copying or modifying data.
-- Use it when passing immutable data to an external function, especially arrays or strings, where gas savings are critical.
-    **[⬆ Back to Top](#questions)**
-    
-418. ### What are the trade-offs of using calldata for function parameters in Solidity?
-
-- Pros: Gas-efficient, immutable, secure.
-- Cons: Cannot modify data, requiring additional memory allocation if modifications are necessary.
-    **[⬆ Back to Top](#questions)**
-    
-419. ### Explain the process of recovering a signer’s address from a hashed message and signature in Solidity.
-
-- Use keccak256 to hash the message.
-- Prefix the hash with "\x19Ethereum Signed Message:\n32" to match the eth_sign format.
-- Use ecrecover with (v, r, s) to recover the signer’s address. Example:
-function recoverSigner(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public pure returns (address) {
-    return ecrecover(hash, v, r, s);
-}
-    **[⬆ Back to Top](#questions)**
-
-420. ### What are the potential security pitfalls of using ecrecover in Solidity? How can these be mitigated?
-
-- Pitfalls:
-    Malformed signatures may lead to unexpected results.
-    Lack of proper hashing allows replay attacks.
-- Mitigations:
-    Always hash messages with keccak256 and use EIP-712 standards for structured data.
-    Add domain-specific information to hashes to prevent reuse across chains/contracts.
-    **[⬆ Back to Top](#questions)**
-
-421. ### 1111
-
-1111
-    **[⬆ Back to Top](#questions)**
-
-422. ### 2222
-
-2222
-    **[⬆ Back to Top](#questions)**
-
-423. ### 3333
+433. ### 3333
 
 3333
     **[⬆ Back to Top](#questions)**
 
-424. ### 4444
+434. ### 4444
 
 4444
     **[⬆ Back to Top](#questions)**
 
-425. ### 5555
+435. ### 5555
 
 5555
     **[⬆ Back to Top](#questions)**
 
-426. ### 6666
+436. ### 6666
 
 6666
     **[⬆ Back to Top](#questions)**
     
-427. ### 7777
+437. ### 7777
 
 7777
     **[⬆ Back to Top](#questions)**
     
-428. ### 8888
+438. ### 8888
 
 8888
     **[⬆ Back to Top](#questions)**
     
-429. ### 9999
+439. ### 9999
 
 9999
     **[⬆ Back to Top](#questions)**
