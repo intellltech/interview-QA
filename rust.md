@@ -457,13 +457,35 @@
 | 450  | [What is the difference between a mutable and an immutable variable in Rust?](#What-is-the-difference-between-a-mutable-and-an-immutable-variable-in-Rust)
 | 451  | [Explain smart pointer in Rust.](#Explain-smart-pointer-in-Rust)
 | 452  | [What are the different types of smart pointers in Rust?](#What-are-the-different-types-of-smart-pointers-in-Rust)
-| 453  | [3333](#3333)
-| 454  | [4444](#4444)
-| 455  | [5555](#5555)
-| 456  | [6666](#6666)
-| 457  | [7777](#7777)
-| 458  | [8888](#8888)
-| 459  | [9999](#9999)
+| 453  | [How is a smart pointer used in Rust?](#How-is-a-smart-pointer-used-in-Rust)
+| 454  | [How are slices used in Rust?](#How-are-slices-used-in-Rust)
+| 455  | [What is a slice in Rust?](#What-is-a-slice-in-Rust)
+| 456  | [What is a match expression?](#What-is-a-match-expression)
+| 457  | [How is match expression used in Rust?](#How-is-match-expression-used-in-Rust)
+| 458  | [What is the difference between the function and closure calls?](#What-is-the-difference-between-the-function-and-closure-calls)
+| 459  | [What is the difference between a trait bound and a where clause?](#What-is-the-difference-between-a-trait-bound-and-a-where-clause)
+| 460  | [What is a closure capture?](#What-is-a-closure-capture)
+| 461  | [What are the types of closure capture in Rust?](#What-are-the-types-of-closure-capture-in-Rust)
+| 462  | [What is the difference between a mutable and an immutable closure in Rust?](#What-is-the-difference-between-a-mutable-and-an-immutable-closure-in-Rust)
+| 463  | [Explain static dispatch.](#Explain-static-dispatch)
+| 464  | [Explain dynamic dispatch.](#Explain-dynamic-dispatch)
+| 465  | [When do you use a dynamic dispatch?](#When-do-you-use-a-dynamic-dispatch)
+| 466  | [What is a type alias in Rust?](#What-is-a-type-alias-in-Rust)
+| 467  | [Explain monomorphization in Rust.](#Explain-monomorphization-in-Rust)
+| 468  | [What is specialization in Rust?](#What-is-specialization-in-Rust)
+| 469  | [What is a range?](#What-is-a-range)
+| 470  | [How is a range used in Rust?](#How-is-a-range-used-in-Rust)
+| 471  | [What is the difference between a trait and an interface?](#What-is-the-difference-between-a-trait-and-an-interface)
+| 472  | [What is the type parameter in Rust?](#What-is-the-type-parameter-in-Rust)
+| 473  | [How is the type parameter used?](#How-is-the-type-parameter-used)
+| 474  | [Explain destructor in Rust.](#Explain-destructor-in-Rust)
+| 475  | [How is the destructor implemented in Rust?](#How-is-the-destructor-implemented-in-Rust)
+| 476  | [What is lifetime elision?](#What-is-lifetime-elision)
+| 477  | [What are the rules of lifetime elision?](#What-are-the-rules-of-lifetime-elision)
+| 478  | [Create a Rust program that reads data from a file and performs some operations on it, such as counting the number of occurrences of a particular word.](#Create-a-Rust-program-that-reads-data-from-a-file-and-performs-some-operations-on-it-such-as-counting-the-number-of-occurrences-of-a-particular-word)
+| 479  | [Write a program that uses Rust's networking capabilities to send data between two machines.](#Write-a-program-that-uses-Rusts-networking-capabilities-to-send-data-between-two-machines)
+| 480  | [Create a Rust program that implements a simple HTTP server.](#Create-a-Rust-program-that-implements-a-simple-HTTP-server)
+
 ## Answers
 1. ### What is Rust?
    
@@ -5651,37 +5673,208 @@ Rust provides several types of smart pointers, each with its own specific use ca
 - <img src="https://images.prismic.io/turing/658c0027531ac2845a26f56f_Image_06_06_23_at_4_41_PM_366c2237ba.webp?auto=format,compress" alt="Image 06-06-23 at 4.41 PM.webp">
     **[⬆ Back to Top](#questions)**
 
-453. ### 3333
+453. ### How is a smart pointer used in Rust?
 
-3333
+A smart pointer is a data structure with the features of a pointer but with added capabilities. An example of a smart pointer in Rust is the Rc type, which provides shared ownership of a value. Here's an example of using an Rc in Rust:
+- <img src="https://images.prismic.io/turing/658c0028531ac2845a26f570_Image_06_06_23_at_4_43_PM_bd66f06606.webp?auto=format,compress" alt="Image 06-06-23 at 4.43 PM.webp">                       
     **[⬆ Back to Top](#questions)**
 
-454. ### 4444
+454. ### How are slices used in Rust?
 
-4444
+Slices are often used to pass a portion of a collection to a function rather than the entire collection. Slices are lightweight and efficient because they only contain a pointer at the beginning of the sequence and a length.
+Slices are a powerful feature of Rust that allow you to efficiently access and manipulate a portion of a collection without copying its data. Here are some common use cases for slices in Rust:
+Accessing parts of an array or vector: You can create a slice that points to a portion of an array or vector using the syntax [start..end], where the start is the index of the first element to include, and the end is the index of the first element to exclude.
+                        
+Passing arguments to functions: Slices are commonly used to pass a collection subset to a function.
+String manipulation: Rust's string type (String) is implemented as a vector of bytes, so slices are used extensively when manipulating strings.
+Binary data manipulation: Slices are also used for working with binary data, such as reading or writing a file. The std::io module provides many functions that take slices as arguments for reading or writing data.
     **[⬆ Back to Top](#questions)**
 
-455. ### 5555
+455. ### What is a slice in Rust?
 
-5555
+A slice is a pointer or a reference to the sequence of elements in the memory block. Slices are used to access data volumes stored in contiguous sequences in memory.
+A slice is represented by the type &amp;[T], where T is the type of the elements in the slice. A slice can either be created from vectors, arrays, strings, and other collection types that use std::slice::SliceIndex trait.
     **[⬆ Back to Top](#questions)**
 
-456. ### 6666
+456. ### What is a match expression?
 
-6666
-    **[⬆ Back to Top](#questions)**
-    
-457. ### 7777
-
-7777
-    **[⬆ Back to Top](#questions)**
-    
-458. ### 8888
-
-8888
+A match expression is a control flow construct that enables you to compare a specific value across a collection of patterns and execute the code related to the 1st matching pattern. It is similar to a switch statement in other programming languages, but a match expression offers more safety and flexibility in Rust.
     **[⬆ Back to Top](#questions)**
     
-459. ### 9999
+457. ### How is match expression used in Rust?
 
-9999
+Match expressions are used in Rust to compare a value against a series of patterns and execute the code associated with the first matching pattern. The match expression can be used in the following way.
+Example:
+- <img src="https://images.prismic.io/turing/658c002a531ac2845a26f571_Image_06_06_23_at_4_46_PM_f82763ea15.webp?auto=format,compress" alt="Image 06-06-23 at 4.46 PM.webp">
+In this example, we're matching the value of a number against several patterns. If the number is 1, we print "One." If it's 2, we print "Two." If it's 3 or 4, we print "Three or Four." Finally, if none of the other patterns match, we print "Something else." The underscore (_) is a catch-all pattern that matches any value.
+    **[⬆ Back to Top](#questions)**
+    
+458. ### What is the difference between the function and closure calls?
+
+The function and closure calls are both used to execute a piece of code, but the main difference between them lies in how they capture and use variables. A function call is used to call a named function with defined parameters and return type.
+A closure, on the other hand, is an anonymous function that can capture variables from its surrounding environment. Closures can be defined using the |...| {...} syntax, where the variables to be captured are listed between the vertical bars.
+When a closure is defined, it captures the values of the variables from the surrounding environment and creates a new function that can access those captured values. The closure can then be called like a regular function, using the captured values in its computations.
+    **[⬆ Back to Top](#questions)**
+    
+459. ### What is the difference between a trait bound and a where clause?
+
+The trait bounds and where clauses are used to add constraints to functions and types, ensuring that they adhere to the specific requirements or conditions. Trait bounds are used to constrain a type parameter to implement a certain trait. They are specified by placing a colon ( : ) followed by the trait name after the type parameter.
+On the other hand, where clauses are used to specify additional requirements on types or functions. They are written after the function signature and start with the where keyword, followed by the constraints. For example ,
+- <img src="https://images.prismic.io/turing/658c002b531ac2845a26f572_Image_06_06_23_at_4_48_PM_3efceced7f.webp?auto=format,compress" alt="Image 06-06-23 at 4.48 PM.webp">
+“where” clauses are useful when you have multiple constraints that would make the function signature difficult to read if written using trait bounds.
+    **[⬆ Back to Top](#questions)**
+    
+460. ### What is a closure capture?
+
+In Rust, a closure is a type that represents an anonymous function that can capture variables from its enclosing environment. It is a process by which a closure captures variables from its enclosing environment. When a closure captures a variable, it creates a "closure capture" of that variable, which is then stored within the closure and can be accessed and modified.
+    **[⬆ Back to Top](#questions)**
+
+461. ### What are the types of closure capture in Rust?
+
+There are two types of closure captures in Rust:
+- <strong>Move capture</strong>: When a closure moves a variable from its enclosing environment into the closure, it is said to perform a "move capture." This means that the closure takes ownership of the variable and can modify it, but the original variable in the enclosing environment is no longer accessible.
+- <strong>Borrow capture</strong>: When a closure borrows a variable from its enclosing environment, it is said to perform a "borrow capture." This means that the closure can access and modify the variable, but the original variable in the enclosing environment remains accessible.
+    **[⬆ Back to Top](#questions)**
+
+462. ### What is the difference between a mutable and an immutable closure in Rust?
+
+The closures are anonymous functions that capture variables from the enclosing scope. Closures can be considered mutable or immutable based on their capability to modify or edit the captured variables.
+An immutable closure captures variables through reference, which means it can read variables but not modify them. This type of closure is represented by the Fn trait.
+A mutable closure captures variables by mutable reference, meaning it can read and modify the captured variables. This type of closure is represented by the FnMut trait. It's important to note that a mutable closure requires that the captured variables are also mutable.
+    **[⬆ Back to Top](#questions)**
+
+463. ### Explain static dispatch.
+
+A static dispatch occurs at compile time, where the compiler determines which function to call based on the static type of a variable or expression. With static dispatch, there is no runtime overhead, and the static dispatch approach is widely used to achieve better performance since it enables the compiler to generate a more efficient code without the overhead.
+A static dispatch is achieved through the use of generics and traits. When a generic function is called with a concrete type, the compiler generates a specialized version of the function for that type. Traits allow for a form of ad-hoc polymorphism, where different types can implement the same trait and provide their own implementations of its methods.
+    **[⬆ Back to Top](#questions)**
+
+464. ### Explain dynamic dispatch.
+
+Dynamic dispatch in Rust refers to the process of determining which implementation of a method to call at runtime based on the type of object the method is called on.
+The dynamic dispatch is implemented using trait objects, which allow a value of any type that implements a given trait to be treated as a single type. When a method is called on a trait object, Rust uses a vtable to determine which implementation of the method to call.
+    **[⬆ Back to Top](#questions)**
+
+465. ### When do you use a dynamic dispatch?
+
+Dynamic dispatch is useful when you need to write code that can work with objects of different types that implement a common trait. However, because Rust is a statically-typed language, dynamic dispatch can incur some performance overhead compared to static dispatch.
+Rust provides several mechanisms for minimizing this overhead, such as using trait objects with the ‘dyn’ keyword, which allows the compiler to emit more efficient code.
+    **[⬆ Back to Top](#questions)**
+
+466. ### What is a type alias in Rust?
+
+In Rust, a type alias is a way to give a new name to an existing type. It is created using the type keyword, followed by the new name and the existing type.
+Example:
+- <img src="https://images.prismic.io/turing/658c002c531ac2845a26f573_Image_06_06_23_at_4_51_PM_e6365cf266.webp?auto=format,compress" alt="Image 06-06-23 at 4.51 PM.webp">
+The type aliases do not create new types. They simply provide alternative names for existing ones. This means that the new name and the original type can be used interchangeably without any performance penalty.
+    **[⬆ Back to Top](#questions)**
+    
+467. ### Explain monomorphization in Rust.
+
+Monomorphization is a tech nique utilized by the compiler to optimize the code, but they have different objectives. Monomorphization involves the compiler generating specialized code for every concrete type used in the structs or generic functions during compilation.
+This means that when a generic function is called with a specific type, the compiler generates a unique version of the function for that type. The compiler can optimize these specialized versions more efficiently because the concrete type is known, allowing for better performance.
+    **[⬆ Back to Top](#questions)**
+    
+468. ### What is specialization in Rust?
+
+Specialization is a technique where the compiler creates a more specific generic function implementation based on the traits implemented for a given type. It is similar to monomorphization in that it generates specialized code, but instead of generating code for each concrete type used, it generates code based on the traits implemented for a type.
+This allows the compiler to optimize the code even further by considering the specific behavior of the type based on the implemented traits.
+    **[⬆ Back to Top](#questions)**
+    
+469. ### What is a range?
+
+In Rust, a range is a sequence of values created using range operators “..” or “...”. The two dots “..” operator creates a range that excludes the upper bound, while the three dots “...” operator creates a range that includes the upper bound. Ranges are commonly used in Rust for iterating over a sequence of values, as in for loop.
+    **[⬆ Back to Top](#questions)**
+
+470. ### How is a range used in Rust?
+
+The range can be used for various purposes, including iterating over a sequence of values, creating slices, and generating random numbers within a range. For implementing a range, you can either use a range with two dots or three dots.
+Example:
+let range = 1..5;
+This will create a range that includes 1 and 2 but excludes 5.
+Similarly, you can create a range that includes the upper bound by using the “...” operator:
+let range = 1...5;
+This will create a range of 1, 2, 3, 4, and 5.
+    **[⬆ Back to Top](#questions)**
+
+471. ### What is the difference between a trait and an interface?
+
+In Rust, traits and interfaces define a set of methods a type must implement. However, the two have a few key differences:
+- <strong>Syntax</strong>: A trait is defined using the trait keyword in Rust, while an interface is defined using the interface keyword. However, Rust does not have a keyword for interfaces - this is just a term used in other programming languages like Java and TypeScript.
+- <strong>Implementation</strong>: Traits in Rust can have default method implementations, while interfaces typically do not. This means that when you implement a trait for a type, you can choose to provide your own implementation for each method or use the default implementation provided by the trait. With an interface, you must provide your own implementation for every method.
+- <strong>Inheritance</strong>: In Rust, traits can be inherited by other traits using the impl Trait1 for Trait2 {} syntax, while other interfaces can extend interfaces in other languages like Java and TypeScript. This allows you to build up more complex traits/interfaces from simpler ones.
+- <strong>Type bounds</strong>: In Rust, you can use traits as type bounds to specify that a generic type parameter must implement a particular set of methods. This is not possible with interfaces in other languages.
+    **[⬆ Back to Top](#questions)**
+
+472. ### What is the type parameter in Rust?
+
+In Rust, a type parameter is a way to make your code generic, allowing it to work with different types without having to duplicate the code for each type. Type parameters are used to define generic functions, structs, enums, and traits. They are similar to templates in C++ or generics in Java.
+When you define a type parameter, you usually use angle brackets
+- <img src="https://images.prismic.io/turing/658c002d531ac2845a26f574_Image_06_06_23_at_4_20_PM_907435aef0.webp?auto=format,compress" alt="Image 06-06-23 at 4.20 PM.webp">
+ following the name of a function, struct, enum, or trait. Within the scope of the generic definition, T can be used as a placeholder for the actual type that will be supplied later.
+     **[⬆ Back to Top](#questions)**
+
+473. ### How is the type parameter used?
+
+The type parameters can be used within functions, traits, structs, and enums. When a type parameter is utilized inside a generic function or a struct definition, it is unbounded to any specific type.
+Example of the type parameter in Rust.
+- <img src="https://images.prismic.io/turing/658c002e531ac2845a26f575_Image_06_06_23_at_4_53_PM_d362c7db47.webp?auto=format,compress" alt="Image 06-06-23 at 4.53 PM.webp">
+Here, T is the type parameter. When the function or struct is used, the type parameter is replaced with a specific type, such as
+example(42); // T is replaced with i32
+let my_struct = MyStruct { field: "hello" }; // T is replaced with &amp;str
+Type parameters can also have bounds, which specify constraints on the types that can be used.
+    **[⬆ Back to Top](#questions)**
+
+474. ### Explain destructor in Rust.
+
+In Rust, the concept of a destructor is implemented through the Drop trait. This trait provides a drop method that gets called automatically when a value goes out of scope, allowing you to clean up resources or perform other actions before the value is deallocated. This is similar to the concept of a destructor in C++ or a finalizer in Java or C#.
+When a struct or an enum implements the Drop trait, the drop method is called whenever the value is about to be deallocated, giving you the chance to clean up any resources associated with the value.
+    **[⬆ Back to Top](#questions)**
+
+475. ### How is the destructor implemented in Rust?
+
+In Rust, the destructor is called a drop(), and it is implemented as follows:
+- <img src="https://images.prismic.io/turing/658c002f531ac2845a26f576_Image_06_06_23_at_4_55_PM_22fb6efc6c.webp?auto=format,compress" alt="Image 06-06-23 at 4.55 PM.webp">
+When an object of MyType goes out of scope, Rust will automatically call the drop() method on it. This will allow MyType to perform any necessary cleanup before it is destroyed.
+It is worth noting that in Rust, there is no explicit delete or free keyword like in other languages to destroy objects. Instead, Rust uses a technique called "ownership and borrowing" to automatically manage the lifetime of objects and ensure that they are properly cleaned up when they are no longer needed.
+    **[⬆ Back to Top](#questions)**
+
+476. ### What is lifetime elision?
+
+Lifetime elision is a Rust feature that allows the compiler to implicitly infer lifetimes in specific cases, so you don't have to explicitly annotate them in your code. Lifetimes are essential to manage the borrowing system in Rust and explicitly defining them in every function can often be cumbersome while providing little benefit to understanding the code.
+    **[⬆ Back to Top](#questions)**
+    
+477. ### What are the rules of lifetime elision?
+
+Lifetime elision simplifies the process by automatically deducing lifetimes for references in function signatures based on a set of predetermined rules. The Rust compiler applies three rules to infer lifetimes:
+Rule 1: Each elided lifetime in input position (function arguments) becomes a distinct lifetime parameter. These lifetimes are usually written as &lt;'a&gt; or &lt;'b&gt; (using different characters for different lifetime parameters).
+Example:
+- <img src="https://images.prismic.io/turing/658c0030531ac2845a26f577_Image_06_06_23_at_4_58_PM_e680c2c966.webp?auto=format,compress" alt="Image 06-06-23 at 4.58 PM.webp">
+Rule 2: If there is exactly one input lifetime position, the elided output lifetime (return type) assumes that same lifetime.
+Example:
+- <img src="https://images.prismic.io/turing/658c0031531ac2845a26f578_Image_06_06_23_at_4_59_PM_74384c0ed4.webp?auto=format,compress" alt="Image 06-06-23 at 4.59 PM.webp">
+Rule 3: If there are multiple input lifetime positions and one of them is &amp;self or &amp;mut self (for methods), the output lifetime is the same as the reference to self.
+Example:
+- <img src="https://images.prismic.io/turing/658c0032531ac2845a26f579_Image_06_06_23_at_4_59_PM_1_dc43662db8.webp?auto=format,compress" alt="Image 06-06-23 at 4.59 PM (1).webp">
+Lifetime elision allows you to write more concise and cleaner code without having to manually specify every lifetime. That said, when more complex borrowing situations arise, explicitly annotating lifetimes can still be necessary to ensure correctness and express clear intent in your code.
+    **[⬆ Back to Top](#questions)**
+    
+478. ### Create a Rust program that reads data from a file and performs some operations on it, such as counting the number of occurrences of a particular word.
+
+First, create a new Rust project by running cargo new my_project in your terminal. Then, navigate the project directory using cd my_project and create a new file called main. rs.
+In main. rs, add the following code:
+- <img src="https://images.prismic.io/turing/658c0034531ac2845a26f57a_Image_06_06_23_at_5_07_PM_5ee8d67d27.webp?auto=format,compress" alt="Image 06-06-23 at 5.07 PM.webp">
+    **[⬆ Back to Top](#questions)**
+    
+479. ### Write a program that uses Rust's networking capabilities to send data between two machines.
+
+This program sends a message from one machine to another over TCP using Rust's networking capabilities:
+- <img src="https://images.prismic.io/turing/658c0035531ac2845a26f57b_Image_06_06_23_at_5_09_PM_d59f40ce7d.webp?auto=format,compress" alt="Image 06-06-23 at 5.09 PM.webp">
+This program listens on all network interfaces on port 12345 for incoming connections. When a client connects, it reads a message from the client and prints it to the console. It then sends a response message back to the client.
+    **[⬆ Back to Top](#questions)**
+      
+480. ### Create a Rust program that implements a simple HTTP server.
+
+Here's an example Rust program that uses the hyper library to implement a simple HTTP server:
+- <img src="https://images.prismic.io/turing/658c0037531ac2845a26f57c_Image_06_06_23_at_5_18_PM_8f9872f28d.webp?auto=format,compress" alt="Image 06-06-23 at 5.18 PM.webp">
     **[⬆ Back to Top](#questions)**
