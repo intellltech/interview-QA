@@ -5671,12 +5671,14 @@ The smart pointer is a data type that provides added functionality compared to a
 
 Rust provides several types of smart pointers, each with its own specific use case:
 - <img src="https://images.prismic.io/turing/658c0027531ac2845a26f56f_Image_06_06_23_at_4_41_PM_366c2237ba.webp?auto=format,compress" alt="Image 06-06-23 at 4.41 PM.webp">
+
     **[⬆ Back to Top](#questions)**
 
 453. ### How is a smart pointer used in Rust?
 
 A smart pointer is a data structure with the features of a pointer but with added capabilities. An example of a smart pointer in Rust is the Rc type, which provides shared ownership of a value. Here's an example of using an Rc in Rust:
-- <img src="https://images.prismic.io/turing/658c0028531ac2845a26f570_Image_06_06_23_at_4_43_PM_bd66f06606.webp?auto=format,compress" alt="Image 06-06-23 at 4.43 PM.webp">                       
+- <img src="https://images.prismic.io/turing/658c0028531ac2845a26f570_Image_06_06_23_at_4_43_PM_bd66f06606.webp?auto=format,compress" alt="Image 06-06-23 at 4.43 PM.webp">
+
     **[⬆ Back to Top](#questions)**
 
 454. ### How are slices used in Rust?
@@ -5877,4 +5879,5 @@ This program listens on all network interfaces on port 12345 for incoming connec
 
 Here's an example Rust program that uses the hyper library to implement a simple HTTP server:
 - <img src="https://images.prismic.io/turing/658c0037531ac2845a26f57c_Image_06_06_23_at_5_18_PM_8f9872f28d.webp?auto=format,compress" alt="Image 06-06-23 at 5.18 PM.webp">
+
     **[⬆ Back to Top](#questions)**
