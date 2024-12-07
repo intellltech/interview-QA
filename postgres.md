@@ -5,7 +5,7 @@
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     | **Behavioural Questions**                                                                                                                                                                                                                   
-| 1   | [What is PostgreSQL?](#What-is-postgresql)
+| 1   | [What is PostgreSQL?](#What-is-postgresql) 
 | 2   | [What are the benefits of PostgreSQL?](#what-are-the-benefits-of-postgresql)
 | 3   | [What are the main applications of PostgreSQL?](#what-are-the-main-applications-of-postgresql)
 | 4   | [What are CRUD operations in PostgreSQL?](#what-are-crud-operations-in-postgresql)
@@ -50,6 +50,26 @@
 | 43   | [In which scenarios the EXPLAIN ANALYZE command can be handy?](#in-which-scenarios-the-explain-analyze-command-can-be-handy)  
 | 44   | [How can you handle errors in PostgreSQL?](#how-can-you-handle-errors-in-postgresql)  
 | 45   | [What is the relevance of logs for troubleshooting in PostgreSQL?](#what-is-the-relevance-of-logs-for-troubleshooting-in-postgresql)  
+| 46   | [What is PostgreSQL and list down its main features?](#what-is-postgresql-and-list-down-its-main-features) 
+| 47   | [How does PostgreSQL differ from other database management systems?](#how-does-postgresql-differ-from-other-database-management-systems) 
+| 48   | [What are the advantages of using PostgreSQL?](#what-are-the-advantages-of-using-postgresql) 
+| 49   | [How do you install PostgreSQL?](#how-do-you-install-postgresql) 
+| 50   | [What is a table in PostgreSQL?](#what-is-a-table-in-postgresql) 
+| 51   | [What is a schema in PostgreSQL?](#what-is-a-schema-in-postgresql) 
+| 52   | [How do you create a database in PostgreSQL?](#how-do-you-create-a-database-in-postgresql) 
+| 53   | [How do you create a table in PostgreSQL?](#how-do-you-create-a-table-in-postgresql) 
+| 54   | [What are functions in PostgreSQL?](#what-are-functions-in-postgresql) 
+| 55   | [What is the maximum table size in PostgreSQL?](#what-is-the-maximum-table-size-in-postgresql) 
+| 56   | [What does command enable-debug mean in PostgreSQL?](#what-does-command-enable-debug-mean-in-postgresql) 
+| 57   | [What are the different data types supported by PostgreSQL?](#what-are-the-different-data-types-supported-by-postgresql) 
+| 58   | [How do you insert data into a table in PostgreSQL?](#how-do-you-insert-data-into-a-table-in-postgresql) 
+| 59   | [How do you update data in a table in PostgreSQL?](#how-do-you-update-data-in-a-table-in-postgresql) 
+| 60   | [What do you understand by pgadmin?](#what-do-you-understand-by-pgadmin) 
+| 61   | [How can you change a user's password in PostgreSQL?](#how-can-you-change-a-users-password-in-postgresql) 
+| 62   | [What are the different data types in PostgreSQL?](#what-are-the-different-data-types-in-postgresql) 
+| 63   | [What do CTIDs mean in PostgreSQL?](#what-do-ctids-mean-in-postgresql) 
+| 64   | [Explain tokens in PostgreSQL.](#explain-tokens-in-postgresql) 
+| 65   | [How do you delete data from a table in PostgreSQL?](#how-do-you-delete-data-from-a-table-in-postgresql) 
 
 ## Answers
 
@@ -365,3 +385,189 @@ There are two main ways to address errors in PostgreSQL:
 PostgreSQL logs are a valuable resource for troubleshooting problems, tracking performance, and auditing database activity. PostgreSQL comes with a wide variety of logs, including error logs. These logs can help you spot queries and statements that lead to errors during execution.  
 
 **[⬆ Back to Top](#questions)**
+
+## Answers
+
+46. ### What is PostgreSQL and list down its main features?
+
+PostgreSQL is an object-relational database management system widely used in various web applications. Some important features of PostgreSQL include:
+
+- PostgreSQL is an object-relational database.
+- It supports major operating systems.
+- Postgres supports extensibility for SQL and JSON querying.
+- Postgres supports multi-version concurrency control and procedural languages.
+- Nested transactions are also supported in Postgres.
+
+  **[⬆ Back to Top](#questions)**
+
+47. ### How does PostgreSQL differ from other database management systems?
+
+PostgreSQL stands out from other database management systems due to its emphasis on extensibility and adherence to standards. It supports a wide range of data types and offers features like user-defined functions, stored procedures, and custom indexing methods. Additionally, PostgreSQL has a vibrant open-source community that actively contributes to its development.
+
+  **[⬆ Back to Top](#questions)**
+
+48. ### What are the advantages of using PostgreSQL?
+
+There are several advantages to using PostgreSQL:
+
+- Excellent performance and scalability.
+- Support for complex data types, full-text search, and geospatial data.
+- Strong data integrity and reliability, supporting ACID properties.
+- Highly extensible, allowing custom data types, functions, and procedural languages.
+- A thriving open-source community with regular updates and security patches.
+- Platform-independent, running on Linux, Windows, and macOS.
+
+  **[⬆ Back to Top](#questions)**
+
+49. ### How do you install PostgreSQL?
+
+To install PostgreSQL:
+
+1. Visit the official PostgreSQL website and download the installer suitable for your operating system.
+2. Run the installer and follow on-screen instructions.
+3. Specify the installation directory and provide a password for the database superuser.
+4. Select components to install, such as the PostgreSQL server and pgAdmin.
+5. Complete the installation, and ensure the PostgreSQL service is started.
+
+  **[⬆ Back to Top](#questions)**
+
+50. ### What is a table in PostgreSQL?
+
+A table in PostgreSQL stores structured data in rows and columns. It represents a collection of related information organized into a predefined structure. Tables provide a structured way to store and retrieve data in a relational database system.
+
+  **[⬆ Back to Top](#questions)**
+
+51. ### What is a schema in PostgreSQL?
+
+A schema in PostgreSQL is a named container or namespace that holds a collection of database objects, including tables, views, and indexes. It helps organize database objects and avoid naming conflicts, allowing better management and access control.
+
+  **[⬆ Back to Top](#questions)**
+
+52. ### How do you create a database in PostgreSQL?
+
+To create a database in PostgreSQL, use the SQL command:
+
+CREATE DATABASE database_name;
+
+Replace database_name with the desired name for your database. This command will create a new database with the specified name using default settings. You can also specify additional options such as encoding, owner, or connection limits during the creation process.
+
+  **[⬆ Back to Top](#questions)**
+
+53. ### How do you create a table in PostgreSQL?
+
+To create a table in PostgreSQL, you can use the following SQL command:
+
+CREATE TABLE table_name ( column1 datatype1, column2 datatype2, column3 datatype3, ... );
+
+Replace table_name with the desired name for your table. Specify the columns and their corresponding data types within parentheses. Each column is defined by a name and a data type, such as integer, text, or timestamp. You can also add constraints, defaults, and other options to the column definitions as needed.
+
+  **[⬆ Back to Top](#questions)**
+
+54. ### What are functions in PostgreSQL?
+
+Functions are crucial because they aid in the execution of code on the server. PL/pgSQL, PostgreSQL's native language, and other scripting languages such as Perl, Python, PHP, and others are some of the languages used to create functions. The statistical language PL/R can also be used to improve the functions' performance.
+
+  **[⬆ Back to Top](#questions)**
+
+55. ### What is the maximum table size in PostgreSQL?
+
+Although PostgreSQL allows users to create infinite databases, it does have a maximum table size limit. The maximum table size in PostgreSQL is 32 TB.
+
+  **[⬆ Back to Top](#questions)**
+
+56. ### What does command enable-debug mean in PostgreSQL?
+
+The command enable-debug is used to make all of the apps and libraries compile. This technique normally slows down the machine, but it also increases the size of the binary file. The presence of debugging symbols aids developers in discovering flaws and other issues that may emerge when working with their scripts.
+
+  **[⬆ Back to Top](#questions)**
+
+57. ### What are the different data types supported by PostgreSQL?
+
+PostgreSQL supports a wide range of data types, including:
+
+- Numeric types: integer, numeric, real, double precision
+- Character types: char, varchar, text
+- Date and time types: date, time, timestamp, interval
+- Boolean type: boolean
+- Binary data types: bytea, bit, bit varying
+- Array types: integer[], text[], etc.
+- JSON and JSONB for storing JSON data
+- UUID for universally unique identifiers
+- Geometric types: point, line, circle, polygon
+- Network address types: inet, CIDR
+- Custom types created by users
+
+  **[⬆ Back to Top](#questions)**
+
+58. ### How do you insert data into a table in PostgreSQL?
+
+To insert data into a table in PostgreSQL, you can use the INSERT INTO statement. Here's an example:
+
+INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+
+Replace table_name with the name of the table you want to insert data into. Specify the column names in parentheses after the table name. Then, provide the corresponding values in the VALUES clause. The number and order of values must match the columns defined in the table.
+
+  **[⬆ Back to Top](#questions)**
+
+59. ### How do you update data in a table in PostgreSQL?
+
+To update data in a table in PostgreSQL, you can use the UPDATE statement. Here's an example:
+
+UPDATE table_name SET column1 = new_value1, column2 = new_value2, ... WHERE condition;
+
+Replace table_name with the name of the table you want to update. Use the SET clause to specify the columns you want to update and their new values. The WHERE clause defines the condition that determines which rows should be updated. Only rows that satisfy the condition will be affected by the update.
+
+60. ### What do you understand by pgadmin?
+
+Pgadmin is a free, open-source database management GUI for PostgreSQL that runs on Microsoft Windows, Mac OS X, and Linux. Pgadmin is used to retrieve information from database servers and the development process, quality testing, and other continuous maintenance.
+
+  **[⬆ Back to Top](#questions)**
+
+61. ### How can you change a user's password in PostgreSQL?
+
+In order to change a user’s password in PostgreSQL, follow these steps:
+
+Through the root user, sudo, or via SSH public key verification, make yourself the ‘Postgres’ system user
+Using ‘PSQL”, connect to the local server
+Follow up by typing this particular meta-command of PSQL \password
+
+  **[⬆ Back to Top](#questions)**
+
+62. ### What are the different data types in PostgreSQL?
+
+PostgreSQL supports a myriad of data types:
+
+- Boolean
+- Numeric Types
+- Character Types
+- Temporal Types
+- Array
+- UUID
+- JSON
+- Store
+- Geometric data and other special types
+
+  **[⬆ Back to Top](#questions)**
+
+63. ### What do CTIDs mean in PostgreSQL?
+
+CTIDs is a column that exists in every PostgreSQL database and is used to identify individual physical rows inside a table based on their block and offset positions. Index entries utilize them to point to actual rows. It is distinct for each entry in the table and clearly identifies the tuple's position. Because the CTID of a logical row changes when it is changed, it cannot be utilized as a long-term row identifier. When no competing update is expected, it is occasionally advantageous to identify a row within a transaction.
+
+  **[⬆ Back to Top](#questions)**
+
+64. ### Explain tokens in PostgreSQL.
+
+Tokens are the fundamental components of any source code. Many of the special character symbols are known to be found in them. Constants, quoted identifiers, other identifiers, and keywords are examples of these. Tokens, or keywords, are pre-defined SQL instructions with pre-defined meanings. Variable names, such as columns and tables, are represented by identifiers.
+
+  **[⬆ Back to Top](#questions)**
+
+65. ### How do you delete data from a table in PostgreSQL?
+
+To delete data from a table in PostgreSQL, you can use the DELETE FROM statement. Here's an example:
+
+DELETE FROM table_name WHERE condition;
+
+Replace table_name with the name of the table you want to delete data from. The WHERE clause is optional but recommended to specify the condition for deletion. If no condition is provided, all rows in the table will be deleted. Be cautious when using DELETE FROM without a condition.
+
+  **[⬆ Back to Top](#questions)**
+
