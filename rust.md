@@ -1,4 +1,4 @@
-# Solidity Interview Questions & Answers
+# Rust Interview Questions & Answers
 
 ### Questions
 
