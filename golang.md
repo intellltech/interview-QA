@@ -303,24 +303,24 @@
 | 296  | [When would you use Go's recover function?](#When-would-you-use-Gos-recover-function)
 | 297  | [Why can't you write to data in a goroutine while another is reading that data?](#Why-cant-you-write-to-data-in-a-goroutine-while-another-is-reading-that-data)
 | 298  | [Can you read data from a single variable using goroutines? Why or why not?](#Can-you-read-data-from-a-single-variable-using-goroutines-Why-or-why-not)
-| 299  | [---------------------------------vvvvvvvvvvv-----------------](#---------------------------------vvvvvvvvvvv-----------------)
-| 300  | [How do you manage the upgradability of a smart contract? How do you mitigate the risks associated with it?](#How-do-you-manage-the-upgradability-of-a-smart-contract-How-do-you-mitigate-the-risks-associated-with-it)
-| 301  | [What is an ERC-20 token and how would you create one using Solidity?](#What-is-an-ERC-20-token-and-how-would-you-create-one-using-Solidity)
-| 302  | [What is the function and importance of the fallback function in Solidity?](#What-is-the-function-and-importance-of-the-fallback-function-in-Solidity)
-| 303  | [How would you prevent overflows and underflows in Solidity?](#How-would-you-prevent-overflows-and-underflows-in-Solidity)
-| 304  | [What is the difference between external, public, internal, and private function visibility specifiers in Solidity?](#What-is-the-difference-between-external-public-internal-and-private-function-visibility-specifiers-in-Solidity)
-| 305  | [Could you clarify the privacy status of private variables in Solidity and discuss whether they are absolutely private?](#Could-you-clarify-the-privacy-status-of-private-variables-in-Solidity-and-discuss-whether-they-are-absolutely-private)
-| 306  | [Can you describe what an Application Binary Interface (ABI) is in the context of a smart contract and elaborate on its role and significance?](#Can-you-describe-what-an-Application-Binary-Interface-ABI-is-in-the-context-of-a-smart-contract-and-elaborate-on-its-role-and-significance)
-| 307  | [How do you accomplish the equivalent of a console.log operation for debugging purposes in Solidity, akin to its usage in JavaScript?](#How-do-you-accomplish-the-equivalent-of-a-consolelog-operation-for-debugging-purposes-in-Solidity-akin-to-its-usage-in-JavaScript)
-| 308  | [In terms of Solidity and smart contract development, what strategies can you adopt to safeguard your contracts from re-entrancy attacks?](#In-terms-of-Solidity-and-smart-contract-development-what-strategies-can-you-adopt-to-safeguard-your-contracts-from-re-entrancy-attacks)
-| 309  | [Can you identify the two APIs utilized by a smart contract for interaction and elaborate on their roles?](#Can-you-identify-the-two-APIs-utilized-by-a-smart-contract-for-interaction-and-elaborate-on-their-roles)
-| 310  | [What is the mechanism employed to pay for gas in the Ethereum network, and can you discuss its relevance in the context of Solidity development?](#What-is-the-mechanism-employed-to-pay-for-gas-in-the-Ethereum-network-and-can-you-discuss-its-relevance-in-the-context-of-Solidity-development)
-| 311  | [Could you enumerate the prerequisites for deploying a smart contract onto the Ethereum network, and discuss any challenges that might arise during the process?](#Could-you-enumerate-the-prerequisites-for-deploying-a-smart-contract-onto-the-Ethereum-network-and-discuss-any-challenges-that-might-arise-during-the-process)
-| 312  | [Would you explain what EVM bytecode is, and describe its role and significance in the Ethereum network?](#Would-you-explain-what-EVM-bytecode-is-and-describe-its-role-and-significance-in-the-Ethereum-network)
-| 313  | [Is it plausible to execute a transaction in such a manner that gas fees are not levied on the user? Could you elaborate on any strategies or methods to achieve this?](#Is-it-plausible-to-execute-a-transaction-in-such-a-manner-that-gas-fees-are-not-levied-on-the-user-Could-you-elaborate-on-any-strategies-or-methods-to-achieve-this)
-| 314  | [Simple Storage Contract](#Simple-Storage-Contract)
-| 315  | [Creating an ERC20 Token](#Creating-an-ERC20-Token)
-| 316  | [Decentralized Voting System](#Decentralized-Voting-System)
+| 299  | [What is syntax like in GO?](#What-is-syntax-like-in-GO)
+| 300  | [Explain what is string literals?](#Explain-what-is-string-literals)
+| 301  | [Explain how to use custom packages in GO language?](#Explain-how-to-use-custom-packages-in-GO-language)
+| 302  | [Explain what is string types?](#Explain-what-is-string-types)
+| 303  | [List out the built in support in GO?](#List-out-the-built-in-support-in-GO)
+| 304  | [Explain what is go routine in GO? How you can stop go routine?](#Explain-what-is-go-routine-in-GO-How-you-can-stop-go-routine)
+| 305  | [Explain how you can write multiline strings in GO?](#Explain-how-you-can-write-multiline-strings-in-GO)
+| 306  | [Explain how pointer is represented in GO?](#Explain-how-pointer-is-represented-in-GO)
+| 307  | [How you can format a string without printing?](#How-you-can-format-a-string-without-printing)
+| 308  | [Explain how arrays in GO works differently then C ?](#Explain-how-arrays-in-GO-works-differently-then-C-)
+| 309  | [Explain GO Interfaces ?](#Explain-GO-Interfaces-)
+| 310  | [Explain what Type assertion is used for and how it does it?](#Explain-what-Type-assertion-is-used-for-and-how-it-does-it)
+| 311  | [In GO language how you can check variable type at runtime?](#In-GO-language-how-you-can-check-variable-type-at-runtime)
+| 312  | [How do you test in Golang?](#How-do-you-test-in-Golang)
+| 313  | [What are the uses of an empty struct in Go?](#What-are-the-uses-of-an-empty-struct-in-Go)
+| 314  | [Why is Golang faster than other languages?](#Why-is-Golang-faster-than-other-languages)
+| 315  | [What is the role of the "init" function in Go?](#What-is-the-role-of-the-init-function-in-Go)
+| 316  | [xxxxxxx---------xxxxxxx](#xxxxxxx---------xxxxxxx)
 | 317  | [Escrow Contract](#Escrow-Contract)
 | 318  | [Decentralized Token Exchange](#Decentralized-Token-Exchange)
 | 319  | [Multi-Signature Wallet](#Multi-Signature-Wallet)
@@ -1158,7 +1158,7 @@ A basic Go program starts with the `package main` declaration, followed by an `i
 
 46. ### What are Slices in Go?
 
-Slices in Go are a fundamental and flexible data structure used to work with data sequences, typically with arrays or other slices. They provide a more versatile alternative to arrays with a fixed size. Here are some key points about slices: Dynamic Size, Reference Type, Syntax, Slicing, Appending, and Length and Capacity.
+Slice is a lightweight data structure of variable length that stores multiple values of the same data types. In this way, it's similar to arrays, but it's more convenient, powerful and flexible than an array in Go. Slice has three components: pointer, length and capacity. Pointer indicates the first element of the array, while length represents the total number of elements in the slice. Finally, capacity refers to the extent to which the slice can expand.
     **[⬆ Back to Top](#questions)**
 
 47. ### How does Go handle variable declaration and initialization?
@@ -3545,172 +3545,162 @@ Yes, it's possible to read data from a single variable using goroutines.
 If any goroutine needs to write data, then the data should get protected with a mutex. If the goroutines solely read data, then a mutex isn't required.
     **[⬆ Back to Top](#questions)**
     
-299. ### ---------------------------------vvvvvvvvvvv-----------------
+299. ### What is syntax like in GO?
 
-Data on the Ethereum blockchain is stored in a large, globally accessible data structure known as the "state". In Solidity, this data is accessed using state variables, which are permanently stored in contract storage. There are also more temporary ways to store data, such as in memory or on the stack. The data type, how frequently the data is accessed or modified, and the structure of the data can impact where and how it should be stored.
+Syntax in GO is specified using Extended Backus-Naur Form (EBNF)
+
+- Production = production_name “=” [ Expression ]
+- Expression = Alternative { “l” Alternative }
+- Alternative = Term { Term }
+- Term = Production_name l token [ “…”token] l Group l Option l Repetition
+- Group = “ ( “ Expression”)”
+- Option = “ [ “ Expression “ ]”
+- Repetition = “ {“ Expression “}”
     **[⬆ Back to Top](#questions)**
 
-300. ### How do you manage the upgradability of a smart contract? How do you mitigate the risks associated with it?
+300. ### Explain what is string literals?
 
-Smart contracts on the blockchain are immutable by nature, but there are methods to introduce upgradability, mostly by using a proxy pattern. The basic idea is to separate the contract logic and the data storage, allowing the logic to be replaced while the data remains untouched. However, upgradeability introduces its own risks, such as increased complexity, potential for admin abuse, and risks of errors during upgrade. These risks can be mitigated by good governance mechanisms, thorough testing, clear documentation, and careful access control.
+A string literals represents a string constant obtained from concatenating a sequence of characters. There are two forms,
+
+- Raw string literals: The value of raw string literals are character sequence between back quotes ‘‘.  The value of a string literal is the string composed of the uninterrupted character between quotes.
+- Interpreted string literals: It is represented between double quotes ““. The text between the double quotes which may not contain newlines, forms the value of the literal.
     **[⬆ Back to Top](#questions)**
 
-301. ### What is an ERC-20 token and how would you create one using Solidity?
+301. ### Explain how to use custom packages in GO language?
 
-ERC-20 is a standard interface for tokens on the Ethereum blockchain. It includes a predefined set of functions that the token contract must implement, allowing them to be easily interoperable with other contracts and wallets. Creating an ERC-20 token in Solidity involves writing a smart contract that implements these functions, including transfer, balanceOf, allowance, approve, and transferFrom, along with a couple of events.
+If you are making your library a separate go get –table project and if your library is for internal use then you can code like this
+
+- Under the directory of your project place the directory with library files
+- Refer to the library using its path relative to the root of your workspace consisting the project
+For example, src/ myproject/ mylib/ mylib.go . . . main.go Now, in main.go you could import myprojec/mylib.
     **[⬆ Back to Top](#questions)**
 
-302. ### What is the function and importance of the fallback function in Solidity?
+302. ### Explain what is string types?
 
-The fallback function is a special function in Solidity that is executed when a contract is called with no other function matching the function identifier, or if no data is supplied at all. This function is important as it allows a smart contract to react when it receives Ether directly (without a function being called). However, it's important to handle this function with care due to potential security vulnerabilities, such as re-entrancy attacks.
+A string type represents the set of string values, and string values are sequence of bytes.  Strings once created is not possible to change.
     **[⬆ Back to Top](#questions)**
 
-303. ### How would you prevent overflows and underflows in Solidity?
+303. ### List out the built in support in GO?
 
-Preventing integer overflows and underflows in Solidity is crucial because such issues could potentially be exploited, leading to unexpected behavior and security vulnerabilities. Solidity doesn't automatically handle these, so you must implement checks manually. A common way is to use the SafeMath library, which is a set of functions designed to throw errors when conditions for overflows or underflows are met. The functions in SafeMath perform arithmetic operations with checks for overflow, and if such a condition is met, they revert the transaction. Starting from Solidity 0.8.0, these checks are built into the language by default, causing a revert if an overflow or underflow occurs.
+The available built-in-support in GO includes
+
+- Container: container/list , container/heap
+- Web Server: net/http
+- Cryptography: Crypto/md5 , crypto/sha1
+- Compression: compress/ gzip
+- Database: database/sql
     **[⬆ Back to Top](#questions)**
 
-304. ### What is the difference between external, public, internal, and private function visibility specifiers in Solidity?
+304. ### Explain what is go routine in GO? How you can stop go routine?
 
-In Solidity, function visibility is specified using one of external, public, internal, or private. These specifiers determine where the function can be called from.
+A goroutine is a function which is capable of running concurrently with other functions To stop goroutine, you pass the goroutine  a signal channel, that signal channel is used to push a value into when you want the goroutine to stop.  The goroutine polls that channel regularly as soon as it detects a signal, it quits.
+```
+Quit : = make (chan bool)
 
+go func ( ) {
 
-External functions can only be called from outside the current contract and cannot be called internally (except with this.functionName()). They can also receive data directly from the call data, which can be more efficient when dealing with large arrays.
+for  {
 
+select {
 
-Public functions can be called from anywhere, both from within the contract and from other contracts.
+case <- quit:
 
+return
 
-Internal functions can only be called from within the contract where they are defined or from contracts that inherit from that contract. They cannot be accessed from unrelated contracts.
+default
 
+// do other stuff
 
-Private functions, like internal functions, can only be called from the contract they are defined in, but they are not accessible from derived contracts.
-
-
-Understanding these specifiers is important for contract security and efficient use of gas.
-    **[⬆ Back to Top](#questions)**
-
-305. ### Could you clarify the privacy status of private variables in Solidity and discuss whether they are absolutely private?
-
-In Solidity, private variables are private in the sense that they can only be accessed directly from within the same contract or contracts derived from it. However, it's crucial to understand that the concept of privacy is not absolute in the context of a public blockchain. All data on the Ethereum blockchain, including the state of all contracts, is public. This means that while a contract cannot read a private variable from another contract, any data stored in the blockchain can be viewed by anyone who examines the blockchain data directly.
-    **[⬆ Back to Top](#questions)**
-
-306. ### Can you describe what an Application Binary Interface (ABI) is in the context of a smart contract and elaborate on its role and significance?
-
-The Application Binary Interface (ABI) is essentially a specification detailing how to interact with a contract. It describes the contract's functions, their input and output parameters, the types of these parameters, and event declarations. ABIs are fundamental in the interaction between contracts and the outside world, including other contracts and off-chain services. For example, when a DApp interacts with a smart contract, it will use the ABI to encode the function call and its data before it's sent and then decode the data returned.
-    **[⬆ Back to Top](#questions)**
-    
-307. ### How do you accomplish the equivalent of a console.log operation for debugging purposes in Solidity, akin to its usage in JavaScript?
-
-In Solidity, direct console logging like in JavaScript is not available due to the deterministic and resource-constrained nature of the Ethereum Virtual Machine (EVM). However, developers often use "Events" for a similar purpose. Events allow you to log information that gets stored with the transaction logs. This logged information can then be accessed off-chain for debugging purposes. Therefore, events are the closest equivalent to console.log in Solidity.
-    **[⬆ Back to Top](#questions)**
-    
-308. ### In terms of Solidity and smart contract development, what strategies can you adopt to safeguard your contracts from re-entrancy attacks?
-
-To safeguard contracts from re-entrancy attacks, the "checks-effects-interactions" pattern should be followed, which recommends performing any interactions with external contracts last, after making any changes to the state. Using a re-entrancy guard is another common practice, which helps to prevent recursive calls by locking a contract while a function is being executed. It's also good practice to minimize the number of external function calls whenever possible.
-    **[⬆ Back to Top](#questions)**
-    
-309. ### Can you identify the two APIs utilized by a smart contract for interaction and elaborate on their roles?
-
-Smart contracts mainly interact with the external world through two APIs: the blockchain data API and the smart contract ABI. The blockchain data API allows contracts to access data from the blockchain, such as the timestamp of the latest block (block.timestamp), the sender of the current transaction (msg.sender), and the amount of Ether sent with the transaction (msg.value). The smart contract ABI, as mentioned earlier, is the interface that allows a contract to interact with other contracts and with off-chain applications.
-    **[⬆ Back to Top](#questions)**
-
-310. ### What is the mechanism employed to pay for gas in the Ethereum network, and can you discuss its relevance in the context of Solidity development?
-
-The mechanism employed to pay for gas in the Ethereum network is Ether, the native cryptocurrency of Ethereum. When a transaction is executed, the total gas used by the computation is multiplied by the gas price specified by the sender. The result is the amount of Ether that the sender must pay to the miner for executing the transaction. Understanding gas costs is essential in Solidity development because inefficient code can lead to higher gas costs, making your smart contracts expensive to interact with.
-    **[⬆ Back to Top](#questions)**
-
-311. ### Could you enumerate the prerequisites for deploying a smart contract onto the Ethereum network, and discuss any challenges that might arise during the process?
-
-To deploy a smart contract onto the Ethereum network, you need the compiled bytecode of the contract, the ABI of the contract, a funded Ethereum account to deploy the contract from, and a connection to the Ethereum network through a node. You must also set an appropriate gas price for the deployment transaction. Challenges during deployment can include insufficient funds for the deployment account, improperly compiled bytecode, or network congestion that leads to slow transaction confirmation times.
-    **[⬆ Back to Top](#questions)**
-
-312. ### Would you explain what EVM bytecode is, and describe its role and significance in the Ethereum network?
-
-Ethereum Virtual Machine (EVM) bytecode is the compiled version of a Solidity smart contract. This bytecode is what gets executed on the Ethereum blockchain. The EVM interprets and executes this bytecode in a sandboxed environment, isolated from the network, filesystem, and other processes of the host computer. The role and significance of the EVM bytecode are paramount, as it ensures that smart contracts run exactly as programmed without any possibility of censorship, downtime, fraud, or third-party interference.
-    **[⬆ Back to Top](#questions)**
-
-313. ### Is it plausible to execute a transaction in such a manner that gas fees are not levied on the user? Could you elaborate on any strategies or methods to achieve this?
-
-Yes, it is plausible to execute transactions without the end user paying for gas through a pattern called a "gas station" or "meta transaction". In this pattern, a user signs a transaction but does not broadcast it to the Ethereum network. Instead, they send it to a third party called a relayer. The relayer then submits the transaction to the network, paying the gas fee. The transaction is crafted in such a way that it can reimburse the relayer in some form, such as tokens within the system, or it could be free as part of a system incentive. This allows users to interact with contracts without needing to hold Ether for gas.
-    **[⬆ Back to Top](#questions)**
-
-314. ### Simple Storage Contract
-
-Problem: Write a simple smart contract in Solidity that can store and retrieve an unsigned integer. The contract should have two functions: one for setting the integer and one for getting the integer.
-Solution:
-
-
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract SimpleStorage {
-    uint private data;
-
-    function set(uint x) public {
-        data = x;
-    }
-
-    function get() public view returns (uint) {
-        return data;
-    }
 }
-Explanation: This is a basic contract in Solidity that stores an unsigned integer in the data state variable. The set function allows a user to set this value, and the get function allows anyone to read this value.
-    **[⬆ Back to Top](#questions)**
 
-315. ### Creating an ERC20 Token
-
-Problem: Create a basic implementation of an ERC20 token. The contract should include a way to mint tokens, check the balance of an account, and transfer tokens from one account to another.
-Solution:
-
-
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract MyToken {
-    mapping (address => uint256) private _balances;
-    uint256 private _totalSupply;
-    string private _name;
-    string private _symbol;
-
-    constructor(string memory name_, string memory symbol_) {
-        _name = name_;
-        _symbol = symbol_;
-    }
-
-    function name() public view returns (string memory) {
-        return _name;
-    }
-
-    function symbol() public view returns (string memory) {
-        return _symbol;
-    }
-
-    function totalSupply() public view returns (uint256) {
-        return _totalSupply;
-    }
-
-    function balanceOf(address account) public view returns (uint256) {
-        return _balances[account];
-    }
-
-    function mint(address to, uint256 amount) public {
-        _balances[to] += amount;
-        _totalSupply += amount;
-    }
-
-    function transfer(address from, address to, uint256 amount) public {
-        require(_balances[from] >= amount, "Insufficient balance");
-        _balances[from] -= amount;
-        _balances[to] += amount;
-    }
 }
-Explanation: This contract implements the basic functionality of an ERC20 token. It includes a name, a symbol, and a total supply count. It allows minting new tokens to an address, checking the balance of an address, and transferring tokens from one address to another. Note that this code is quite simplified and does not include all features of a complete ERC20 token, such as allowances and events.
+
+}()
+
+// Do stuff
+
+// Quit goroutine
+
+Quit <- true
+```
+.
     **[⬆ Back to Top](#questions)**
 
-316. ### Decentralized Voting System
+305. ### Explain how you can write multiline strings in GO?
 
-Problem: Implement a smart contract in Solidity for a decentralized voting system. The contract should allow users to register as voters, submit their votes, and retrieve the vote count for each candidate.
+To write multiline string in GO you can use a raw string literal, where the string is delimited by back quotes rather than double quotes. ‘ line  1 line  2 line  3 ’
+    **[⬆ Back to Top](#questions)**
+
+306. ### Explain how pointer is represented in GO?
+
+In GO a pointer is represented by using the * (asterisk) character followed by the type of the stored value.
+    **[⬆ Back to Top](#questions)**
+    
+307. ### How you can format a string without printing?
+
+To format a string without printing you have to use command
+```
+return fmt.Sprintf ( "at %v, %s" , e.When , e.What )
+```
+.
+    **[⬆ Back to Top](#questions)**
+    
+308. ### Explain how arrays in GO works differently then C ?
+
+In GO Array works differently than it works in C
+
+- Arrays are values, assigning one array to another copies all the elements
+- If you pass an array to a function, it will receive a copy of the array, not a pointer to it
+- The size of an array is part of its type. The types [10] int and [20] int are distinct
+    **[⬆ Back to Top](#questions)**
+    
+309. ### Explain GO Interfaces ?
+
+In GO, interfaces is a way to specify the behaviour of an object.  An interface is created by using the “type” word, followed by a name and the keyword interface.  An interface is specified as two things.
+
+- A set of methods
+- Also it is referred as type
+    **[⬆ Back to Top](#questions)**
+
+310. ### Explain what Type assertion is used for and how it does it?
+
+Type conversion is used to convert dissimilar types in GO.  A type  assertion takes an interface value and retrieve from it a value of the specified explicit type.
+    **[⬆ Back to Top](#questions)**
+
+311. ### In GO language how you can check variable type at runtime?
+
+A special type of switch is dedicated in GO to check variable type at runtime, this switch is referred as type switch. Also, you can switch on the type of an interface value with Type Switch.
+    **[⬆ Back to Top](#questions)**
+
+312. ### How do you test in Golang?
+
+There's a four-step process when testing in Golang. First, you create a new file with a name ending in _testing. Then, add the functions specific to what you want to test and add your test file to the package. Finally, enter the 'go test' command. The test executes as soon as you enter the command.
+    **[⬆ Back to Top](#questions)**
+
+313. ### What are the uses of an empty struct in Go?
+
+Empty structs are useful when you want to save memory space, as they don't consume memory for values. There are various ways to use empty structs. One way is when a channel needs to send a signal of an event without needing to send data. I've used this approach many times to send signals without the expense of memory space.'
+    **[⬆ Back to Top](#questions)**
+
+314. ### Why is Golang faster than other languages?
+
+Golang is faster than other programming languages because of its design. It has a small syntax and concurrency model and efficient memory management. Its compilation system is also fast and can machine code quickly and efficiently. Another speed-enhancing feature is its storage arrangement. As its dependencies link to a single binary file, there's less reliance on servers, and this reduces data lag. When using Golang, the reduction in my software development cycle time is significant.
+    **[⬆ Back to Top](#questions)**
+
+315. ### What is the role of the "init" function in Go?
+
+In Go, the "init" function is a special function that is automatically called by the Go runtime when a package is initialized. It is called before the main function and can be used to perform initialization tasks for the package.
+
+The "init" function does not take any arguments and does not return a value. It is typically used to set initial values for package-level variables, establish connections to external resources such as databases, or perform any other initialization tasks that need to be performed before the main function is called.
+
+The "init" function can be defined anywhere in the package, and multiple "init" functions can be defined in the same package. All "init" functions within a package will be called by the Go runtime in the order they appear in the code.
+
+The "init" function is a useful tool for performing initialization tasks that need to be done before the main function is called, and it is often used in conjunction with the "main" package to set up the environment for the main function to run. 
+    **[⬆ Back to Top](#questions)**
+
+316. ### xxxxxxx---------xxxxxxx
+
+Problem: Implement a smart contract in Solidity for a xxxxxxx---------xxxxxxx. The contract should allow users to register as voters, submit their votes, and retrieve the vote count for each candidate.
 
 Solution:
 
