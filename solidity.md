@@ -2499,7 +2499,16 @@ Ripple’s major goal is to eliminate the customary friction caused by currency 
 
 271. ### What is the location of transactions in Ethereum?
 
-What is the location of transactions in Ethereum?
+In Ethereum, transactions are stored in blocks on the blockchain. Each block contains a list of transactions, which include the details of each transaction such as:
+
+1. Sender and receiver addresses – The Ethereum addresses involved in the transaction.
+2. Value – The amount of Ether (ETH) being transferred.
+3. Gas limit and gas price – The computational resources required to process the transaction.
+4. Nonce – A number that represents the transaction count for a specific sender, ensuring transactions are processed in the correct order.
+5. Data (optional) – Any additional data being sent with the transaction, such as for smart contract interactions.
+Transactions are added to the blockchain in a block, which is created approximately every 12-15 seconds in Ethereum. Each block has a unique identifier (block hash), and transactions can be found by searching the block containing them. The entire history of Ethereum transactions is publicly available, enabling transparency and verifiability.
+
+The Ethereum network operates in a decentralized manner, meaning no single entity controls the transaction data, and it is stored across multiple nodes that maintain the Ethereum blockchain.
     **[⬆ Back to Top](#questions)**
 
 272. ### What is Ethereum?
