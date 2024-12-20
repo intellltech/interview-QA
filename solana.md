@@ -729,167 +729,209 @@ Deploying a smart contract on Solana involves writing the contract in Rust, comp
 98. ### How do you handle conflicts within a development team?
 
 When conflicts arise, I prioritize open communication and active listening to understand all perspectives. I facilitate a collaborative discussion where team members can express their concerns and work together to find a mutually agreeable solution. Additionally, I emphasize the importance of focusing on common goals and maintaining respect throughout the process, ensuring that the team remains cohesive and motivated.
+   **[⬆ Back to Top](#questions)**
 
 99. ### Can you describe a time when you had to collaborate with a non-technical team member?
 
 In a previous project, I worked closely with a marketing team member to develop a user-friendly interface for our decentralized application. Despite their lack of technical knowledge, I took the time to explain the technical constraints and possibilities in simple terms, which helped us align our goals. We held regular meetings to discuss progress and gather feedback, ultimately resulting in a product that met both technical standards and user expectations.
+   **[⬆ Back to Top](#questions)**
 
 100. ### What tools do you use for team communication and project management?
 
 For team communication, we primarily use Slack for real-time messaging and Zoom for video conferencing. For project management, we rely on Jira to track tasks and progress, and Confluence for documentation and knowledge sharing. These tools help us maintain clear communication, streamline workflows, and ensure everyone is on the same page.
+   **[⬆ Back to Top](#questions)**
 
 101. ### How do you ensure that everyone on the team is on the same page?
 
 To keep everyone on the same page, I implement regular stand-up meetings where team members share updates and address any blockers. Additionally, I use project management tools like Trello to track progress and ensure transparency. This approach helps us stay aligned and quickly adapt to any changes or challenges.
+   **[⬆ Back to Top](#questions)**
 
 102. ### How do you handle feedback from team members or stakeholders?
 
 I view feedback as an opportunity for growth and actively seek it from both team members and stakeholders. When I receive feedback, I listen carefully, ask clarifying questions if needed, and reflect on how I can incorporate it into my work. For instance, in a recent project, a stakeholder suggested a different approach to our user interface design. I took their feedback into account, discussed it with the team, and we collaboratively adjusted our design, resulting in a more user-friendly product.
+   **[⬆ Back to Top](#questions)**
 
 103. ### How would you approach debugging a smart contract on Solana?
 
 To debug a smart contract on Solana, I start by using the Solana CLI to check transaction logs and identify any errors. I then utilize the Anchor framework's built-in testing suite to write and run unit tests, isolating the problematic code. Additionally, I employ tools like Solana Explorer to monitor on-chain activity and verify the contract's behavior in real-time. By systematically narrowing down the issue and leveraging these tools, I ensure the smart contract functions as intended.
+   **[⬆ Back to Top](#questions)**
 
 104. ### Describe a time when you had to optimize a piece of code for performance. What steps did you take?
 
 In a previous project, I noticed that our application's response time was lagging due to inefficient database queries. I started by profiling the code to identify bottlenecks and found that several queries were not indexed properly. I optimized these queries by adding appropriate indexes and refactoring the code to reduce redundant operations. Additionally, I implemented caching for frequently accessed data, which significantly improved the application's performance and reduced server load.
+   **[⬆ Back to Top](#questions)**
 
 105. ### How do you handle unexpected errors or bugs in a live blockchain application?
 
 When unexpected errors or bugs occur in a live blockchain application, I prioritize immediate containment by isolating the affected components to prevent further issues. I then perform a root cause analysis using tools like Solana Explorer and transaction logs to identify the source of the problem. Once identified, I deploy a hotfix if necessary and thoroughly test the solution in a staging environment before applying it to the live system. Additionally, I implement monitoring and alerting systems to detect and respond to future issues proactively.
+   **[⬆ Back to Top](#questions)**
 
 106. ### Explain how you would design a decentralized application (dApp) on Solana from scratch.
 
 To design a decentralized application on Solana, I would start by defining the application's core functionality and user requirements. Next, I would architect the system, choosing Rust for smart contract development due to its performance and safety features. I would use the Anchor framework to streamline the development and deployment of these contracts. For the frontend, I would select a modern JavaScript framework like React, integrating it with Solana's Web3.js library to interact with the blockchain. I would also implement a robust security strategy, including code audits and formal verification, to ensure the dApp's integrity. Finally, I would deploy the smart contracts using the Solana CLI and continuously monitor the application's performance and security post-deployment.
+   **[⬆ Back to Top](#questions)**
 
 107. ### What strategies do you use to ensure the security of your smart contracts?
 
 To ensure the security of my smart contracts, I implement a multi-layered approach that includes rigorous code reviews, automated testing, and formal verification methods. I also follow best practices such as using well-audited libraries, minimizing the use of external dependencies, and employing static analysis tools to detect vulnerabilities. Additionally, I stay updated with the latest security advisories and participate in bug bounty programs to proactively identify and address potential threats.
+   **[⬆ Back to Top](#questions)**
 
 108. ### What is the Solana runtime and how does it differ from other blockchain runtimes?
 
 The Solana runtime is designed to execute transactions in parallel, leveraging a unique Proof of History (PoH) mechanism to achieve high throughput and low latency. Unlike other blockchain runtimes that rely on sequential processing, Solana's runtime allows for concurrent transaction execution, significantly enhancing scalability and performance. This parallel processing capability, combined with the Tower BFT consensus algorithm, ensures fast and secure transaction finality, making Solana a highly efficient blockchain platform.
+   **[⬆ Back to Top](#questions)**
 
 109. ### Can you explain the concept of Proof of History (PoH) and its role in Solana?
 
 Proof of History (PoH) is a cryptographic clock that provides a verifiable sequence of events, enabling Solana to achieve high throughput and low latency. By timestamping transactions, PoH allows nodes to agree on the order of events without extensive communication, thus streamlining consensus and enhancing scalability. This mechanism is integral to Solana's ability to process thousands of transactions per second, making it one of the fastest blockchains available.
+   **[⬆ Back to Top](#questions)**
 
 110. ### How do you deploy a smart contract on Solana?
 
 Deploying a smart contract on Solana involves writing the contract in Rust, compiling it to a Solana Program Library (SPL) format, and then using the Solana CLI to deploy it to the blockchain. First, you create and build your project using Anchor, a framework for Solana programs. After building, you generate a keypair for your program and use the solana program deploy command to upload the compiled binary to the Solana cluster. Finally, you interact with the deployed contract using client-side scripts or applications, ensuring it functions as intended.
+   **[⬆ Back to Top](#questions)**
 
 111. ### What are the key differences between Solana's Sealevel runtime and Ethereum's EVM?
 
 Solana's Sealevel runtime allows for parallel transaction execution, significantly enhancing throughput and scalability, while Ethereum's EVM processes transactions sequentially, which can lead to bottlenecks and slower performance. Sealevel leverages Solana's Proof of History (PoH) to timestamp transactions, enabling concurrent processing, whereas the EVM relies on a more traditional Proof of Work (PoW) or Proof of Stake (PoS) consensus mechanism, which can limit its transaction speed and efficiency.
+   **[⬆ Back to Top](#questions)**
 
 112. ### How do you handle transaction fees in Solana?
 
 In Solana, I handle transaction fees by leveraging its low-cost structure, ensuring that transactions are bundled efficiently to minimize costs. I also monitor fee fluctuations and adjust transaction timing to take advantage of lower fee periods, and I use tools like the Solana Explorer to track and analyze fee patterns, optimizing our application's performance and cost-effectiveness.
+   **[⬆ Back to Top](#questions)**
 
 113. ### What is the consensus mechanism used by Solana?
 
 Solana uses the Tower BFT consensus algorithm, which is an optimized version of Practical Byzantine Fault Tolerance (PBFT) that leverages the Proof of History (PoH) mechanism to achieve fast and secure consensus, enabling the network to process thousands of transactions per second with low latency.
+   **[⬆ Back to Top](#questions)**
 
 114. ### How does Solana achieve high throughput and low latency?
 
 Solana achieves high throughput and low latency through its unique Proof of History (PoH) mechanism, which timestamps transactions to create a verifiable order of events, allowing for parallel processing and reducing the need for extensive communication between nodes. This, combined with the Tower BFT consensus algorithm, enables the network to process thousands of transactions per second efficiently.
+   **[⬆ Back to Top](#questions)**
 
 115. ### What are Solana clusters and how do they work?
 
 Solana clusters are groups of validators that work together to maintain the integrity and performance of the network. Each cluster operates independently, processing transactions and producing blocks, but they can communicate with other clusters to ensure a cohesive and scalable blockchain ecosystem. This architecture allows Solana to handle a high volume of transactions while maintaining decentralization and security.
+   **[⬆ Back to Top](#questions)**
 
 116. ### Explain the concept of Proof of History (PoH) in Solana.
 
 PoH is a decentralized clock that allows nodes to agree on the time order of events without relying on synchronized clocks.
+   **[⬆ Back to Top](#questions)**
 
 117. ### How does Solana handle smart contracts?
 
 Solana supports smart contracts written in popular programming languages like Rust and C, instead of a proprietary language.
+   **[⬆ Back to Top](#questions)**
 
 118. ### What is the role of the SOL token in the Solana ecosystem?
 
 SOL is used for staking, transaction fees, and can also serve as a native token in various decentralized applications.
+   **[⬆ Back to Top](#questions)**
 
 119. ### Describe Solana's architecture. How does it achieve scalability?
 
 Solana uses a single, compressed data structure called the Tower BFT for consensus, combined with the PoH, which helps in achieving scalability.
+   **[⬆ Back to Top](#questions)**
 
 120. ### What are Solana Programs and how are they different from traditional smart contracts?
 
 Solana Programs are like smart contracts but are built using systems programming languages, offering more flexibility and performance.
+   **[⬆ Back to Top](#questions)**
 
 121. ### How do you handle data storage on Solana?
 
 Solana uses accounts for data storage, which can be owned by Solana programs and can store arbitrary data.
+   **[⬆ Back to Top](#questions)**
 
 122. ### Describe the Solana CLI.
 
 The Solana Command-Line Interface (CLI) is a set of tools to interact with the Solana cluster, manage keys, deploy programs, and more.
+   **[⬆ Back to Top](#questions)**
 
 123. ### How do you handle cross-chain compatibility on Solana?
 
 With the use of bridges like Wormhole, assets and data can be transferred between Solana and other blockchains.
+   **[⬆ Back to Top](#questions)**
 
 124. ### How is transaction processing parallelized in Solana?
 
 Solana uses a technique called Sealevel, which parallelizes transaction processing using runtime-specific hardware features.
+   **[⬆ Back to Top](#questions)**
 
 125. ### What is the significance of the Solana Beach?
 
 Solana Beach is a dashboard that provides real-time insights into the Solana network, including transaction volume, current slot, and validator details.
+   **[⬆ Back to Top](#questions)**
 
 126. ### Explain the role of validators in the Solana network.
 
 Validators participate in the consensus, validate transactions, and produce new blocks in the Solana blockchain.
+   **[⬆ Back to Top](#questions)**
 
 127. ### How does staking work in the Solana ecosystem?
 
 Users can stake SOL tokens by delegating them to validators, which helps secure the network and earn rewards.
+   **[⬆ Back to Top](#questions)**
 
 128. ### What tools does Solana provide for developers?
 
 Solana offers the Solana Program Library (SPL), the aforementioned CLI, and a suite of webjs utilities.
+   **[⬆ Back to Top](#questions)**
 
 129. ### How is token creation and management facilitated on Solana?
 
 Solana's Token Program allows developers to issue and manage their own tokens.
+   **[⬆ Back to Top](#questions)**
 
 130. ### What is the Solana Foundation?
 
 It's a non-profit organization dedicated to supporting the growth and development of the Solana ecosystem.
+   **[⬆ Back to Top](#questions)**
 
 131. ### How does Solana handle network upgrades or hard forks?
 
 Solana has a built-in on-chain upgrade mechanism to minimize network disruptions during upgrades.
+   **[⬆ Back to Top](#questions)**
 
 132. ### Describe the role of leaders in Solana's consensus mechanism.
 
 Leaders are elected by the network's staked validators and are responsible for producing and transmitting new blocks.
+   **[⬆ Back to Top](#questions)**
 
 133. ### How do you ensure security in Solana dApps?
 
 By following best practices in smart contract development, using official SDKs, and regularly auditing contracts.
+   **[⬆ Back to Top](#questions)**
 
 134. ### Can you integrate Solana with existing dApps on other platforms?
 
 Yes, using bridges and cross-chain protocols, dApps can communicate and operate across multiple blockchains including Solana.
+   **[⬆ Back to Top](#questions)**
 
 135. ### How is the fee structure determined on the Solana network?
 
 Fees are based on the computational load of the transaction and are used to compensate validators for their work.
+   **[⬆ Back to Top](#questions)**
 
 136. ### How do you test and deploy applications on the Solana network?
 
 Developers can use Solana's Devnet for testing and then deploy to Mainnet-Beta for production.
+   **[⬆ Back to Top](#questions)**
 
 137. ### Describe Solana's approach to sharding.
 
 Solana doesn't use traditional sharding. Instead, its scalability is achieved through parallel processing techniques and PoH.
+   **[⬆ Back to Top](#questions)**
 
 138. ### How is data replication handled in Solana?
 
 Solana uses a mechanism called Gulf Stream, where transaction caching is done on the client side, minimizing the need for data replication.
+   **[⬆ Back to Top](#questions)**
 
 139. ### How do you handle private transactions on Solana?
 
 While Solana's mainnet is transparent, there are efforts in the community to implement privacy features and solutions.
+   **[⬆ Back to Top](#questions)**
