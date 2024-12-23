@@ -1,4 +1,4 @@
-# Golang Interview Questions & Answers
+# Solana Interview Questions & Answers
 
 ### Questions
 
