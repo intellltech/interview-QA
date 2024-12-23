@@ -11,15 +11,11 @@
 | 4   | [Are you interviewing with other companies?](#Are-you-interviewing-with-other-companies)
 | 5   | [When can you start?](#When-can-you-start)
 | 6   | [Do you have any questions?](#Do-you-have-any-questions)
-| 7   | [How does Solana address scalability challenges in blockchain technology?](#How-does-Solana-address-scalability-challenges-in-blockchain-technology)
-| 8   | [What are some real-world applications of Solana?](#What-are-some-real-world-applications-of-Solana)
-| 9   | [How does Solana ensure security and decentralization?](#How-does-Solana-ensure-security-and-decentralization)
-| 10   | [What is Solana's approach to handling smart contracts?](#What-is-Solanas-approach-to-handling-smart-contracts)
-| 11   | [How does Solana compare to other popular blockchain platforms like Ethereum and Binance Smart Chain?](#How-does-Solana-compare-to-other-popular-blockchain-platforms-like-Ethereum-and-Binance-Smart-Chain)
-| 12   | [What is Solana's transaction throughput and how does it achieve such high numbers?](#What-is-Solanas-transaction-throughput-and-how-does-it-achieve-such-high-numbers)
-| 13   | [How does Solana handle network congestion and scalability issues?](#How-does-Solana-handle-network-congestion-and-scalability-issues)
-| 14   | [What are Solana's plans for future development and growth?](#What-are-Solanas-plans-for-future-development-and-growth)
-| 15   | [How does Solana ensure transaction finality and immutability?](#How-does-Solana-ensure-transaction-finality-and-immutability)
+| 7   | [Walk me through a recent project you worked on. What was your role, and what was the outcome?](#Walk-me-through-a-recent-project-you-worked-on-What-was-your-role-and-what-was-the-outcome)
+| 8   | [Can you describe a challenging bug you encountered? How did you debug and resolve it?](#Can-you-describe-a-challenging-bug-you-encountered-How-did-you-debug-and-resolve-it)
+| 9   | [How do you stay updated on the latest trends and advancements in software engineering?](#How-do-you-stay-updated-on-the-latest-trends-and-advancements-in-software-engineering)
+| 10   | [How do you ensure effective communication when working on a remote or distributed team?](#How-do-you-ensure-effective-communication-when-working-on-a-remote-or-distributed-team)
+| 11   | [xxxxxxxxx](#xxxxxxxxx)
 
 ## Answers
 1. ### Tell me about yourself?
@@ -56,51 +52,27 @@ I’m available to start immediately. However, I’m flexible if an earlier or l
 Yes, I do. Could you share what the immediate priorities are for this role? Also, what is the company’s long-term vision for blockchain innovation?
     **[⬆ Back to Top](#questions)**
     
-7. ### How does Solana address scalability challenges in blockchain technology?
+7. ### Walk me through a recent project you worked on. What was your role, and what was the outcome?
 
-Solana addresses scalability challenges by utilizing a combination of innovative technologies such as Proof of History, Tower Consensus, and Gulf Stream. These technologies enable Solana to process thousands of transactions per second and support the growing demands of decentralized applications.
+At Zapper, I led a project to enhance cross-chain asset management, enabling users to manage assets across Ethereum, Binance Smart Chain, and Layer-2 solutions like Optimism. I designed smart contract bridges, optimized backend processes, and collaborated with the UI team to improve usability. The result was a seamless multi-chain experience, driving user adoption and solidifying Zapper's position in DeFi.
     **[⬆ Back to Top](#questions)**
     
-8. ### What are some real-world applications of Solana?
+8. ### Can you describe a challenging bug you encountered? How did you debug and resolve it?
 
-Solana is suitable for a wide range of real-world applications, including decentralized finance (DeFi), non-fungible tokens (NFTs), gaming, decentralized exchanges (DEXs), and more. Its high throughput and low latency make it well-suited for applications that require fast and efficient transaction processing.
+I faced a bug in Zapper’s portfolio aggregation where data fetches failed intermittently on Binance Smart Chain. After replicating the issue and using debugging tools like Hardhat, I discovered undocumented API changes. I fixed it by implementing a retry mechanism and dynamic API handling, ensuring reliable performance and adding better monitoring for future issues.
     **[⬆ Back to Top](#questions)**
     
-9. ### How does Solana ensure security and decentralization?
+9. ### How do you stay updated on the latest trends and advancements in software engineering?
 
-Solana ensures security and decentralization through its robust consensus mechanism, which relies on a network of validators to confirm transactions and maintain the integrity of the blockchain. Additionally, Solana's architecture is designed to prevent centralized control and censorship, further enhancing its security and decentralization.
+I follow industry blogs, participate in forums, engage in communities like Ethereum, and experiment with new technologies. I also take online courses and stay connected with peers to exchange knowledge on emerging trends.
     **[⬆ Back to Top](#questions)**
 
-10. ### What is Solana's approach to handling smart contracts?
+10. ### How do you ensure effective communication when working on a remote or distributed team?
 
-Solana supports smart contracts through its Solana Program Library (SPL), which provides a framework for developing and deploying decentralized applications (dApps) on the Solana blockchain. Smart contracts on Solana are written in Rust and compiled to bytecode for execution on the network.
+I prioritize structured communication through tools like Slack and Jira, provide regular updates in stand-ups, and maintain transparency about progress and blockers. I align work across time zones by scheduling overlaps for real-time collaboration and using asynchronous updates when needed.
     **[⬆ Back to Top](#questions)**
     
-11. ### How does Solana compare to other popular blockchain platforms like Ethereum and Binance Smart Chain?
+11. ### xxxxxxxxx
 
 Solana offers several advantages over other blockchain platforms, including higher throughput, lower latency, and lower transaction costs. Additionally, Solana's architecture is designed to support decentralized applications with high computational requirements, making it a competitive option for developers.
-   **[⬆ Back to Top](#questions)**
-
-12. ### What is Solana's transaction throughput and how does it achieve such high numbers?
-
-Solana's transaction throughput can reach tens of thousands of transactions per second (TPS) under optimal conditions. It achieves this high throughput through its unique combination of Proof of History, Tower Consensus, and Gulf Stream, which enable parallel transaction processing and minimize communication overhead.
-   **[⬆ Back to Top](#questions)**
-
-13. ### How does Solana handle network congestion and scalability issues?
-
-Solana is designed to handle network congestion and scalability issues through its scalable architecture and innovative consensus mechanism. By allowing for parallel transaction processing and minimizing communication overhead, Solana can maintain high throughput and low latency even under heavy network load.
-   **[⬆ Back to Top](#questions)**
-
-14. ### What are Solana's plans for future development and growth?
-
-Solana has ambitious plans for future development and growth, including expanding its ecosystem of decentralized applications, improving scalability and interoperability, and enhancing security and decentralization. Additionally, Solana is actively investing in research and development to push the boundaries of blockchain technology further.
-```
-def is_transaction_final(tx_hash):
-    return tx_hash in confirmed_transactions
-```
-   **[⬆ Back to Top](#questions)**
-
-15. ### How does Solana ensure transaction finality and immutability?
-
-Solana ensures transaction finality and immutability through its consensus mechanism, which relies on a network of validators to confirm transactions and reach agreement on the state of the blockchain. Once a transaction is confirmed by a sufficient number of validators, it is considered final and cannot be reversed.
    **[⬆ Back to Top](#questions)**
