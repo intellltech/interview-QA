@@ -54,6 +54,55 @@
 | 47  | [Removing All Whitespace in a String](#removing-all-whitespace-in-a-string)                                                                                                                                             |
 | 48  | [Building a Pyramid in Python](#building-a-pyramid-in-python)                                                                                                                                                           |
 | 49  | [Randomizing the Items of a List in Python](#randomizing-the-items-of-a-list-in-python)                                                                                                                                 |
+|     | [Top Python Theoritical Interview Questions and Answers](#top-python-theoritical-interview-questions-and-answers)                                                                                                       |
+| 50  | [Explain Python?](#explain-python)                                                                                                                                                                                      |
+| 51  | [What are the distinct features of Python?](#what-are-the-distinct-features-of-python)                                                                                                                                  |
+| 52  | [What is Python path?](#what-is-python-path)                                                                                                                                                                            |
+| 53  | [What are the supported standard data types in Python?](#what-are-the-supported-standard-data-types-in-python)                                                                                                          |
+| 54  | [Define tuples in Python?](#define-tuples-in-python)                                                                                                                                                                    |
+| 55  | [What are the positive and negative indices?](#what-are-the-positive-and-negative-indices)                                                                                                                              |
+| 56  | [What can be the length of the identifier in Python?](#what-can-be-the-length-of-the-identifier-in-python)                                                                                                              |
+| 57  | [Define Pass statement in Python?](#define-pass-statement-in-python)                                                                                                                                                    |
+| 58  | [What are the limitations of Python?](#what-are-the-limitations-of-python)                                                                                                                                              |
+| 59  | [Do runtime errors exist in Python? Give an example?](#do-runtime-errors-exist-in-python-give-an-example)                                                                                                               |
+| 60  | [Why do we need a break in Python?](#why-do-we-need-a-break-in-python)                                                                                                                                                  |
+| 61  | [Why do we need a continue in Python?](#why-do-we-need-a-continue-in-python)                                                                                                                                            |
+| 62  | [Can we use a break and continue together in Python? How?](#can-we-use-a-break-and-continue-together-in-python-how)                                                                                                     |
+| 63  | [Does Python support an intrinsic do-while loop?](#does-python-support-an-intrinsic-do-while-loop)                                                                                                                      |
+| 64  | [How many ways can be applied for applying reverse string?](#how-many-ways-can-be-applied-for-applying-reverse-string)                                                                                                  |
+| 65  | [What are the different stages of the Life Cycle of a Thread?](#what-are-the-different-stages-of-the-life-cycle-of-a-thread)                                                                                            |
+| 66  | [What is the purpose of relational operators in Python?](#what-is-the-purpose-of-relational-operators-in-python)                                                                                                        |
+| 67  | [What are assignment operators in Python?](#what-are-assignment-operators-in-python)                                                                                                                                    |
+| 68  | [Why do we need membership operators in Python?](#why-do-we-need-membership-operators-in-python)                                                                                                                        |
+| 69  | [How are identity operators different than the membership operators?](#how-are-identity-operators-different-than-the-membership-operators)                                                                              |
+| 70  | [Describe how multithreading is achieved in Python?](#describe-how-multithreading-is-achieved-in-python)                                                                                                                |
+| 71  | [What is Inheritance in Python?](#what-is-inheritance-in-python)                                                                                                                                                        |
+| 72  | [What are the different types of inheritance?](#what-are-the-different-types-of-inheritance)                                                                                                                            |
+| 73  | [Explain memory managed in Python?](#explain-memory-managed-in-python)                                                                                                                                                  |
+| 74  | [What are Python decorators?](#what-are-python-decorators)                                                                                                                                                              |
+| 75  | [What do you understand by the process of compilation and linking in Python?](#what-do-you-understand-by-the-process-of-compilation-and-linking-in-python)                                                              |
+| 76  | [What is the map() function used for in Python?](#what-is-the-map-function-used-for-in-python)                                                                                                                          |
+| 77  | [How will you distinguish between NumPy and SciPy?](#how-will-you-distinguish-between-numpy-and-scipy)                                                                                                                  |
+| 78  | [What is the lambda function?](#what-is-the-lambda-function)                                                                                                                                                            |
+| 80  | [Differentiate between list and tuple?](#differentiate-between-list-and-tuple)                                                                                                                                          |
+| 81  | [What is the // operator? What is its use?](#what-is-the--operator-what-is-its-use)                                                                                                                                     |
+| 82  | [What is monkey patching in Python?](#what-is-monkey-patching-in-python)                                                                                                                                                |
+| 83  | [What is the split function used for?](#what-is-the-split-function-used-for)                                                                                                                                            |
+| 84  | [Explain the Dogpile effect?](#explain-the-dogpile-effect)                                                                                                                                                              |
+| 85  | [What is a pass in Python?](#what-is-a-pass-in-python)                                                                                                                                                                  |
+| 86  | [Define slicing in Python.](#define-slicing-in-python)                                                                                                                                                                  |
+| 87  | [What are docstring?](#what-are-docstring)                                                                                                                                                                              |
+| 88  | [What is [::-1] used for?](#what-is--1-used-for)                                                                                                                                                                        |
+| 89  | [Define Python Iterators](#define-python-iterators)                                                                                                                                                                     |
+| 90  | [How are comments written in Python?](#how-are-comments-written-in-python)                                                                                                                                              |
+| 91  | [How to capitalize the first letter of string?](#how-to-capitalize-the-first-letter-of-string)                                                                                                                          |
+| 92  | [What is, not and in operators?](#what-is-not-and-in-operators)                                                                                                                                                         |
+| 93  | [How are files deleted in Python?](#how-are-files-deleted-in-python)                                                                                                                                                    |
+| 94  | [Does Python support multiple inheritances?](#does-python-support-multiple-inheritances)                                                                                                                                |
+| 95  | [What does the method object() do?](#what-does-the-method-object-do)                                                                                                                                                    |
+| 96  | [What is pep 8?](#what-is-pep-8)                                                                                                                                                                                        |
+| 97  | [What is namespace in Python?](#what-is-namespace-in-python)                                                                                                                                                            |
+| 98  | [Is indentation necessary in Python?](#is-indentation-necessary-in-python)                                                                                                                                              |
 
 ## Answers
 
@@ -1582,5 +1631,355 @@ print(lst)
 
 
 ```
+
+**[⬆ Back to Top](#questions)**
+
+# Top Python Theoritical Interview Questions and Answers
+
+50. ## Explain Python?
+
+Python is a highly comprehensive, interactive, and object-oriented scriptwriting language. It was developed to make the content highly readable among net surfers. Python makes use of various English keywords other than just punctuations.
+
+**[⬆ Back to Top](#questions)**
+
+51. ## What are the distinct features of Python?
+
+- Structured and functional programmings are supported.
+- It can be compiled to byte-code for creating larger applications.
+- Develops high-level dynamic data types.
+- Supports checking of dynamic data types.
+- Applies automated garbage collection.
+- It could be used effectively along with Java, COBRA, C, C++, ActiveX, and COM.
+
+**[⬆ Back to Top](#questions)**
+
+52. ## What is Python path?
+
+A Python path tells the Python interpreter to locate the module files that can be imported into the program. It includes the Python source library directory and source code directory.
+
+**[⬆ Back to Top](#questions)**
+
+53. ## What are the supported standard data types in Python?
+
+The supported standard data types in Python include the following.
+
+- List
+- Number
+- String
+- Dictionary
+- Tuples
+
+**[⬆ Back to Top](#questions)**
+
+54. ## Define tuples in Python?
+
+Tuples is a sequence data type in Python. The number of values in tuples are separated by commas.
+
+**[⬆ Back to Top](#questions)**
+
+55. ## What are the positive and negative indices?
+
+In the positive indices are applied the search beings from left to the right. In the case of the negative indices, the search begins from right to left. For example, in the array list of size n the positive index, the first index is 0, then comes 1 and until the last index is n-1. However, in the negative index, the first index is -n, then -(n-1) until the last index will be -1
+
+**[⬆ Back to Top](#questions)**
+
+56. ## What can be the length of the identifier in Python?
+
+The length of the identifier in Python can be of any length. The longest identifier will violate from PEP – 8 and PEP – 20.
+
+**[⬆ Back to Top](#questions)**
+
+57. ## Define Pass statement in Python?
+
+A Pass statement in Python is used when we cannot decide what to do in our code, but we must type something for making syntactically correct.
+
+**[⬆ Back to Top](#questions)**
+
+58. ## What are the limitations of Python?
+
+There are certain limitations of Python, which include the following:
+
+- It has design restrictions.
+- It is slower when compared with C and C++ or Java.
+- It is inefficient in mobile computing.
+- It consists of an underdeveloped database access layer.
+
+**[⬆ Back to Top](#questions)**
+
+59. ## Do runtime errors exist in Python? Give an example?
+
+Yes, runtime errors exist in Python. For example, if you are duck typing and things look like a duck, then it is considered as a duck even if that is just a flag or stamp or any other thing. The code, in this case, would be A Run-time error. For example, Print “Hackr io”, then the runtime error would be the missing parenthesis that is required by print ( ).
+
+**[⬆ Back to Top](#questions)**
+
+60. ## Why do we need a break in Python?
+
+Break helps in controlling the Python loop by breaking the current loop from execution and transfer the control to the next block.
+
+**[⬆ Back to Top](#questions)**
+
+61. ## Why do we need a continue in Python?
+
+A continue also helps in controlling the Python loop but by making jumps to the next iteration of the loop without exhausting it.
+
+**[⬆ Back to Top](#questions)**
+
+62. ## Can we use a break and continue together in Python? How?
+
+Break and continue can be used together in Python. The break will stop the current loop from execution, while jump will take to another loop.
+
+**[⬆ Back to Top](#questions)**
+
+63. ## Does Python support an intrinsic do-while loop?
+
+No Python does not support an intrinsic do-while loop.
+
+**[⬆ Back to Top](#questions)**
+
+64. ## How many ways can be applied for applying reverse string?
+
+There are five ways in which the reverse string can be applied which include the following.
+
+- Loop
+- Recursion
+- Stack
+- Extended Slice Syntax
+- Reversed
+
+**[⬆ Back to Top](#questions)**
+
+65. ## What are the different stages of the Life Cycle of a Thread?
+
+The different stages of the Life Cycle of a Thread can be stated as follows.
+Stage 1: Creating a class where we can override the run method of the Thread class.
+Stage 2: We make a call to start() on the new thread. The thread is taken forward for scheduling purposes.
+Stage 3: Execution takes place wherein the thread starts execution, and it reaches the running state.
+Stage 4: Thread wait until the calls to methods including join() and sleep() takes place.
+Stage 5: After the waiting or execution of the thread, the waiting thread is sent for scheduling.
+Stage 6: Running thread is done by executing the terminates and reaches the dead state.
+
+**[⬆ Back to Top](#questions)**
+
+66. ## What is the purpose of relational operators in Python?
+
+The purpose of relational operators in Python is to compare values.
+
+**[⬆ Back to Top](#questions)**
+
+67. ## What are assignment operators in Python?
+
+The assignment operators in Python can help in combining all the arithmetic operators with the assignment symbol.
+
+**[⬆ Back to Top](#questions)**
+
+68. ## Why do we need membership operators in Python?
+
+We need membership operators in Python with the purpose to confirm if the value is a member in another or not.
+
+**[⬆ Back to Top](#questions)**
+
+69. ## How are identity operators different than the membership operators?
+
+Unlike membership operators, the identity operators compare the values to find out if they have the same value or not.
+
+**[⬆ Back to Top](#questions)**
+
+70. ## Describe how multithreading is achieved in Python?
+
+Even though Python comes with a multi-threading package, if the motive behind multithreading is to speed the code then using the package is not the go-to option.
+
+The package has something called the GIL or Global Interpreter Lock, which is a construct. It ensures that one and only one of the threads execute at any given time. A thread acquires the GIL and then do some work before passing it to the next thread.
+
+This happens so fast that to a user it seems that threads are executing in parallel. Obviously, this is not the case as they are just taking turns while using the same CPU core. Moreover, GIL passing adds to the overall overhead to the execution.
+
+Hence, if you intend to use the threading package for speeding up the execution, using the package is not recommended.
+
+**[⬆ Back to Top](#questions)**
+
+71. ## What is Inheritance in Python?
+
+Inheritance enables a class to acquire all the members of another class. These members can be attributes, methods, or both. By providing reusability, inheritance makes it easier to create as well as maintain an application.
+
+The class which acquires is known as the child class or the derived class. The one that it acquires from is known as the superclass or base class or the parent class
+
+**[⬆ Back to Top](#questions)**
+
+72. ## What are the different types of inheritance?
+
+- Single Inheritance – A single derived class acquires from on single superclass.
+- Multi-Level Inheritance – At least 2 different derived classes acquire from two distinct base classes.
+- Hierarchical Inheritance – A number of child classes acquire from one superclass
+- Multiple Inheritance – A derived class acquires from several superclasses.
+
+**[⬆ Back to Top](#questions)**
+
+73. ## Explain memory managed in Python?
+
+Python private heap space takes place of memory management in Python. It contains all Python objects and data structures. The interpreter is responsible to take care of this private heap and the programmer does not have access to it. The Python memory manager is responsible for the allocation of Python heap space for Python objects. The programmer may access some tools for the code with the help of the core API. Python also provides an inbuilt garbage collector, which recycles all the unused memory and frees the memory and makes it available to heap space.
+
+**[⬆ Back to Top](#questions)**
+
+74. ## What are Python decorators?
+
+A specific change made in Python syntax to alter the functions easily are termed as Python decorators.
+
+**[⬆ Back to Top](#questions)**
+
+75. ## What do you understand by the process of compilation and linking in Python?
+
+In order to compile new extensions without any error, compiling and linking is used in Python. Linking initiates only and only when the compilation is complete.
+
+In the case of dynamic loading, the process of compilation and linking depends on the style that is provided with the concerned system. In order to provide dynamic loading of the configuration setup files and rebuilding the interpreter, the Python interpreter is used.
+
+**[⬆ Back to Top](#questions)**
+
+76. ## What is the map() function used for in Python?
+
+The map() function applies a given function to each item of an iterable. It then returns a list of the results. The value returned from the map() function can then be passed on to functions to the likes of the list() and set().
+
+Typically, the given function is the first argument and the iterable is available as the second argument to a map() function. Several tables are given if the function takes in more than one arguments.
+
+**[⬆ Back to Top](#questions)**
+
+77. ## How will you distinguish between NumPy and SciPy?
+
+Typically, NumPy contains nothing but the array data type and the most basic operations, such as basic element-wise functions, indexing, reshaping, and sorting. All the numerical code resides in SciPy.
+
+As one of NumPy’s most important goals is compatibility, the library tries to retain all features supported by either of its predecessors. Hence, NumPy contains a few linear algebra functions despite the fact that these more appropriately belong to the SciPy library.
+
+SciPy contains fully-featured versions of the linear algebra modules available to NumPy in addition to several other numerical algorithms.
+
+**[⬆ Back to Top](#questions)**
+
+78. ## What is the lambda function?
+
+An anonymous function is known as a lambda function. This function can have only one statement but can have any number of parameters.
+
+**[⬆ Back to Top](#questions)**
+
+80. ## Differentiate between list and tuple?
+
+Tuple is not mutable it can be hashed eg. key for dictionaries. On the other hand, lists are mutable.
+
+**[⬆ Back to Top](#questions)**
+
+81. ## What is the // operator? What is its use?
+
+The // is a Floor Divisionoperator used for dividing two operands with the result as quotient displaying digits before the decimal point. For instance, 10//5 = 2 and 10.0//5.0 = 2.0.
+
+**[⬆ Back to Top](#questions)**
+
+82. ## What is monkey patching in Python?
+
+The dynamic modifications made to a class or module at runtime are termed as monkey patching in Python
+
+**[⬆ Back to Top](#questions)**
+
+83. ## What is the split function used for?
+
+The split function breaks the string into shorter strings using the defined separator. It returns the list of all the words present in the string.
+
+**[⬆ Back to Top](#questions)**
+
+84. ## Explain the Dogpile effect?
+
+The event when the cache expires and websites are hit by multiple requests made by the client at the same time. Using a semaphore lock prevents the Dogpile effect. In this system when value expires, the first process acquires the lock and starts generating new value.
+
+**[⬆ Back to Top](#questions)**
+
+85. ## What is a pass in Python?
+
+No-operation Python statement refers to pass. It is a place holder in the compound statement, where there should have a blank left or nothing written there.
+
+**[⬆ Back to Top](#questions)**
+
+86. ## Define slicing in Python.
+
+Slicing refers to the mechanism to select the range of items from sequence types like lists, tuples, strings
+
+**[⬆ Back to Top](#questions)**
+
+87. ## What are docstring?
+
+Docstring is a Python documentation string, it is a way of documenting Python functions, classes and modules.
+
+**[⬆ Back to Top](#questions)**
+
+88. ## What is [::-1] used for?
+
+[::-1] reverses the order of an array or a sequence. However, the original array or the list remains unchanged.
+
+**[⬆ Back to Top](#questions)**
+
+89. ## Define Python Iterators
+
+Group of elements, containers or objects that can be traversed.
+
+**[⬆ Back to Top](#questions)**
+
+90. ## How are comments written in Python?
+
+Comments in Python start with a # character, they can also be written within docstring(String within triple quotes)
+
+**[⬆ Back to Top](#questions)**
+
+91. ## How to capitalize the first letter of string?
+
+Capitalize() method capitalizes the first letter of the string, and if the letter is already capital it returns the original string
+
+**[⬆ Back to Top](#questions)**
+
+92. ## What is, not and in operators?
+
+Operators are functions that take two or more values and returns the corresponding result.
+
+- is: returns true when two operands are true
+- not: returns inverse of a boolean value
+- in: checks if some element is present in some sequence.
+
+**[⬆ Back to Top](#questions)**
+
+93. ## How are files deleted in Python?
+
+To delete a file in Python:
+
+- Import OS module
+- Use os.remove() function
+
+**[⬆ Back to Top](#questions)**
+
+94. ## Does Python supports multiple inheritances?
+
+Yes, in Python a class can be derived from more than one parent class.
+
+**[⬆ Back to Top](#questions)**
+
+95. ## What does the method object() do?
+
+The method returns a featureless object that is base for all classes. This method does not take any parameters.
+
+**[⬆ Back to Top](#questions)**
+
+96. ## What is pep 8?
+
+Python Enhancement Proposal or pep 8 is a set of rules that specify how to format Python code for maximum readability.
+
+**[⬆ Back to Top](#questions)**
+
+97. ## What is namespace in Python?
+
+A naming system used to make sure that names are unique to avoid naming conflicts refers to as Namespace.
+
+**[⬆ Back to Top](#questions)**
+
+98. ## Is indentation necessary in Python?
+
+Indentation is required in Python if not done properly the code is not executed properly and might throw errors. Indentation is usually done using four space characters.
+
+Question: Define a function in Python
+Answer: A block of code that is executed when it is called is defined as a function. Keyword def is used to define a Python function.
+
+Question: Define self in Python
+Answer: An instance of a class or an object is self in Python. It is included as the first parameter. It helps to differentiate between the methods and attributes of a class with local variables.
 
 **[⬆ Back to Top](#questions)**
