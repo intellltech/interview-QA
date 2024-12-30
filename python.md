@@ -2,24 +2,58 @@
 
 ## Questions
 
-| No. | Questions                                                                                                                                  |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-|     | **Behavioural Questions**                                                                                                                  |
-| 1   | [What are the _key features_ of _Python_?](#what-are-the-key-features-of-python)                                                           |
-| 2   | [How is _Python_ executed?](#how-is-python-executed)                                                                                       |
-| 3   | [What is _PEP 8_ and why is it important?](#what-is-pep-8-and-why-is-it-important)                                                         |
-| 4   | [How is memory allocation and garbage collection handled in _Python_?](#how-is-memory-allocation-and-garbage-collection-handled-in-python) |
-| 5   | [What are the _built-in data types_ in _Python_?](#what-are-the-built-in-data-types-in-python)                                             |
-| 6   | [Explain the difference between a _mutable_ and _immutable_ object.](#explain-the-difference-between-a-mutable-and-immutable-object)       |
-| 7   | [How do you _handle exceptions_ in _Python_?](#how-do-you-handle-exceptions-in-python)                                                     |
-| 8   | [What is the difference between _list_ and _tuple_?](#what-is-the-difference-between-list-and-tuple)                                       |
-| 9   | [How do you create a _dictionary_ in _Python_?](#how-do-you-create-a-dictionary-in-python)                                                 |
-| 10  | [What is the difference between _==_ and _is operator_ in _Python_?](#what-is-the-difference-between--and-is-operator-in-python)           |
-| 11  | [How does a _Python function_ work?](#how-does-a-python-function-work)                                                                     |
-| 12  | [What is a _lambda function_, and where would you use it?](#what-is-a-lambda-function-and-where-would-you-use-it)                          |
-| 13  | [Explain _\*args_ and _\*\*kwargs_ in _Python_.](#explain-args-and-kwargs-in-python)                                                       |
-| 14  | [What are _decorators_ in _Python_?](#what-are-decorators-in-python)                                                                       |
-| 15  | [How can you create a _module_ in _Python_?](#how-can-you-create-a-module-in-python)                                                       |
+| No. | Questions                                                                                                                                                                                                               |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     | **Behavioural Questions**                                                                                                                                                                                               |
+| 1   | [What are the _key features_ of _Python_?](#what-are-the-key-features-of-python)                                                                                                                                        |
+| 2   | [How is _Python_ executed?](#how-is-python-executed)                                                                                                                                                                    |
+| 3   | [What is _PEP 8_ and why is it important?](#what-is-pep-8-and-why-is-it-important)                                                                                                                                      |
+| 4   | [How is memory allocation and garbage collection handled in _Python_?](#how-is-memory-allocation-and-garbage-collection-handled-in-python)                                                                              |
+| 5   | [What are the _built-in data types_ in _Python_?](#what-are-the-built-in-data-types-in-python)                                                                                                                          |
+| 6   | [Explain the difference between a _mutable_ and _immutable_ object.](#explain-the-difference-between-a-mutable-and-immutable-object)                                                                                    |
+| 7   | [How do you _handle exceptions_ in _Python_?](#how-do-you-handle-exceptions-in-python)                                                                                                                                  |
+| 8   | [What is the difference between _list_ and _tuple_?](#what-is-the-difference-between-list-and-tuple)                                                                                                                    |
+| 9   | [How do you create a _dictionary_ in _Python_?](#how-do-you-create-a-dictionary-in-python)                                                                                                                              |
+| 10  | [What is the difference between _==_ and _is operator_ in _Python_?](#what-is-the-difference-between--and-is-operator-in-python)                                                                                        |
+| 11  | [How does a _Python function_ work?](#how-does-a-python-function-work)                                                                                                                                                  |
+| 12  | [What is a _lambda function_, and where would you use it?](#what-is-a-lambda-function-and-where-would-you-use-it)                                                                                                       |
+| 13  | [Explain _\*args_ and _\*\*kwargs_ in _Python_.](#explain-args-and-kwargs-in-python)                                                                                                                                    |
+| 14  | [What are _decorators_ in _Python_?](#what-are-decorators-in-python)                                                                                                                                                    |
+| 15  | [How can you create a _module_ in _Python_?](#how-can-you-create-a-module-in-python)                                                                                                                                    |
+| 16  | [Given two arrays, write a Python function to return the intersection of the two?](#given-two-arrays-write-a-python-function-to-return-the-intersection-of-the-two)                                                     |
+| 17  | [Given an array, find all the duplicates in this array?](#given-an-array-find-all-the-duplicates-in-this-array)                                                                                                         |
+| 18  | [Given an integer array, return the maximum product of any three numbers in the array?](#given-an-integer-array-return-the-maximum-product-of-any-three-numbers-in-the-array)                                           |
+| 19  | [Given an integer array, find the sum of the largest contiguous subarray within the array?](#given-an-integer-array-find-the-sum-of-the-largest-contiguous-subarray-within-the-array)                                   |
+| 20  | [Define tuples and lists in Python. What are the major differences between them?](#define-tuples-and-lists-in-python-what-are-the-major-differences-between-them)                                                       |
+| 21  | [Compute the Euclidean Distance Between Two Series?](#compute-the-euclidean-distance-between-two-series)                                                                                                                |
+| 22  | [Given an integer n and an integer K, output a list of all the combination of k numbers chosen from 1 to n.](#given-an-integer-n-and-an-integer-k-output-a-list-of-all-the-combination-of-k-numbers-chosen-from-1-to-n) |
+| 23  | [Write a function to generate N samples from a normal distribution and plot them on the histogram.](#write-a-function-to-generate-n-samples-from-a-normal-distribution-and-plot-them-on-the-histogram)                  |
+| 24  | [What is the difference between apply and applymap function in pandas?](#what-is-the-difference-between-apply-and-applymap-function-in-pandas)                                                                          |
+| 25  | [Given a string, return the first recurring character in it, or “None” if there is no recurring character.](#given-a-string-return-the-first-recurring-character-in-it-or-none-if-there-is-no-recurring-character)      |
+| 26  | [Given a positive integer X, return an integer that is a factorial of X using recursion.](#given-a-positive-integer-x-return-an-integer-that-is-a-factorial-of-x-using-recursion)                                       |
+| 27  | [Given an m-by-n matrix with positive integers, determine the length of the longest increasing path.](#given-an-m-by-n-matrix-with-positive-integers-determine-the-length-of-the-longest-increasing-path)               |
+| 28  | [Explain what Flask is and its benefits.](#explain-what-flask-is-and-its-benefits)                                                                                                                                      |
+| 29  | [What is the difference between lists, arrays, and sets in Python, and when should you use each of them?](#what-is-the-difference-between-lists-arrays-and-sets-in-python-and-when-should-you-use-each-of-them)         |
+| 30  | [Converting an Integer into Decimals](#converting-an-integer-into-decimals)                                                                                                                                             |
+| 31  | [Converting a String of Integers into Decimals](#converting-a-string-of-integers-into-decimals)                                                                                                                         |
+| 32  | [Reversing a String using an Extended Slicing Technique](#reversing-a-string-using-an-extended-slicing-technique)                                                                                                       |
+| 33  | [Counting Vowels in a Given Word](#counting-vowels-in-a-given-word)                                                                                                                                                     |
+| 34  | [Counting Consonants in a Given Word](#counting-consonants-in-a-given-word)                                                                                                                                             |
+| 35  | [Counting the Number of Occurrences of a Character in a String](#counting-the-number-of-occurrences-of-a-character-in-a-string)                                                                                         |
+| 36  | [Writing Fibonacci Series](#writing-fibonacci-series)                                                                                                                                                                   |
+| 37  | [Finding the Maximum Number in a List](#finding-the-maximum-number-in-a-list)                                                                                                                                           |
+| 38  | [Finding the Minimum Number in a List](#finding-the-minimum-number-in-a-list)                                                                                                                                           |
+| 39  | [Finding the Middle Element in a List](#finding-the-middle-element-in-a-list)                                                                                                                                           |
+| 40  | [Converting a List into a String](#converting-a-list-into-a-string)                                                                                                                                                     |
+| 41  | [Adding Two List Elements Together](#adding-two-list-elements-together)                                                                                                                                                 |
+| 42  | [Comparing Two Strings for Anagrams](#comparing-two-strings-for-anagrams)                                                                                                                                               |
+| 43  | [Checking for Palindrome Using Extended Slicing Technique](#checking-for-palindrome-using-extended-slicing-technique)                                                                                                   |
+| 44  | [Counting the White Spaces in a String](#counting-the-white-spaces-in-a-string)                                                                                                                                         |
+| 45  | [Counting Digits, Letters, and Spaces in a String](#counting-digits-letters-and-spaces-in-a-string)                                                                                                                     |
+| 46  | [Counting Special Characters in a String](#counting-special-characters-in-a-string)                                                                                                                                     |
+| 47  | [Removing All Whitespace in a String](#removing-all-whitespace-in-a-string)                                                                                                                                             |
+| 48  | [Building a Pyramid in Python](#building-a-pyramid-in-python)                                                                                                                                                           |
+| 49  | [Randomizing the Items of a List in Python](#randomizing-the-items-of-a-list-in-python)                                                                                                                                 |
 
 ## Answers
 
@@ -944,5 +978,609 @@ if __name__ == "__main__":
 
 This makes sure that the block of code following `if __name__ == "__main__":` is only executed when the module is run directly and not when imported as a module in another program.
 <br>
+
+**[⬆ Back to Top](#questions)**
+
+16. ## Given two arrays, write a python function to return the intersection of the two?
+
+### For example, X = [1,5,9,0] and Y = [3,0,2,9] it should return [9,0]
+
+Answer:
+
+```
+set(X).intersect (set(Y))
+```
+
+**[⬆ Back to Top](#questions)**
+
+17. ## Given an array, find all the duplicates in this array?
+
+### For example: input: [1,2,3,1,3,6,5] output: [1,3]
+
+Answer:
+
+```
+set1=set()
+res=set()
+for i in list:
+  if i in set1:
+    res.add(i)
+  else:
+    set1.add(i)
+print(res)
+```
+
+**[⬆ Back to Top](#questions)**
+
+18. ## Given an integer array, return the maximum product of any three numbers in the array?
+
+Answer:
+
+```
+import heapq
+
+def max_three(arr):
+    a = heapq.nlargest(3, arr) # largerst 3 numbers for postive case
+    b = heapq.nsmallest(2, arr) # for negative case
+    return max(a[2]*a[1]*a[0], b[1]*b[0]*a[0])
+```
+
+**[⬆ Back to Top](#questions)**
+
+19. ## Given an integer array, find the sum of the largest contiguous subarray within the array.
+
+### For example, given the array A = [0,-1,-5,-2,3,14] it should return 17 because of [3,14]. Note that if all the elements are negative it should return zero.
+
+```
+def max_subarray(arr):
+  n = len(arr)
+  max_sum = arr[0] #max
+  curr_sum = 0
+  for i in range(n):
+    curr_sum += arr[i]
+    max_sum = max(max_sum, curr_sum)
+    if curr_sum <0:
+      curr_sum  = 0
+  return max_sum
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+20. ## Define tuples and lists in Python What are the major differences between them?
+
+Answer:
+
+Lists:
+In Python, a list is created by placing elements inside square brackets [], separated by commas. A list can have any number of items and they may be of different types (integer, float, string, etc.). A list can also have another list as an item. This is called a nested list.
+
+1. Lists are mutable
+2. Lists are better for performing operations, such as insertion and deletion.
+3. Lists consume more memory
+4. Lists have several built-in methods
+
+Tuples:
+A tuple is a collection of objects which ordered and immutable. Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.
+
+1. Tuples are immutable
+2. Tuple data type is appropriate for accessing the elements
+3. Tuples consume less memory as compared to the list
+4. Tuple does not have many built-in methods.
+
+- Mutable = we can change, add, delete and modify stuff
+- Immutable = we cannot change, add, delete and modify stuff
+
+**[⬆ Back to Top](#questions)**
+
+21. ## Compute the Euclidean Distance Between Two Series?
+
+```
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+22. ## Given an integer n and an integer K, output a list of all the combination of k numbers chosen from 1 to n
+
+### For example, if n=3 and k=2, return [1,2],[1,3],[2,3]
+
+Answer
+
+```
+from itertools import combinations
+def find_combintaion(k,n):
+    list_num = []
+    comb = combinations([x for x in range(1, n+1)],k)
+    for i in comb:
+        list_num.append(i)
+    print("(K:{},n:{}):".format(k,n))
+    print(list_num,"\n")
+```
+
+**[⬆ Back to Top](#questions)**
+
+23. ## Write a function to generate N samples from a normal distribution and plot them on the histogram
+
+Answer:
+Using bultin Libraries:
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.randn((N,))
+plt.hist(x)
+```
+
+From scratch:
+![Alt_text](https://github.com/youssefHosni/Data-Science-Interview-Questions/blob/main/Figures/Python%20questions%208.png)
+
+**[⬆ Back to Top](#questions)**
+
+24. ## What is the difference between apply and applymap function in pandas?
+
+Answer:
+
+Both the methods only accept callables as arguments but what sets them apart is that applymap is defined on dataframes and works element-wise. While apply can be defined on data frames as well as series and can work row/column-wise as well as element-wise. In terms of use case, applymap is used for transformations while apply is used for more complex operations and aggregations. Applymap only returns a dataframe while apply can return a scalar value, series, or dataframe.
+
+**[⬆ Back to Top](#questions)**
+
+25. ## Given a string, return the first recurring character in it, or “None” if there is no recurring character.
+
+### Example: input = "pythoninterviewquestion" , output = "n"
+
+Answer:
+
+```
+input_string = "pythoninterviewquestion"
+
+def first_recurring(input_str):
+
+  a_str = ""
+  for letter in input_str:
+    a_str = a_str + letter
+    if a_str.count(letter) > 1:
+      return letter
+  return None
+
+first_recurring(input_string)
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+26. ## Given a positive integer X, return an integer that is a factorial of X using recursion
+
+### Given a positive integer X return an integer that is a factorial of X. If a negative integer is provided, return -1. Implement the solution by using a recursive function.
+
+Answer:
+
+```
+def factorial(x):
+    # Edge cases
+    if x < 0: return -1
+    if x == 0: return 1
+
+    # Exit condition - x = 1
+    if x == 1:
+        return x
+    else:
+        # Recursive part
+        return x * factorial(x - 1)
+```
+
+**[⬆ Back to Top](#questions)**
+
+27. ## Given an m-by-n matrix with positive integers, determine the length of the longest increasing path
+
+### For example, consider the input matrix:
+
+```c
+        [ 1 2 3 ]
+
+        [ 4 5 6 ]
+
+        [ 7 8 9 ]
+
+        The answer should be 5 since the longest path would be 1-2-5-6-9
+```
+
+Answer:
+
+```
+MAX = 10
+
+def Longest_Increasing_Path(dp, mat, n, m, x, y):
+
+    # If value not calculated yet.
+    if (dp[x][y] < 0):
+        result = 0
+
+        #  // If reach bottom right cell, return 1
+        if (x == n - 1 and y == m - 1):
+            dp[x][y] = 1
+            return dp[x][y]
+
+        # If reach the corner
+        # of the matrix.
+        if (x == n - 1 or y == m - 1):
+            result = 1
+
+        # If value greater than below cell.
+        if (x + 1 < n and mat[x][y] < mat[x + 1][y]):
+            result = 1 + LIP(dp, mat, n,
+                            m, x + 1, y)
+
+        # If value greater than left cell.
+        if (y + 1 < m and mat[x][y] < mat[x][y + 1]):
+            result = max(result, 1 + LIP(dp, mat, n,
+                                        m, x, y + 1))
+        dp[x][y] = result
+    return dp[x][y]
+
+# Wrapper function
+def wrapper(mat, n, m):
+    dp = [[-1 for i in range(MAX)]
+            for i in range(MAX)]
+    return Longest_Increasing_Path(dp, mat, n, m, 0, 0)
+```
+
+**[⬆ Back to Top](#questions)**
+
+28. ## Explain what Flask is and its benefits
+
+Answer:
+
+Flask is a web framework. This means flask provides you with tools, libraries, and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki, or go as big as a web-based calendar application or a commercial website.
+
+Benefits of Flask:
+
+- Scalable
+  Flask’s status as a microframework means that it can be used to grow a tech project such as a web app very quickly.
+
+- Flexible
+  It allows the project to be rearranged and moved around. Also makes sure that the project structure does not collapse when a part is altered.
+
+- Easy to negotiate
+  At its core, the microframework is easy to understand for web developers also giving them more control over their code and what is possible.
+
+- Lightweight
+  Certain parts of a design of a tool/framework might need assembling and reassembling and do not rely on a large number of extensions to function which gives web developers a certain level of control. Further, Flask also supports modular programming, which is where its functionality can be split into several interchangeable modules and each module acts as an independent entity and executes a part of the functionality.
+
+**[⬆ Back to Top](#questions)**
+
+29. ## What is the difference between lists, arrays, and sets in Python, and when should you use each of them
+
+Answer:
+
+All three are data structures that can store sequences of data. but with some differences.
+
+List denoted by [ ], set by { } , and array/tuple by ( )
+
+𝐋𝐢𝐬𝐭: built-in data type in Python that helps store data in sequence with a very rich API that allows insertion removal retrieval and expansion. one of its benefits is that it allows the use of many data types in the same lists as it can store string, integers, floats of any other derived objects. one of its cons that are very slow if it will be used in numerical computation.
+
+𝐀𝐫𝐫𝐚𝐲: on the other hand array can only store a single data type like integers only, float only, or any derived object only. but unlike lists, it's very efficient in terms of speed and memory usage (NumPy is one of the best libraries that implements array operations as it's a very rich library that solves many problems in numerical computation like vectorization, broadcasting, ...etc).
+
+𝐒𝐞𝐭: it's also a built-in data type in Python and can store more that data types. but it does not allow for the existence of duplicates and if there are duplicates it only uses one of them. provide a lot of methods like unions, diffs, and intersections.
+
+**[⬆ Back to Top](#questions)**
+
+30. ## Converting an Integer into Decimals
+
+```python
+import decimal
+integer = 10
+print(decimal.Decimal(integer))
+print(type(decimal.Decimal(integer)))
+
+> 10
+> <class 'decimal.Decimal'>
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+31. ## Converting a String of Integers into Decimals
+
+```python
+import decimal
+string = '12345'
+print(decimal.Decimal(string))
+print(type(decimal.Decimal(string)))
+
+> 12345
+> <class 'decimal.Decimal'>
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+32. ## Reversing a String using an Extended Slicing Technique
+
+```python
+string = "Python Programming"
+print(string[::-1])
+
+> gnimmargorP nohtyP
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+33. ## Counting Vowels in a Given Word
+
+```python
+vowel = ['a', 'e', 'i', 'o', 'u']
+word = "programming"
+count = 0
+for character in word:
+    if character in vowel:
+        count += 1
+print(count)
+
+> 3
+```
+
+**[⬆ Back to Top](#questions)**
+
+34. ## Counting Consonants in a Given Word
+
+```python
+vowel = ['a', 'e', 'i', 'o', 'u']
+word = "programming"
+count = 0
+for character in word:
+    if character not in vowel:
+        count += 1
+print(count)
+
+> 8
+```
+
+**[⬆ Back to Top](#questions)**
+
+35. ## Counting the Number of Occurrences of a Character in a String
+
+```python
+word = "python"
+character = "p"
+count = 0
+for letter in word:
+    if letter == character:
+        count += 1
+print(count)
+
+> 1
+```
+
+**[⬆ Back to Top](#questions)**
+
+36. ## Writing Fibonacci Series
+
+```python
+fib = [0,1]
+# Range starts from 0 by default
+for i in range(5):
+    fib.append(fib[-1] + fib[-2])
+
+# Converting the list of integers to string
+print(', '.join(str(e) for e in fib))
+
+> 0, 1, 1, 2, 3, 5, 8
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+37. ## Finding the Maximum Number in a List
+
+```python
+numberList = [15, 85, 35, 89, 125]
+
+maxNum = numberList[0]
+for num in numberList:
+    if maxNum < num:
+        maxNum = num
+print(maxNum)
+
+> 125
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+38. ## Finding the Minimum Number in a List
+
+```python
+numberList = [15, 85, 35, 89, 125, 2]
+
+minNum = numberList[0]
+for num in numberList:
+    if minNum > num:
+        minNum = num
+print(minNum)
+
+> 2
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+39. ## Finding the Middle Element in a List
+
+```python
+numList = [1, 2, 3, 4, 5]
+midElement = int((len(numList)/2))
+
+print(numList[midElement])
+
+> 3
+```
+
+**[⬆ Back to Top](#questions)**
+
+40. ## Converting a List into a String
+
+```python
+lst = ["P", "Y", "T", "H", "O", "N"]
+string = ''.join(lst)
+
+print(string)
+print(type(string))
+
+> PYTHON
+> <class 'str'>
+```
+
+**[⬆ Back to Top](#questions)**
+
+41. ## Adding Two List Elements Together
+
+```python
+lst1 = [1, 2, 3]
+lst2 = [4, 5, 6]
+
+res_lst = []
+for i in range(0, len(lst1)):
+    res_lst.append(lst1[i] + lst2[i])
+print(res_lst)
+
+> [5, 7, 9]
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+42. ## Comparing Two Strings for Anagrams
+
+```python
+str1 = "Listen"
+str2 = "Silent"
+
+str1 = list(str1.upper())
+str2 = list(str2.upper())
+str1.sort(), str2.sort()
+
+if(str1 == str2):
+    print("True")
+else:
+    print("False")
+
+> True
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+43. ## Checking for Palindrome Using Extended Slicing Technique
+
+```python
+str1 = "Kayak".lower()
+str2 = "kayak".lower()
+
+if(str1 == str2[::-1]):
+    print("True")
+else:
+    print("False")
+
+> True
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+44. ## Counting the White Spaces in a String
+
+```python
+string = "P r ogramm in g "
+print(string.count(' '))
+
+> 5
+```
+
+**[⬆ Back to Top](#questions)**
+
+45. ## Counting Digits, Letters, and Spaces in a String
+
+```python
+# Importing Regular Expressions Library
+import re
+
+name = 'Python is 1'
+
+digitCount = re.sub("[^0-9]", "", name)
+letterCount = re.sub("[^a-zA-Z]", "", name)
+spaceCount = re.findall("[ \n]", name)
+
+print(len(digitCount))
+print(len(letterCount))
+print(len(spaceCount))
+
+> 1
+> 8
+> 2
+```
+
+**[⬆ Back to Top](#questions)**
+
+46. ## Counting Special Characters in a String
+
+```python
+# Importing Regular Expressions Library
+import re
+spChar = "!@#$%^&*()"
+
+count = re.sub('[\w]+', '', spChar)
+print(len(count))
+
+> 10
+```
+
+**[⬆ Back to Top](#questions)**
+
+47. ## Removing All Whitespace in a String
+
+```python
+import re
+
+string = "C O D E"
+spaces = re.compile(r'\s+')
+result = re.sub(spaces, '', string)
+print(result)
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+48. ## Building a Pyramid in Python
+
+```python
+floors = 3
+h = 2*floors-1
+for i in range(1, 2*floors, 2):
+    print('{:^{}}'.format('*'*i, h))
+
+>  *
+  ***
+ *****
+
+```
+
+**[⬆ Back to Top](#questions)**
+
+49. ## Randomizing the Items of a List in Python
+
+```python
+
+from random import shuffle
+
+lst = ['Python', 'is', 'Easy']
+shuffle(lst)
+print(lst)
+
+> ['Easy', 'is', 'Python']
+
+
+```
 
 **[⬆ Back to Top](#questions)**
