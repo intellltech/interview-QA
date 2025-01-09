@@ -362,6 +362,57 @@
 | 353 | [What are the Benefits of Using a Data-Driven Framework in Selenium?](#what-are-the-benefits-of-using-a-data-driven-framework-in-selenium)                                                                                           |
 | 354 | [Explain the concept of Object Repository in Selenium.](#explain-the-concept-of-object-repository-in-selenium)                                                                                                                       |
 | 355 | [How can you Perform Mouse Hover Actions in Selenium?](#how-can-you-perform-mouse-hover-actions-in-selenium)                                                                                                                         |
+|     | [Panda Interview Questions?](#panda-interview-questions)                                                                                                                                                                             |
+| 356 | [What are Pandas?](#what-are-pandas)                                                                                                                                                                                                 |
+| 357 | [What are the Different Types of Data Structures in Pandas?](#what-are-the-different-types-of-data-structures-in-pandas)                                                                                                             |
+| 358 | [List Key Features of Pandas.](#list-key-features-of-pandas)                                                                                                                                                                         |
+| 359 | [What is Series in Pandas?](#what-is-series-in-pandas)                                                                                                                                                                               |
+| 360 | [What are the Different Ways to Create a Series?](#what-are-the-different-ways-to-create-a-series)                                                                                                                                   |
+| 361 | [How can we Create a Copy of the Series?](#how-can-we-create-a-copy-of-the-series)                                                                                                                                                   |
+| 362 | [What is a DataFrame in Pandas?](#what-is-a-dataframe-in-pandas)                                                                                                                                                                     |
+| 363 | [What are the Different Ways to Create a DataFrame in Pandas?](#what-are-the-different-ways-to-create-a-dataframe-in-pandas)                                                                                                         |
+| 364 | [How to Read Data into a DataFrame from a CSV file?](#how-to-read-data-into-a-dataframe-from-a-csv-file)                                                                                                                             |
+| 365 | [How to Access the First Few Rows of a DataFrame?](#how-to-access-the-first-few-rows-of-a-dataframe)                                                                                                                                 |
+| 366 | [What is Reindexing in Pandas?](#what-is-reindexing-in-pandas)                                                                                                                                                                       |
+| 367 | [How to Select a Single Column of a DataFrame?](#how-to-select-a-single-column-of-a-dataframe)                                                                                                                                       |
+| 368 | [How to Rename a Column in a DataFrame?](#how-to-rename-a-column-in-a-dataframe)                                                                                                                                                     |
+| 369 | [How to Add an Index, Row, or Column to an Existing DataFrame?](#how-to-add-an-index-row-or-column-to-an-existing-dataframe)                                                                                                         |
+| 370 | [How to Delete an Index, Row, or Column from an Existing DataFrame?](#how-to-delete-an-index-row-or-column-from-an-existing-dataframe)                                                                                               |
+| 371 | [How to Set the Index in a Panda DataFrame?](#how-to-set-the-index-in-a-panda-dataframe)                                                                                                                                             |
+| 372 | [How to Reset the Index of a DataFrame?](#how-to-reset-the-index-of-a-dataframe)                                                                                                                                                     |
+| 373 | [How to Find the Correlation Using Pandas?](#how-to-find-the-correlation-using-pandas)                                                                                                                                               |
+| 374 | [How to Iterate Over a DataFrame in Pandas?](#how-to-iterate-over-a-dataframe-in-pandas)                                                                                                                                             |
+| 375 | [What are the Important Conditions to Keep in Mind Before Iterating?](#what-are-the-important-conditions-to-keep-in-mind-before-iterating)                                                                                           |
+| 376 | [What is Categorical Data and How is it Represented in Pandas?](#what-is-categorical-data-and-how-is-it-represented-in-pandas)                                                                                                       |
+| 377 | [How Can a DataFrame be Converted to an Excel File?](#how-can-a-dataframe-be-converted-to-an-excel-file)                                                                                                                             |
+| 378 | [What is Multi-Indexing in Pandas?](#what-is-multi-indexing-in-pandas)                                                                                                                                                               |
+| 379 | [How to Select Specific Data-Types to Include or Exclude in the DataFrame?](#how-to-select-specific-data-types-to-include-or-exclude-in-the-dataframe)                                                                               |
+| 380 | [How to Convert a DataFrame into a Numpy Array?](#how-to-convert-a-dataframe-into-a-numpy-array)                                                                                                                                     |
+| 381 | [How to Split a DataFrame According to a Boolean Criterion?](#how-to-split-a-dataframe-according-to-a-boolean-criterion)                                                                                                             |
+| 382 | [What is Time Series in Pandas?](#what-is-time-series-in-pandas)                                                                                                                                                                     |
+| 383 | [What is Time Delta in Pandas?](#what-is-time-delta-in-pandas)                                                                                                                                                                       |
+| 384 | [What is Data Aggregation in Pandas?](#what-is-data-aggregation-in-pandas)                                                                                                                                                           |
+| 385 | [Difference Between merge() and concat()](#difference-between-merge-and-concat)                                                                                                                                                      |
+| 386 | [Difference Between map(), applymap(), and apply()](#difference-between-map-applymap-and-apply)                                                                                                                                      |
+| 387 | [Difference Between pivot_table() and groupby()](#difference-between-pivot-table-and-groupby)                                                                                                                                        |
+| 388 | [How Can We Use Pivot and Melt Data in Pandas?](#how-can-we-use-pivot-and-melt-data-in-pandas)                                                                                                                                       |
+| 389 | [How to Convert a String to Datetime in Pandas?](#how-to-convert-a-string-to-datetime-in-pandas)                                                                                                                                     |
+| 390 | [What is the Significance of Pandas Describe Command?](#what-is-the-significance-of-pandas-describe-command)                                                                                                                         |
+| 391 | [How to Compute Mean, Median, Mode, Variance, Standard Deviation, and Various Quantile Ranges in Pandas?](#how-to-compute-mean-median-mode-variance-standard-deviation-and-various-quantile-ranges-in-pandas)                        |
+| 392 | [How to Make Label Encoding Using Pandas?](#how-to-make-label-encoding-using-pandas)                                                                                                                                                 |
+| 393 | [How to Make Onehot Encoding Using Pandas?](#how-to-make-onehot-encoding-using-pandas)                                                                                                                                               |
+| 394 | [How to Make a Boxplot Using Pandas?](#how-to-make-a-boxplot-using-pandas)                                                                                                                                                           |
+| 395 | [How to Make a Distribution Plot Using Pandas?](#how-to-make-a-distribution-plot-using-pandas)                                                                                                                                       |
+| 396 | [How to Sort a DataFrame?](#how-to-sort-a-dataframe)                                                                                                                                                                                 |
+| 397 | [How to Check and Remove Duplicate Values in Pandas?](#how-to-check-and-remove-duplicate-values-in-pandas)                                                                                                                           |
+| 398 | [How to Create a New Column Based on Existing Columns?](#how-to-create-a-new-column-based-on-existing-columns)                                                                                                                       |
+| 399 | [How to Handle Missing Data in Pandas?](#how-to-handle-missing-data-in-pandas)                                                                                                                                                       |
+| 400 | [What is groupby() Function in Pandas?](#what-is-groupby-function-in-pandas)                                                                                                                                                         |
+| 401 | [What are loc and iloc Methods in Pandas?](#what-are-loc-and-iloc-methods-in-pandas)                                                                                                                                                 |
+| 402 | [How to Merge Two DataFrames?](#how-to-merge-two-dataframes)                                                                                                                                                                         |
+| 403 | [Difference Between iloc() and loc()](#difference-between-iloc-and-loc)                                                                                                                                                              |
+| 404 | [Difference Between join() and merge()](#difference-between-join-and-merge)                                                                                                                                                          |
+| 405 | [Difference Between interpolate() and fillna()](#difference-between-interpolate-and-fillna)                                                                                                                                          |
 
 ## Answers
 
@@ -6956,5 +7007,1055 @@ WebDriver driver = new ChromeDriver();
 
 }
 ```
+
+**[⬆ Back to Top](#questions)**
+
+## Panda Interview Questions
+
+356. ## What are Pandas?
+
+Pandas is an open-source Python library that is built on top of the NumPy library. It is made for working with relational or labelled data. It provides various data structures for manipulating, cleaning and analyzing numerical data. It can easily handle missing data as well. Pandas are fast and have high performance and productivity.
+
+**[⬆ Back to Top](#questions)**
+
+357. ## What are the Different Types of Data Structures in Pandas?
+
+The two data structures that are supported by Pandas are Series and DataFrames.
+
+Pandas Series is a one-dimensional labelled array that can hold data of any type. It is mostly used to represent a single column or row of data.
+Pandas DataFrame is a two-dimensional heterogeneous data structure. It stores data in a tabular form. Its three main components are data, rows, and columns.
+
+**[⬆ Back to Top](#questions)**
+
+358. ## List Key Features of Pandas.
+
+Pandas are used for efficient data analysis. The key features of Pandas are as follows:
+
+Fast and efficient data manipulation and analysis
+Provides time-series functionality
+Easy missing data handling
+Faster data merging and joining
+Flexible reshaping and pivoting of data sets
+Powerful group by functionality
+Data from different file objects can be loaded
+Integrates with NumPy
+
+**[⬆ Back to Top](#questions)**
+
+359. ## What is Series in Pandas?
+
+Ans: A Series in Pandas is a one-dimensional labelled array. Its columns are like an Excel sheet that can hold any type of data, which can be, an integer, string, or Python objects, etc. Its axis labels are known as the index. Series contains homogeneous data and its values can be changed but the size of the series is immutable. A series can be created from a Python tuple, list and dictionary. The syntax for creating a series is as follows:
+
+```python
+import pandas as pd
+series = pd.Series(data)
+```
+
+**[⬆ Back to Top](#questions)**
+
+360. ## What are the Different Ways to Create a Series?
+
+Ans: In Pandas, a series can be created in many ways. They are as follows:
+
+Creating an Empty Series
+
+An empty series can be created by just calling the pandas.Series() constructor.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # Creating empty series
+  print(pd.Series())
+```
+
+Output:
+
+```bash
+Series([], dtype: float64)
+Creating a Series from an Array
+```
+
+In order to create a series from the NumPy array, we have to import the NumPy module and have to use the array() function.
+
+```python
+# import pandas and numpy
+  import pandas as pd
+  import numpy as np
+
+  # simple array
+  data = np.array(['g', 'e', 'e', 'k', 's'])
+
+  # convert array to Series
+  print(pd.Series(data))
+```
+
+```bash
+Output:
+
+0    g
+1    e
+2    e
+3    k
+4    s
+dtype: object
+```
+
+**Creating a Series from an Array with a custom Index**
+
+In order to create a series by explicitly proving the index instead of the default, we have to provide a list of elements to the index parameter with the same number of elements as it is an array.
+
+```python
+# import pandas and numpy
+  import pandas as pd
+  import numpy as np
+
+  # simple array
+  data = np.array(['g', 'e', 'e', 'k', 's'])
+
+  # providing an index
+  ser = pd.Series(data, index=[10, 11, 12, 13, 14])
+  print(ser)
+
+Output:
+
+10    g
+11    e
+12    e
+13    k
+14    s
+dtype: object
+```
+
+**Creating a Series from a List**
+
+We can create a series using a Python list and pass it to the Series() constructor.
+
+```python
+# import pandas
+  import pandas as pd
+
+  # a simple list
+  list = ['g', 'e', 'e', 'k', 's']
+
+  # create series form a list
+  print(pd.Series(list))
+```
+
+```bash
+Output:
+
+0    g
+1    e
+2    e
+3    k
+4    s
+dtype: object
+```
+
+**Creating a Series from Dictionary**
+
+A Series can also be created from a Python dictionary. The keys of the dictionary as used to construct indexes of the series.
+
+```python
+# import pandas
+  import pandas as pd
+
+  # a simple dictionary
+  dict = {'Geeks': 10,
+  'for': 20,
+  'geeks': 30}
+
+  # create series from dictionary
+  print(pd.Series(dict))
+```
+
+```bash
+Output:
+
+Geeks    10
+for      20
+geeks    30
+dtype: int64
+```
+
+**Creating a Series from Scalar Value**
+
+To create a series from a Scalar value, we must provide an index. The Series constructor will take two arguments, one will be the scalar value and the other will be a list of indexes. The value will repeat until all the index values are filled.
+
+```python
+# import pandas and numpy
+  import pandas as pd
+  import numpy as np
+
+  # giving a scalar value with index
+  ser = pd.Series(10, index=[0, 1, 2, 3, 4, 5])
+
+  print(ser)
+```
+
+```bash
+Output:
+
+0    10
+1    10
+2    10
+3    10
+4    10
+5    10
+dtype: int64
+```
+
+**Creating a Series using NumPy Functions**
+
+The Numpy module's functions, such as numpy.linspace(), and numpy.random.randn() can also be used to create a Pandas series.
+
+```python
+# import pandas and numpy
+  import pandas as pd
+  import numpy as np
+
+  # series with numpy linspace()
+  ser1 = pd.Series(np.linspace(3, 33, 3))
+  print(ser1)
+
+  # series with numpy linspace()
+  ser2 = pd.Series(np.random.randn(3))
+  print("\n", ser2)
+```
+
+```bash
+Output:
+
+0     3.0
+1    18.0
+2    33.0
+dtype: float64
+ 0    0.694519
+1    0.782243
+2    0.082820
+dtype: float64
+```
+
+**Creating a Series using the Range Function**
+
+We can also create a series in Python by using the range function.
+
+```python
+# import pandas
+  import pandas as pd
+  print(pd.Series(range(5)))
+```
+
+```bash
+Output:
+
+0    0
+1    1
+2    2
+3    3
+4    4
+dtype: int64
+```
+
+**Creating a Series using List Comprehension**
+
+Here, we will use the Python list comprehension technique to create a series in Pandas. We will use the range function to define the values and a for loop for indexes.
+
+```python
+# import pandas
+  import pandas as pd
+  ser = pd.Series(range(1, 20, 3),
+  index=[x for x in 'abcdefg'])
+  print(ser)
+```
+
+```bash
+Output:
+
+a     1
+b     4
+c     7
+d    10
+e    13
+f    16
+g    19
+dtype: int64
+```
+
+**[⬆ Back to Top](#questions)**
+
+361. ## How can we Create a Copy of the Series?
+
+Ans: In Pandas, there are two ways to create a copy of the Series. They are as follows:
+
+**Shallow Copy** is a copy of the series object where the indices and the data of the original object are not copied. It only copies the references to the indices and data. This means any changes made to a series will be reflected in the other. A shallow copy of the series can be created by writing the following syntax:
+
+```python
+ser.copy(deep=False)
+```
+
+**Deep Copy** is a copy of the series object where it has its own indices and data. This means nay changes made to a copy of the object will not be reflected tot he original series object. A deep copy of the series can be created by writing the following syntax:
+
+```python
+ser.copy(deep=True)
+```
+
+The default value of the deep parameter of the copy() function is set to True.
+
+**[⬆ Back to Top](#questions)**
+
+362. ## What is a DataFrame in Pandas?
+
+Ans: A DataFrame in Panda is a data structure used to store the data in tabular form, that is in the form of rows and columns. It is two-dimensional, size-mutable, and heterogeneous in nature. The main components of a dataframe are data, rows, and columns. A dataframe can be created by loading the dataset from existing storage, such as SQL database, CSV file, Excel file, etc. The syntax for creating a dataframe is as follows:
+
+```python
+import pandas as pd
+dataframe = pd.DataFrame(data)
+```
+
+**[⬆ Back to Top](#questions)**
+
+363. ## What are the Different ways to Create a DataFrame in Pandas?
+
+Ans: In Pandas, a dataframe can be created in many ways. They are as follows:
+
+Creating an Empty DataFrame
+
+An empty dataframe can be created by just calling the pandas.DataFrame() constructor.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # Calling DataFrame constructor
+  print(pd.DataFrame())
+```
+
+```bash
+Output:
+
+Empty DataFrame
+Columns: []
+Index: []
+```
+
+**Creating a DataFrame using a List**
+
+In order to create a DataFrame from a Python list, just pass the list to the DataFrame() constructor.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # list of strings
+  lst = ['Geeks', 'For', 'Geeks', 'is',
+  'portal', 'for', 'Geeks']
+
+  # Calling DataFrame constructor on list
+  print(pd.DataFrame(lst))
+```
+
+```bash
+Output:
+
+      0
+0   Geeks
+1     For
+2   Geeks
+3      is
+4  portal
+5     for
+6   Geeks
+```
+
+**Creating a DataFrame using a List of Lists**
+
+A DataFrame can be created from a Python list of lists and passed the main list to the DataFrame() constructor along with the column names.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # list of strings
+  lst = [[1, 'Geeks'], [2, 'For'], [3, 'Geeks']]
+
+  # Calling DataFrame constructor
+  # on list with column names
+  print(pd.DataFrame(lst, columns=['Id', 'Data']))
+```
+
+```bash
+Output:
+
+   Id   Data
+0   1  Geeks
+1   2    For
+2   3  Geeks
+```
+
+**Creating a DataFrame using a Dictionary**
+
+A DataFrame can be created from a Python dictionary and passed to the DataFrame() constructor. The Keys of the dictionary will be the column names and the values of the dictionary are the data of the DataFrame.
+
+```python
+import pandas as pd
+
+  # initialise data of lists.
+  data = {'Name':['Tom', 'nick', 'krish', 'jack'], 'Age':[20, 21, 19, 18]}
+
+  # Print the dataframe created
+  print(pd.DataFrame(data))
+```
+
+```bash
+Output:
+
+    Name  Age
+0    Tom   20
+1   nick   21
+2  krish   19
+3   jack   18
+```
+
+**Creating a DataFrame using a List of Dictionaries**
+
+Another way to create a DataFrame is by using Python list of dictionaries. The list is passed to the DataFrame() constructor. The Keys of each dictionary element will be the column names.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # list of strings
+  lst = [{1: 'Geeks', 2: 'For', 3: 'Geeks'},
+  {1: 'Portal', 2: 'for', 3: 'Geeks'}]
+
+  # Calling DataFrame constructor on list
+  print(pd.DataFrame(lst))
+```
+
+```bash
+Output:
+
+        1    2      3
+0   Geeks  For  Geeks
+1  Portal  for  Geeks
+```
+
+**Creating a DataFrame from Pandas Series**
+
+A DataFrame in Pandas can also be created by using the Pandas series.
+
+```python
+# import pandas as pd
+  import pandas as pd
+
+  # list of strings
+  lst = pd.Series(['Geeks', 'For', 'Geeks'])
+
+  # Calling DataFrame constructor on list
+  print(pd.DataFrame(lst))
+```
+
+```bash
+Output:
+
+       0
+0  Geeks
+1    For
+2  Geeks
+```
+
+**[⬆ Back to Top](#questions)**
+
+364. ## How to Read Data into a DataFrame from a CSV file?
+
+Ans: We can create a data frame from a CSV file - "Comma Separated Values". This can be done by using the read_csv() method which takes the csv file as the parameter.
+
+```python
+pandas.read_csv(file_name)
+```
+
+Another way to do this is by using the read_table() method which takes the CSV file and a delimiter value as the parameter.
+
+```python
+pandas.read_table(file_name, deliniter)
+```
+
+**[⬆ Back to Top](#questions)**
+
+365. ## How to access the first few rows of a dataframe?
+
+Ans: The first few records of a dataframe can be accessed by using the pandas head() method. It takes one optional argument n, which is the number of rows. By default, it returns the first 5 rows of the dataframe. The head() method has the following syntax:
+
+```python
+df.head(n)
+```
+
+Another way to do it is by using iloc() method. It is similar to the Python list-slicing technique. It has the following syntax:
+
+```python
+df.iloc[:n]
+```
+
+**[⬆ Back to Top](#questions)**
+
+366. ## What is Reindexing in Pandas?
+
+Ans: Reindexing in Pandas as the name suggests means changing the index of the rows and columns of a dataframe. It can be done by using the Pandas reindex() method. In case of missing values or new values that are not present in the dataframe, the reindex() method assigns it as NaN.
+
+```python
+df.reindex(new_index)
+```
+
+**[⬆ Back to Top](#questions)**
+
+367. ## How to Select a Single Column of a DataFrame?
+
+Ans: There are many ways to Select a single column of a dataframe. They are as follows:
+
+By using the Dot operator, we can access any column of a dataframe.
+
+```python
+Dataframe.column_name
+```
+
+Another way to select a column is by using the square brackets [].
+
+```python
+DataFrame[column_name]
+```
+
+**[⬆ Back to Top](#questions)**
+
+368. ## How to Rename a Column in a DataFrame?
+
+Ans: A column of the dataframe can be renamed by using the rename() function. We can rename a single as well as multiple columns at the same time using this method.
+
+```python
+DataFrame.rename(columns={'column1': 'COLUMN_1', 'column2':'COLUMN_2'}, inplace=True)
+```
+
+Another way is by using the set_axis() function which takes the new column name and axis to be replaced with the new name.
+
+```python
+DataFrame.set_axis(labels=['COLUMN_1','COLUMN_2'], axis=1, inplace=True)
+```
+
+In case we want to add a prefix or suffix to the column names, we can use the add_prefix() or add_suffix() methods.
+
+```python
+DataFrame.add_prefix(prefix='PREFIX_')
+DataFrame.add_suffix(suffix='_suffix')
+```
+
+**[⬆ Back to Top](#questions)**
+
+369. ## How to add an Index, Row, or Column to an Existing Dataframe?
+
+Ans: Adding Index
+
+We can add an index to an existing dataframe by using the Pandas **set_index()** method which is used to set a list, series, or dataframe as the index of a dataframe. The set_index() method has the following syntax:
+
+```python
+df.set_index(keys, drop=True, append=False, inplace=False, verify_integrity=False)
+```
+
+**Adding Rows**
+
+The **df.loc[]** is used to access a group of rows or columns and can be used to add a row to a dataframe.
+
+```python
+DataFrame.loc[Row_Index]=new_row
+```
+
+We can also add multiple rows in a dataframe by using **pandas.concat()** function which takes a list of dataframes to be added together.
+
+```python
+pandas.concat([Dataframe1,Dataframe2])
+```
+
+**Adding Columns**
+
+We can add a column to an existing dataframe by just declaring the column name and the list or dictionary of values.
+
+```python
+DataFrame[data] = list_of_values
+```
+
+Another way to add a column is by using df.insert() method which take a value where the column should be added, column name and the value of the column as parameters.
+
+```python
+DataFrameName.insert(col_index, col_name, value)
+```
+
+We can also add a column to a dataframe by using df.assign() function
+
+```python
+DataFrame.assign(**kwargs)
+```
+
+**[⬆ Back to Top](#questions)**
+
+370. ## How to Delete an Index, Row, or Column from an Existing DataFrame?
+
+Ans: We can delete a row or a column from a dataframe by using df.drop() method. and provide the row or column name as the parameter.
+
+To delete a column
+
+```python
+DataFrame.drop(['Column_Name'], axis=1)
+```
+
+To delete a row
+
+```python
+DataFrame.drop([Row_Index_Number], axis=0)
+```
+
+**[⬆ Back to Top](#questions)**
+
+371. ## How to set the Index in a Panda dataFrame?
+
+Ans: We can set the index to a Pandas dataframe by using the set_index() method, which is used to set a list, series, or dataframe as the index of a dataframe.
+
+```python
+DataFrame.set_index('Column_Name')
+```
+
+**[⬆ Back to Top](#questions)**
+
+372. ## How to Reset the Index of a DataFrame?
+
+Ans: The index of Pandas dataframes can be reset by using the reset_index() method. It can be used to simply reset the index to the default integer index beginning at 0.
+
+```python
+DataFrame.reset_index(inplace = True)
+```
+
+**[⬆ Back to Top](#questions)**
+
+373. ## How to Find the Correlation Using Pandas?
+
+Ans: Pandas dataframe.corr() method is used to find the correlation of all the columns of a dataframe. It automatically ignores any missing or non-numerical values.
+
+```python
+DataFrame.corr()
+```
+
+**[⬆ Back to Top](#questions)**
+
+374. ## How to Iterate over Dataframe in Pandas?
+
+Ans: There are various ways to iterate the rows and columns of a dataframe.
+
+**Iteration over Rows**
+
+In order to iterate over rows, we apply a iterrows() function this function returns each index value along with a series containing the data in each row. Another way to iterate over rows is by using iteritems() method, which iterates over each column as key-value pairs. We can also use itertuples() function which returns a tuple for each row in the DataFrame.The first element of the tuple will be the row’s corresponding index value, while the remaining values are the row values.
+
+**Iteration over Columns**
+
+To iterate columns of a dataframe, we just need to create a list of dataframe columns by using the list constructor and passing the dataframe to it.
+
+**[⬆ Back to Top](#questions)**
+
+375. ## What are the Important Conditions to keep in mind before Iterating?
+
+Ans: Iterating is not the best option when it comes to Pandas Dataframe. Pandas provides a lot of functions using which we can perform certain operations instead of iterating through the dataframe. While iterating a dataframe, we need to keep in mind the following things:
+
+- While printing the data frame, instead of iterating, we can use DataFrame.to_string() methods which will display the data in tabular form.
+- If we are concerned about time performance, iteration is not a good option. Instead, we should choose vectorization as pandas have a number of highly optimized and efficient built-in methods.
+- We should use the apply() method instead of iteration when there is an operation to be applied to a few rows and not the whole database.
+
+**[⬆ Back to Top](#questions)**
+
+**Pandas Interview Questions for Experienced**
+
+376. ## What is Categorical Data and How it is represented in Pandas?
+
+Ans: Categorical data is a set of predefined data values under some categories. It usually has a limited and fixed range of possible values and can be either numerical or textual in nature. A few examples of categorical data are gender, educational qualifications, blood type, country affiliation, observation time, etc. In Pandas categorical data is often represented by Object datatype.
+
+**[⬆ Back to Top](#questions)**
+
+377. ## How can a DataFrame be Converted to an Excel File?
+
+Ans: A Pandas dataframe can be converted to an Excel file by using the to_excel() function which takes the file name as the parameter. We can also specify the sheet name in this function.
+
+```python
+DataFrame.to_excel(file_name)
+```
+
+**[⬆ Back to Top](#questions)**
+
+378. ## What is Multi-Indexing in Pandas?
+
+Ans: Multi-indexing refers to selecting two or more rows or columns in the index. It is a multi-level or hierarchical object for pandas object and deals with data analysis and works with higher dimensional data. Multi-indexing in Pandas can be achieved by using a number of functions, such as **MultiIndex.from_arrays, MultiIndex.from_tuples, MultiIndex.from_product, MultiIndex.from_frame**, etc which helps us to create multiple indexes from arrays, tuples, dataframes, etc.
+
+**[⬆ Back to Top](#questions)**
+
+379. ## How to select Specific Data-types to Include or Exclude in the DataFrame?
+
+Ans: The Pandas select_dtypes() method is used to include or exclude a specific type of data in the dataframe. The datatypes to include or exclude are specified to it as a list or parameters to the function. It has the following syntax:
+
+```python
+DataFrame.select_dtypes(include=['object','float'], exclude =['int'])
+```
+
+**[⬆ Back to Top](#questions)**
+
+380. ## How to Convert a DataFrame into a Numpy Array?
+
+Ans: Pandas Numpy is an inbuilt Python package that is used to perform large numerical computations. It is used for processing multidimensional array elements to perform complicated mathematical operations.
+
+The pandas dataframe can be converted to a NumPy array by using the to_numpy() method. We can also provide the datatype as an optional argument.
+
+```python
+Dataframe.to_numpy()
+```
+
+We can also use .values to convert dataframe values to NumPy array
+
+df.values
+
+**[⬆ Back to Top](#questions)**
+
+381. ## How to Split a DataFrame according to a Boolean Criterion?
+
+Ans: Boolean masking is a technique that can be used in Pandas to split a DataFrame depending on a boolean criterion. You may divide different regions of the DataFrame and filter rows depending on a certain criterion using boolean masking.
+
+```python
+# Define the condition
+condition = DataFrame['col_name'] < VALUE
+# DataFrame with rows where the condition is True
+DataFrame1 = DataFrame[condition]
+# DataFrame with rows where the condition is False
+DataFrame1 = DataFrame[~condition]
+```
+
+**[⬆ Back to Top](#questions)**
+
+382. ## What is Time Series in Pandas?
+
+Ans: Time series is a collection of data points with timestamps. It depicts the evolution of quantity over time. Pandas provide various functions to handle time series data efficiently. It is used to work with data timestamps, resampling time series for different time periods, working with missing data, slicing the data using timestamps, etc.
+
+Pandas Built-in Function
+
+| **Function**                                | **Operation**                                                                              |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `pandas.to_datetime(DataFrame['Date'])`     | Convert 'Date' column of DataFrame to datetime dtype                                       |
+| `DataFrame.set_index('Date', inplace=True)` | Set 'Date' as the index                                                                    |
+| `DataFrame.resample('H').sum()`             | Resample time series to a different frequency (e.g., hourly, daily, weekly, monthly, etc.) |
+| `DataFrame.interpolate()`                   | Fill missing values using linear interpolation                                             |
+| `DataFrame.loc[start_date:end_date]`        | Slice the data based on timestamps                                                         |
+
+**[⬆ Back to Top](#questions)**
+
+383. ## What is Time Delta in Pandas?
+
+Ans: The time delta is the difference in dates and time. Similar to the timedelta() object in the datetime module, a Timedelta in Pandas indicates the duration or difference in time. For addressing time durations or time variations in a DataFrame or Series, Pandas has a dedicated data type.
+
+The time delta object can be created by using the timedelta() method and providing the number of weeks, days, seconds, milliseconds, etc as the parameter.
+
+```python
+Duration = pandas.Timedelta(days=7, hours=4, minutes=30, seconds=23)
+```
+
+With the help of the Timedelta data type, you can easily perform arithmetic operations, comparisons, and other time-related manipulations. In terms of different units, such as days, hours, minutes, seconds, milliseconds, and microseconds, it can give durations.
+
+```bash
+Duration + pandas.Timedelta('2 days 6 hours')
+```
+
+**[⬆ Back to Top](#questions)**
+
+384. ## What is Data Aggregation in Pandas?
+
+Ans: In Pandas, data aggregation refers to the act of summarizing or decreasing data in order to produce a consolidated view or summary statistics of one or more columns in a dataset. In order to calculate statistical measures like sum, mean, minimum, maximum, count, etc., aggregation functions must be applied to groups or subsets of data.
+
+The agg() function in Pandas is frequently used to aggregate data. Applying one or more aggregation functions to one or more columns in a DataFrame or Series is possible using this approach. Pandas' built-in functions or specially created user-defined functions can be used as aggregation functions.
+
+```python
+DataFrame.agg({'Col_name1': ['sum', 'min', 'max'], 'Col_name2': 'count'})
+```
+
+**[⬆ Back to Top](#questions)**
+
+385. ## Difference between merge() and concat()
+
+Ans: The following table shows the difference between merge() and concat():
+
+| **Function**           | **.merge()**                                                                             | **.concat()**                                                                                                    |
+| ---------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Use Case**           | Used to join exactly 2 DataFrames based on a common column or index.                     | Used to join 2 or more DataFrames along a particular axis (rows or columns).                                     |
+| **Join Types**         | Supports inner join, outer join, left join, and right join.                              | Performs concatenation by appending DataFrames one below the other (along rows) or side by side (along columns). |
+| **Axis Specification** | Join types and column names must be specified.                                           | By default, performs row-wise concatenation (`axis=0`). Column-wise concatenation can be done with `axis=1`.     |
+| **Column Matching**    | Merges based on shared column(s) or index, and multiple columns can be merged if needed. | Does not perform any matching or joining based on column values.                                                 |
+| **Purpose**            | Used when combining data based on shared columns or index is necessary.                  | Commonly used to combine DataFrames vertically or horizontally without matching criteria.                        |
+
+**[⬆ Back to Top](#questions)**
+
+386. ## Difference between map(), applymap(), and apply()
+
+Ans: The map(), applymap(), and apply() methods are used in pandas for applying functions or transformations to elements in a DataFrame or Series. The following table shows the difference between map(), applymap() and apply():
+
+| **Function**   | **map()**                                                                   | **applymap()**                                                          | **apply()**                                                                        |
+| -------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Definition** | Defined only in Series                                                      | Defined only in DataFrame                                               | Defined in both Series and DataFrame                                               |
+| **Purpose**    | Used to apply a function or a dictionary to each element of the Series.     | Used to apply a function to each element of the DataFrame.              | Used to apply a function along a specific axis of the DataFrame or Series.         |
+| **Scope**      | Works element-wise on Series.                                               | Works element-wise on DataFrame, applying the function to each element. | Works on rows or columns of a DataFrame or Series (element-wise or aggregated).    |
+| **Use Case**   | For simple transformations or mappings applied to each element of a Series. | For applying a function to each individual element of a DataFrame.      | For applying a function that aggregates or transforms data across rows or columns. |
+| **Example**    | `Series.map(lambda x: x * 2)`                                               | `DataFrame.applymap(lambda x: x * 2)`                                   | `DataFrame.apply(np.sum, axis=0)`                                                  |
+
+**[⬆ Back to Top](#questions)**
+
+387. ## Difference between pivot_table() and groupby()
+
+Ans: Both pivot_table() and groupby() are powerful methods in pandas used for aggregating and summarizing data. The following table shows the difference between pivot_table() and groupby():
+
+| **Function**      | **pivot_table()**                                                                                  | **groupby()**                                                                                       |
+| ----------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Purpose**       | Summarizes and aggregates data in a tabular format.                                                | Performs aggregation on grouped data of one or more columns.                                        |
+| **Functionality** | Used to transform data by reshaping it based on column values.                                     | Groups data based on categorical variables, then applies aggregation functions.                     |
+| **Flexibility**   | Can handle multiple levels of grouping and aggregation, providing flexibility in summarizing data. | Groups data into a GroupBy object, allowing various aggregation functions (e.g., sum, mean, count). |
+| **Use Case**      | Used when comparing data across multiple dimensions.                                               | Used to summarize data within groups.                                                               |
+| **Example**       | `DataFrame.pivot_table(values='value', index='index', columns='column', aggfunc='mean')`           | `DataFrame.groupby('column').sum()`                                                                 |
+
+**[⬆ Back to Top](#questions)**
+
+387. ## How can we use Pivot and Melt Data in Pandas?
+
+Ans: We can pivot the dataframe in Pandas by using the pivot_table() method. To unpivot the dataframe to its original form we can melt the dataframe by using the melt() method.
+
+**[⬆ Back to Top](#questions)**
+
+388. ## How to convert a String to Datetime in Pandas?
+
+Ans: A Python string can be converted to a DateTime object by using the to_datetime() function or strptime() method of datetime. It returns a DateTime object corresponding to date_string, parsed according to the format string given by the user.
+
+Using Pandas.to_datetime()
+
+```python
+import pandas as pd
+
+# Convert a string to a datetime object
+
+date_string = '2023-07-17'
+dateTime = pd.to_datetime(date_string)
+print(dateTime)
+```
+
+```bash
+Output:
+
+2023-07-17 00:00:00
+```
+
+Using datetime.strptime
+
+```python
+from datetime import datetime
+
+# Convert a string to a datetime object
+
+date_string = '2023-07-17'
+dateTime = datetime.strptime(date_string, '%Y-%m-%d')
+print(dateTime)
+```
+
+```bash
+Output:
+
+2023-07-17 00:00:00
+```
+
+**[⬆ Back to Top](#questions)**
+
+389. ## What is the Significance of Pandas Described Command?
+
+Ans: Pandas describe() is used to view some basic statistical details of a data frame or a series of numeric values. It can give a different output when it is applied to a series of strings. It can get details like percentile, mean, standard deviation, etc.
+
+```python
+DataFrame.describe()
+```
+
+**[⬆ Back to Top](#questions)**
+
+390. ## How to Compute Mean, Median, Mode, Variance, Standard Deviation, and Various Quantile Ranges in Pandas?
+
+Ans: The mean, median, mode, Variance, Standard Deviation, and Quantile range can be computed using the following commands in Python.
+
+- DataFrame.mean(): To calculate the mean
+- DataFrame.median(): To calculate median
+- DataFrame.mode(): To calculate the mode
+- DataFrame.var(): To calculate variance
+- DataFrame.std(): To calculate the standard deviation
+- DataFrame.quantile(): To calculate quantile range, with range value as a parameter
+
+**[⬆ Back to Top](#questions)**
+
+391. ## How to make Label Encoding using Pandas?
+
+Ans: Label encoding is used to convert categorical data into numerical data so that a machine-learning model can fit it. To apply label encoding using pandas we can use the pandas.Categorical().codes or pandas.factorize() method to replace the categorical values with numerical values.
+
+**[⬆ Back to Top](#questions)**
+
+392. ## How to make Onehot Encoding using Pandas?
+
+Ans: One-hot encoding is a technique for representing categorical data as numerical values in a machine-learning model. It works by creating a separate binary variable for each category in the data. The value of the binary variable is 1 if the observation belongs to that category and 0 otherwise. It can improve the performance of the model. To apply one hot encoding, we greater a dummy column for our dataframe by using get_dummies() method.
+
+**[⬆ Back to Top](#questions)**
+
+393. ## How to make a Boxplot using Pandas?
+
+Ans: A Boxplot is a visual representation of grouped data. It is used for detecting outliers in the data set. We can create a boxplot using the Pandas dataframe by using the boxplot() method and providing the parameter based on which we want the boxplot to be created.
+
+```python
+DataFrame.boxplot(column='Col_Name', grid=False)
+```
+
+**[⬆ Back to Top](#questions)**
+
+394. ## How to make a Distribution Plot using Pandas?
+
+Ans: A distribution plot is a graphical representation of the distribution of data. It is a type of histogram that shows the frequency of each value in a dataset. To create a distribution plot using Pandas, you can use the plot.hist() method. This method takes a DataFrame as input and creates a histogram for each column in the DataFrame.
+
+```python
+DataFrame['Numerical_Col_Name'].plot.hist()
+```
+
+**[⬆ Back to Top](#questions)**
+
+395. ## How to Sort a Dataframe?
+
+Ans: A dataframe in pandas can be sorted in ascending or descending order according to a particular column. We can do so by using the sort_values() method. and providing the column name according to which we want to sort the dataframe. we can also sort it by multiple columns. To sort it in descending order, we pass an additional parameter 'ascending' and set it to False.
+
+```python
+DataFrame.sort_values(by='Age',ascending=True)
+```
+
+**[⬆ Back to Top](#questions)**
+
+396. ## How to Check and Remove Duplicate Values in Pandas.
+
+Ans: In pandas, duplicate values can be checked by using the duplicated() method.
+
+```python
+DataFrame.duplicated()
+```
+
+To remove the duplicated values we can use the drop_duplicates() method.
+
+```python
+DataFrame.drop_duplicates()
+```
+
+**[⬆ Back to Top](#questions)**
+
+397. ## How to Create a New Column Based on Existing Columns?
+
+Ans: We can create a column from an existing column in a DataFrame by using the df.apply() and df.map() functions
+
+**[⬆ Back to Top](#questions)**
+
+398. ## How to Handle Missing Data in Pandas?
+
+Ans: Generally dataset has some missing values, and it can happen for a variety of reasons, such as data collection issues, data entry errors, or data not being available for certain observations. This can cause a big problem. To handle these missing values Pandas provides various functions. These functions are used for detecting, removing, and replacing null values in Pandas DataFrame:
+
+- isnull(): It returns True for NaN values or null values and False for present values
+- notnull(): It returns False for NaN values and True for present values
+- dropna(): It analyzes and drops Rows/Columns with Null values
+- fillna(): It let the user replace NaN values with some value of their own
+- replace(): It is used to replace a string, regex, list, dictionary, series, number, etc.
+- interpolate(): It fills NA values in the dataframe or series.
+
+**[⬆ Back to Top](#questions)**
+
+399. ## What is groupby() Function in Pandas?
+
+Ans: The groupby() function is used to group or aggregate the data according to a category. It makes the task of splitting the Dataframe over some criteria really easy and efficient. It has the following syntax:
+
+```python
+DataFrame.groupby(by=['Col_name'])
+```
+
+400. ## What are loc and iloc methods in Pandas?
+
+Ans: Pandas Subset Selection is also known as Pandas Indexing. It means selecting a particular row or column from a dataframe. We can also select a number of rows or columns as well. Pandas support the following types of indexing:
+
+- Dataframe.[ ]: This function is also known as the indexing operator
+- Dataframe.loc[ ]: This function is used for label-based indexing.
+- Dataframe.iloc[ ]: This function is used for positions or integer-based indexing.
+
+**[⬆ Back to Top](#questions)**
+
+401. ## How to Merge Two DataFrames?
+
+Ans: In pandas, we can combine two dataframes using the pandas.merge() method which takes 2 dataframes as the parameters.
+
+```python
+import pandas as pd
+
+# Create two DataFrames
+
+df1 = pd.DataFrame({'A': [1, 2, 3],
+'B': [4, 5, 6]},
+index=[10, 20, 30])
+
+df2 = pd.DataFrame({'C': [7, 8, 9],
+'D': [10, 11, 12]},
+index=[20, 30, 40])
+
+# Merge both dataframe
+
+result = pd.merge(df1, df2, left_index=True, right_index=True)
+print(result)
+```
+
+```bash
+Output:
+
+    A  B  C   D
+
+20 2 5 7 10
+30 3 6 8 11
+```
+
+**[⬆ Back to Top](#questions)**
+
+402. ## Difference between iloc() and loc()
+
+Ans: The iloc() and loc() functions of pandas are used for accessing data from a DataFrame.The following table shows the difference between iloc() and loc():
+
+| **Attribute**        | **iloc()**                                                                                          | **loc()**                                                                                       |
+| -------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Selection Method** | Indexed-based selection method.                                                                     | Label-based selection method.                                                                   |
+| **Access**           | Allows access to rows and columns of a DataFrame by their integer positions.                        | Allows access to rows and columns of a DataFrame using their labels or names.                   |
+| **Indexing**         | Indexing starts from 0 for both rows and columns.                                                   | Indexing is based on row labels, column labels, or a combination of both.                       |
+| **Usage**            | Used for integer-based slicing with single integers, lists, or arrays for specific rows or columns. | Used for label-based slicing with single labels, lists, or arrays for specific rows or columns. |
+| **Syntax**           | `DataFrame.iloc[row_index, column_index]`                                                           | `DataFrame.loc[row_label, column_label]`                                                        |
+
+**[⬆ Back to Top](#questions)**
+
+403. ## Difference between join() and merge()
+
+Ans: Both join() and merge() functions in pandas are used to combine data from multiple DataFrames. The following table shows the difference between join and merge():
+
+| **Attribute**      | **join()**                                                                      | **merge()**                                                                              |
+| ------------------ | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Operation**      | Combines DataFrames on their indexes.                                           | Combines DataFrames by specifying the columns as a merge key.                            |
+| **Joining Method** | Joining is performed on the DataFrame's index and not on any specified columns. | Joining is performed based on the values in the specified columns or indexes.            |
+| **Flexibility**    | Does not support merging based on column values or multiple columns.            | Supports merging based on one or more columns or indexes, allowing for more flexibility. |
+
+**[⬆ Back to Top](#questions)**
+
+404. ## Difference between the interpolate() and fillna()
+
+Ans: The interpolate() and fillna() methods in pandas are used to handle missing or NaN (Not a Number) values in a DataFrame or Series. The following table shows the difference between interpolate() and fillna():
+
+| **Attribute**   | **interpolate()**                                                                                         | **fillna()**                                                                                  |
+| --------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Operation**   | Fill in the missing values based on interpolation or estimate values based on existing data.              | Fill missing values with specified values that can be based on some strategies.               |
+| **Methods**     | Performs interpolation based on various methods such as linear, polynomial, and time-based interpolation. | Replaces NaN values with a constant like zero, mean, median, mode, or any other custom value. |
+| **Application** | Applied to both numerical and DateTime data, often for time series or logical relationships.              | Can be applied to both numerical and categorical data.                                        |
 
 **[⬆ Back to Top](#questions)**
